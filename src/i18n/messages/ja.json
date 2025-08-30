@@ -1,0 +1,122 @@
+{
+  "LocaleLayoutCluster": {
+    "title": "アクションフィギュア AI ジェネレーター",
+    "description": "最先端のAI技術で見事なアクションフィギュアを作成。数秒でプロ品質を実現。"
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "features": "機能",
+    "pricing": "料金",
+    "gallery": "ギャラリー",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "blog": "ブログ",
+    "docs": "ドキュメント"
+  },
+  "Common": {
+    "getStarted": "始める",
+    "learnMore": "詳細を見る",
+    "signUp": "サインアップ",
+    "signIn": "サインイン",
+    "signOut": "サインアウト",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "create": "作成",
+    "upload": "アップロード",
+    "download": "ダウンロード",
+    "share": "共有",
+    "copy": "コピー",
+    "close": "閉じる",
+    "open": "開く",
+    "next": "次へ",
+    "previous": "前へ",
+    "settings": "設定",
+    "profile": "プロフィール",
+    "dashboard": "ダッシュボード",
+    "account": "アカウント",
+    "billing": "請求",
+    "subscription": "サブスクリプション",
+    "upgrade": "アップグレード",
+    "downgrade": "ダウングレード"
+  },
+  "Auth": {
+    "signInTitle": "アカウントにサインイン",
+    "signUpTitle": "新しいアカウントを作成",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワードを確認",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "rememberMe": "ログイン状態を保持",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "既にアカウントをお持ちですか？",
+    "signInWithGoogle": "Googleでサインイン",
+    "signInWithGitHub": "GitHubでサインイン",
+    "orContinueWith": "または次の方法で続行",
+    "termsAgreement": "サインインすることで、{terms}および{privacy}に同意したものとみなされます",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー"
+  },
+  "Features": {
+    "title": "強力なAI駆動アクションフィギュア作成",
+    "subtitle": "見事なアクションフィギュアを作成するために必要なすべて",
+    "aiPowered": "AI駆動",
+    "aiPoweredDesc": "プロ品質のための最先端AIアルゴリズム",
+    "fastGeneration": "高速生成",
+    "fastGenerationDesc": "数秒でアクションフィギュアを作成",
+    "highQuality": "高品質",
+    "highQualityDesc": "あらゆるニーズに対応する高解像度出力",
+    "multipleStyles": "複数スタイル",
+    "multipleStylesDesc": "様々なアートスタイルとテーマから選択",
+    "commercialUse": "商業利用",
+    "commercialUseDesc": "商業プロジェクトの完全な権利",
+    "easyToUse": "使いやすい",
+    "easyToUseDesc": "技術的な知識は不要"
+  },
+  "Pricing": {
+    "title": "あなたの完璧なプランを選択",
+    "subtitle": "無料で始めて、必要に応じてスケール",
+    "monthly": "月払い",
+    "yearly": "年払い",
+    "save": "節約",
+    "mostPopular": "最も人気",
+    "free": "無料",
+    "creator": "クリエイター",
+    "professional": "プロフェッショナル",
+    "enterprise": "エンタープライズ",
+    "freeFeatures": [
+      "1日5回生成",
+      "基本スタイル",
+      "標準品質",
+      "コミュニティサポート"
+    ],
+    "creatorFeatures": [
+      "月100回生成",
+      "全スタイル利用可能",
+      "HD品質",
+      "メールサポート",
+      "商業ライセンス"
+    ],
+    "proFeatures": [
+      "月500回生成",
+      "バッチ処理",
+      "APIアクセス",
+      "優先サポート",
+      "高度なカスタマイゼーション"
+    ],
+    "enterpriseFeatures": [
+      "無制限生成",
+      "専任サポート",
+      "ホワイトラベルソリューション",
+      "カスタム統合",
+      "SLA保証"
+    ],
+    "choosePlan": "プランを選択",
+    "currentPlan": "現在のプラン",
+    "contactSales": "営業にお問い合わせ"
+  }
+}

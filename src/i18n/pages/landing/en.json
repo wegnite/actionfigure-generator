@@ -5,7 +5,7 @@
     "brand": {
       "title": "Character Figure AI Generator",
       "logo": {
-        "src": "/logo.png",
+        "src": "/logo.svg",
         "alt": "Character Figure AI Generator"
       },
       "url": "/"
@@ -293,5 +293,134 @@
     "title": "Start Creating Character Figures Today",
     "description": "Join thousands using our character figure generator to bring ideas to life",
     "button": "Create Your First Character Figure Free"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "Character Figure AI Generator",
+      "description": "The most advanced AI-powered character figure generation platform. Create stunning 3D characters for gaming, animation, and collectibles.",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Character Figure AI Generator"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Product",
+          "children": [
+            {
+              "title": "Character Generator",
+              "url": "/#generator"
+            },
+            {
+              "title": "Video Generator",
+              "url": "/generate/video"
+            },
+            {
+              "title": "Gallery",
+              "url": "/gallery"
+            },
+            {
+              "title": "Pricing",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Blog",
+              "url": "/blog"
+            },
+            {
+              "title": "Tutorials",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "Style Guide",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "API Docs",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "children": [
+            {
+              "title": "About Us",
+              "url": "/about"
+            },
+            {
+              "title": "Contact",
+              "url": "/contact"
+            },
+            {
+              "title": "Support",
+              "url": "/support"
+            },
+            {
+              "title": "Careers",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 Character Figure AI Generator. All rights reserved.",
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Cookie Policy",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "DMCA",
+          "url": "/dmca"
+        }
+      ]
+    }
   }
 }

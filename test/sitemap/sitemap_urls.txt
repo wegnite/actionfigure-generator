@@ -1,0 +1,83 @@
+# 动态Sitemap URL验证列表
+# 基于 /src/app/sitemap.ts 配置生成
+
+# 核心页面 (Core Pages)
+https://actionfigure-generator.com
+https://actionfigure-generator.com/generate/character-figure
+https://actionfigure-generator.com/generate/video
+https://actionfigure-generator.com/gallery
+https://actionfigure-generator.com/pricing
+https://actionfigure-generator.com/blog
+
+# 法律页面 (Legal Pages)
+https://actionfigure-generator.com/privacy-policy
+https://actionfigure-generator.com/terms-of-service
+https://actionfigure-generator.com/cookie-policy
+
+# 工具页面 (Tool Pages)
+https://actionfigure-generator.com/tools/prompt-generator
+https://actionfigure-generator.com/tools/style-mixer
+https://actionfigure-generator.com/tools/batch-processor
+
+# 博客文章 (Blog Posts)
+https://actionfigure-generator.com/blog/how-to-create-perfect-character-figures-with-ai
+https://actionfigure-generator.com/blog/top-10-character-figure-styles-trending
+https://actionfigure-generator.com/blog/character-figure-design-concept-to-reality
+https://actionfigure-generator.com/blog/ai-vs-traditional-character-design
+https://actionfigure-generator.com/blog/monetizing-character-figure-creations
+https://actionfigure-generator.com/blog/character-figures-in-gaming-entertainment
+https://actionfigure-generator.com/blog/building-professional-character-portfolio
+
+# 画廊分类 (Gallery Categories)
+https://actionfigure-generator.com/gallery/trending
+https://actionfigure-generator.com/gallery/featured
+https://actionfigure-generator.com/gallery/anime
+https://actionfigure-generator.com/gallery/realistic
+https://actionfigure-generator.com/gallery/fantasy
+https://actionfigure-generator.com/gallery/sci-fi
+
+# 静态文件 (Static Files)
+https://actionfigure-generator.com/ads.txt
+
+# 多语言版本 (Localized Pages)
+# 中文版本
+https://actionfigure-generator.com/zh
+https://actionfigure-generator.com/zh/generate/character-figure
+https://actionfigure-generator.com/zh/generate/video
+https://actionfigure-generator.com/zh/gallery
+https://actionfigure-generator.com/zh/pricing
+https://actionfigure-generator.com/zh/blog
+
+# 日语版本
+https://actionfigure-generator.com/ja
+https://actionfigure-generator.com/ja/generate/character-figure
+https://actionfigure-generator.com/ja/generate/video
+https://actionfigure-generator.com/ja/gallery
+https://actionfigure-generator.com/ja/pricing
+https://actionfigure-generator.com/ja/blog
+
+# 西班牙语版本
+https://actionfigure-generator.com/es
+https://actionfigure-generator.com/es/generate/character-figure
+https://actionfigure-generator.com/es/generate/video
+https://actionfigure-generator.com/es/gallery
+https://actionfigure-generator.com/es/pricing
+https://actionfigure-generator.com/es/blog
+
+# 法语版本
+https://actionfigure-generator.com/fr
+https://actionfigure-generator.com/fr/generate/character-figure
+https://actionfigure-generator.com/fr/generate/video
+https://actionfigure-generator.com/fr/gallery
+https://actionfigure-generator.com/fr/pricing
+https://actionfigure-generator.com/fr/blog
+
+# 德语版本
+https://actionfigure-generator.com/de
+https://actionfigure-generator.com/de/generate/character-figure
+https://actionfigure-generator.com/de/generate/video
+https://actionfigure-generator.com/de/gallery
+https://actionfigure-generator.com/de/pricing
+https://actionfigure-generator.com/de/blog
+
+# 总计约 52 个URLs需要验证

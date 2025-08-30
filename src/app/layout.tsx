@@ -3,6 +3,7 @@ import "@/app/globals.css";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
+import Analytics from "@/components/analytics";
 
 export default async function RootLayout({
   children,
@@ -37,7 +38,11 @@ export default async function RootLayout({
           ))}
         {webUrl && <link rel="alternate" hrefLang="x-default" href={webUrl} />}
       </head>
-      <body className={cn("min-h-screen overflow-x-hidden dark")}>{children}</body>
+      <body className={cn("min-h-screen overflow-x-hidden dark")}>
+        {/* Google Analytics 和其他分析工具 */}
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }

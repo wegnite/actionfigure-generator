@@ -1,0 +1,122 @@
+{
+  "LocaleLayoutCluster": {
+    "title": "Générateur IA de Figurines d'Action",
+    "description": "Créez des figurines d'action époustouflantes avec une technologie IA avancée. Qualité professionnelle en quelques secondes."
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "gallery": "Galerie",
+    "about": "À propos",
+    "contact": "Contact",
+    "blog": "Blog",
+    "docs": "Documentation"
+  },
+  "Common": {
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus",
+    "signUp": "S'inscrire",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "upload": "Télécharger",
+    "download": "Télécharger",
+    "share": "Partager",
+    "copy": "Copier",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "settings": "Paramètres",
+    "profile": "Profil",
+    "dashboard": "Tableau de bord",
+    "account": "Compte",
+    "billing": "Facturation",
+    "subscription": "Abonnement",
+    "upgrade": "Améliorer",
+    "downgrade": "Rétrograder"
+  },
+  "Auth": {
+    "signInTitle": "Connectez-vous à votre compte",
+    "signUpTitle": "Créer un nouveau compte",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "rememberMe": "Se souvenir de moi",
+    "noAccount": "Pas de compte ?",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "signInWithGoogle": "Continuer avec Google",
+    "signInWithGitHub": "Continuer avec GitHub",
+    "orContinueWith": "Ou continuer avec",
+    "termsAgreement": "En vous inscrivant, vous acceptez nos {terms} et {privacy}",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité"
+  },
+  "Features": {
+    "title": "Création Puissante de Figurines d'Action par IA",
+    "subtitle": "Tout ce dont vous avez besoin pour créer des figurines d'action époustouflantes",
+    "aiPowered": "Propulsé par IA",
+    "aiPoweredDesc": "Algorithmes IA avancés pour une qualité professionnelle",
+    "fastGeneration": "Génération Rapide",
+    "fastGenerationDesc": "Créez des figurines d'action en quelques secondes",
+    "highQuality": "Haute Qualité",
+    "highQualityDesc": "Sortie haute résolution pour tous vos besoins",
+    "multipleStyles": "Styles Multiples",
+    "multipleStylesDesc": "Choisissez parmi divers styles artistiques et thèmes",
+    "commercialUse": "Usage Commercial",
+    "commercialUseDesc": "Droits complets pour les projets commerciaux",
+    "easyToUse": "Facile à Utiliser",
+    "easyToUseDesc": "Aucune connaissance technique requise"
+  },
+  "Pricing": {
+    "title": "Choisissez Votre Plan Parfait",
+    "subtitle": "Commencez gratuitement et adaptez selon vos besoins",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "save": "Économiser",
+    "mostPopular": "Le Plus Populaire",
+    "free": "Gratuit",
+    "creator": "Créateur",
+    "professional": "Professionnel",
+    "enterprise": "Entreprise",
+    "freeFeatures": [
+      "5 générations par jour",
+      "Styles de base",
+      "Qualité standard",
+      "Support communautaire"
+    ],
+    "creatorFeatures": [
+      "100 générations par mois",
+      "Tous les styles disponibles",
+      "Qualité HD",
+      "Support par email",
+      "Licence commerciale"
+    ],
+    "proFeatures": [
+      "500 générations par mois",
+      "Traitement par lots",
+      "Accès API",
+      "Support prioritaire",
+      "Personnalisation avancée"
+    ],
+    "enterpriseFeatures": [
+      "Générations illimitées",
+      "Support dédié",
+      "Solution marque blanche",
+      "Intégration personnalisée",
+      "Garantie SLA"
+    ],
+    "choosePlan": "Choisir le Plan",
+    "currentPlan": "Plan Actuel",
+    "contactSales": "Contacter les Ventes"
+  }
+}

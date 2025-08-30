@@ -15,6 +15,12 @@ import { Pathnames } from "next-intl/routing";
  * 目前支持：
  * - en: 英语
  * - zh: 中文
+ * - de: 德语
+ * - ja: 日语
+ * - es: 西班牙语
+ * - ar: 阿拉伯语
+ * - fr: 法语
+ * - it: 意大利语
  * 
  * 扩展方法：
  * 1. 在此数组添加语言代码
@@ -22,7 +28,7 @@ import { Pathnames } from "next-intl/routing";
  * 3. 在 localeNames 添加显示名称
  * 4. 更新 middleware.ts 的 matcher
  */
-export const locales = ["en", "zh"];
+export const locales = ["en", "zh", "de", "ja", "es", "ar", "fr", "it"];
 
 /**
  * 语言显示名称映射
@@ -31,9 +37,15 @@ export const locales = ["en", "zh"];
  * key: 语言代码
  * value: 显示名称
  */
-export const localeNames: any = {
+export const localeNames: unknown = {
   en: "English",
   zh: "中文",
+  de: "Deutsch",
+  ja: "日本語",
+  es: "Español",
+  ar: "العربية",
+  fr: "Français",
+  it: "Italiano",
 };
 
 /**

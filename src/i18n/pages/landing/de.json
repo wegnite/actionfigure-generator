@@ -1,0 +1,426 @@
+{
+  "template": "character-figure-generator",
+  "theme": "orange",
+  "header": {
+    "brand": {
+      "title": "Actionfigur KI Generator",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Actionfigur KI Generator"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Funktionen",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "Preise",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "Generator",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Actionfiguren",
+    "subtitle": "KI Generator",
+    "description": "Ihr persönlicher Actionfigur Generator mit fortschrittlicher KI-Technologie. Erstellen Sie professionelle KI Figuren in Sekunden - von personalisierten Actionfiguren bis hin zu einzigartigen Sammlerstücken.",
+    "announcement": {
+      "label": "Neu",
+      "title": "✨ Angetrieben von Nano Banana KI",
+      "url": "/pricing"
+    },
+    "tip": "🚀 Personalisierte Actionfigur mit dem KI Generator erstellen",
+    "badge": "✨ Angetrieben von Nano Banana KI",
+    "buttons": [
+      {
+        "title": "KI Figur Generator starten",
+        "icon": "RiFlashlightFill",
+        "url": "#generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Galerie durchsuchen",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "stats": {
+      "users": "50.000+ Ersteller",
+      "rating": "4,9/5 Bewertung",
+      "created": "1M+ KI Figuren mit dem Actionfigur Generator erstellt"
+    }
+  },
+  "whatYouCanCreate": {
+    "title": "Was Sie mit dem Actionfigur Generator für KI Figuren erstellen können",
+    "description": "Nutzen Sie unseren Actionfigur Generator, um jede Idee in personalisierte Actionfiguren zu verwandeln. Erstellen Sie professionelle KI Figuren für Sammler, Content Creator und alle, die hochwertige, individuelle Kreationen benötigen.",
+    "categories": [
+      {
+        "title": "Premium-Sammlerstücke",
+        "icon": "🏆",
+        "description": "Nutzen Sie den Actionfigur Generator für hochwertige KI Figuren, die erwachsene Sammler begeistern. Personalisierte Actionfiguren für Vitrinen, Conventions und exklusive Sammlungen.",
+        "features": [
+          "Museumsqualität Details",
+          "Limitierter Editions-Stil",
+          "Kommerzielle Lizenz enthalten",
+          "HD-Export für 3D-Druck"
+        ]
+      },
+      {
+        "title": "Social Media Inhalte",
+        "icon": "📱",
+        "description": "Erstellen Sie virale KI Figuren mit unserem Actionfigur Generator für YouTube, TikTok und Instagram. Personalisierte Actionfiguren, die in sozialen Medien zum Trend werden.",
+        "features": [
+          "Social Media optimiert",
+          "Sofortiges virales Potenzial",
+          "Multi-Format-Export",
+          "Monetarisierungsbereit"
+        ]
+      },
+      {
+        "title": "Gaming-Charaktere",
+        "icon": "🎮",
+        "description": "Entwerfen Sie maßgeschneiderte Avatare, NPCs und Charakterkonzepte für Spiele, Tabletop-RPGs und virtuelle Welten.",
+        "features": [
+          "Fantasy- und Sci-Fi-Stile",
+          "Spielbereite Formate",
+          "Charakterbogen-Vorlagen",
+          "RPG-Kampagnen-Assets"
+        ]
+      },
+      {
+        "title": "3D-Druck bereit",
+        "icon": "🖨️",
+        "description": "Generieren Sie optimierte Actionfiguren mit geeigneter Geometrie und druckbaren Details, speziell für 3D-Druck entwickelt.",
+        "features": [
+          "Druckoptimierte Geometrie",
+          "Stützfreundliches Design",
+          "Mehrere Größenoptionen",
+          "STL-Konvertierungsanleitung"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "KI-gesteuerte Qualität",
+        "icon": "Sparkles",
+        "description": "Unser Actionfigur Generator mit Nano Banana KI-Technologie gewährleistet, dass jede KI Figur professionelle Qualitätsstandards erreicht. Personalisierte Actionfiguren mit hochauflösenden, konsistenten Ergebnissen."
+      },
+      {
+        "title": "Blitzschnell",
+        "icon": "Clock",
+        "description": "Unser KI Figur Generator erstellt personalisierte Actionfiguren in nur 10 Sekunden. Keine Wartezeit für Ihren individuellen Actionfigur Generator - sofortige Ergebnisse."
+      },
+      {
+        "title": "Kommerzielle Rechte",
+        "icon": "Shield",
+        "description": "Jede KI Figur aus unserem Actionfigur Generator kommt mit vollständigen kommerziellen Rechten. Personalisierte Actionfiguren ideal für Unternehmen, Verkauf und professionelle Projekte."
+      }
+    ]
+  },
+  "features": {
+    "title": "Erweiterte KI Figur Generator Funktionen",
+    "description": "Professionelle Tools für Ihren Actionfigur Generator - erstellen Sie personalisierte KI Figuren",
+    "items": [
+      {
+        "title": "10+ KI Figur Stile im Generator",
+        "description": "Unser Actionfigur Generator bietet vielfältige Stile für personalisierte KI Figuren - Anime, Realismus, Fantasy und mehr",
+        "icon": "Palette"
+      },
+      {
+        "title": "Video-Generierung",
+        "description": "Der KI Generator verwandelt Ihre personalisierten Actionfiguren in beeindruckende Videos",
+        "icon": "Video"
+      },
+      {
+        "title": "Blitzschnell",
+        "description": "Blitzschneller Actionfigur Generator - KI Figuren in nur 10 Sekunden erstellen",
+        "icon": "Zap"
+      },
+      {
+        "title": "HD-Export",
+        "description": "Hochauflösende KI Figuren aus Ihrem personalisierten Actionfigur Generator exportieren",
+        "icon": "Download"
+      },
+      {
+        "title": "Kommerzielle Lizenz",
+        "description": "Alle Actionfiguren enthalten kommerzielle Nutzungsrechte",
+        "icon": "Shield"
+      },
+      {
+        "title": "Globale Plattform",
+        "description": "Unterstützt 6 Sprachen und dient Erstellern weltweit",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Community KI Figuren aus dem Actionfigur Generator",
+    "description": "Entdecken Sie faszinierende personalisierte Actionfiguren aus unserem KI Generator. Von Anime-Stilen bis hin zu realistischen Porträts - erleben Sie die endlosen Möglichkeiten für individuelle KI Figuren.",
+    "stats": {
+      "creators": "50.000+ Ersteller",
+      "generated": "1M+ personalisierte KI Figuren mit dem Actionfigur Generator erstellt"
+    }
+  },
+  "pricing": {
+    "title": "KI Figur Generator Preise für personalisierte Actionfiguren",
+    "description": "Starten Sie kostenlos mit Ihrem Actionfigur Generator für KI Figuren",
+    "plans": [
+      {
+        "name": "Kostenlos",
+        "price": "€0",
+        "description": "5 pro Tag",
+        "button": "Loslegen"
+      },
+      {
+        "name": "Ersteller",
+        "price": "€15",
+        "description": "100 pro Monat",
+        "button": "KI Figur Generator starten",
+        "badge": "Bester Wert"
+      },
+      {
+        "name": "Professionell",
+        "price": "€39",
+        "description": "500 pro Monat",
+        "button": "Pro werden"
+      },
+      {
+        "name": "Unternehmen",
+        "price": "€159",
+        "description": "Unbegrenzt",
+        "button": "Vertrieb kontaktieren"
+      }
+    ],
+    "detailedPricing": "Detaillierte Preise anzeigen →"
+  },
+  "howItWorks": {
+    "title": "Wie der KI Figur Generator personalisierte Actionfiguren erstellt",
+    "description": "Drei einfache Schritte zu faszinierenden KI Figuren mit dem Actionfigur Generator",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Laden Sie Ihr Bild hoch",
+        "description": "Laden Sie ein Foto hoch oder nutzen Sie eine Beschreibung für Ihren personalisierten Actionfigur Generator. Unser KI Figur Generator verarbeitet jeden Input für optimale Ergebnisse."
+      },
+      {
+        "number": "2",
+        "title": "Wählen Sie Ihren Stil",
+        "description": "Wählen Sie aus 10+ professionellen Stilen, einschließlich Anime, Realismus, Studio Ghibli und mehr. Passen Sie jedes Detail an."
+      },
+      {
+        "number": "3",
+        "title": "Herunterladen und teilen",
+        "description": "Erhalten Sie Ihre personalisierte KI Figur in Sekunden vom Actionfigur Generator. Perfekt für Social Media, Druck und kommerzielle Anwendungen."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Alles was Sie über die Erstellung von Actionfiguren mit KI wissen müssen",
+    "items": [
+      {
+        "question": "Was ist ein KI Figur Generator für personalisierte Actionfiguren?",
+        "answer": "Unser innovativer Actionfigur Generator nutzt fortschrittliche KI-Technologie, um personalisierte KI Figuren aus Fotos oder Beschreibungen zu erstellen. Der spezialisierte Generator für Actionfiguren bietet professionelle Qualität in verschiedenen Stilen - perfekt für Sammler, Content Creator und kommerzielle Anwendungen."
+      },
+      {
+        "question": "Wie erstellt der Actionfigur Generator personalisierte KI Figuren?",
+        "answer": "Unser KI Figur Generator funktioniert ganz einfach: Foto hochladen oder Beschreibung eingeben, Stil wählen, und der Actionfigur Generator erstellt in unter 10 Sekunden Ihre personalisierte Actionfigur. Die innovative KI-Technologie wurde mit Millionen Charakterdesigns trainiert für optimale Ergebnisse."
+      },
+      {
+        "question": "Welche Dateiformate werden unterstützt?",
+        "answer": "Wir akzeptieren JPEG-, PNG-, GIF- und WEBP-Dateien bis zu 20MB als Eingabe. Generierte Actionfiguren werden als hochauflösende PNG-Dateien geliefert, optimiert für Druck, Social Media oder digitale Nutzung. Wir bieten auch mehrere Seitenverhältnisse, einschließlich Quadrat (1:1), Hochformat (2:3) und Querformat (3:2)."
+      },
+      {
+        "question": "Sind KI Figuren aus dem Actionfigur Generator kommerziell nutzbar?",
+        "answer": "Absolut! Jede KI Figur aus unserem Actionfigur Generator kommt mit vollständigen kommerziellen Rechten. Personalisierte Actionfiguren können für Business, Verkauf, Marketing und Merchandise ohne Lizenzgebühren genutzt werden - ideal für alle kostenpflichtigen Pläne."
+      },
+      {
+        "question": "Wie schnell erstellt der KI Figur Generator personalisierte Actionfiguren?",
+        "answer": "Unser blitzschneller Actionfigur Generator erstellt die meisten KI Figuren in nur 10 Sekunden! Selbst komplexere personalisierte Actionfiguren werden dank optimierter KI-Technologie ohne Wartezeiten generiert - sofortige Ergebnisse garantiert."
+      },
+      {
+        "question": "Welche Stile bietet der KI Figur Generator für personalisierte Actionfiguren?",
+        "answer": "Unser vielseitiger Actionfigur Generator bietet 10+ professionelle Stile für KI Figuren: Anime, Realismus, Fantasy, Cyberpunk, Studio Ghibli, Superheld und mehr. Jeder Stil ist perfekt optimiert für personalisierte Actionfiguren - von Sammlerstücken bis Social Media Content."
+      },
+      {
+        "question": "Bieten Sie Rückerstattungen an?",
+        "answer": "Selbstverständlich! 30-tägige Geld-zurück-Garantie für alle Abonnements unseres KI Figur Generators. Nicht zufrieden mit Ihren personalisierten Actionfiguren? Vollständige Rückerstattung durch unser Support-Team. Kostenlose Nutzer können den Actionfigur Generator vorab testen."
+      },
+      {
+        "question": "Wie funktioniert die Preisgestaltung?",
+        "answer": "Unser Actionfigur Generator bietet flexible Preise für KI Figuren: Kostenlos (5 personalisierte Actionfiguren täglich), Ersteller (€15/Monat für 100), Professionell (€39/Monat für 500) und Unternehmen (€159/Monat unbegrenzt). Pro KI Figur wird 1 Kredit verwendet."
+      },
+      {
+        "question": "Kann ich jederzeit kündigen?",
+        "answer": "Absolut! Sie können Ihr Abonnement jederzeit in den Kontoeinstellungen kündigen. Keine Kündigungsgebühren oder langfristigen Verpflichtungen. Ihre ungenutzten Kredite bleiben bis zum Ende des Abrechnungszeitraums verfügbar."
+      },
+      {
+        "question": "Welche Auflösung haben die Actionfiguren?",
+        "answer": "Jede KI Figur aus unserem Actionfigur Generator wird in hoher Auflösung erstellt (1024x1024+). Personalisierte Actionfiguren sind damit perfekt für Druck, Social Media und professionelle Anwendungen - konsistente Qualität in allen Stilen garantiert."
+      },
+      {
+        "question": "Sind meine Daten und Actionfiguren privat?",
+        "answer": "Absolut! Privatsphäre hat höchste Priorität bei unserem KI Figur Generator. Hochgeladene Bilder werden nach Erstellung der personalisierten Actionfigur sicher gelöscht. Ihre KI Figuren bleiben privat, außer Sie teilen sie freiwillig in der Community-Galerie."
+      },
+      {
+        "question": "Erstellt der KI Figur Generator personalisierte Actionfiguren für 3D-Druck?",
+        "answer": "Ja! Unser Actionfigur Generator erstellt KI Figuren, die für 3D-Druck optimiert sind. Obwohl personalisierte Actionfiguren als 2D-Bilder generiert werden, enthalten sie druckbare Details. Inklusive Anleitungen für 3D-Konvertierung und Drucker-Optimierung."
+      }
+    ],
+    "contact": {
+      "text": "Haben Sie weitere Fragen?",
+      "link": "Support kontaktieren"
+    }
+  },
+  "cta": {
+    "title": "Starten Sie jetzt mit Ihrem personalisierten KI Figur Generator",
+    "description": "Schließen Sie sich Tausenden an, die unseren Actionfigur Generator nutzen, um personalisierte KI Figuren zu erstellen und kreative Ideen zu verwirklichen",
+    "button": "Erste personalisierte KI Figur kostenlos mit dem Actionfigur Generator erstellen"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "KI Figur Generator - Personalisierte Actionfiguren",
+      "description": "Der führende Actionfigur Generator für personalisierte KI Figuren. Erstellen Sie individuelle Charaktere für Gaming, Social Media und einzigartige Sammlerstücke mit modernster KI-Technologie.",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Actionfigur KI Generator"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Produkt",
+          "children": [
+            {
+              "title": "Charakter-Generator",
+              "url": "/#generator"
+            },
+            {
+              "title": "Video-Generator",
+              "url": "/generate/video"
+            },
+            {
+              "title": "Galerie",
+              "url": "/gallery"
+            },
+            {
+              "title": "Preise",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "Ressourcen",
+          "children": [
+            {
+              "title": "Blog",
+              "url": "/blog"
+            },
+            {
+              "title": "Tutorials",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "Stil-Guide",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "API Docs",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "Unternehmen",
+          "children": [
+            {
+              "title": "Über uns",
+              "url": "/about"
+            },
+            {
+              "title": "Kontakt",
+              "url": "/contact"
+            },
+            {
+              "title": "Support",
+              "url": "/support"
+            },
+            {
+              "title": "Karriere",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 KI Figur Generator - Personalisierte Actionfiguren. Alle Rechte vorbehalten.",
+    "agreement": {
+      "items": [
+        {
+          "title": "Datenschutzrichtlinie",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Nutzungsbedingungen",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Cookie-Richtlinie",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "DMCA",
+          "url": "/dmca"
+        }
+      ]
+    }
+  }
+}

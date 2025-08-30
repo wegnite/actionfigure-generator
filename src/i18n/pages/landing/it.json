@@ -1,0 +1,426 @@
+{
+  "template": "character-figure-generator",
+  "theme": "orange",
+  "header": {
+    "brand": {
+      "title": "Generatore AI di Action Figure",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Generatore AI di Action Figure"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Funzionalità",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "Prezzi",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "Generatore",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Action Figure",
+    "subtitle": "Generatore AI",
+    "description": "Trasforma le tue idee creative in action figure straordinarie con tecnologia AI avanzata. Raggiungi la qualità professionale in pochi secondi.",
+    "announcement": {
+      "label": "Nuovo",
+      "title": "✨ Alimentato da Nano Banana AI",
+      "url": "/pricing"
+    },
+    "tip": "🚀 Inizia a creare action figure",
+    "badge": "✨ Alimentato da Nano Banana AI",
+    "buttons": [
+      {
+        "title": "Crea Action Figure",
+        "icon": "RiFlashlightFill",
+        "url": "#generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Esplora Galleria",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "stats": {
+      "users": "50.000+ Creatori",
+      "rating": "Valutazione 4,9/5",
+      "created": "1M+ Figure Create"
+    }
+  },
+  "whatYouCanCreate": {
+    "title": "Cosa Puoi Creare con le Action Figure AI",
+    "description": "Trasforma qualsiasi idea in action figure professionali utilizzando AI avanzata. Perfetto per collezionisti, creatori e professionisti che necessitano di creazioni di alta qualità.",
+    "categories": [
+      {
+        "title": "Collezionabili Premium",
+        "icon": "🏆",
+        "description": "Crea action figure di fascia alta per collezionisti adulti (25-49 anni). Perfetto per teche, convention e collezioni personali.",
+        "features": [
+          "Dettagli di qualità museale",
+          "Stile edizione limitata",
+          "Licenza commerciale inclusa",
+          "Export HD per stampa 3D"
+        ]
+      },
+      {
+        "title": "Contenuti Social Media",
+        "icon": "📱",
+        "description": "Genera action figure virali per YouTube, TikTok, Instagram e live streaming. Personalizzato per creatori di 18-35 anni.",
+        "features": [
+          "Ottimizzato per social media",
+          "Potenziale virale istantaneo",
+          "Export multi-formato",
+          "Pronto per monetizzazione"
+        ]
+      },
+      {
+        "title": "Personaggi Gaming",
+        "icon": "🎮",
+        "description": "Progetta avatar personalizzati, NPC e concept di personaggi per giochi, RPG da tavolo e mondi virtuali.",
+        "features": [
+          "Stili Fantasy e Sci-Fi",
+          "Formati pronti per il gioco",
+          "Template schede personaggio",
+          "Asset per campagne RPG"
+        ]
+      },
+      {
+        "title": "Pronto per Stampa 3D",
+        "icon": "🖨️",
+        "description": "Genera action figure ottimizzate con geometria appropriata e dettagli stampabili, progettate specificamente per la stampa 3D.",
+        "features": [
+          "Geometria ottimizzata per stampa",
+          "Design compatibile con supporti",
+          "Opzioni multiple di dimensioni",
+          "Guida conversione STL"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Qualità Alimentata da AI",
+        "icon": "Sparkles",
+        "description": "La nostra tecnologia Nano Banana AI garantisce che ogni action figure soddisfi gli standard di qualità professionale, fornendo risultati ad alta risoluzione e coerenti."
+      },
+      {
+        "title": "Super Veloce",
+        "icon": "Clock",
+        "description": "Genera action figure professionali in 10 secondi. Nessuna attesa, nessuna coda - solo risultati creativi istantanei."
+      },
+      {
+        "title": "Diritti Commerciali",
+        "icon": "Shield",
+        "description": "Tutte le action figure generate includono diritti di uso commerciale completi. Perfetto per business, rivendita e progetti professionali."
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità Avanzate delle Action Figure",
+    "description": "Strumenti professionali per creare action figure di alta qualità",
+    "items": [
+      {
+        "title": "10+ Stili di Action Figure",
+        "description": "Crea action figure diverse inclusi stili anime, realismo, fantasy",
+        "icon": "Palette"
+      },
+      {
+        "title": "Generazione Video",
+        "description": "Trasforma action figure statiche in video dinamici con AI",
+        "icon": "Video"
+      },
+      {
+        "title": "Super Veloce",
+        "description": "Genera action figure in 10 secondi con Nano Banana AI",
+        "icon": "Zap"
+      },
+      {
+        "title": "Export HD",
+        "description": "Esporta action figure in alta risoluzione per qualsiasi scopo",
+        "icon": "Download"
+      },
+      {
+        "title": "Licenza Commerciale",
+        "description": "Tutte le action figure includono diritti di uso commerciale",
+        "icon": "Shield"
+      },
+      {
+        "title": "Piattaforma Globale",
+        "description": "Supporta 6 lingue e serve creatori in tutto il mondo",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Action Figure Create dalla Comunità",
+    "description": "Scopri la diversità e qualità incredibili delle action figure generate da AI. Dagli stili anime ai ritratti realistici, guarda le possibilità infinite del nostro generatore avanzato di action figure.",
+    "stats": {
+      "creators": "50.000+ Creatori",
+      "generated": "1M+ Figure Create"
+    }
+  },
+  "pricing": {
+    "title": "Piani Prezzi Action Figure",
+    "description": "Inizia a creare action figure gratuitamente",
+    "plans": [
+      {
+        "name": "Gratuito",
+        "price": "€0",
+        "description": "5 al giorno",
+        "button": "Inizia"
+      },
+      {
+        "name": "Creatore",
+        "price": "€15",
+        "description": "100 al mese",
+        "button": "Inizia a Creare",
+        "badge": "Miglior Valore"
+      },
+      {
+        "name": "Professionale",
+        "price": "€39",
+        "description": "500 al mese",
+        "button": "Diventa Pro"
+      },
+      {
+        "name": "Aziendale",
+        "price": "€159",
+        "description": "Illimitato",
+        "button": "Contatta Vendite"
+      }
+    ],
+    "detailedPricing": "Vedi prezzi dettagliati →"
+  },
+  "howItWorks": {
+    "title": "Come Creare Action Figure",
+    "description": "Tre semplici passaggi per action figure straordinarie",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Carica la Tua Immagine",
+        "description": "Carica qualsiasi foto o usa una descrizione testuale per iniziare a creare la tua action figure. La nostra AI può elaborare qualsiasi input."
+      },
+      {
+        "number": "2",
+        "title": "Scegli il Tuo Stile",
+        "description": "Seleziona tra 10+ stili professionali inclusi anime, realismo, Studio Ghibli e altro. Personalizza ogni dettaglio."
+      },
+      {
+        "number": "3",
+        "title": "Scarica e Condividi",
+        "description": "Ottieni la tua action figure di alta qualità in pochi secondi. Perfetta per social media, stampa o uso commerciale."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "description": "Tutto quello che devi sapere sulla creazione di action figure con AI",
+    "items": [
+      {
+        "question": "Cos'è un generatore di action figure?",
+        "answer": "Il nostro generatore AI di action figure trasforma foto, descrizioni o idee in action figure digitali di alta qualità. Utilizzando la tecnologia avanzata Nano Banana AI, crea figure professionali in vari stili, inclusi anime, realismo, fantasy e altro. Perfetto per collezionisti, creatori e uso commerciale."
+      },
+      {
+        "question": "Come funziona la generazione di action figure AI?",
+        "answer": "Semplicemente carica una foto o inserisci una descrizione, scegli il tuo stile preferito (anime, realismo, cyberpunk, ecc.), e la nostra AI analizza l'input per generare un'action figure unica. L'intero processo richiede meno di 10 secondi e utilizza machine learning addestrato su milioni di design di personaggi di alta qualità."
+      },
+      {
+        "question": "Quali formati di file sono supportati?",
+        "answer": "Accettiamo file JPEG, PNG, GIF e WEBP fino a 20MB come input. Le action figure generate vengono consegnate come file PNG ad alta risoluzione, ottimizzati per stampa, social media o uso digitale. Offriamo anche multiple proporzioni incluse quadrato (1:1), ritratto (2:3) e paesaggio (3:2)."
+      },
+      {
+        "question": "Posso usare le action figure generate commercialmente?",
+        "answer": "Sì! Tutte le action figure create con il nostro generatore includono diritti di uso commerciale completi. Puoi usarle per business, rivendita, marketing, social media, merchandise e qualsiasi scopo commerciale senza commissioni di licenza aggiuntive. Questo si applica a tutti i piani a pagamento."
+      },
+      {
+        "question": "Quanto tempo richiede la generazione di action figure?",
+        "answer": "La maggior parte delle action figure viene generata in 10 secondi. Richieste complesse o generazioni batch possono richiedere un po' più di tempo, ma la nostra Nano Banana AI è ottimizzata per la velocità. Nessuna coda o tempi di attesa - ottieni risultati istantanei."
+      },
+      {
+        "question": "Quali stili di action figure sono disponibili?",
+        "answer": "Offriamo 10+ stili professionali inclusi: Anime, Realismo, Fantasy Warrior, Cyberpunk, Studio Ghibli, Supereroe, Pop Mart, Pittura a Olio, Acquerello e Pixel Art. Ogni stile è accuratamente ottimizzato per diversi casi d'uso, dai collezionabili ai contenuti per social media."
+      },
+      {
+        "question": "Offrite rimborsi?",
+        "answer": "Sì, offriamo una garanzia di rimborso di 30 giorni per tutti gli abbonamenti a pagamento. Se non sei completamente soddisfatto della qualità delle action figure, contatta il nostro team di supporto per un rimborso completo. Gli utenti gratuiti possono testare il generatore prima dell'upgrade."
+      },
+      {
+        "question": "Come funzionano i prezzi?",
+        "answer": "I prezzi si basano sul numero di action figure che puoi generare al mese: Gratuito (5 al giorno), Creatore (€15/mese per 100), Professionale (€39/mese per 500), e Aziendale (€159/mese illimitato). Ogni generazione utilizza 1 credito, indipendentemente dallo stile o dalla complessità."
+      },
+      {
+        "question": "Posso cancellare in qualsiasi momento?",
+        "answer": "Assolutamente! Puoi cancellare il tuo abbonamento in qualsiasi momento dalle impostazioni dell'account. Nessuna commissione di cancellazione o impegni a lungo termine. I tuoi crediti inutilizzati rimangono disponibili fino alla fine del periodo di fatturazione."
+      },
+      {
+        "question": "Qual è la risoluzione delle action figure?",
+        "answer": "Tutte le action figure vengono generate in alta risoluzione (tipicamente 1024x1024 o superiore a seconda delle proporzioni). Questo garantisce che siano perfette per stampa, social media, uso commerciale o qualsiasi applicazione professionale. Manteniamo qualità coerente attraverso tutti gli stili."
+      },
+      {
+        "question": "I miei dati e action figure sono privati?",
+        "answer": "Sì, la tua privacy è la nostra priorità. Le immagini caricate vengono elaborate in sicurezza e eliminate dopo la generazione. Le action figure generate ti appartengono e sono private a meno che tu scelga di condividerle nella galleria della comunità. Non utilizziamo mai i tuoi contenuti per addestramento o altri scopi."
+      },
+      {
+        "question": "Posso creare action figure per la stampa 3D?",
+        "answer": "Sì! Le nostre action figure sono ottimizzate per vari usi, inclusa la stampa 3D. Anche se generiamo immagini 2D, sono progettate con geometria appropriata e dettagli stampabili. Forniamo guide per la conversione in formati 3D e l'ottimizzazione per diverse stampanti."
+      }
+    ],
+    "contact": {
+      "text": "Hai altre domande?",
+      "link": "Contatta Supporto"
+    }
+  },
+  "cta": {
+    "title": "Inizia a Creare Action Figure Oggi",
+    "description": "Unisciti a migliaia che usano il nostro generatore di action figure per dare vita alle idee",
+    "button": "Crea la Tua Prima Action Figure Gratis"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "Generatore AI di Action Figure",
+      "description": "La piattaforma di generazione di action figure più avanzata alimentata da AI. Crea personaggi 3D straordinari per gaming, animazione e collezionabili.",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Generatore AI di Action Figure"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Prodotto",
+          "children": [
+            {
+              "title": "Generatore Personaggi",
+              "url": "/#generator"
+            },
+            {
+              "title": "Generatore Video",
+              "url": "/generate/video"
+            },
+            {
+              "title": "Galleria",
+              "url": "/gallery"
+            },
+            {
+              "title": "Prezzi",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "Risorse",
+          "children": [
+            {
+              "title": "Blog",
+              "url": "/blog"
+            },
+            {
+              "title": "Tutorial",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "Guida Stili",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "Docs API",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "Azienda",
+          "children": [
+            {
+              "title": "Chi Siamo",
+              "url": "/about"
+            },
+            {
+              "title": "Contatti",
+              "url": "/contact"
+            },
+            {
+              "title": "Supporto",
+              "url": "/support"
+            },
+            {
+              "title": "Carriere",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 Generatore AI di Action Figure. Tutti i diritti riservati.",
+    "agreement": {
+      "items": [
+        {
+          "title": "Informativa Privacy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Termini di Servizio",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Cookie Policy",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "DMCA",
+          "url": "/dmca"
+        }
+      ]
+    }
+  }
+}

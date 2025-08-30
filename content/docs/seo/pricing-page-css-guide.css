@@ -1,0 +1,535 @@
+/* SaaS定价页面优化CSS样式指南 */
+/* 基于最佳实践的视觉设计系统 */
+
+/* ===================
+   1. 定价页面整体布局
+   =================== */
+
+.pricing-section {
+  @apply py-20 bg-gradient-to-br from-gray-50 to-white;
+  position: relative;
+}
+
+.pricing-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.pricing-container {
+  @apply container relative z-10;
+  max-width: 1400px;
+}
+
+/* ===================
+   2. 定价卡片系统
+   =================== */
+
+/* 基础卡片样式 */
+.pricing-card {
+  @apply relative rounded-2xl p-8 bg-white border transition-all duration-300;
+  @apply hover:shadow-xl hover:border-primary/50;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* 特色方案卡片 */
+.pricing-card--featured {
+  @apply border-2 border-primary shadow-2xl;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.05) 0%, 
+    rgba(255, 255, 255, 0.98) 25%, 
+    rgba(59, 130, 246, 0.05) 100%
+  );
+  transform: scale(1.05) translateY(-8px);
+  z-index: 20;
+}
+
+.pricing-card--featured::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+  border-radius: 1rem;
+  z-index: -1;
+  animation: gradient-rotate 3s ease-in-out infinite;
+}
+
+@keyframes gradient-rotate {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.02); }
+}
+
+/* 企业版卡片 */
+.pricing-card--enterprise {
+  @apply bg-gray-900 text-white border-gray-700;
+}
+
+.pricing-card--enterprise .pricing-card__price {
+  @apply text-white;
+}
+
+/* ===================
+   3. 价格展示系统
+   =================== */
+
+.pricing-card__header {
+  @apply text-center mb-8 relative;
+}
+
+.pricing-card__badge {
+  @apply absolute -top-4 left-1/2 transform -translate-x-1/2;
+  @apply px-6 py-2 rounded-full text-sm font-bold shadow-lg z-30;
+}
+
+.pricing-card__badge--popular {
+  @apply bg-primary text-white;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.pricing-card__badge--discount {
+  @apply bg-red-500 text-white;
+  animation: bounce-subtle 1s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-2px); }
+}
+
+.pricing-card__original-price {
+  @apply text-2xl font-medium text-gray-500 line-through mb-2;
+  position: relative;
+}
+
+.pricing-card__original-price::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ef4444, transparent);
+  border-radius: 2px;
+}
+
+.pricing-card__price {
+  @apply flex items-baseline justify-center gap-2 mb-4;
+}
+
+.pricing-card__price-main {
+  @apply text-7xl font-bold tracking-tight text-gray-900;
+  background: linear-gradient(135deg, #1f2937, #374151);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card__price-unit {
+  @apply text-xl font-medium text-gray-600;
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.pricing-card__value-indicator {
+  @apply text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-full inline-block;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* ===================
+   4. 功能列表系统
+   =================== */
+
+.pricing-card__features {
+  @apply flex-1 mb-8;
+}
+
+.pricing-card__features-title {
+  @apply font-semibold text-gray-900 border-b border-gray-200 pb-2 mb-4;
+}
+
+.pricing-card__features-list {
+  @apply space-y-3;
+}
+
+.pricing-card__feature {
+  @apply flex items-start gap-3;
+  animation: fade-in-up 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.pricing-card__feature:nth-child(1) { animation-delay: 0.1s; }
+.pricing-card__feature:nth-child(2) { animation-delay: 0.2s; }
+.pricing-card__feature:nth-child(3) { animation-delay: 0.3s; }
+.pricing-card__feature:nth-child(4) { animation-delay: 0.4s; }
+.pricing-card__feature:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pricing-card__feature-icon {
+  @apply w-5 h-5 text-green-500 shrink-0 mt-0.5;
+  filter: drop-shadow(0 2px 4px rgba(34, 197, 94, 0.3));
+}
+
+.pricing-card__feature-text {
+  @apply text-gray-700 leading-relaxed;
+}
+
+/* 限制功能样式 */
+.pricing-card__feature--limited .pricing-card__feature-icon {
+  @apply text-gray-400;
+}
+
+.pricing-card__feature--limited .pricing-card__feature-text {
+  @apply text-gray-500;
+}
+
+/* ===================
+   5. CTA按钮系统
+   =================== */
+
+.pricing-card__cta-section {
+  @apply space-y-4;
+}
+
+/* 基础按钮样式 */
+.pricing-cta-button {
+  @apply w-full px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+  @apply flex items-center justify-center gap-2;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pricing-cta-button:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* 免费方案按钮 */
+.pricing-cta-button--free {
+  @apply bg-white border-2 border-primary text-primary;
+  @apply hover:bg-primary hover:text-white;
+}
+
+/* 付费方案按钮 */
+.pricing-cta-button--paid {
+  @apply bg-primary text-white hover:bg-primary/90;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.pricing-cta-button--paid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+}
+
+/* 特色方案按钮 */
+.pricing-cta-button--featured {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  @apply text-white shadow-lg;
+  animation: button-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes button-glow {
+  from {
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+  }
+  to {
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6);
+  }
+}
+
+.pricing-cta-button--featured:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* 企业方案按钮 */
+.pricing-cta-button--enterprise {
+  @apply bg-gray-900 text-white hover:bg-gray-800;
+  border: 1px solid #374151;
+}
+
+/* 按钮图标 */
+.pricing-cta-button__icon {
+  @apply w-4 h-4;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* 加载状态 */
+.pricing-cta-button--loading {
+  @apply opacity-75 cursor-not-allowed;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ===================
+   6. 社会证明系统
+   =================== */
+
+.pricing-social-proof {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-6 mb-8;
+}
+
+.pricing-social-proof__item {
+  @apply text-center;
+  animation: count-up 2s ease-out;
+}
+
+.pricing-social-proof__number {
+  @apply text-3xl font-bold text-primary;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricing-social-proof__label {
+  @apply text-sm text-gray-600;
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================
+   7. 信任标识系统
+   =================== */
+
+.pricing-trust-badges {
+  @apply flex flex-wrap justify-center gap-4 text-sm text-gray-600;
+}
+
+.pricing-trust-badge {
+  @apply flex items-center gap-2 px-4 py-2 bg-white rounded-lg;
+  @apply border border-gray-200 shadow-sm;
+  transition: all 0.3s ease;
+}
+
+.pricing-trust-badge:hover {
+  @apply border-primary/30 shadow-md;
+  transform: translateY(-1px);
+}
+
+.pricing-trust-badge__icon {
+  @apply w-4 h-4;
+}
+
+/* ===================
+   8. 方案组切换器
+   =================== */
+
+.pricing-toggle {
+  @apply flex h-12 items-center rounded-xl bg-gray-100 p-1 shadow-inner;
+  backdrop-filter: blur(10px);
+}
+
+.pricing-toggle__option {
+  @apply h-full rounded-lg transition-all;
+  @apply has-[button[data-state="checked"]]:bg-white;
+  @apply has-[button[data-state="checked"]]:shadow-md;
+}
+
+.pricing-toggle__label {
+  @apply flex h-full cursor-pointer items-center justify-center px-8;
+  @apply font-semibold text-gray-600 transition-all;
+  @apply peer-data-[state=checked]:text-primary;
+}
+
+/* ===================
+   9. 底部保障信息
+   =================== */
+
+.pricing-guarantee {
+  @apply mt-16 text-center;
+}
+
+.pricing-guarantee__container {
+  @apply inline-flex items-center gap-8 px-8 py-4;
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.pricing-guarantee__item {
+  @apply flex items-center gap-2 text-sm text-gray-600;
+}
+
+.pricing-guarantee__icon {
+  @apply w-4 h-4;
+}
+
+.pricing-guarantee__icon--green { @apply text-green-500; }
+.pricing-guarantee__icon--blue { @apply text-blue-500; }
+.pricing-guarantee__icon--purple { @apply text-purple-500; }
+
+/* ===================
+   10. 响应式适配
+   =================== */
+
+@media (max-width: 768px) {
+  .pricing-card__price-main {
+    @apply text-5xl;
+  }
+  
+  .pricing-card--featured {
+    transform: scale(1.02) translateY(-4px);
+  }
+  
+  .pricing-social-proof {
+    @apply grid-cols-2 gap-4;
+  }
+  
+  .pricing-guarantee__container {
+    @apply flex-col gap-4 px-6 py-6;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-card {
+    @apply p-6;
+  }
+  
+  .pricing-card__price-main {
+    @apply text-4xl;
+  }
+  
+  .pricing-card__badge {
+    @apply px-4 py-1 text-xs;
+  }
+}
+
+/* ===================
+   11. 动画和过渡效果
+   =================== */
+
+/* 页面进入动画 */
+.pricing-card {
+  animation: slide-in-up 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.pricing-card:nth-child(1) { animation-delay: 0.1s; }
+.pricing-card:nth-child(2) { animation-delay: 0.2s; }
+.pricing-card:nth-child(3) { animation-delay: 0.3s; }
+.pricing-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 悬停效果 */
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+.pricing-card--featured:hover {
+  transform: scale(1.05) translateY(-12px);
+}
+
+/* 加载骨架屏 */
+.pricing-skeleton {
+  @apply animate-pulse;
+}
+
+.pricing-skeleton__title {
+  @apply h-6 bg-gray-200 rounded mb-4;
+}
+
+.pricing-skeleton__price {
+  @apply h-12 bg-gray-200 rounded mb-6;
+}
+
+.pricing-skeleton__feature {
+  @apply h-4 bg-gray-200 rounded mb-3;
+}
+
+.pricing-skeleton__button {
+  @apply h-12 bg-gray-200 rounded;
+}
+
+/* ===================
+   12. 可访问性增强
+   =================== */
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .pricing-card {
+    @apply border-gray-800;
+  }
+  
+  .pricing-card--featured {
+    @apply border-4;
+  }
+  
+  .pricing-card__price-main {
+    @apply text-black;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+/* 减少动画 */
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card,
+  .pricing-card__feature,
+  .pricing-cta-button,
+  .pricing-social-proof__item {
+    animation: none;
+  }
+  
+  .pricing-card:hover,
+  .pricing-card--featured:hover,
+  .pricing-cta-button--featured:hover {
+    transform: none;
+  }
+}
+
+/* 焦点指示器 */
+.pricing-cta-button:focus-visible {
+  @apply outline-none ring-4 ring-primary/50;
+}
+
+.pricing-toggle__label:focus-visible {
+  @apply outline-none ring-2 ring-primary/50 rounded;
+}

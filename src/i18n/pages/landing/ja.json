@@ -1,0 +1,426 @@
+{
+  "template": "character-figure-generator",
+  "theme": "orange",
+  "header": {
+    "brand": {
+      "title": "AIフィギュア生成器 - アクションフィギュアジェネレーター",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "AIフィギュア生成器 - 無料でAIフィギュア作成"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "機能",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "料金",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "ジェネレーター",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "AIフィギュア",
+    "subtitle": "生成器",
+    "description": "最先端のAI技術で写真やアイデアを話題のAIフィギュア風画像に変換。Twitter(X)やInstagramで大人気のAIフィギュア生成が数秒で完成。",
+    "announcement": {
+      "label": "NEW",
+      "title": "✨ Nano Banana AI 搭載",
+      "url": "/pricing"
+    },
+    "tip": "🚀 話題のAIフィギュア作成を始める",
+    "badge": "✨ Nano Banana AI 搭載",
+    "buttons": [
+      {
+        "title": "AIフィギュアを無料作成",
+        "icon": "RiFlashlightFill",
+        "url": "#generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "ギャラリーを見る",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "stats": {
+      "users": "5万+ クリエイター",
+      "rating": "4.9/5 評価",
+      "created": "100万+ AIフィギュア作成済み"
+    }
+  },
+  "whatYouCanCreate": {
+    "title": "AIフィギュアで作れるもの",
+    "description": "最先端のAI生成技術で写真やアイデアを話題のAIフィギュア風イラストに変換。SNSでバズるAIフィギュア生成からコレクターズアイテムまで自由自在。",
+    "categories": [
+      {
+        "title": "プレミアムコレクティブル",
+        "icon": "🏆",
+        "description": "25-49歳の大人のコレクター向けの高級アクションフィギュアを作成。展示ケース、コンベンション、個人コレクションに最適。",
+        "features": [
+          "ミュージアム品質のディテール",
+          "限定版スタイル",
+          "商業ライセンス込み",
+          "3Dプリント用HD出力"
+        ]
+      },
+      {
+        "title": "ソーシャルメディアコンテンツ",
+        "icon": "📱",
+        "description": "YouTube、TikTok、Instagram、ライブ配信用のバイラルアクションフィギュアを生成。18-35歳のクリエイター向けにカスタマイズ。",
+        "features": [
+          "ソーシャルメディア最適化",
+          "即座のバイラルポテンシャル",
+          "マルチフォーマット出力",
+          "収益化対応"
+        ]
+      },
+      {
+        "title": "ゲーミングキャラクター",
+        "icon": "🎮",
+        "description": "ゲーム、テーブルトップRPG、仮想世界用のカスタムアバター、NPC、キャラクターコンセプトをデザイン。",
+        "features": [
+          "ファンタジー＆SF スタイル",
+          "ゲーム対応フォーマット",
+          "キャラクターシートテンプレート",
+          "RPGキャンペーンアセット"
+        ]
+      },
+      {
+        "title": "3Dプリント対応",
+        "icon": "🖨️",
+        "description": "適切なジオメトリとプリント可能なディテールで3Dプリント専用に設計された最適化アクションフィギュアを生成。",
+        "features": [
+          "プリント最適化ジオメトリ",
+          "サポートフレンドリーデザイン",
+          "複数サイズオプション",
+          "STL変換ガイド"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "高品質AIフィギュア生成",
+        "icon": "Sparkles",
+        "description": "Nano Banana AI技術により生成されるAIフィギュアは、プラスチックの質感やグロッシーなツヤ感までリアルに再現。高品質なAIフィギュア生成を実現。"
+      },
+      {
+        "title": "瞬時生成",
+        "icon": "Clock",
+        "description": "ChatGPT風AIフィギュア加工がたった10秒で完成。AIフィギュア生成に待ち時間やキューなしですぐにSNS投稿可能。"
+      },
+      {
+        "title": "商業権利",
+        "icon": "Shield",
+        "description": "生成されたAIフィギュアは商用利用可能。YouTube動画のサムネイルやグッズ制作などビジネス活用OK。AIフィギュアで収益化を実現。"
+      }
+    ]
+  },
+  "features": {
+    "title": "高度なAIフィギュア機能",
+    "description": "高品質AIフィギュア生成のためのプロツール",
+    "items": [
+      {
+        "title": "10+ AIフィギュアスタイル",
+        "description": "アニメ、リアル、ファンタジースタイルを含む多様なAIフィギュアをAI生成",
+        "icon": "Palette"
+      },
+      {
+        "title": "動画生成",
+        "description": "AIで静的AIフィギュアを動的動画に変換",
+        "icon": "Video"
+      },
+      {
+        "title": "超高速",
+        "description": "Nano Banana AIで10秒でAIフィギュアを生成",
+        "icon": "Zap"
+      },
+      {
+        "title": "HD出力",
+        "description": "あらゆる用途に対応した高解像度でAIフィギュアを出力",
+        "icon": "Download"
+      },
+      {
+        "title": "商業ライセンス",
+        "description": "すべてのAIフィギュアに商業利用権が含まれます",
+        "icon": "Shield"
+      },
+      {
+        "title": "グローバルプラットフォーム",
+        "description": "6言語をサポートし、世界中のクリエイターにサービス提供",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "コミュニティ作成AIフィギュア",
+    "description": "AI生成されたAIフィギュアの驚くべき多様性と品質を発見してください。アニメスタイルからリアルな肖像画まで、先進的なAIフィギュア生成器の無限の可能性をご覧ください。",
+    "stats": {
+      "creators": "5万+ クリエイター",
+      "generated": "100万+ フィギュア作成済み"
+    }
+  },
+  "pricing": {
+    "title": "AIフィギュア価格プラン",
+    "description": "AIフィギュア生成を無料で開始",
+    "plans": [
+      {
+        "name": "無料",
+        "price": "¥0",
+        "description": "1日5回",
+        "button": "始める"
+      },
+      {
+        "name": "クリエイター",
+        "price": "¥1,680",
+        "description": "月100回",
+        "button": "作成開始",
+        "badge": "ベストバリュー"
+      },
+      {
+        "name": "プロフェッショナル",
+        "price": "¥4,320",
+        "description": "月500回",
+        "button": "プロになる"
+      },
+      {
+        "name": "エンタープライズ",
+        "price": "¥17,280",
+        "description": "無制限",
+        "button": "営業にお問い合わせ"
+      }
+    ],
+    "detailedPricing": "詳細料金を表示 →"
+  },
+  "howItWorks": {
+    "title": "AIフィギュアの作り方",
+    "description": "見事なAIフィギュアをAI生成する3つの簡単なステップ",
+    "steps": [
+      {
+        "number": "1",
+        "title": "画像をアップロード",
+        "description": "任意の写真をアップロードするか、テキスト説明でAIフィギュア生成を開始。AIフィギュア生成器はあらゆる入力を処理できます。"
+      },
+      {
+        "number": "2",
+        "title": "スタイルを選択",
+        "description": "アニメ、リアル、ジブリなどを含む10+のプロスタイルから選択。あらゆるディテールをカスタマイズ。"
+      },
+      {
+        "number": "3",
+        "title": "ダウンロードして共有",
+        "description": "数秒で高品質AIフィギュアを取得。AIフィギュアはソーシャルメディア、プリント、商業利用に最適。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "よくある質問",
+    "description": "AIでアクションフィギュアを作成するために知っておくべきすべて",
+    "items": [
+      {
+        "question": "AIフィギュアジェネレーターとは何ですか？",
+        "answer": "弊社のAIフィギュアジェネレーターは、写真、説明、アイデアを高品質デジタルAIフィギュアに変換します。先進的なNano Banana AI技術を使用して、アニメ、リアル、ファンタジーなど様々なスタイルでプロ級AIフィギュアを作成。コレクター、クリエイター、商業利用に最適。"
+      },
+      {
+        "question": "AIフィギュア生成はどのように機能しますか？",
+        "answer": "写真をアップロードするか説明を入力し、お好みのスタイル（アニメ、リアル、サイバーパンクなど）を選択すると、AIが入力を分析してユニークなAIフィギュアを生成します。プロセス全体は10秒未満で、数百万の高品質キャラクターデザインでトレーニングされた機械学習を使用します。"
+      },
+      {
+        "question": "どのファイル形式がサポートされていますか？",
+        "answer": "入力として最大20MBのJPEG、PNG、GIF、WEBPファイルを受け付けます。生成されたAIフィギュアは、プリント、ソーシャルメディア、デジタル使用に最適化された高解像度PNGファイルで提供されます。正方形（1:1）、縦向き（2:3）、横向き（3:2）を含む複数のアスペクト比も提供します。"
+      },
+      {
+        "question": "生成されたAIフィギュアを商業的に使用できますか？",
+        "answer": "はい！弊社ジェネレーターで作成されたすべてのAIフィギュアには完全な商業利用権が含まれます。追加のライセンス料なしで、ビジネス、転売、マーケティング、ソーシャルメディア、商品、あらゆる商業目的に使用できます。これはすべての有料プランに適用されます。"
+      },
+      {
+        "question": "AIフィギュア生成にはどのくらい時間がかかりますか？",
+        "answer": "ほとんどのAIフィギュアは10秒で生成されます。複雑なリクエストやバッチ生成はもう少し時間がかかる場合がありますが、Nano Banana AIは速度に最適化されています。キューや待機時間はありません - 即座に結果を得られます。"
+      },
+      {
+        "question": "どのようなAIフィギュアスタイルがありますか？",
+        "answer": "10+のプロスタイルでAIフィギュアを提供：アニメ、リアル、ファンタジーウォリアー、サイバーパンク、スタジオジブリ、スーパーヒーロー、ポップマート、油絵、水彩、ピクセルアート。各スタイルのフィギュアは、コレクティブルからソーシャルメディアコンテンツまで、異なる用途に合わせて慎重に最適化されています。"
+      },
+      {
+        "question": "返金はありますか？",
+        "answer": "はい、すべての有料サブスクリプションに30日間の返金保証を提供しています。AIフィギュアの品質に完全に満足されない場合は、サポートチームにご連絡いただければ全額返金いたします。無料ユーザーはアップグレード前にAIフィギュアジェネレーターをテストできます。"
+      },
+      {
+        "question": "価格設定はどのように機能しますか？",
+        "answer": "価格は月間生成可能なアクションフィギュア数に基づきます：無料（1日5回）、クリエイター（¥1,680/月 100回）、プロフェッショナル（¥4,320/月 500回）、エンタープライズ（¥17,280/月 無制限）。スタイルや複雑さに関係なく、各生成で1クレジットを使用します。"
+      },
+      {
+        "question": "いつでもキャンセルできますか？",
+        "answer": "もちろんです！アカウント設定からいつでもサブスクリプションをキャンセルできます。キャンセル料や長期契約はありません。未使用クレジットは請求期間の終了まで利用可能です。"
+      },
+      {
+        "question": "アクションフィギュアの解像度はどのくらいですか？",
+        "answer": "すべてのAIフィギュアは高解像度で生成されます（通常1024x1024またはアスペクト比に応じてそれ以上）。これによりAIフィギュアはプリント、ソーシャルメディア、商業利用、あらゆるプロ用途に完璧に適しています。すべてのスタイルで一貫した品質を維持しています。"
+      },
+      {
+        "question": "私のデータとアクションフィギュアはプライベートですか？",
+        "answer": "はい、プライバシーが最優先です。アップロードされた画像は安全に処理され、生成後に削除されます。生成されたAIフィギュアはあなたのものであり、コミュニティギャラリーで共有することを選択しない限りプライベートです。お客様のコンテンツをトレーニングやその他の目的に使用することはありません。"
+      },
+      {
+        "question": "3Dプリント用のAIフィギュアを作成できますか？",
+        "answer": "はい！AIフィギュアは3Dプリントを含む様々な用途に最適化されています2D画像でAIフィギュアを生成しますが、適切なジオメトリとプリント可能なディテールを考慮して設計されています。3Dフォーマットへの変換と様々なプリンター向けの最適化に関するガイドを提供しています。"
+      }
+    ],
+    "contact": {
+      "text": "他に質問がありますか？",
+      "link": "サポートにお問い合わせ"
+    }
+  },
+  "cta": {
+    "title": "今日からAIフィギュア作成を始めましょう",
+    "description": "AIフィギュアジェネレーターで話題のAIフィギュア作成を始める何千人ものユーザーに参加",
+    "button": "初回AIフィギュアを無料作成"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "AIフィギュア ジェネレーター",
+      "description": "最先端のAI技術で話題のAIフィギュアを生成。SNSでバズるAIフィギュアからコレクティブルまで自由自在に作成。",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "アクションフィギュア AI ジェネレーター"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "製品",
+          "children": [
+            {
+              "title": "キャラクタージェネレーター",
+              "url": "/#generator"
+            },
+            {
+              "title": "動画ジェネレーター",
+              "url": "/generate/video"
+            },
+            {
+              "title": "ギャラリー",
+              "url": "/gallery"
+            },
+            {
+              "title": "料金",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "リソース",
+          "children": [
+            {
+              "title": "ブログ",
+              "url": "/blog"
+            },
+            {
+              "title": "チュートリアル",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "スタイルガイド",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "API ドキュメント",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "会社",
+          "children": [
+            {
+              "title": "会社概要",
+              "url": "/about"
+            },
+            {
+              "title": "お問い合わせ",
+              "url": "/contact"
+            },
+            {
+              "title": "サポート",
+              "url": "/support"
+            },
+            {
+              "title": "採用",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 AIフィギュア ジェネレーター. All rights reserved.",
+    "agreement": {
+      "items": [
+        {
+          "title": "プライバシーポリシー",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "利用規約",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "クッキーポリシー",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "DMCA",
+          "url": "/dmca"
+        }
+      ]
+    }
+  }
+}

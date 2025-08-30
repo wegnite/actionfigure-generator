@@ -1,0 +1,122 @@
+{
+  "LocaleLayoutCluster": {
+    "title": "Actionfigur AI Generator",
+    "description": "Erstellen Sie atemberaubende Actionfiguren mit fortschrittlicher KI-Technologie. Professionelle Qualität in Sekunden."
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "gallery": "Galerie",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "docs": "Dokumentation"
+  },
+  "Common": {
+    "getStarted": "Loslegen",
+    "learnMore": "Mehr erfahren",
+    "signUp": "Registrieren",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "success": "Erfolgreich",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "upload": "Hochladen",
+    "download": "Herunterladen",
+    "share": "Teilen",
+    "copy": "Kopieren",
+    "close": "Schließen",
+    "open": "Öffnen",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "settings": "Einstellungen",
+    "profile": "Profil",
+    "dashboard": "Dashboard",
+    "account": "Konto",
+    "billing": "Abrechnung",
+    "subscription": "Abonnement",
+    "upgrade": "Upgrade",
+    "downgrade": "Downgrade"
+  },
+  "Auth": {
+    "signInTitle": "Bei Ihrem Konto anmelden",
+    "signUpTitle": "Neues Konto erstellen",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "forgotPassword": "Passwort vergessen?",
+    "rememberMe": "Angemeldet bleiben",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits ein Konto?",
+    "signInWithGoogle": "Mit Google anmelden",
+    "signInWithGitHub": "Mit GitHub anmelden",
+    "orContinueWith": "Oder weiter mit",
+    "termsAgreement": "Durch die Anmeldung stimmen Sie unseren {terms} und {privacy} zu",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzrichtlinie"
+  },
+  "Features": {
+    "title": "Leistungsstarke KI-gestützte Actionfigur-Erstellung",
+    "subtitle": "Alles was Sie brauchen, um atemberaubende Actionfiguren zu erstellen",
+    "aiPowered": "KI-gestützt",
+    "aiPoweredDesc": "Fortschrittliche KI-Algorithmen für professionelle Qualität",
+    "fastGeneration": "Schnelle Generierung",
+    "fastGenerationDesc": "Erstellen Sie Actionfiguren in wenigen Sekunden",
+    "highQuality": "Hohe Qualität",
+    "highQualityDesc": "Hochauflösende Ausgabe für alle Ihre Bedürfnisse",
+    "multipleStyles": "Mehrere Stile",
+    "multipleStylesDesc": "Wählen Sie aus verschiedenen Kunststilen und Themen",
+    "commercialUse": "Kommerzielle Nutzung",
+    "commercialUseDesc": "Vollständige Rechte für kommerzielle Projekte",
+    "easyToUse": "Einfach zu verwenden",
+    "easyToUseDesc": "Keine technischen Kenntnisse erforderlich"
+  },
+  "Pricing": {
+    "title": "Wählen Sie Ihren perfekten Plan",
+    "subtitle": "Beginnen Sie kostenlos und skalieren Sie nach Bedarf",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "save": "Sparen Sie",
+    "mostPopular": "Am beliebtesten",
+    "free": "Kostenlos",
+    "creator": "Ersteller",
+    "professional": "Professionell",
+    "enterprise": "Unternehmen",
+    "freeFeatures": [
+      "5 Generierungen pro Tag",
+      "Grundlegende Stile",
+      "Standard-Qualität",
+      "Community-Support"
+    ],
+    "creatorFeatures": [
+      "100 Generierungen pro Monat",
+      "Alle Stile verfügbar",
+      "HD-Qualität",
+      "E-Mail-Support",
+      "Kommerzielle Lizenz"
+    ],
+    "proFeatures": [
+      "500 Generierungen pro Monat",
+      "Batch-Verarbeitung",
+      "API-Zugang",
+      "Prioritäts-Support",
+      "Erweiterte Anpassung"
+    ],
+    "enterpriseFeatures": [
+      "Unbegrenzte Generierungen",
+      "Dedizierte Unterstützung",
+      "White-Label-Lösung",
+      "Benutzerdefinierte Integration",
+      "SLA-Garantie"
+    ],
+    "choosePlan": "Plan wählen",
+    "currentPlan": "Aktueller Plan",
+    "contactSales": "Vertrieb kontaktieren"
+  }
+}

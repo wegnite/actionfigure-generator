@@ -1,0 +1,122 @@
+{
+  "LocaleLayoutCluster": {
+    "title": "Generador AI de Figuras de Acción",
+    "description": "Crea figuras de acción increíbles con tecnología AI avanzada. Calidad profesional en segundos."
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "gallery": "Galería",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "docs": "Documentación"
+  },
+  "Common": {
+    "getStarted": "Comenzar",
+    "learnMore": "Saber más",
+    "signUp": "Registrarse",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "upload": "Subir",
+    "download": "Descargar",
+    "share": "Compartir",
+    "copy": "Copiar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "settings": "Configuración",
+    "profile": "Perfil",
+    "dashboard": "Panel",
+    "account": "Cuenta",
+    "billing": "Facturación",
+    "subscription": "Suscripción",
+    "upgrade": "Actualizar",
+    "downgrade": "Degradar"
+  },
+  "Auth": {
+    "signInTitle": "Inicia sesión en tu cuenta",
+    "signUpTitle": "Crear una nueva cuenta",
+    "email": "Dirección de correo",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "rememberMe": "Recordarme",
+    "noAccount": "¿No tienes una cuenta?",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "signInWithGoogle": "Continuar con Google",
+    "signInWithGitHub": "Continuar con GitHub",
+    "orContinueWith": "O continúa con",
+    "termsAgreement": "Al registrarte, aceptas nuestros {terms} y {privacy}",
+    "terms": "Términos de Servicio",
+    "privacy": "Política de Privacidad"
+  },
+  "Features": {
+    "title": "Creación Potente de Figuras de Acción con AI",
+    "subtitle": "Todo lo que necesitas para crear figuras de acción impresionantes",
+    "aiPowered": "Impulsado por AI",
+    "aiPoweredDesc": "Algoritmos de AI avanzados para calidad profesional",
+    "fastGeneration": "Generación Rápida",
+    "fastGenerationDesc": "Crea figuras de acción en segundos",
+    "highQuality": "Alta Calidad",
+    "highQualityDesc": "Salida de alta resolución para todas tus necesidades",
+    "multipleStyles": "Múltiples Estilos",
+    "multipleStylesDesc": "Elige entre varios estilos de arte y temas",
+    "commercialUse": "Uso Comercial",
+    "commercialUseDesc": "Derechos completos para proyectos comerciales",
+    "easyToUse": "Fácil de Usar",
+    "easyToUseDesc": "No se requieren conocimientos técnicos"
+  },
+  "Pricing": {
+    "title": "Elige tu Plan Perfecto",
+    "subtitle": "Comienza gratis y escala según necesites",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "Ahorrar",
+    "mostPopular": "Más Popular",
+    "free": "Gratuito",
+    "creator": "Creador",
+    "professional": "Profesional",
+    "enterprise": "Empresa",
+    "freeFeatures": [
+      "5 generaciones por día",
+      "Estilos básicos",
+      "Calidad estándar",
+      "Soporte de la comunidad"
+    ],
+    "creatorFeatures": [
+      "100 generaciones por mes",
+      "Todos los estilos disponibles",
+      "Calidad HD",
+      "Soporte por correo",
+      "Licencia comercial"
+    ],
+    "proFeatures": [
+      "500 generaciones por mes",
+      "Procesamiento en lotes",
+      "Acceso API",
+      "Soporte prioritario",
+      "Personalización avanzada"
+    ],
+    "enterpriseFeatures": [
+      "Generaciones ilimitadas",
+      "Soporte dedicado",
+      "Solución de marca blanca",
+      "Integración personalizada",
+      "Garantía SLA"
+    ],
+    "choosePlan": "Elegir Plan",
+    "currentPlan": "Plan Actual",
+    "contactSales": "Contactar Ventas"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "template": "character-figure-generator",
+  "theme": "orange",
+  "title": "Character Figure Generator",
+  "subtitle": "AI-Powered Creation Tool",
+  
+  "inputSettings": {
+    "title": "Input Settings",
+    "tabs": {
+      "imageToImage": "Image to Image", 
+      "textToImage": "Text to Image"
+    },
+    "upload": {
+      "title": "Drag & drop your image here",
+      "subtitle": "or click to browse (JPG, PNG, WebP • Max 10MB)",
+      "remove": "Remove"
+    },
+    "mainPrompt": {
+      "label": "Main Prompt",
+      "placeholder": "A futuristic city powered by nano technology, golden hour lighting, ultra detailed..."
+    },
+    "additionalPrompt": {
+      "label": "Additional Instructions (Optional)",
+      "placeholder": "Add any additional details or modifications..."
+    }
+  },
+  
+  "styleSelection": {
+    "title": "Select Style",
+    "styles": {
+      "ghibli": {
+        "name": "Ghibli Style",
+        "description": "Miyazaki anime style"
+      },
+      "figure": {
+        "name": "Character Figure", 
+        "description": "Collectible figure effect"
+      },
+      "anime": {
+        "name": "Anime Style",
+        "description": "Classic Japanese anime"
+      },
+      "oil": {
+        "name": "Oil Painting",
+        "description": "Traditional oil art"
+      },
+      "watercolor": {
+        "name": "Watercolor",
+        "description": "Fresh watercolor style"
+      },
+      "pixel": {
+        "name": "Pixel Art", 
+        "description": "Retro game pixels"
+      },
+      "none": {
+        "name": "No Style",
+        "description": "Keep original style"
+      }
+    }
+  },
+  
+  "advancedSettings": {
+    "title": "Advanced Settings",
+    "aspectRatio": {
+      "label": "Aspect Ratio",
+      "options": {
+        "1:1": "Square 1:1",
+        "4:3": "Landscape 4:3", 
+        "3:4": "Portrait 3:4",
+        "16:9": "Widescreen 16:9",
+        "9:16": "Vertical 9:16"
+      }
+    },
+    "quality": {
+      "label": "Quality",
+      "options": {
+        "standard": "Standard",
+        "hd": "HD (High Quality)"
+      }
+    },
+    "numImages": {
+      "label": "Number of Images"
+    }
+  },
+  
+  "outputGallery": {
+    "title": "Output Gallery",
+    "empty": {
+      "title": "Ready for instant generation",
+      "description": "Enter your prompt and unleash the power of AI"
+    },
+    "actions": {
+      "generateMore": "Generate More Variations"
+    }
+  },
+  
+  "authentication": {
+    "required": "Sign in to start generating",
+    "signInAndGenerate": "Sign In & Generate"
+  },
+  
+  "generation": {
+    "generating": "Generating...",
+    "generateNow": "Generate Now",
+    "success": "Success!",
+    "successDescription": "Successfully generated {count} images",
+    "errors": {
+      "fileSize": "File too large",
+      "fileSizeDesc": "Please upload an image smaller than 10MB",
+      "missingInput": "Missing input", 
+      "missingInputDesc": "Please upload an image or enter a prompt",
+      "authRequired": "Authentication required",
+      "authRequiredDesc": "Please sign in to continue",
+      "insufficientCredits": "Insufficient Credits",
+      "insufficientCreditsDesc": "Please purchase more credits",
+      "generationFailed": "Generation failed",
+      "generationFailedDesc": "Please try again later",
+      "generationError": "Generation Error",
+      "generationErrorDesc": "An unexpected error occurred"
+    }
+  }
+}

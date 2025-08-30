@@ -1,0 +1,122 @@
+{
+  "LocaleLayoutCluster": {
+    "title": "Generatore AI di Action Figure",
+    "description": "Crea action figure straordinarie con tecnologia AI avanzata. Qualità professionale in pochi secondi."
+  },
+  "Navigation": {
+    "home": "Home",
+    "features": "Funzionalità",
+    "pricing": "Prezzi",
+    "gallery": "Galleria",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "blog": "Blog",
+    "docs": "Documentazione"
+  },
+  "Common": {
+    "getStarted": "Inizia",
+    "learnMore": "Scopri di più",
+    "signUp": "Registrati",
+    "signIn": "Accedi",
+    "signOut": "Disconnetti",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "create": "Crea",
+    "upload": "Carica",
+    "download": "Scarica",
+    "share": "Condividi",
+    "copy": "Copia",
+    "close": "Chiudi",
+    "open": "Apri",
+    "next": "Avanti",
+    "previous": "Indietro",
+    "settings": "Impostazioni",
+    "profile": "Profilo",
+    "dashboard": "Dashboard",
+    "account": "Account",
+    "billing": "Fatturazione",
+    "subscription": "Abbonamento",
+    "upgrade": "Aggiorna",
+    "downgrade": "Degrada"
+  },
+  "Auth": {
+    "signInTitle": "Accedi al tuo account",
+    "signUpTitle": "Crea un nuovo account",
+    "email": "Indirizzo email",
+    "password": "Password",
+    "confirmPassword": "Conferma password",
+    "forgotPassword": "Password dimenticata?",
+    "rememberMe": "Ricordami",
+    "noAccount": "Non hai un account?",
+    "hasAccount": "Hai già un account?",
+    "signInWithGoogle": "Continua con Google",
+    "signInWithGitHub": "Continua con GitHub",
+    "orContinueWith": "O continua con",
+    "termsAgreement": "Registrandoti, accetti i nostri {terms} e {privacy}",
+    "terms": "Termini di Servizio",
+    "privacy": "Informativa sulla Privacy"
+  },
+  "Features": {
+    "title": "Creazione Potente di Action Figure con AI",
+    "subtitle": "Tutto ciò di cui hai bisogno per creare action figure straordinarie",
+    "aiPowered": "Alimentato da AI",
+    "aiPoweredDesc": "Algoritmi AI avanzati per qualità professionale",
+    "fastGeneration": "Generazione Veloce",
+    "fastGenerationDesc": "Crea action figure in pochi secondi",
+    "highQuality": "Alta Qualità",
+    "highQualityDesc": "Output ad alta risoluzione per tutte le tue esigenze",
+    "multipleStyles": "Stili Multipli",
+    "multipleStylesDesc": "Scegli tra vari stili artistici e temi",
+    "commercialUse": "Uso Commerciale",
+    "commercialUseDesc": "Diritti completi per progetti commerciali",
+    "easyToUse": "Facile da Usare",
+    "easyToUseDesc": "Non sono richieste conoscenze tecniche"
+  },
+  "Pricing": {
+    "title": "Scegli il Tuo Piano Perfetto",
+    "subtitle": "Inizia gratis e scala secondo le tue esigenze",
+    "monthly": "Mensile",
+    "yearly": "Annuale",
+    "save": "Risparmia",
+    "mostPopular": "Più Popolare",
+    "free": "Gratuito",
+    "creator": "Creatore",
+    "professional": "Professionale",
+    "enterprise": "Aziendale",
+    "freeFeatures": [
+      "5 generazioni al giorno",
+      "Stili di base",
+      "Qualità standard",
+      "Supporto della comunità"
+    ],
+    "creatorFeatures": [
+      "100 generazioni al mese",
+      "Tutti gli stili disponibili",
+      "Qualità HD",
+      "Supporto via email",
+      "Licenza commerciale"
+    ],
+    "proFeatures": [
+      "500 generazioni al mese",
+      "Elaborazione batch",
+      "Accesso API",
+      "Supporto prioritario",
+      "Personalizzazione avanzata"
+    ],
+    "enterpriseFeatures": [
+      "Generazioni illimitate",
+      "Supporto dedicato",
+      "Soluzione white label",
+      "Integrazione personalizzata",
+      "Garanzia SLA"
+    ],
+    "choosePlan": "Scegli Piano",
+    "currentPlan": "Piano Attuale",
+    "contactSales": "Contatta Vendite"
+  }
+}

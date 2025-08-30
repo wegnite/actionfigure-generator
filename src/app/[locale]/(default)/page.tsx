@@ -295,37 +295,102 @@ export default async function CharacterFigurePage({
             {t.pricingSubtitle}
           </p>
           
-          {/* 定价卡片预览 - 根据PRD文档统一价格 */}
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-200)] dark:border-gray-700 p-6 text-center">
+          {/* Enhanced Pricing Cards - Based on Character Figure Pricing Config */}
+          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {/* Free Plan */}
+            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-200)] dark:border-gray-700 p-6 text-center relative">
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Free</h3>
-              <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$0</p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">5 per day</p>
-              <Button variant="outline" className="w-full border-[var(--cf-orange-300)] text-[var(--cf-orange-600)] hover:bg-[var(--cf-orange-50)]">Get Started</Button>
+              <div className="mb-4">
+                <p className="text-4xl font-bold text-gray-900 dark:text-white">$0</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">/month</p>
+              </div>
+              <div className="space-y-2 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                <p>• 5 characters daily</p>
+                <p>• 3 basic styles</p>
+                <p>• Community support</p>
+                <p>• With watermark</p>
+              </div>
+              <Button variant="outline" className="w-full border-[var(--cf-orange-300)] text-[var(--cf-orange-600)] hover:bg-[var(--cf-orange-50)]">
+                Get Started
+              </Button>
             </Card>
             
-            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-500)] p-6 text-center relative shadow-lg">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 cf-gradient-primary text-white text-xs px-3 py-1 rounded-full">
-                BEST VALUE
+            {/* Creator Plan - Popular */}
+            <Card className="bg-white dark:bg-gray-900 border-2 border-[var(--cf-orange-500)] p-6 text-center relative transform scale-105 shadow-xl">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--cf-orange-500)] to-[var(--cf-yellow-500)] text-white text-xs px-4 py-1 rounded-full font-semibold">
+                MOST POPULAR
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Creator</h3>
-              <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$19</p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">100 per month</p>
-              <Button className="w-full cf-gradient-primary hover:opacity-90 shadow-lg">Start Creating</Button>
+              <div className="mb-4">
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-lg text-gray-500 line-through">$29</span>
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">34% OFF</span>
+                </div>
+                <p className="text-5xl font-bold bg-gradient-to-r from-[var(--cf-orange-500)] to-[var(--cf-yellow-500)] bg-clip-text text-transparent">$19</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">/month</p>
+              </div>
+              <div className="space-y-2 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-[var(--cf-orange-600)] font-medium">• 100 characters/month</p>
+                <p>• HD quality exports</p>
+                <p>• Commercial license</p>
+                <p>• No watermarks</p>
+                <p>• Priority queue</p>
+              </div>
+              <Button className="w-full bg-gradient-to-r from-[var(--cf-orange-500)] to-[var(--cf-yellow-500)] hover:opacity-90 shadow-lg text-white font-semibold">
+                Start Creating
+              </Button>
             </Card>
             
-            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-200)] dark:border-gray-700 p-6 text-center">
+            {/* Professional Plan */}
+            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-200)] dark:border-gray-700 p-6 text-center relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium">
+                FOR BUSINESS
+              </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Professional</h3>
-              <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$49</p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">500 per month</p>
-              <Button variant="outline" className="w-full border-[var(--cf-orange-300)] text-[var(--cf-orange-600)] hover:bg-[var(--cf-orange-50)]">Go Pro</Button>
+              <div className="mb-4">
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-lg text-gray-500 line-through">$69</span>
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">29% OFF</span>
+                </div>
+                <p className="text-4xl font-bold text-gray-900 dark:text-white">$49</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">/month</p>
+              </div>
+              <div className="space-y-2 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-green-600 font-medium">• 500 characters/month</p>
+                <p>• 3D file exports</p>
+                <p>• API access</p>
+                <p>• Team collaboration</p>
+                <p>• Priority support</p>
+              </div>
+              <Button variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50">
+                Go Professional
+              </Button>
             </Card>
             
-            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-200)] dark:border-gray-700 p-6 text-center">
+            {/* Enterprise Plan */}
+            <Card className="bg-white dark:bg-gray-900 border-[var(--cf-orange-200)] dark:border-gray-700 p-6 text-center relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs px-3 py-1 rounded-full font-medium">
+                ENTERPRISE
+              </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Enterprise</h3>
-              <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$199</p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">Unlimited</p>
-              <Button variant="outline" className="w-full border-[var(--cf-orange-300)] text-[var(--cf-orange-600)] hover:bg-[var(--cf-orange-50)]">Contact Sales</Button>
+              <div className="mb-4">
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-lg text-gray-500 line-through">$299</span>
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">33% OFF</span>
+                </div>
+                <p className="text-4xl font-bold text-gray-900 dark:text-white">$199</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">/month</p>
+              </div>
+              <div className="space-y-2 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-purple-600 font-medium">• Unlimited generation</p>
+                <p>• Custom training</p>
+                <p>• White-label solution</p>
+                <p>• Dedicated manager</p>
+                <p>• 24/7 support</p>
+              </div>
+              <Button variant="outline" className="w-full border-purple-600 text-purple-600 hover:bg-purple-50">
+                Contact Sales
+              </Button>
             </Card>
           </div>
           

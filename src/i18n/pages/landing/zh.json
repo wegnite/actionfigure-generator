@@ -5,7 +5,7 @@
     "brand": {
       "title": "AI角色手办生成器",
       "logo": {
-        "src": "/logo.png",
+        "src": "/logo.svg",
         "alt": "AI角色手办生成器"
       },
       "url": "/"
@@ -293,5 +293,134 @@
     "title": "今天就开始创建角色手办",
     "description": "加入成千上万使用我们角色手办生成器将创意变为现实的用户",
     "button": "免费创建您的第一个角色手办"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "AI角色手办生成器",
+      "description": "最先进的AI驱动角色手办生成平台。为游戏、动画和收藏品创建令人惊艳的3D角色。",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "AI角色手办生成器"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "产品",
+          "children": [
+            {
+              "title": "角色生成器",
+              "url": "/#generator"
+            },
+            {
+              "title": "视频生成器",
+              "url": "/generate/video"
+            },
+            {
+              "title": "作品画廊",
+              "url": "/gallery"
+            },
+            {
+              "title": "价格方案",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "资源",
+          "children": [
+            {
+              "title": "博客",
+              "url": "/blog"
+            },
+            {
+              "title": "教程",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "风格指南",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "API文档",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "公司",
+          "children": [
+            {
+              "title": "关于我们",
+              "url": "/about"
+            },
+            {
+              "title": "联系我们",
+              "url": "/contact"
+            },
+            {
+              "title": "客户支持",
+              "url": "/support"
+            },
+            {
+              "title": "招聘职位",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 AI角色手办生成器。保留所有权利。",
+    "agreement": {
+      "items": [
+        {
+          "title": "隐私政策",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "服务条款",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Cookie政策",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "版权投诉",
+          "url": "/dmca"
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,426 @@
+{
+  "template": "character-figure-generator",
+  "theme": "orange",
+  "header": {
+    "brand": {
+      "title": "Generador AI de Figuras de Acción",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Generador AI de Figuras de Acción"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Características",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "Precios",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "Generador",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Figuras de Acción",
+    "subtitle": "Generador AI",
+    "description": "Transforma tus ideas creativas en figuras de acción impresionantes con tecnología AI avanzada. Alcanza calidad profesional en segundos.",
+    "announcement": {
+      "label": "Nuevo",
+      "title": "✨ Impulsado por Nano Banana AI",
+      "url": "/pricing"
+    },
+    "tip": "🚀 Comienza a crear figuras de acción",
+    "badge": "✨ Impulsado por Nano Banana AI",
+    "buttons": [
+      {
+        "title": "Crear Figura de Acción",
+        "icon": "RiFlashlightFill",
+        "url": "#generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Explorar Galería",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "stats": {
+      "users": "50,000+ Creadores",
+      "rating": "4.9/5 Valoración",
+      "created": "1M+ Figuras Creadas"
+    }
+  },
+  "whatYouCanCreate": {
+    "title": "Qué Puedes Crear con Figuras de Acción AI",
+    "description": "Transforma cualquier idea en figuras de acción profesionales usando AI avanzada. Perfecto para coleccionistas, creadores y profesionales que necesitan creaciones de alta calidad.",
+    "categories": [
+      {
+        "title": "Coleccionables Premium",
+        "icon": "🏆",
+        "description": "Crea figuras de acción de alta gama para coleccionistas adultos (25-49 años). Perfecto para vitrinas, convenciones y colecciones personales.",
+        "features": [
+          "Detalles de calidad museística",
+          "Estilo de edición limitada",
+          "Licencia comercial incluida",
+          "Exportación HD para impresión 3D"
+        ]
+      },
+      {
+        "title": "Contenido para Redes Sociales",
+        "icon": "📱",
+        "description": "Genera figuras de acción virales para YouTube, TikTok, Instagram y streaming en vivo. Personalizado para creadores de 18-35 años.",
+        "features": [
+          "Optimizado para redes sociales",
+          "Potencial viral instantáneo",
+          "Exportación multi-formato",
+          "Listo para monetización"
+        ]
+      },
+      {
+        "title": "Personajes de Gaming",
+        "icon": "🎮",
+        "description": "Diseña avatares personalizados, NPCs y conceptos de personajes para juegos, RPGs de mesa y mundos virtuales.",
+        "features": [
+          "Estilos Fantasy y Sci-Fi",
+          "Formatos listos para juegos",
+          "Plantillas de fichas de personaje",
+          "Assets para campañas RPG"
+        ]
+      },
+      {
+        "title": "Listo para Impresión 3D",
+        "icon": "🖨️",
+        "description": "Genera figuras de acción optimizadas con geometría adecuada y detalles imprimibles, específicamente diseñadas para impresión 3D.",
+        "features": [
+          "Geometría optimizada para impresión",
+          "Diseño amigable con soportes",
+          "Múltiples opciones de tamaño",
+          "Guía de conversión STL"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Calidad Impulsada por AI",
+        "icon": "Sparkles",
+        "description": "Nuestra tecnología Nano Banana AI asegura que cada figura de acción cumpla con estándares de calidad profesional, entregando resultados de alta resolución y consistentes."
+      },
+      {
+        "title": "Súper Rápido",
+        "icon": "Clock",
+        "description": "Genera figuras de acción profesionales en 10 segundos. Sin esperas, sin colas - solo resultados creativos instantáneos."
+      },
+      {
+        "title": "Derechos Comerciales",
+        "icon": "Shield",
+        "description": "Todas las figuras de acción generadas vienen con derechos completos de uso comercial. Perfecto para negocios, reventa y proyectos profesionales."
+      }
+    ]
+  },
+  "features": {
+    "title": "Características Avanzadas de Figuras de Acción",
+    "description": "Herramientas profesionales para crear figuras de acción de alta calidad",
+    "items": [
+      {
+        "title": "10+ Estilos de Figuras de Acción",
+        "description": "Crea figuras de acción diversas incluyendo estilos anime, realismo, fantasy",
+        "icon": "Palette"
+      },
+      {
+        "title": "Generación de Video",
+        "description": "Transforma figuras de acción estáticas en videos dinámicos con AI",
+        "icon": "Video"
+      },
+      {
+        "title": "Súper Rápido",
+        "description": "Genera figuras de acción en 10 segundos con Nano Banana AI",
+        "icon": "Zap"
+      },
+      {
+        "title": "Exportación HD",
+        "description": "Exporta figuras de acción en alta resolución para cualquier propósito",
+        "icon": "Download"
+      },
+      {
+        "title": "Licencia Comercial",
+        "description": "Todas las figuras de acción incluyen derechos de uso comercial",
+        "icon": "Shield"
+      },
+      {
+        "title": "Plataforma Global",
+        "description": "Soporta 6 idiomas y sirve a creadores de todo el mundo",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Figuras de Acción Creadas por la Comunidad",
+    "description": "Descubre la increíble diversidad y calidad de las figuras de acción generadas por AI. Desde estilos anime hasta retratos realistas, ve las posibilidades infinitas de nuestro generador avanzado de figuras de acción.",
+    "stats": {
+      "creators": "50,000+ Creadores",
+      "generated": "1M+ Figuras Creadas"
+    }
+  },
+  "pricing": {
+    "title": "Planes de Precios de Figuras de Acción",
+    "description": "Comienza a crear figuras de acción gratis",
+    "plans": [
+      {
+        "name": "Gratuito",
+        "price": "€0",
+        "description": "5 por día",
+        "button": "Comenzar"
+      },
+      {
+        "name": "Creador",
+        "price": "€15",
+        "description": "100 por mes",
+        "button": "Comenzar a Crear",
+        "badge": "Mejor Valor"
+      },
+      {
+        "name": "Profesional",
+        "price": "€39",
+        "description": "500 por mes",
+        "button": "Ser Pro"
+      },
+      {
+        "name": "Empresa",
+        "price": "€159",
+        "description": "Ilimitado",
+        "button": "Contactar Ventas"
+      }
+    ],
+    "detailedPricing": "Ver precios detallados →"
+  },
+  "howItWorks": {
+    "title": "Cómo Crear Figuras de Acción",
+    "description": "Tres pasos simples para figuras de acción impresionantes",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Sube tu Imagen",
+        "description": "Sube cualquier foto o usa una descripción de texto para comenzar a crear tu figura de acción. Nuestra AI puede procesar cualquier entrada."
+      },
+      {
+        "number": "2",
+        "title": "Elige tu Estilo",
+        "description": "Selecciona de 10+ estilos profesionales incluyendo anime, realismo, Studio Ghibli y más. Personaliza cada detalle."
+      },
+      {
+        "number": "3",
+        "title": "Descarga y Comparte",
+        "description": "Obtén tu figura de acción de alta calidad en segundos. Perfecto para redes sociales, impresión o uso comercial."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "description": "Todo lo que necesitas saber sobre crear figuras de acción con AI",
+    "items": [
+      {
+        "question": "¿Qué es un generador de figuras de acción?",
+        "answer": "Nuestro generador AI de figuras de acción transforma fotos, descripciones o ideas en figuras de acción digitales de alta calidad. Usando tecnología avanzada Nano Banana AI, crea figuras profesionales en varios estilos, incluyendo anime, realismo, fantasy y más. Perfecto para coleccionistas, creadores y uso comercial."
+      },
+      {
+        "question": "¿Cómo funciona la generación de figuras de acción AI?",
+        "answer": "Simplemente sube una foto o ingresa una descripción, elige tu estilo preferido (anime, realismo, cyberpunk, etc.), y nuestra AI analiza la entrada para generar una figura de acción única. Todo el proceso toma menos de 10 segundos y usa aprendizaje automático entrenado en millones de diseños de personajes de alta calidad."
+      },
+      {
+        "question": "¿Qué formatos de archivo son compatibles?",
+        "answer": "Aceptamos archivos JPEG, PNG, GIF y WEBP de hasta 20MB como entrada. Las figuras de acción generadas se entregan como archivos PNG de alta resolución, optimizados para impresión, redes sociales o uso digital. También ofrecemos múltiples proporciones incluyendo cuadrado (1:1), retrato (2:3) y paisaje (3:2)."
+      },
+      {
+        "question": "¿Puedo usar las figuras de acción generadas comercialmente?",
+        "answer": "¡Sí! Todas las figuras de acción creadas con nuestro generador vienen con derechos completos de uso comercial. Puedes usarlas para negocios, reventa, marketing, redes sociales, mercancía y cualquier propósito comercial sin tarifas de licencia adicionales. Esto aplica para todos los planes pagos."
+      },
+      {
+        "question": "¿Cuánto tiempo toma generar figuras de acción?",
+        "answer": "La mayoría de las figuras de acción se generan en 10 segundos. Solicitudes complejas o generaciones por lotes pueden tomar un poco más, pero nuestra Nano Banana AI está optimizada para velocidad. Sin colas ni tiempos de espera - obtienes resultados instantáneos."
+      },
+      {
+        "question": "¿Qué estilos de figuras de acción están disponibles?",
+        "answer": "Ofrecemos 10+ estilos profesionales incluyendo: Anime, Realismo, Fantasy Warrior, Cyberpunk, Studio Ghibli, Superhero, Pop Mart, Oil Painting, Watercolor y Pixel Art. Cada estilo está cuidadosamente optimizado para diferentes casos de uso, desde coleccionables hasta contenido para redes sociales."
+      },
+      {
+        "question": "¿Ofrecen reembolsos?",
+        "answer": "Sí, ofrecemos una garantía de devolución de dinero de 30 días para todas las suscripciones pagas. Si no estás completamente satisfecho con la calidad de las figuras de acción, contacta a nuestro equipo de soporte para un reembolso completo. Los usuarios gratuitos pueden probar el generador antes de actualizar."
+      },
+      {
+        "question": "¿Cómo funcionan los precios?",
+        "answer": "Los precios se basan en el número de figuras de acción que puedes generar por mes: Gratuito (5 por día), Creador (€15/mes por 100), Profesional (€39/mes por 500), y Empresa (€159/mes ilimitado). Cada generación usa 1 crédito, independientemente del estilo o complejidad."
+      },
+      {
+        "question": "¿Puedo cancelar en cualquier momento?",
+        "answer": "¡Absolutamente! Puedes cancelar tu suscripción en cualquier momento desde la configuración de la cuenta. Sin tarifas de cancelación o compromisos a largo plazo. Tus créditos no utilizados permanecen disponibles hasta el final del período de facturación."
+      },
+      {
+        "question": "¿Cuál es la resolución de las figuras de acción?",
+        "answer": "Todas las figuras de acción se generan en alta resolución (típicamente 1024x1024 o superior dependiendo de la proporción). Esto asegura que sean perfectas para impresión, redes sociales, uso comercial o cualquier aplicación profesional. Mantenemos calidad consistente a través de todos los estilos."
+      },
+      {
+        "question": "¿Son privados mis datos y figuras de acción?",
+        "answer": "Sí, tu privacidad es nuestra prioridad. Las imágenes subidas se procesan de forma segura y se eliminan después de la generación. Las figuras de acción generadas te pertenecen y son privadas a menos que elijas compartirlas en la galería de la comunidad. Nunca usamos tu contenido para entrenamiento u otros propósitos."
+      },
+      {
+        "question": "¿Puedo crear figuras de acción para impresión 3D?",
+        "answer": "¡Sí! Nuestras figuras de acción están optimizadas para varios usos, incluyendo impresión 3D. Aunque generamos imágenes 2D, están diseñadas con geometría adecuada y detalles imprimibles. Proporcionamos guías para conversión a formatos 3D y optimización para diferentes impresoras."
+      }
+    ],
+    "contact": {
+      "text": "¿Tienes más preguntas?",
+      "link": "Contactar Soporte"
+    }
+  },
+  "cta": {
+    "title": "Comienza a Crear Figuras de Acción Hoy",
+    "description": "Únete a miles que usan nuestro generador de figuras de acción para dar vida a las ideas",
+    "button": "Crea tu Primera Figura de Acción Gratis"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "Generador AI de Figuras de Acción",
+      "description": "La plataforma más avanzada de generación de figuras de acción impulsada por AI. Crea personajes 3D impresionantes para gaming, animación y coleccionables.",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Generador AI de Figuras de Acción"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Producto",
+          "children": [
+            {
+              "title": "Generador de Personajes",
+              "url": "/#generator"
+            },
+            {
+              "title": "Generador de Video",
+              "url": "/generate/video"
+            },
+            {
+              "title": "Galería",
+              "url": "/gallery"
+            },
+            {
+              "title": "Precios",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "Recursos",
+          "children": [
+            {
+              "title": "Blog",
+              "url": "/blog"
+            },
+            {
+              "title": "Tutoriales",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "Guía de Estilos",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "Documentos API",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "Empresa",
+          "children": [
+            {
+              "title": "Acerca de",
+              "url": "/about"
+            },
+            {
+              "title": "Contacto",
+              "url": "/contact"
+            },
+            {
+              "title": "Soporte",
+              "url": "/support"
+            },
+            {
+              "title": "Carreras",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 Generador AI de Figuras de Acción. Todos los derechos reservados.",
+    "agreement": {
+      "items": [
+        {
+          "title": "Política de Privacidad",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Términos de Servicio",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Política de Cookies",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "DMCA",
+          "url": "/dmca"
+        }
+      ]
+    }
+  }
+}
