@@ -1,3 +1,8 @@
+---
+title: Claude Code 代理 (Agents) 安装指南
+description: Claude Code 专业代理安装和使用指南
+---
+
 # Claude Code 代理 (Agents) 安装指南
 
 ## 🎉 安装成功

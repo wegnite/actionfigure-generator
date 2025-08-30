@@ -41,7 +41,7 @@ import {
   Maximize, Minimize, Filter, ArrowUpNarrowWide as SortAsc, ArrowDownWideNarrow as SortDesc, RotateCw,
   
   // Specialty icons
-  Zap, Activity, BarChart3, PieChart, TrendingUp, Target,
+  Zap, Activity, BarChart3, PieChart, TrendingUp, Target, Sparkles,
 } from "lucide-react";
 
 import { ReactNode } from "react";
@@ -80,6 +80,10 @@ const iconMap: { [key: string]: React.ElementType } = {
   "RiClapperboardAiLine": Video,
   "RiCodeFill": Code,
   "RiMailLine": Mail,
+  "RiSparkling2Line": Sparkles,
+  "RiMagicFill": Star,
+  "RiPlayFill": Play,
+  "RiPhoneFill": Phone,
 };
 
 // Additional icon packages can be added here if needed

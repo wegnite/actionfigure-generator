@@ -116,7 +116,7 @@ const FormBlock = function ({
     try {
       const formData = new FormData();
       Object.entries(data).forEach(([key, value]) => {
-        formData.append(key, value);
+        formData.append(key, String(value || ''));
       });
 
       const res = await submit.handler(formData, passby);
@@ -166,13 +166,14 @@ const FormBlock = function ({
                     {item.type === "textarea" ? (
                       <Textarea
                         {...field}
+                        value={String(field.value || '')}
                         placeholder={item.placeholder}
                         {...item.attributes}
                       />
                     ) : item.type === "select" ? (
                       <Select
                         onValueChange={field.onChange}
-                        defaultValue={field.value}
+                        defaultValue={String(field.value || '')}
                         {...item.attributes}
                       >
                         <SelectTrigger className="w-full bg-background rounded-md">
@@ -188,18 +189,19 @@ const FormBlock = function ({
                       </Select>
                     ) : item.type === "markdown_editor" ? (
                       <MarkdownEditor
-                        value={field.value}
+                        value={String(field.value || '')}
                         onChange={field.onChange}
                       />
                     ) : item.type === "editor" ||
                       item.type === "richtext_editor" ? (
                       <MarkdownEditor
-                        value={field.value}
+                        value={String(field.value || '')}
                         onChange={field.onChange}
                       />
                     ) : (
                       <Input
                         {...field}
+                        value={String(field.value || '')}
                         type={item.type || "text"}
                         placeholder={item.placeholder}
                         className="bg-background rounded-md"

@@ -48,7 +48,7 @@ export default function Header({ header }: { header: HeaderType }) {
               className="flex items-center gap-2 group"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-lg blur-md opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 cf-gradient-primary rounded-lg blur-md opacity-60 group-hover:opacity-100 transition-opacity" />
                 {header.brand?.logo?.src ? (
                   <img
                     src={header.brand.logo.src}
@@ -56,13 +56,13 @@ export default function Header({ header }: { header: HeaderType }) {
                     className="w-10 h-10 relative rounded-lg"
                   />
                 ) : (
-                  <div className="w-10 h-10 relative bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 relative cf-gradient-primary rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-lg">AI</span>
                   </div>
                 )}
               </div>
               {header.brand?.title && (
-                <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-[var(--cf-orange-500)] to-[var(--cf-yellow-500)] bg-clip-text text-transparent">
                   {header.brand?.title || ""}
                 </span>
               )}

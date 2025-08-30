@@ -42,7 +42,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
               {footer.social && (
                 <ul className="flex items-center space-x-6 text-muted-foreground">
                   {footer.social.items?.map((item, i) => (
-                    <li key={i} className="font-medium hover:text-primary">
+                    <li key={i} className="font-medium hover:text-[var(--cf-orange-500)]">
                       <a href={item.url} target={item.target}>
                         {item.icon && (
                           <Icon name={item.icon} className="size-4" />
@@ -59,7 +59,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
                   <p className="mb-6 font-bold">{item.title}</p>
                   <ul className="space-y-4 text-sm text-muted-foreground">
                     {item.children?.map((iitem, ii) => (
-                      <li key={ii} className="font-medium hover:text-primary">
+                      <li key={ii} className="font-medium hover:text-[var(--cf-orange-500)]">
                         <a href={iitem.url} target={iitem.target}>
                           {iitem.title}
                         </a>
@@ -78,7 +78,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
                   <a
                     href="https://shipany.ai"
                     target="_blank"
-                    className="px-2 text-primary"
+                    className="px-2 text-[var(--cf-orange-500)]"
                   >
                     build with ShipAny
                   </a>
@@ -89,7 +89,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
             {footer.agreement && (
               <ul className="flex justify-center gap-4 lg:justify-start">
                 {footer.agreement.items?.map((item, i) => (
-                  <li key={i} className="hover:text-primary">
+                  <li key={i} className="hover:text-[var(--cf-orange-500)]">
                     <a href={item.url} target={item.target}>
                       {item.title}
                     </a>

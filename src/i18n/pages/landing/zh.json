@@ -1,12 +1,12 @@
 {
-  "template": "ai-universal-generator",
-  "theme": "dark",
+  "template": "character-figure-generator",
+  "theme": "orange",
   "header": {
     "brand": {
-      "title": "AI 通用生成器",
+      "title": "AI角色手办生成器",
       "logo": {
         "src": "/logo.png",
-        "alt": "AI 通用生成器"
+        "alt": "AI角色手办生成器"
       },
       "url": "/"
     },
@@ -18,9 +18,14 @@
           "icon": "RiSparkling2Line"
         },
         {
-          "title": "定价",
+          "title": "定价方案",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "生成器",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
         }
       ]
     },
@@ -30,457 +35,263 @@
     "show_locale": true
   },
   "hero": {
-    "title": "通用 AI 平台",
-    "highlight_text": "通用 AI",
-    "description": "在一个平台上访问所有主流 AI 模型。<br/>使用尖端 AI 技术生成文本、图像和视频。",
+    "title": "角色手办",
+    "subtitle": "AI 生成器",
+    "description": "用先进的AI技术将您的创意转化为惊艳的角色手办。几秒内达到专业品质。",
     "announcement": {
       "label": "全新",
-      "title": "✨ AI 创作新纪元",
+      "title": "✨ 由纳米香蕉AI驱动",
       "url": "/pricing"
     },
-    "tip": "🚀 开始 AI 创作",
-    "badge": "✨ AI 图像创作新纪元",
+    "tip": "🚀 开始创建角色手办",
+    "badge": "✨ 由纳米香蕉AI驱动",
     "buttons": [
       {
-        "title": "立即开始",
+        "title": "开始创建角色手办",
         "icon": "RiFlashlightFill",
-        "url": "/pricing",
+        "url": "#generator",
         "target": "_self",
         "variant": "default"
       },
       {
-        "title": "阅读文档",
-        "icon": "RiBookOpenLine",
-        "url": "/docs",
-        "target": "_blank",
+        "title": "浏览作品画廊",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
         "variant": "outline"
       }
     ],
-    "show_happy_users": true,
-    "show_badge": false
+    "stats": {
+      "users": "5万+ 创作者",
+      "rating": "4.9/5 评分",
+      "created": "100万+ 手办已生成"
+    }
   },
-  "branding": {
-    "title": "由行业领先技术驱动",
-    "items": [
+  "whatYouCanCreate": {
+    "title": "用AI角色手办能创造什么",
+    "description": "使用先进AI将任何想法转化为专业角色手办。完美适合收藏家、创作者和对品质创意有需求的专业人士。",
+    "categories": [
       {
-        "title": "Next.js",
-        "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "Next.js"
-        }
+        "title": "精品收藏",
+        "icon": "🏆",
+        "description": "为25-49岁成年收藏家创建高端角色手办。完美适用于展示柜、会展和个人收藏。",
+        "features": [
+          "博物馆级品质细节",
+          "限量版风格",
+          "包含商业授权",
+          "HD导出用于3D打印"
+        ]
       },
       {
-        "title": "React",
-        "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "React"
-        }
+        "title": "社交媒体内容",
+        "icon": "📱",
+        "description": "为YouTube、TikTok、Instagram和直播生成病毒式角色手办。专为18-35岁创作者打造。",
+        "features": [
+          "社交媒体优化",
+          "即时病毒潜力",
+          "多格式导出",
+          "变现就绪"
+        ]
       },
       {
-        "title": "TailwindCSS",
-        "image": {
-          "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "TailwindCSS"
-        }
+        "title": "游戏角色",
+        "icon": "🎮",
+        "description": "为游戏、桌游RPG和虚拟世界设计定制头像、NPC和角色概念。",
+        "features": [
+          "奇幻和科幻风格",
+          "游戏就绪格式",
+          "角色表模板",
+          "RPG战役资产"
+        ]
       },
       {
-        "title": "Shadcn/UI",
-        "image": {
-          "src": "/imgs/logos/shadcn.svg",
-          "alt": "Shadcn/UI"
-        }
+        "title": "3D打印就绪",
+        "icon": "🖨️",
+        "description": "生成优化的角色手办，具备适当几何形状和可打印细节，专为3D打印而设计。",
+        "features": [
+          "打印优化几何",
+          "支撑友好设计",
+          "多尺寸选项",
+          "STL转换指南"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "AI驱动品质",
+        "icon": "Sparkles",
+        "description": "我们的纳米香蕉AI技术确保每个角色手办都达到专业品质标准，输出高分辨率且保持一致性。"
       },
       {
-        "title": "Vercel",
-        "image": {
-          "src": "/imgs/logos/vercel.svg",
-          "alt": "Vercel"
-        }
+        "title": "闪电般快速",
+        "icon": "Clock",
+        "description": "10秒内生成专业角色手办。无需等待，无需排队 - 只有即时创意成果。"
+      },
+      {
+        "title": "商业权利",
+        "icon": "Shield",
+        "description": "所有生成的角色手办都包含完整的商业使用权。完美适用于商业、转售和专业项目。"
       }
     ]
   },
-  "introduce": {
-    "name": "introduce",
-    "title": "什么是 AI 通用生成器",
-    "label": "介绍",
-    "description": "AI 通用生成器是一个全面的平台，集成了所有主流的文本、图像和视频生成 AI 模型。",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
+  "features": {
+    "title": "高级角色手办功能",
+    "description": "创建高质量角色手办的专业工具",
     "items": [
       {
-        "title": "即用型模板",
-        "description": "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
-        "icon": "RiNextjsFill"
+        "title": "10+种角色手办风格",
+        "description": "创建多样化角色手办，包括动漫、写实、奇幻风格",
+        "icon": "Palette"
       },
       {
-        "title": "基础设施配置",
-        "description": "立即获取内置最佳实践的可扩展基础设施。",
-        "icon": "RiDatabase2Line"
+        "title": "视频生成",
+        "description": "用AI将静态角色手办转换为动态视频",
+        "icon": "Video"
       },
       {
-        "title": "快速部署",
-        "description": "在几小时内将您的 AI SaaS 应用部署到生产环境，而不是几天。",
-        "icon": "RiCloudyFill"
+        "title": "闪电般快速",
+        "description": "用纳米香蕉AI在10秒内生成角色手办",
+        "icon": "Zap"
+      },
+      {
+        "title": "高清导出",
+        "description": "以高分辨率导出角色手办，适用于任何用途",
+        "icon": "Download"
+      },
+      {
+        "title": "商业许可",
+        "description": "所有角色手办都包含商业使用权",
+        "icon": "Shield"
+      },
+      {
+        "title": "全球平台",
+        "description": "支持6种语言，服务全世界创作者",
+        "icon": "Globe"
       }
     ]
   },
-  "benefit": {
-    "name": "benefit",
-    "title": "为什么选择 AI 通用生成器",
-    "label": "优势",
-    "description": "获取启动 AI 创业所需的一切 - 从即用型模板到技术支持。",
-    "items": [
-      {
-        "title": "完整框架",
-        "description": "基于 Next.js 构建，集成身份验证、支付和 AI 功能 - 一切开箱即用。",
-        "icon": "RiNextjsFill",
-        "image": {
-          "src": "/imgs/features/2.png"
-        }
-      },
-      {
-        "title": "丰富的模板库",
-        "description": "选择各种 AI SaaS 模板来启动您的项目 - 聊天机器人、图像生成等。",
-        "icon": "RiClapperboardAiLine",
-        "image": {
-          "src": "/imgs/features/3.png"
-        }
-      },
-      {
-        "title": "技术指导",
-        "description": "获得专门支持并加入我们的开发者社区，确保您成功启动。",
-        "icon": "RiCodeFill",
-        "image": {
-          "src": "/imgs/features/4.png"
-        }
-      }
-    ]
+  "gallery": {
+    "title": "社区创作的角色手办作品",
+    "description": "发现AI生成角色手办的惊人多样性和质量。从动漫风格到写实肖像，看看我们先进角色手办生成器的无限可能。",
+    "stats": {
+      "creators": "5万+ 创作者",
+      "generated": "100万+ 手办已生成"
+    }
   },
-  "usage": {
-    "name": "usage",
-    "title": "如何开始使用 AI 通用生成器",
-    "description": "通过三个简单步骤启动您的 AI SaaS 创业项目：",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
-    "image_position": "left",
-    "text_align": "center",
-    "items": [
+  "pricing": {
+    "title": "角色手办定价方案",
+    "description": "免费开始创建角色手办",
+    "plans": [
       {
-        "title": "注册账号",
-        "description": "创建您的账号并立即获得所有 AI 模型的访问权限和 API 密钥。",
-        "image": {
-          "src": "/imgs/features/5.png"
-        }
+        "name": "免费版",
+        "price": "￥0",
+        "description": "每天5张",
+        "button": "开始使用"
       },
       {
-        "title": "开始您的项目",
-        "description": "选择和配置您需要的 AI 模型。从我们的预配置模板开始。",
-        "image": {
-          "src": "/imgs/features/6.png"
-        }
+        "name": "创作者",
+        "price": "￥128",
+        "description": "每月100张",
+        "button": "开始创作",
+        "badge": "最超值"
       },
       {
-        "title": "定制您的项目",
-        "description": "使用您的数据和内容修改模板。满足特定的 AI 功能需求。",
-        "image": {
-          "src": "/imgs/features/7.png"
-        }
+        "name": "专业版",
+        "price": "￥328",
+        "description": "每月500张",
+        "button": "升级专业版"
       },
       {
-        "title": "部署到生产环境",
-        "description": "通过几个步骤将项目部署到生产环境，立即开始服务客户。",
-        "image": {
-          "src": "/imgs/features/8.png"
-        }
+        "name": "企业版",
+        "price": "￥1328",
+        "description": "无限制",
+        "button": "联系销售"
       }
-    ]
+    ],
+    "detailedPricing": "查看详细定价 →"
   },
-  "feature": {
-    "name": "feature",
-    "title": "AI 通用生成器核心功能",
-    "description": "快速高效启动 AI SaaS 创业所需的一切。",
-    "items": [
+  "howItWorks": {
+    "title": "如何创建角色手办",
+    "description": "三个简单步骤创建惊艳的角色手办",
+    "steps": [
       {
-        "title": "Next.js 模板",
-        "description": "生产就绪的 Next.js 模板，支持 SEO 友好结构和国际化。",
-        "icon": "RiNextjsFill"
+        "number": "1",
+        "title": "上传您的图片",
+        "description": "上传任何照片或使用文本描述开始创建您的角色手办。我们的AI可处理任何输入。"
       },
       {
-        "title": "身份验证和支付",
-        "description": "集成 Google OAuth、一键登录和 Stripe 支付处理。",
-        "icon": "RiKey2Fill"
+        "number": "2",
+        "title": "选择您的风格",
+        "description": "从10+种专业风格中选择，包括动漫、写实、吉卜力等。自定义每个细节。"
       },
       {
-        "title": "数据基础设施",
-        "description": "内置 Supabase 集成，提供可靠和可扩展的数据存储。",
-        "icon": "RiDatabase2Line"
-      },
-      {
-        "title": "一键部署",
-        "description": "无缝部署到 Vercel 或 Cloudflare，自动化设置。",
-        "icon": "RiCloudy2Fill"
-      },
-      {
-        "title": "业务分析",
-        "description": "集成 Google Analytics 和 Search Console 追踪增长。",
-        "icon": "RiBarChart2Line"
-      },
-      {
-        "title": "AI 就绪基础设施",
-        "description": "预配置 AI 集成，内置积分系统和 API 销售。",
-        "icon": "RiRobot2Line"
-      }
-    ]
-  },
-  "stats": {
-    "name": "stats",
-    "label": "统计",
-    "title": "全球开发者信赖的选择",
-    "description": "因为它易于使用且快速发布。",
-    "icon": "FaRegHeart",
-    "items": [
-      {
-        "title": "信任",
-        "label": "99+",
-        "description": "客户"
-      },
-      {
-        "title": "内置",
-        "label": "20+",
-        "description": "组件"
-      },
-      {
-        "title": "快速发布",
-        "label": "5",
-        "description": "分钟"
-      }
-    ]
-  },
-  "testimonial": {
-    "name": "testimonial",
-    "label": "用户评价",
-    "title": "用户如何评价 AI 通用生成器",
-    "description": "听听使用我们通用平台构建惊人 AI 应用的开发者和创始人怎么说。",
-    "icon": "GoThumbsup",
-    "items": [
-      {
-        "title": "陈大卫",
-        "label": "AI 平台开发者",
-        "description": "通用 AI 集成太棒了。在一个地方访问所有主流模型为我们节省了数月的集成工作。我们仅用几天就启动了 AI 应用！",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "金瑞秋",
-        "label": "TechVision 技术总监",
-        "description": "GPT-4、DALL-E 和其他模型的无缝集成是革命性的。我们无需担心不同的 API 就构建了多模态 AI 平台。",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "马库斯",
-        "label": "独立开发者",
-        "description": "作为独立开发者，这个平台让我立即访问 OpenAI、DeepSeek 和 FLUX 模型。统一的界面让开发速度飞快！",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "索菲亚",
-        "label": "Melodisco CEO",
-        "description": "这些模板可直接用于生产且高度可定制。我们用几小时而不是几个月就建立了 AI 音乐平台。上市时间令人难以置信！",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "詹姆斯",
-        "label": "GPTs.works 技术主管",
-        "description": "通用模型支持太棒了。我们可以在 OpenRouter 和 SiliconFlow 等提供商之间无缝切换。这是我们使用过的最好的 AI 基础设施。",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      },
-      {
-        "title": "张安娜",
-        "label": "创业者",
-        "description": "从想法到上线只用了 3 天！有了文本、图像和视频生成 API，我们可以立即验证我们的 AI 概念。",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
+        "number": "3",
+        "title": "下载并分享",
+        "description": "几秒内获得您的高质量角色手办。完美适用于社交媒体、打印或商业用途。"
       }
     ]
   },
   "faq": {
-    "name": "faq",
-    "label": "常见问题",
     "title": "常见问题",
-    "description": "还有其他问题？通过 Discord 或电子邮件联系我们。",
+    "description": "关于用AI创建角色手办你需要知道的一切",
     "items": [
       {
-        "title": "什么是 AI 通用生成器？",
-        "description": "AI 通用生成器是一个综合平台，提供对所有主流 AI 模型的统一访问，包括 GPT-4、DALL-E、Midjourney 等。通过单一界面生成文本、图像和视频。"
+        "question": "什么是角色手办生成器？",
+        "answer": "我们的AI角色手办生成器将照片、描述或想法转换为高质量数字角色手办。使用先进的纳米香蕉AI技术，创建多种风格的专业级手办，包括动漫、写实、奇幻等。完美适用于收藏家、创作者和商业用途。"
       },
       {
-        "title": "支持哪些 AI 模型？",
-        "description": "我们支持 20+ 模型，包括 OpenAI GPT-4、Anthropic Claude、Google Gemini、Meta Llama、DALL-E 3、Midjourney、FLUX、Stable Diffusion 等。定期添加新模型。"
+        "question": "AI角色手办生成如何工作？",
+        "answer": "只需上传照片或输入描述，选择您喜欢的风格（动漫、写实、赛博朋克等），我们的AI分析输入生成独特的角色手办。整个过程不到10秒，使用在数百万高质量角色设计上训练的机器学习模型。"
       },
       {
-        "title": "价格如何计算？",
-        "description": "我们提供灵活的定价，包括按需付费和订阅选项。您只需为使用的内容付费，每个模型都有透明的定价。从免费积分开始测试平台。"
+        "question": "支持哪些文件格式？",
+        "answer": "我们接受最大20MB的JPEG、PNG、GIF和WEBP文件作为输入。生成的角色手办以高分辨率PNG文件交付，优化用于打印、社交媒体或数字使用。我们还提供多种纵横比，包括正方形(1:1)、纵向(2:3)和横向(3:2)。"
       },
       {
-        "title": "可以使用自己的 API 密钥吗？",
-        "description": "当然可以！您可以带来任何支持的提供商的自己的 API 密钥。这让您可以完全控制使用量和计费，同时仍然受益于我们的统一界面。"
+        "question": "能否将生成的角色手办用于商业用途？",
+        "answer": "可以！使用我们生成器创建的所有角色手办都包含完整的商业使用权。您可以将它们用于商业、转售、营销、社交媒体、商品和任何商业目的，无需额外的许可费用。这适用于所有付费计划。"
       },
       {
-        "title": "是否提供开发者 API？",
-        "description": "当然！我们提供全面的 REST API 和流行编程语言的 SDK。只需几行代码就可以将 AI 生成功能集成到您的应用中。"
+        "question": "角色手办生成需要多长时间？",
+        "answer": "大多数角色手办在10秒内生成。复杂请求或大批量生成可能需要稍长时间，但我们的纳米香蕉AI经过速度优化。无需排队或等待时间 - 您可获得即时结果。"
       },
       {
-        "title": "我可以自定义模板以匹配我的品牌吗？",
-        "description": "我们非常重视安全。所有数据在传输和存储时都进行加密。除非您明确保存，否则我们不会存储您的提示或生成的内容。完全符合 GDPR 和 SOC 2。"
+        "question": "有哪些角色手办风格？",
+        "answer": "我们提供10+种专业风格，包括：动漫、写实、奇幻战士、赛博朋克、吉卜力、超级英雄、泡泡玛特、油画、水彩和像素艺术。每种风格都针对不同用例精心优化，从收藏品到社交媒体内容。"
+      },
+      {
+        "question": "提供退款吗？",
+        "answer": "是的，我们为所有付费订阅提供30天退款保证。如果您对角色手办的质量不完全满意，请联系我们的支持团队申请全额退款。免费用户可在升级前测试生成器。"
+      },
+      {
+        "question": "定价如何计算？",
+        "answer": "定价基于每月可生成的角色手办数量：免费版（每天5张）、创作者（￥128/月100张）、专业版（￥328/月500张）和企业版（￥1328/月无限制）。无论风格或复杂程度，每次生成使用1个积分。"
+      },
+      {
+        "question": "可以随时取消订阅吗？",
+        "answer": "当然可以！您可以随时从账户设置中取消订阅。没有取消费用或长期承诺。您未使用的积分在计费周期结束前仍然可用。"
+      },
+      {
+        "question": "角色手办输出的分辨率是多少？",
+        "answer": "所有角色手办都以高分辨率生成（通常为1024x1024或根据纵横比更高）。这确保它们完美适用于打印、社交媒体、商业用途或任何专业应用。我们在所有风格中保持一致的质量。"
+      },
+      {
+        "question": "我的数据和角色手办是私密的吗？",
+        "answer": "是的，您的隐私是我们的优先考虑。上传的图片经过安全处理，生成后删除。生成的角色手办属于您，除非您选择在社区画廊中分享，否则是私密的。我们永远不会将您的内容用于训练或其他目的。"
+      },
+      {
+        "question": "可以生成用于3D打印的角色手办吗？",
+        "answer": "可以！我们的角色手办针对包括3D打印在内的各种用途进行了优化。虽然我们生成2D图像，但设计时考虑了适当的几何形状和可打印细节。我们提供转换为3D格式和针对不同打印机优化的指南。"
       }
-    ]
+    ],
+    "contact": {
+      "text": "还有其他问题？",
+      "link": "联系客服"
+    }
   },
   "cta": {
-    "name": "cta",
-    "title": "启动您的第一个 AI SaaS 创业项目",
-    "description": "加入数千名使用我们平台的开发者。",
-    "buttons": [
-      {
-        "title": "开始使用",
-        "url": "/pricing",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
-      },
-      {
-        "title": "阅读文档",
-        "url": "/docs",
-        "target": "_blank",
-        "variant": "outline"
-      }
-    ]
-  },
-  "footer": {
-    "name": "footer",
-    "brand": {
-      "title": "AI 通用生成器",
-      "description": "最全面的 AI 平台，统一访问所有主流语言、图像和视频模型。通过单一集成构建强大的 AI 应用。",
-      "logo": {
-        "src": "/logo.png",
-        "alt": "AI 通用生成器"
-      },
-      "url": "/"
-    },
-    "copyright": "© 2025 • AI 通用生成器。由尖端 AI 技术驱动。",
-    "nav": {
-      "items": [
-        {
-          "title": "平台",
-          "children": [
-            {
-              "title": "AI 模型",
-              "url": "/#feature",
-              "target": "_self"
-            },
-            {
-              "title": "定价",
-              "url": "/#pricing",
-              "target": "_self"
-            },
-            {
-              "title": "API 访问",
-              "url": "/#api",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "AI 模型",
-          "children": [
-            {
-              "title": "文本生成",
-              "url": "/#text-models",
-              "target": "_self"
-            },
-            {
-              "title": "图像生成",
-              "url": "/#image-models",
-              "target": "_self"
-            },
-            {
-              "title": "视频生成",
-              "url": "/#video-models",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "提供商",
-          "children": [
-            {
-              "title": "OpenAI",
-              "url": "https://openai.com",
-              "target": "_blank"
-            },
-            {
-              "title": "Anthropic",
-              "url": "https://anthropic.com",
-              "target": "_blank"
-            },
-            {
-              "title": "Google AI",
-              "url": "https://ai.google",
-              "target": "_blank"
-            }
-          ]
-        }
-      ]
-    },
-    "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/aiuniversalgen",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/ai-universal-generator",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/ai-universal",
-          "target": "_blank"
-        },
-        {
-          "title": "邮箱",
-          "icon": "RiMailLine",
-          "url": "mailto:support@aiuniversal.dev",
-          "target": "_self"
-        }
-      ]
-    },
-    "agreement": {
-      "items": [
-        {
-          "title": "隐私政策",
-          "url": "/privacy-policy"
-        },
-        {
-          "title": "服务条款",
-          "url": "/terms-of-service"
-        }
-      ]
-    }
+    "title": "今天就开始创建角色手办",
+    "description": "加入成千上万使用我们角色手办生成器将创意变为现实的用户",
+    "button": "免费创建您的第一个角色手办"
   }
 }

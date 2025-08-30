@@ -1,3 +1,8 @@
+---
+title: Claude Code 自动化任务指南
+description: Claude Code 自动化能力研究和最大化利用指南
+---
+
 # Claude Code 自动化任务指南
 
 ## 📋 概述

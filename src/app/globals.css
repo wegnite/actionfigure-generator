@@ -37,6 +37,31 @@
   animation: gradient 6s ease infinite;
 }
 
+/* Character Figure gradients */
+.cf-gradient-primary {
+  background: linear-gradient(135deg, 
+    oklch(0.67 0.18 35.73) 0%, 
+    oklch(0.75 0.25 78.45) 100%);
+}
+
+.cf-gradient-secondary {
+  background: linear-gradient(135deg, 
+    oklch(0.72 0.24 58.35) 0%, 
+    oklch(0.80 0.22 78.45) 100%);
+}
+
+.cf-gradient-accent {
+  background: linear-gradient(135deg, 
+    oklch(0.82 0.15 58.35) 0%, 
+    oklch(0.90 0.12 78.45) 100%);
+}
+
+.cf-gradient-light {
+  background: linear-gradient(135deg, 
+    oklch(0.94 0.05 58.35) 0%, 
+    oklch(0.98 0.02 78.45) 100%);
+}
+
 .container {
   @apply mx-auto max-w-7xl px-4 md:px-8;
 }

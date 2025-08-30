@@ -83,7 +83,7 @@ export async function checkEnvironmentVariables(): Promise<CheckResult> {
     const result = EnvSchema.safeParse(process.env);
     
     if (!result.success) {
-      const errors = result.error.errors.map(err => `${err.path.join('.')}: ${err.message}`);
+      const errors = result.error.issues.map(err => `${err.path.join('.')}: ${err.message}`);
       return {
         passed: false,
         message: 'Environment variable validation failed',

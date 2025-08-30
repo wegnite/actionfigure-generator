@@ -1,4 +1,33 @@
 User-agent: *
+Allow: /
+
+# 允许所有主要搜索引擎抓取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# 禁止抓取管理后台和API
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /dashboard/
 Disallow: /*?*q=
-Disallow: /privacy-policy
-Disallow: /terms-of-service
+
+# 重要: 允许抓取 Privacy Policy 和 Terms of Service (AdSense 必需)
+Allow: /privacy-policy/
+Allow: /terms-of-service/
+Allow: /blog/
+Allow: /tools/
+Allow: /sitemap.xml
+Allow: /ads.txt
+
+# 网站地图位置
+Sitemap: https://actionfigure-generator.com/sitemap.xml
+
+# 爬取频率限制
+Crawl-delay: 1

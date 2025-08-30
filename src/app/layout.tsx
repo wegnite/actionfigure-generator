@@ -12,7 +12,7 @@ export default async function RootLayout({
   const locale = await getLocale();
   setRequestLocale(locale);
 
-  const webUrl = process.env.NEXT_PUBLIC_WEB_URL || "";
+  const webUrl = process.env.NEXT_PUBLIC_WEB_URL;
   const googleAdsenseCode = process.env.NEXT_PUBLIC_GOOGLE_ADCODE || "";
 
   return (
@@ -26,7 +26,7 @@ export default async function RootLayout({
 
         <link rel="icon" href="/favicon.ico" />
 
-        {locales &&
+        {webUrl && locales &&
           locales.map((loc) => (
             <link
               key={loc}
@@ -35,7 +35,7 @@ export default async function RootLayout({
               href={`${webUrl}${loc === "en" ? "" : `/${loc}`}/`}
             />
           ))}
-        <link rel="alternate" hrefLang="x-default" href={webUrl} />
+        {webUrl && <link rel="alternate" hrefLang="x-default" href={webUrl} />}
       </head>
       <body className={cn("min-h-screen overflow-x-hidden dark")}>{children}</body>
     </html>

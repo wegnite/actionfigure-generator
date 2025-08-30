@@ -34,24 +34,24 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
   }, []);
   
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-yellow-50 to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 md:py-24">
+    <section className="relative overflow-hidden cf-gradient-light dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 md:py-24">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-orange-300/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-yellow-300/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[var(--cf-orange-300)]/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[var(--cf-yellow-300)]/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/30 rounded-full text-orange-600 dark:text-orange-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--cf-orange-100)] dark:bg-[var(--cf-orange-900)]/30 rounded-full text-[var(--cf-orange-600)] dark:text-[var(--cf-orange-400)] text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
               Powered by nano-banana AI
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--cf-orange-500)] to-[var(--cf-yellow-500)] bg-clip-text text-transparent">
                 {locale === 'zh' ? '使用 AI 创建' : 'Create Amazing'}
               </span>
               <br />
@@ -69,7 +69,7 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold px-8"
+                className="cf-gradient-primary hover:opacity-90 transition-opacity text-white font-semibold px-8 shadow-lg"
                 onClick={() => document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Sparkles className="mr-2 h-5 w-5" />
@@ -78,7 +78,7 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
               </Button>
               
               <Link href="#gallery">
-                <Button size="lg" variant="outline" className="border-orange-300 hover:bg-orange-50 dark:hover:bg-orange-900/20">
+                <Button size="lg" variant="outline" className="border-[var(--cf-orange-300)] hover:bg-[var(--cf-orange-50)] dark:hover:bg-[var(--cf-orange-900)]/20 text-[var(--cf-orange-600)] dark:text-[var(--cf-orange-400)]">
                   {locale === 'zh' ? '浏览作品集' : 'Browse Gallery'}
                 </Button>
               </Link>
@@ -87,21 +87,21 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-12">
               <div>
-                <div className="text-3xl font-bold text-orange-500">10K+</div>
+                <div className="text-3xl font-bold text-[var(--cf-orange-500)]">50K+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {locale === 'zh' ? '创作者' : 'Creators'}
+                  {locale === 'zh' ? '创作者' : 'Character Figure Creators'}
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-orange-500">100K+</div>
+                <div className="text-3xl font-bold text-[var(--cf-orange-500)]">1M+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {locale === 'zh' ? '生成作品' : 'Artworks'}
+                  {locale === 'zh' ? '生成作品' : 'Character Figures Created'}
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-orange-500">4.9/5</div>
+                <div className="text-3xl font-bold text-[var(--cf-orange-500)]">4.9/5</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {locale === 'zh' ? '用户评分' : 'Rating'}
+                  {locale === 'zh' ? '用户评分' : 'User Rating'}
                 </div>
               </div>
             </div>
@@ -111,14 +111,14 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
           <div className="relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               {/* Main showcase image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-3xl transform rotate-3" />
+              <div className="absolute inset-0 cf-gradient-secondary rounded-3xl transform rotate-3" />
               <div className="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-2xl">
                 <div className="p-2">
                   <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl overflow-hidden">
                     {/* Placeholder for actual images */}
-                    <div className="aspect-square bg-gradient-to-br from-orange-200 to-yellow-200 dark:from-orange-800 dark:to-yellow-800 flex items-center justify-center">
+                    <div className="aspect-square cf-gradient-accent flex items-center justify-center">
                       <div className="text-center p-8">
-                        <Sparkles className="w-24 h-24 text-orange-500 mx-auto mb-4" />
+                        <Sparkles className="w-24 h-24 text-[var(--cf-orange-600)] mx-auto mb-4" />
                         <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                           {locale === 'zh' ? 'AI 生成示例' : 'AI Generated Sample'}
                         </p>

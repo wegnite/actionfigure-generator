@@ -139,7 +139,7 @@
   },
   
   // Markdown 扩展支持
-  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdown.extension.preview.autoShowPreviewToSide": false,
   "markdown.extension.print.theme": "light",
   "markdown.extension.toc.updateOnSave": true,
   

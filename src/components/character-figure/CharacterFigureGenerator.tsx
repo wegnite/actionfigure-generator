@@ -222,23 +222,23 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Left Panel - Input */}
         <div className="space-y-6">
-          <Card className="p-6 border-orange-200 dark:border-orange-900">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-orange-500" />
+          <Card className="p-6 bg-white/90 dark:bg-gray-900/90 border-[var(--cf-orange-200)] dark:border-[var(--cf-orange-800)]">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
+              <Sparkles className="w-6 h-6 text-[var(--cf-orange-500)]" />
               Input Settings
             </h2>
             
             <Tabs value={generationTab} onValueChange={setGenerationTab}>
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="upload">Image to Image</TabsTrigger>
-                <TabsTrigger value="text">Text to Image</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 bg-[var(--cf-orange-100)] dark:bg-[var(--cf-orange-900)]/30">
+                <TabsTrigger value="upload" className="data-[state=active]:bg-[var(--cf-orange-500)] data-[state=active]:text-white">Image to Image</TabsTrigger>
+                <TabsTrigger value="text" className="data-[state=active]:bg-[var(--cf-orange-500)] data-[state=active]:text-white">Text to Image</TabsTrigger>
               </TabsList>
               
               <TabsContent value="upload" className="space-y-4">
                 <div
                   onDragOver={handleDragOver}
                   onDrop={handleDrop}
-                  className="border-2 border-dashed border-orange-300 dark:border-orange-700 rounded-lg p-8 text-center hover:border-orange-400 transition-colors cursor-pointer"
+                  className="border-2 border-dashed border-[var(--cf-orange-300)] dark:border-[var(--cf-orange-700)] rounded-lg p-8 text-center hover:border-[var(--cf-orange-400)] transition-colors cursor-pointer"
                   onClick={() => document.getElementById('image-upload')?.click()}
                 >
                   {uploadedImage ? (
@@ -262,7 +262,7 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
                     </div>
                   ) : (
                     <>
-                      <Upload className="w-12 h-12 text-orange-400 mx-auto mb-4" />
+                      <Upload className="w-12 h-12 text-[var(--cf-orange-400)] mx-auto mb-4" />
                       <p className="text-lg font-medium mb-2">
                         Drag & drop your image here
                       </p>
@@ -309,8 +309,8 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
           </Card>
           
           {/* Style Selection */}
-          <Card className="p-6 border-orange-200 dark:border-orange-900">
-            <h3 className="text-lg font-semibold mb-4">Select Style</h3>
+          <Card className="p-6 bg-white/90 dark:bg-gray-900/90 border-[var(--cf-orange-200)] dark:border-[var(--cf-orange-800)]">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Select Style</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {STYLE_PRESETS.map((style) => (
                 <button
@@ -318,8 +318,8 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
                   onClick={() => setSelectedStyle(style.id)}
                   className={`p-4 rounded-lg border-2 transition-all hover:shadow-md ${
                     selectedStyle === style.id
-                      ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
-                      : 'border-gray-200 dark:border-gray-700 hover:border-orange-300'
+                      ? 'border-[var(--cf-orange-500)] bg-[var(--cf-orange-50)] dark:bg-[var(--cf-orange-900)]/20'
+                      : 'border-gray-200 dark:border-gray-700 hover:border-[var(--cf-orange-300)]'
                   }`}
                 >
                   <div className="text-2xl mb-2">{style.icon}</div>
@@ -335,8 +335,8 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
           </Card>
           
           {/* Advanced Settings */}
-          <Card className="p-6 border-orange-200 dark:border-orange-900">
-            <h3 className="text-lg font-semibold mb-4">Advanced Settings</h3>
+          <Card className="p-6 bg-white/90 dark:bg-gray-900/90 border-[var(--cf-orange-200)] dark:border-[var(--cf-orange-800)]">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Advanced Settings</h3>
             <div className="space-y-4">
               <div>
                 <Label>Aspect Ratio</Label>
@@ -372,7 +372,7 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
                 <Label>Number of Images: {numImages}</Label>
                 <Slider
                   value={[parseInt(numImages)]}
-                  onValueChange={(v) => setNumImages(v[0].toString())}
+                  onValueChange={(v: number[]) => setNumImages(v[0].toString())}
                   min={1}
                   max={4}
                   step={1}
@@ -384,7 +384,7 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
           
           {/* Generate Button with Authentication Check */}
           {!session && (
-            <div className="mb-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-sm text-orange-700 dark:text-orange-300">
+            <div className="mb-3 p-3 bg-[var(--cf-orange-50)] dark:bg-[var(--cf-orange-900)]/20 rounded-lg text-sm text-[var(--cf-orange-700)] dark:text-[var(--cf-orange-300)]">
               <LogIn className="inline-block mr-2 h-4 w-4" />
               登录后即可开始生成 / Sign in to start generating
             </div>
@@ -393,7 +393,7 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
             onClick={handleGenerate}
             disabled={isGenerating}
             size="lg"
-            className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold"
+            className="w-full cf-gradient-primary hover:opacity-90 transition-opacity text-white font-semibold shadow-lg"
           >
             {isGenerating ? (
               <>
@@ -416,8 +416,13 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
         
         {/* Right Panel - Output */}
         <div className="space-y-6">
-          <Card className="p-6 border-orange-200 dark:border-orange-900 min-h-[600px]">
-            <h2 className="text-2xl font-bold mb-4">Output Gallery</h2>
+          <Card className="p-6 bg-white/90 dark:bg-gray-900/90 border-[var(--cf-orange-200)] dark:border-[var(--cf-orange-800)] min-h-[600px]">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
+              <div className="w-6 h-6 cf-gradient-primary rounded-full flex items-center justify-center">
+                <div className="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+              Output Gallery
+            </h2>
             
             {generatedImages.length > 0 ? (
               <div className="space-y-4">
@@ -471,10 +476,10 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
               </div>
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center p-8">
-                <div className="w-24 h-24 mb-6 bg-orange-100 dark:bg-orange-900/20 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-12 h-12 text-orange-500" />
+                <div className="w-24 h-24 mb-6 bg-[var(--cf-orange-100)] dark:bg-[var(--cf-orange-900)]/20 rounded-full flex items-center justify-center">
+                  <Sparkles className="w-12 h-12 text-[var(--cf-orange-500)]" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Ready for instant generation</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Ready for instant generation</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Enter your prompt and unleash the power of AI
                 </p>

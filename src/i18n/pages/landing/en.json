@@ -1,12 +1,12 @@
 {
-  "template": "ai-universal-generator",
-  "theme": "dark",
+  "template": "character-figure-generator",
+  "theme": "orange",
   "header": {
     "brand": {
-      "title": "AI Universal Generator",
+      "title": "Character Figure AI Generator",
       "logo": {
         "src": "/logo.png",
-        "alt": "AI Universal Generator"
+        "alt": "Character Figure AI Generator"
       },
       "url": "/"
     },
@@ -21,6 +21,11 @@
           "title": "Pricing",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "Generator",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
         }
       ]
     },
@@ -30,457 +35,263 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Universal AI Platform",
-    "highlight_text": "Universal AI",
-    "description": "Access all major AI models in one place.<br/>Generate text, images, and videos with cutting-edge AI technology.",
+    "title": "Character Figure",
+    "subtitle": "AI Generator",
+    "description": "Transform your creative vision into stunning character figures with advanced AI. Professional quality in seconds.",
     "announcement": {
       "label": "New",
-      "title": "✨ New Era of AI Creation",
+      "title": "✨ Powered by Nano-Banana AI",
       "url": "/pricing"
     },
-    "tip": "🚀 Start Creating with AI",
-    "badge": "✨ New Era of AI Image Creation",
+    "tip": "🚀 Start Creating Character Figures",
+    "badge": "✨ Powered by Nano-Banana AI",
     "buttons": [
       {
-        "title": "Get Started",
+        "title": "Start Creating Character Figures",
         "icon": "RiFlashlightFill",
-        "url": "/pricing",
+        "url": "#generator",
         "target": "_self",
         "variant": "default"
       },
       {
-        "title": "Read Document",
-        "icon": "RiBookOpenLine",
-        "url": "/docs",
-        "target": "_blank",
+        "title": "Browse Gallery",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
         "variant": "outline"
       }
     ],
-    "show_happy_users": true,
-    "show_badge": false
+    "stats": {
+      "users": "50K+ Creators",
+      "rating": "4.9/5 Rating",
+      "created": "1M+ Figures Created"
+    }
   },
-  "branding": {
-    "title": "Powered by Industry-Leading Technologies",
-    "items": [
+  "whatYouCanCreate": {
+    "title": "What You Can Create with AI Character Figures",
+    "description": "Transform any idea into professional character figures using advanced AI. Perfect for collectors, creators, and professionals who demand quality and creativity.",
+    "categories": [
       {
-        "title": "Next.js",
-        "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "Next.js"
-        }
+        "title": "Premium Collectibles",
+        "icon": "🏆",
+        "description": "Create high-end character figures for adult collectors aged 25-49. Perfect for display cases, conventions, and personal collections.",
+        "features": [
+          "Museum-quality detail",
+          "Limited edition styles",
+          "Commercial licensing included",
+          "HD export for 3D printing"
+        ]
       },
       {
-        "title": "React",
-        "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "React"
-        }
+        "title": "Social Media Content",
+        "icon": "📱",
+        "description": "Generate viral character figures for YouTube, TikTok, Instagram, and streaming. Built for creators aged 18-35.",
+        "features": [
+          "Social media optimized",
+          "Instant viral potential",
+          "Multiple format exports",
+          "Monetization ready"
+        ]
       },
       {
-        "title": "TailwindCSS",
-        "image": {
-          "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "TailwindCSS"
-        }
+        "title": "Game Characters",
+        "icon": "🎮",
+        "description": "Design custom avatars, NPCs, and character concepts for games, tabletop RPGs, and virtual worlds.",
+        "features": [
+          "Fantasy & sci-fi styles",
+          "Game-ready formats",
+          "Character sheet templates",
+          "RPG campaign assets"
+        ]
       },
       {
-        "title": "Shadcn/UI",
-        "image": {
-          "src": "/imgs/logos/shadcn.svg",
-          "alt": "Shadcn/UI"
-        }
+        "title": "3D Print Ready",
+        "icon": "🖨️",
+        "description": "Generate character figures optimized for 3D printing with proper geometry and printable details.",
+        "features": [
+          "Print-optimized geometry",
+          "Support-friendly design",
+          "Multiple scale options",
+          "STL conversion guides"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "AI-Powered Quality",
+        "icon": "Sparkles",
+        "description": "Our nano-banana AI technology ensures every character figure meets professional quality standards with consistent, high-resolution outputs."
       },
       {
-        "title": "Vercel",
-        "image": {
-          "src": "/imgs/logos/vercel.svg",
-          "alt": "Vercel"
-        }
+        "title": "Lightning Fast",
+        "icon": "Clock",
+        "description": "Generate professional character figures in under 10 seconds. No waiting, no queues - just instant creative results."
+      },
+      {
+        "title": "Commercial Rights",
+        "icon": "Shield",
+        "description": "All generated character figures include full commercial usage rights. Perfect for business, resale, and professional projects."
       }
     ]
   },
-  "introduce": {
-    "name": "introduce",
-    "title": "What is AI Universal Generator",
-    "label": "Introduce",
-    "description": "AI Universal Generator is a comprehensive platform that integrates all major AI models for text, image, and video generation.",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
+  "features": {
+    "title": "Advanced Character Figure Features",
+    "description": "Professional tools for creating high-quality character figures",
     "items": [
       {
-        "title": "Universal Model Access",
-        "description": "Access 20+ AI models from OpenAI, DeepSeek, FLUX, DALL-E, and more through a single interface.",
-        "icon": "RiNextjsFill"
+        "title": "10+ Character Figure Styles",
+        "description": "Create diverse character figures including anime, realistic, fantasy styles",
+        "icon": "Palette"
       },
       {
-        "title": "Multi-Modal Generation",
-        "description": "Generate text, images, and videos with cutting-edge AI technology in one unified platform.",
-        "icon": "RiDatabase2Line"
+        "title": "Video Generation",
+        "description": "Transform static character figures into dynamic videos with AI",
+        "icon": "Video"
       },
       {
-        "title": "Instant Integration",
-        "description": "Start generating AI content immediately with pre-configured API integrations and unified billing.",
-        "icon": "RiCloudyFill"
+        "title": "Lightning Fast",
+        "description": "Generate character figures in under 10 seconds with nano-banana AI",
+        "icon": "Zap"
+      },
+      {
+        "title": "HD Export",
+        "description": "Export character figures in high resolution for any use",
+        "icon": "Download"
+      },
+      {
+        "title": "Commercial License",
+        "description": "All character figures include commercial usage rights",
+        "icon": "Shield"
+      },
+      {
+        "title": "Global Platform",
+        "description": "Available in 6 languages for creators worldwide",
+        "icon": "Globe"
       }
     ]
   },
-  "benefit": {
-    "name": "benefit",
-    "title": "Why Choose AI Universal Generator",
-    "label": "Benefits",
-    "description": "The most comprehensive AI platform that brings all major models together with unified access and billing.",
-    "items": [
-      {
-        "title": "All-in-One AI Platform",
-        "description": "Integrated with all major AI providers - OpenAI, Anthropic, Google, Meta, and more in a single platform.",
-        "icon": "RiNextjsFill",
-        "image": {
-          "src": "/imgs/features/2.png"
-        }
-      },
-      {
-        "title": "Unified Model Interface",
-        "description": "Switch between different AI models seamlessly without changing code - compare and choose the best for your needs.",
-        "icon": "RiClapperboardAiLine",
-        "image": {
-          "src": "/imgs/features/3.png"
-        }
-      },
-      {
-        "title": "Enterprise-Ready Infrastructure",
-        "description": "Production-ready with built-in authentication, rate limiting, usage tracking, and automatic billing.",
-        "icon": "RiCodeFill",
-        "image": {
-          "src": "/imgs/features/4.png"
-        }
-      }
-    ]
+  "gallery": {
+    "title": "Character Figures Created by Our Community",
+    "description": "Discover the incredible diversity and quality of AI-generated character figures. From anime styles to realistic portraits, see what's possible with our advanced character figure generator.",
+    "stats": {
+      "creators": "50,000+ Creators",
+      "generated": "1M+ Figures Generated"
+    }
   },
-  "usage": {
-    "name": "usage",
-    "title": "How to Start with AI Universal Generator",
-    "description": "Get your AI platform running in simple steps:",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
-    "image_position": "left",
-    "text_align": "center",
-    "items": [
+  "pricing": {
+    "title": "Character Figure Pricing Plans",
+    "description": "Start creating character figures for free",
+    "plans": [
       {
-        "title": "Sign Up",
-        "description": "Create your account and get instant access to all AI models with your API keys.",
-        "image": {
-          "src": "/imgs/features/5.png"
-        }
+        "name": "Free",
+        "price": "$0",
+        "description": "5 per day",
+        "button": "Get Started"
       },
       {
-        "title": "Configure Models",
-        "description": "Select and configure the AI models you need. Start with our pre-configured templates.",
-        "image": {
-          "src": "/imgs/features/6.png"
-        }
+        "name": "Creator",
+        "price": "$19",
+        "description": "100 per month",
+        "button": "Start Creating",
+        "badge": "BEST VALUE"
       },
       {
-        "title": "Generate Content",
-        "description": "Start generating text, images, and videos with our unified interface.",
-        "image": {
-          "src": "/imgs/features/7.png"
-        }
+        "name": "Professional",
+        "price": "$49",
+        "description": "500 per month",
+        "button": "Go Pro"
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
-        "image": {
-          "src": "/imgs/features/8.png"
-        }
+        "name": "Enterprise",
+        "price": "$199",
+        "description": "Unlimited",
+        "button": "Contact Sales"
       }
-    ]
+    ],
+    "detailedPricing": "View detailed pricing →"
   },
-  "feature": {
-    "name": "feature",
-    "title": "Key Features of AI Universal Generator",
-    "description": "Everything you need to build powerful AI applications with unified access.",
-    "items": [
+  "howItWorks": {
+    "title": "How to Create Character Figures",
+    "description": "Three simple steps to amazing character figure creation",
+    "steps": [
       {
-        "title": "Universal AI Access",
-        "description": "Access 20+ AI models from all major providers through a single unified API.",
-        "icon": "RiNextjsFill"
+        "number": "1",
+        "title": "Upload Your Image",
+        "description": "Upload any photo or use text description to start creating your character figure. Our AI works with any input."
       },
       {
-        "title": "Smart Model Selection",
-        "description": "Automatically choose the best model for your task or manually select from available options.",
-        "icon": "RiKey2Fill"
+        "number": "2",
+        "title": "Choose Your Style",
+        "description": "Select from 10+ professional styles including anime, realistic, Ghibli, and more. Customize every detail."
       },
       {
-        "title": "Real-time Generation",
-        "description": "Stream responses for text generation and track progress for image/video creation.",
-        "icon": "RiDatabase2Line"
-      },
-      {
-        "title": "Usage Analytics",
-        "description": "Track model usage, costs, and performance across all your AI generations.",
-        "icon": "RiCloudy2Fill"
-      },
-      {
-        "title": "Flexible Pricing",
-        "description": "Pay-as-you-go or subscription models with transparent pricing for all AI models.",
-        "icon": "RiBarChart2Line"
-      },
-      {
-        "title": "Enterprise Ready",
-        "description": "Built-in authentication, rate limiting, and team collaboration features.",
-        "icon": "RiRobot2Line"
-      }
-    ]
-  },
-  "stats": {
-    "name": "stats",
-    "label": "Stats",
-    "title": "Trusted by Developers Worldwide",
-    "description": "Building the future of AI applications.",
-    "icon": "FaRegHeart",
-    "items": [
-      {
-        "title": "Trusted by",
-        "label": "99+",
-        "description": "Customers"
-      },
-      {
-        "title": "Built in",
-        "label": "20+",
-        "description": "Components"
-      },
-      {
-        "title": "Ship Fast in",
-        "label": "5",
-        "description": "Minutes"
-      }
-    ]
-  },
-  "testimonial": {
-    "name": "testimonial",
-    "label": "Testimonial",
-    "title": "What Users Say About AI Universal Generator",
-    "description": "Hear from developers and founders who built amazing AI applications with our universal platform.",
-    "icon": "GoThumbsup",
-    "items": [
-      {
-        "title": "David Chen",
-        "label": "AI Platform Developer",
-        "description": "The universal AI integration is incredible. Having access to all major models in one place saved us months of integration work. We launched our AI app in just days!",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "Rachel Kim",
-        "label": "CTO at TechVision",
-        "description": "The seamless integration of GPT-4, DALL-E, and other models is game-changing. We built our multi-modal AI platform without worrying about different APIs.",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "Marcus Thompson",
-        "label": "Solo Developer",
-        "description": "As a solo developer, this platform gave me instant access to OpenAI, DeepSeek, and FLUX models. The unified interface made development incredibly fast!",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "Sofia Garcia",
-        "label": "CEO of CreativeAI",
-        "description": "The dark mode UI and modern design perfectly match our AI brand. Supporting 20+ models out of the box accelerated our time-to-market significantly.",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "James Wilson",
-        "label": "Tech Lead at AIFlow",
-        "description": "The universal model support is fantastic. We can switch between providers like OpenRouter and SiliconFlow seamlessly. Best AI infrastructure we've used.",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      },
-      {
-        "title": "Anna Zhang",
-        "label": "AI Startup Founder",
-        "description": "From idea to launch in 3 days! Having text, image, and video generation APIs ready to use made it possible to validate our AI concept instantly.",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
+        "number": "3",
+        "title": "Download & Share",
+        "description": "Get your high-quality character figure in seconds. Perfect for social media, printing, or commercial use."
       }
     ]
   },
   "faq": {
-    "name": "faq",
-    "label": "FAQ",
     "title": "Frequently Asked Questions",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "description": "Everything you need to know about creating character figures with AI",
     "items": [
       {
-        "title": "What is AI Universal Generator?",
-        "description": "AI Universal Generator is a comprehensive platform that provides unified access to all major AI models including GPT-4, DALL-E, Midjourney, and more. Generate text, images, and videos through a single interface."
+        "question": "What is a character figure generator?",
+        "answer": "Our AI character figure generator transforms photos, descriptions, or ideas into high-quality digital character figures. Using advanced nano-banana AI technology, it creates professional-grade figures in multiple styles including anime, realistic, fantasy, and more. Perfect for collectors, creators, and businesses."
       },
       {
-        "title": "Which AI models are supported?",
-        "description": "We support 20+ models including OpenAI GPT-4, Anthropic Claude, Google Gemini, Meta Llama, DALL-E 3, Midjourney, FLUX, Stable Diffusion, and many more. New models are added regularly."
+        "question": "How does AI character figure generation work?",
+        "answer": "Simply upload a photo or enter a description, choose your preferred style (anime, realistic, cyberpunk, etc.), and our AI analyzes the input to generate a unique character figure. The process takes under 10 seconds and uses machine learning models trained on millions of high-quality character designs."
       },
       {
-        "title": "How does pricing work?",
-        "description": "We offer flexible pricing with both pay-as-you-go and subscription options. You only pay for what you use, with transparent pricing for each model. Start with free credits to test the platform."
+        "question": "What file formats do you support?",
+        "answer": "We accept JPEG, PNG, GIF, and WEBP files up to 20MB for input. Generated character figures are delivered as high-resolution PNG files optimized for printing, social media, or digital use. We also provide multiple aspect ratios including square (1:1), portrait (2:3), and landscape (3:2)."
       },
       {
-        "title": "Can I use my own API keys?",
-        "description": "Yes! You can bring your own API keys for any supported provider. This gives you full control over your usage and billing while still benefiting from our unified interface."
+        "question": "Can I use generated character figures commercially?",
+        "answer": "Yes! All character figures created with our generator include full commercial usage rights. You can use them for business, resale, marketing, social media, merchandise, and any commercial purposes without additional licensing fees. This applies to all paid plans."
       },
       {
-        "title": "Is there an API for developers?",
-        "description": "Absolutely! We provide a comprehensive REST API and SDKs for popular programming languages. Integrate AI generation capabilities into your applications with just a few lines of code."
+        "question": "How long does character figure generation take?",
+        "answer": "Most character figures are generated in under 10 seconds. Complex requests or high-volume generations may take slightly longer, but our nano-banana AI is optimized for speed. There are no queues or waiting times - you get instant results."
       },
       {
-        "title": "What about data privacy and security?",
-        "description": "We take security seriously. All data is encrypted in transit and at rest. We don't store your prompts or generated content unless you explicitly save them. Full compliance with GDPR and SOC 2."
+        "question": "What character figure styles are available?",
+        "answer": "We offer 10+ professional styles including: Anime, Realistic, Fantasy Warrior, Cyberpunk, Ghibli, Superhero, Funko Pop, Oil Painting, Watercolor, and Pixel Art. Each style is carefully optimized for different use cases from collectibles to social media content."
+      },
+      {
+        "question": "Do you offer refunds?",
+        "answer": "Yes, we offer a 30-day money-back guarantee for all paid subscriptions. If you're not completely satisfied with the quality of your character figures, contact our support team for a full refund. Free tier users can test the generator before upgrading."
+      },
+      {
+        "question": "How is pricing calculated?",
+        "answer": "Pricing is based on the number of character figures you can generate per month: Free (5/day), Creator ($19 for 100/month), Professional ($49 for 500/month), and Enterprise ($199 for unlimited). Each generation uses 1 credit regardless of style or complexity."
+      },
+      {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Absolutely! You can cancel your subscription anytime from your account settings. There are no cancellation fees or long-term commitments. Your unused credits remain available until the end of your billing period."
+      },
+      {
+        "question": "What resolution are the character figure outputs?",
+        "answer": "All character figures are generated at high resolution (typically 1024x1024 or higher depending on aspect ratio). This ensures they're perfect for printing, social media, commercial use, or any professional application. We maintain consistent quality across all styles."
+      },
+      {
+        "question": "Is my data and character figures private?",
+        "answer": "Yes, your privacy is our priority. Uploaded images are processed securely and deleted after generation. Generated character figures belong to you and are private unless you choose to share them in our community gallery. We never use your content for training or other purposes."
+      },
+      {
+        "question": "Can I generate character figures for 3D printing?",
+        "answer": "Yes! Our character figures are optimized for various uses including 3D printing. While we generate 2D images, they're designed with proper geometry and printable details in mind. We provide guides for converting to 3D formats and optimizing for different printers."
       }
-    ]
+    ],
+    "contact": {
+      "text": "Still have questions?",
+      "link": "Contact Support"
+    }
   },
   "cta": {
-    "name": "cta",
-    "title": "Start Building with AI Today",
-    "description": "Join thousands of developers using our platform.",
-    "buttons": [
-      {
-        "title": "Get Started",
-        "url": "/pricing",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
-      },
-      {
-        "title": "Read Document",
-        "url": "/docs",
-        "target": "_blank",
-        "variant": "outline"
-      }
-    ]
-  },
-  "footer": {
-    "name": "footer",
-    "brand": {
-      "title": "AI Universal Generator",
-      "description": "The most comprehensive AI platform that unifies access to all major language, image, and video models. Build powerful AI applications with a single integration.",
-      "logo": {
-        "src": "/logo.png",
-        "alt": "AI Universal Generator"
-      },
-      "url": "/"
-    },
-    "copyright": "© 2025 • AI Universal Generator. Powered by cutting-edge AI technology.",
-    "nav": {
-      "items": [
-        {
-          "title": "Platform",
-          "children": [
-            {
-              "title": "AI Models",
-              "url": "/#feature",
-              "target": "_self"
-            },
-            {
-              "title": "Pricing",
-              "url": "/#pricing",
-              "target": "_self"
-            },
-            {
-              "title": "API Access",
-              "url": "/#api",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "AI Models",
-          "children": [
-            {
-              "title": "Text Generation",
-              "url": "/#text-models",
-              "target": "_self"
-            },
-            {
-              "title": "Image Generation",
-              "url": "/#image-models",
-              "target": "_self"
-            },
-            {
-              "title": "Video Generation",
-              "url": "/#video-models",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "Providers",
-          "children": [
-            {
-              "title": "OpenAI",
-              "url": "https://openai.com",
-              "target": "_blank"
-            },
-            {
-              "title": "Anthropic",
-              "url": "https://anthropic.com",
-              "target": "_blank"
-            },
-            {
-              "title": "Google AI",
-              "url": "https://ai.google",
-              "target": "_blank"
-            }
-          ]
-        }
-      ]
-    },
-    "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/aiuniversalgen",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/ai-universal-generator",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/ai-universal",
-          "target": "_blank"
-        },
-        {
-          "title": "Email",
-          "icon": "RiMailLine",
-          "url": "mailto:support@aiuniversal.dev",
-          "target": "_self"
-        }
-      ]
-    },
-    "agreement": {
-      "items": [
-        {
-          "title": "Privacy Policy",
-          "url": "/privacy-policy"
-        },
-        {
-          "title": "Terms of Service",
-          "url": "/terms-of-service"
-        }
-      ]
-    }
+    "title": "Start Creating Character Figures Today",
+    "description": "Join thousands using our character figure generator to bring ideas to life",
+    "button": "Create Your First Character Figure Free"
   }
 }

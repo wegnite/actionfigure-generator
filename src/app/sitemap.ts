@@ -11,7 +11,7 @@ import { MetadataRoute } from 'next';
 const locales = ['en', 'zh', 'ja', 'es', 'fr', 'de'];
 
 // 基础URL
-const baseUrl = 'https://characterfigure.com';
+const baseUrl = 'https://actionfigure-generator.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();

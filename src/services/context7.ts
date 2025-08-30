@@ -214,7 +214,7 @@ class Context7Service {
         includeMetadata: true,
       });
 
-      return results.map(result => ({
+      return results.map((result: any) => ({
         id: result.id as string,
         content: result.metadata?.content as string || '', // 从元数据中获取内容
         metadata: result.metadata as any,

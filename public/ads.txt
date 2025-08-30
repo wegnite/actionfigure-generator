@@ -1,0 +1,11 @@
+# ads.txt file for Google AdSense
+# This file is required for AdSense approval
+# Replace pub-XXXXXXXXXXXXXXXX with your actual AdSense publisher ID
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Additional ad networks (if using)
+# googlesyndication.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Note: Replace pub-XXXXXXXXXXXXXXXX with your actual Google AdSense Publisher ID
+# You can find your Publisher ID in your AdSense account dashboard

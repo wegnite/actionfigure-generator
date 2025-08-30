@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`测试环境验证 应该支持快照测试 1`] = `
+<div
+  data-testid="test-component"
+>
+  <h1>
+    测试组件
+  </h1>
+  <p>
+    快照测试
+  </p>
+</div>
+`;

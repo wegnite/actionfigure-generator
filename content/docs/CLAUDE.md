@@ -1,3 +1,8 @@
+---
+title: Development Guidelines
+description: Core development philosophy and best practices for Claude Code
+---
+
 The orignal prompt is from: https://www.dzombak.com/blog/2025/08/getting-good-results-from-claude-code/
 
 # Development Guidelines

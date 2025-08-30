@@ -85,13 +85,19 @@ export interface CharacterPricingPlan {
 }
 
 /**
- * Character Figure 完整定价配置
+ * Character Figure 完整定价配置 - 基于PRD文档定价策略
  * 
- * 价值感知策略：
- * 1. Free: 建立使用习惯，每日1次体验
- * 2. Trial: 超值感知锚点，$3.99=10次，单次仅$0.399
- * 3. Pro: 主推计划，$10.99=50次，单次$0.22，突出性价比
- * 4. Ultra: 专业版，$34.99=200次，单次$0.17，商用授权
+ * 定价结构（根据PRD文档）：
+ * 1. Free: 每日5次免费体验，建立使用习惯
+ * 2. Creator: $19/月=100次，单次$0.19，内容创作者首选
+ * 3. Professional: $49/月=500次，单次$0.098，小企业和开发者
+ * 4. Enterprise: $199/月=无限次，企业级解决方案
+ * 
+ * 价值递进策略：
+ * - 免费版：导流获客，基础质量，带水印
+ * - 创作者版：商业授权，高清质量，内容创作者
+ * - 专业版：3D文件，API访问，小企业和游戏开发者
+ * - 企业版：无限生成，定制训练，白标方案，玩具公司和工作室
  */
 export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
   // ===== FREE 计划 =====
@@ -99,8 +105,8 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
     planId: SubscriptionPlan.FREE,
     planName: "免费体验",
     planNameEn: "Free",
-    description: "每日一次免费体验，探索角色生成魅力",
-    descriptionEn: "One free generation daily to explore character creation",
+    description: "每日免费体验，探索角色生成魅力",
+    descriptionEn: "Daily free access to explore character creation",
     
     monthlyPrice: 0,
     yearlyPrice: 0,
@@ -109,14 +115,14 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
     displayYearlyPrice: "免费",
     
     features: [
-      "✨ 每日1次免费生成",
+      "✨ 每日5次免费生成",
       "🎨 3种基础风格（动漫、写实、卡通）",
       "📱 标准画质输出 (1024x1024)",
       "🖼️ 社区画廊浏览",
       "💬 社区支持"
     ],
     featuresEn: [
-      "✨ 1 free generation daily",
+      "✨ 5 free generations daily",
       "🎨 3 basic styles (Anime, Realistic, Cartoon)",
       "📱 Standard quality (1024x1024)",
       "🖼️ Community gallery access",
@@ -124,7 +130,7 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
     ],
     
     monthlyLimit: null, // Free不按月计算
-    dailyLimit: 1,
+    dailyLimit: 5, // 根据PRD文档调整为每日5次
     creditsPerGeneration: 1,
     
     allowedStyles: ["anime", "realistic", "cartoon"],
@@ -139,205 +145,204 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
     supportLevel: "community",
   },
   
-  // ===== TRIAL 计划 =====
+  // ===== CREATOR 计划 - 对应PRD文档的创作者版 =====
   {
-    planId: SubscriptionPlan.TRIAL,
-    planName: "超值试用包",
-    planNameEn: "Trial Pack",
-    description: "一次性购买，10次精品生成，建立价值认知",
-    descriptionEn: "One-time purchase, 10 premium generations to establish value",
+    planId: SubscriptionPlan.TRIAL, // 重用现有枚举，但语义改为Creator
+    planName: "创作者版",
+    planNameEn: "Creator",
+    description: "适合内容创作者和爱好者，每月100次生成",
+    descriptionEn: "Perfect for content creators and hobbyists, 100 generations monthly",
     
-    monthlyPrice: 399,   // $3.99
-    yearlyPrice: 399,    // 一次性购买无年月之分
+    monthlyPrice: 1900,   // $19/month 根据PRD文档
+    yearlyPrice: 19000,   // $190/year (相当于10个月价格)
     currency: "USD", 
-    displayMonthlyPrice: "$3.99",
-    displayYearlyPrice: "$3.99",
+    displayMonthlyPrice: "$19",
+    displayYearlyPrice: "$190",
     
-    // Stripe 产品配置（需要在Stripe后台创建对应产品）
-    stripeProductId: "prod_character_trial",
-    stripeMonthlyPriceId: "price_character_trial",
+    // Stripe 产品配置
+    stripeProductId: "prod_character_creator",
+    stripeMonthlyPriceId: "price_character_creator_monthly",
+    stripeYearlyPriceId: "price_character_creator_yearly",
     
     features: [
-      "⚡ 10次精品角色生成",
-      "🌟 解锁所有12种风格",
-      "🔥 高清画质输出 (2048x2048)",
-      "🚀 优先生成队列（快3倍）",
+      "🎨 每月100次角色生成",
+      "🌟 高清画质输出",
+      "📋 商业授权许可",
       "✨ 无水印导出",
-      "📞 优先客服支持",
-      "🎯 单次仅$0.399，超值体验",
-      "💎 永久有效，不过期"
+      "🚀 优先生成队列",
+      "📧 邮件客服支持",
+      "🎭 高级风格选项"
     ],
     featuresEn: [
-      "⚡ 10 premium character generations",
-      "🌟 All 12 styles unlocked",
-      "🔥 HD quality output (2048x2048)",
-      "🚀 Priority queue (3x faster)",
+      "🎨 100 character generations monthly",
+      "🌟 High-definition quality output",
+      "📋 Commercial license included",
       "✨ Watermark-free export",
-      "📞 Priority customer support",
-      "🎯 Only $0.399 per generation",
-      "💎 Never expires"
+      "🚀 Priority generation queue",
+      "📧 Email customer support",
+      "🎭 Advanced style options"
     ],
     
-    monthlyLimit: 10,   // 总共10次
-    dailyLimit: null,   // 无日限制
+    monthlyLimit: 100,   // 每月100次，符合PRD
+    dailyLimit: null,    // 无日限制
     creditsPerGeneration: 1,
     
     allowedStyles: ["*"], // 所有风格
     allowedQualities: ["standard", "hd"],
-    maxBatchSize: 2,
+    maxBatchSize: 4,
     priorityQueue: true,
     apiAccess: false,
     
     isPopular: true,
     isRecommended: true,
-    badge: "超值推荐",
-    badgeColor: "bg-orange-500",
+    badge: "热门选择",
+    badgeColor: "bg-blue-500",
     sortOrder: 2,
     
     // 价值感知营销
-    valueHighlight: "相比单次付费节省80%",
-    originalPrice: "$19.90",  // 假设的原价
-    discountPercent: 80,
-    urgencyText: "限时体验价",
+    valueHighlight: "内容创作者的热门选择",
+    originalPrice: "$29",
+    discountPercent: 34,
     
-    isOneTime: true,
-    isLimitedTime: true,
-    supportLevel: "priority",
+    commercialLicense: true, // 包含商用许可
+    supportLevel: "email",
   },
   
-  // ===== PRO 计划 =====
+  // ===== PRO 计划 - 对应PRD文档的专业版 =====
   {
     planId: SubscriptionPlan.PRO,
-    planName: "专业创作版",
-    planNameEn: "Pro",
-    description: "创作者首选，每月50次专业生成，性价比之王",
-    descriptionEn: "Creator's choice, 50 professional generations monthly, best value",
+    planName: "专业版",
+    planNameEn: "Professional",
+    description: "适合小企业和游戏开发者，每月500次生成",
+    descriptionEn: "For small businesses and game developers, 500 generations monthly",
     
-    monthlyPrice: 1099,  // $10.99
-    yearlyPrice: 10990,  // $109.90 (相当于10个月价格，2个月免费)
+    monthlyPrice: 4900,  // $49/month 根据PRD文档
+    yearlyPrice: 49000,  // $490/year (相当于10个月价格)
     currency: "USD",
-    displayMonthlyPrice: "$10.99",
-    displayYearlyPrice: "$109.90",
+    displayMonthlyPrice: "$49",
+    displayYearlyPrice: "$490",
     
-    stripeProductId: "prod_character_pro",
-    stripeMonthlyPriceId: "price_character_pro_monthly",
-    stripeYearlyPriceId: "price_character_pro_yearly",
+    stripeProductId: "prod_character_professional",
+    stripeMonthlyPriceId: "price_character_professional_monthly",
+    stripeYearlyPriceId: "price_character_professional_yearly",
     
     features: [
-      "🎨 每月50次专业生成",
-      "🌈 完整风格库（20+种风格）",
-      "🖥️ 超高清输出 (4096x4096)",
-      "⚡ 优先处理队列",
-      "📸 批量生成（最多4张）",
+      "🎨 每月500次专业生成",
+      "📁 3D文件导出功能",
+      "🔌 API访问权限",
+      "🤖 自定义训练选项",
       "🛠️ 高级编辑工具",
-      "☁️ 无限云端存储",
-      "📧 邮件客服支持",
-      "🔄 每月自动重置",
-      "📱 移动端API访问"
+      "📸 批量生成工具",
+      "👥 团队协作功能",
+      "📧 优先技术支持",
+      "☁️ 无限云端存储"
     ],
     featuresEn: [
-      "🎨 50 professional generations monthly",
-      "🌈 Complete style library (20+ styles)",
-      "🖥️ Ultra HD output (4096x4096)",
-      "⚡ Priority processing queue",
-      "📸 Batch generation (up to 4)",
+      "🎨 500 professional generations monthly",
+      "📁 3D file export capability",
+      "🔌 API access included",
+      "🤖 Custom training options",
       "🛠️ Advanced editing tools",
-      "☁️ Unlimited cloud storage",
-      "📧 Email customer support",
-      "🔄 Monthly auto-reset",
-      "📱 Mobile API access"
+      "📸 Bulk generation tools",
+      "👥 Team collaboration features",
+      "📧 Priority technical support",
+      "☁️ Unlimited cloud storage"
     ],
     
-    monthlyLimit: 50,
+    monthlyLimit: 500,  // 根据PRD文档调整
     dailyLimit: null,
     creditsPerGeneration: 1,
     
     allowedStyles: ["*"],
     allowedQualities: ["standard", "hd", "uhd"],
-    maxBatchSize: 4,
+    maxBatchSize: 10,   // 专业版支持更大批量
     priorityQueue: true,
     apiAccess: true,
     
     isPopular: false,
     isRecommended: true,
-    badge: "最受欢迎",
-    badgeColor: "bg-blue-500",
+    badge: "小企业首选",
+    badgeColor: "bg-green-500",
     sortOrder: 3,
     
     // 价值对比
-    valueHighlight: "相比Trial单次成本降低45%",
-    annualSavings: "$21.98",
+    valueHighlight: "小企业和开发者的最佳选择",
+    originalPrice: "$69",
+    discountPercent: 29,
+    annualSavings: "$98",
     annualDiscountMonths: 2,
     
-    supportLevel: "email",
+    supportLevel: "priority",
   },
   
-  // ===== ULTRA 计划 =====
+  // ===== ULTRA 计划 - 对应PRD文档的企业版 =====
   {
     planId: SubscriptionPlan.ULTRA,
-    planName: "旗舰无限版",
-    planNameEn: "Ultra",
-    description: "专业团队版，每月200次大容量生成+商用授权",
-    descriptionEn: "Professional team version, 200 generations monthly + commercial license",
+    planName: "企业版",
+    planNameEn: "Enterprise",
+    description: "玩具公司和专业工作室，无限生成+定制方案",
+    descriptionEn: "For toy companies and professional studios, unlimited generations + custom solutions",
     
-    monthlyPrice: 3499,  // $34.99
-    yearlyPrice: 34990,  // $349.90 (相当于10个月价格)
+    monthlyPrice: 19900,  // $199/month 根据PRD文档
+    yearlyPrice: 199000,  // $1990/year (相当于10个月价格)
     currency: "USD",
-    displayMonthlyPrice: "$34.99",
-    displayYearlyPrice: "$349.90",
+    displayMonthlyPrice: "$199",
+    displayYearlyPrice: "$1990",
     
-    stripeProductId: "prod_character_ultra",
-    stripeMonthlyPriceId: "price_character_ultra_monthly", 
-    stripeYearlyPriceId: "price_character_ultra_yearly",
+    stripeProductId: "prod_character_enterprise",
+    stripeMonthlyPriceId: "price_character_enterprise_monthly", 
+    stripeYearlyPriceId: "price_character_enterprise_yearly",
     
     features: [
-      "🚀 每月200次旗舰生成",
-      "💎 独家风格库（30+种风格）",
-      "🎯 8K超清输出 (8192x8192)",
-      "👑 最高优先级队列",
-      "📦 大批量生成（最多10张）",
-      "🤖 AI风格定制训练",
-      "📋 商用授权许可证",
-      "🔒 私有画廊空间",
-      "🎧 1对1专属客服",
-      "🔌 完整API访问权限",
+      "🚀 无限角色生成",
+      "🤖 定制模型训练",
+      "🏢 白标解决方案",
+      "👤 专属客户经理",
+      "📊 SLA服务保证",
+      "🔌 定制集成服务",
+      "🔒 企业级安全保障",
+      "📋 完整商用授权",
+      "🎧 24/7专属客服",
       "📊 详细使用分析",
-      "⚡ 专用服务器资源"
+      "⚡ 专用服务器资源",
+      "🛠️ 私有部署选项"
     ],
     featuresEn: [
-      "🚀 200 flagship generations monthly",
-      "💎 Exclusive style library (30+ styles)",
-      "🎯 8K ultra HD output (8192x8192)",
-      "👑 Highest priority queue",
-      "📦 Bulk generation (up to 10)",
-      "🤖 AI style custom training",
-      "📋 Commercial license included",
-      "🔒 Private gallery space",
-      "🎧 Dedicated 1-on-1 support",
-      "🔌 Full API access",
+      "🚀 Unlimited character generations",
+      "🤖 Custom model training",
+      "🏢 White-label solutions",
+      "👤 Dedicated account manager",
+      "📊 SLA guarantee",
+      "🔌 Custom integrations",
+      "🔒 Enterprise-grade security",
+      "📋 Full commercial license",
+      "🎧 24/7 dedicated support",
       "📊 Detailed usage analytics",
-      "⚡ Dedicated server resources"
+      "⚡ Dedicated server resources",
+      "🛠️ Private deployment options"
     ],
     
-    monthlyLimit: 200,
+    monthlyLimit: -1, // 无限生成
     dailyLimit: null,
     creditsPerGeneration: 1,
     
     allowedStyles: ["*"],
     allowedQualities: ["standard", "hd", "uhd", "8k"],
-    maxBatchSize: 10,
+    maxBatchSize: -1, // 无限批量
     priorityQueue: true,
     apiAccess: true,
     
     isPopular: false,
     isRecommended: false,
-    badge: "专业版",
+    badge: "企业级",
     badgeColor: "bg-purple-500",
     sortOrder: 4,
     
     // 价值对比
-    valueHighlight: "相比Pro单次成本降低68%",
-    annualSavings: "$69.98",
+    valueHighlight: "企业级需求的完整解决方案",
+    originalPrice: "$299",
+    discountPercent: 33,
+    annualSavings: "$398",
     annualDiscountMonths: 2,
     
     commercialLicense: true,

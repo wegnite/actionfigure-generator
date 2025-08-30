@@ -108,96 +108,97 @@ export default function MarkdownRenderer({ content, className }: MarkdownRendere
           code: CodeBlock,
           
           // 自定义标题样式
-          h1: ({ children }) => (
-            <h1 className="text-3xl font-bold mt-8 mb-4 text-foreground">{children}</h1>
+          h1: ({ children, ...props }: any) => (
+            <h1 className="text-3xl font-bold mt-8 mb-4 text-foreground" {...props}>{children}</h1>
           ),
-          h2: ({ children }) => (
-            <h2 className="text-2xl font-semibold mt-6 mb-3 text-foreground">{children}</h2>
+          h2: ({ children, ...props }: any) => (
+            <h2 className="text-2xl font-semibold mt-6 mb-3 text-foreground" {...props}>{children}</h2>
           ),
-          h3: ({ children }) => (
-            <h3 className="text-xl font-semibold mt-4 mb-2 text-foreground">{children}</h3>
+          h3: ({ children, ...props }: any) => (
+            <h3 className="text-xl font-semibold mt-4 mb-2 text-foreground" {...props}>{children}</h3>
           ),
           
           // 自定义段落样式
-          p: ({ children }) => (
-            <p className="my-4 leading-7 text-foreground/90">{children}</p>
+          p: ({ children, ...props }: any) => (
+            <p className="my-4 leading-7 text-foreground/90" {...props}>{children}</p>
           ),
           
           // 自定义列表样式
-          ul: ({ children }) => (
-            <ul className="my-4 ml-6 list-disc space-y-2">{children}</ul>
+          ul: ({ children, ...props }: any) => (
+            <ul className="my-4 ml-6 list-disc space-y-2" {...props}>{children}</ul>
           ),
-          ol: ({ children }) => (
-            <ol className="my-4 ml-6 list-decimal space-y-2">{children}</ol>
+          ol: ({ children, ...props }: any) => (
+            <ol className="my-4 ml-6 list-decimal space-y-2" {...props}>{children}</ol>
           ),
-          li: ({ children }) => (
-            <li className="text-foreground/90">{children}</li>
+          li: ({ children, ...props }: any) => (
+            <li className="text-foreground/90" {...props}>{children}</li>
           ),
           
           // 自定义表格样式
-          table: ({ children }) => (
+          table: ({ children, ...props }: any) => (
             <div className="my-4 overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full border-collapse" {...props}>
                 {children}
               </table>
             </div>
           ),
-          thead: ({ children }) => (
-            <thead className="border-b border-border bg-muted/30">
+          thead: ({ children, ...props }: any) => (
+            <thead className="border-b border-border bg-muted/30" {...props}>
               {children}
             </thead>
           ),
-          tbody: ({ children }) => (
-            <tbody className="divide-y divide-border">
+          tbody: ({ children, ...props }: any) => (
+            <tbody className="divide-y divide-border" {...props}>
               {children}
             </tbody>
           ),
-          tr: ({ children }) => (
-            <tr className="hover:bg-muted/20 transition-colors">
+          tr: ({ children, ...props }: any) => (
+            <tr className="hover:bg-muted/20 transition-colors" {...props}>
               {children}
             </tr>
           ),
-          th: ({ children }) => (
-            <th className="px-4 py-2 text-left font-semibold text-foreground">
+          th: ({ children, ...props }: any) => (
+            <th className="px-4 py-2 text-left font-semibold text-foreground" {...props}>
               {children}
             </th>
           ),
-          td: ({ children }) => (
-            <td className="px-4 py-2 text-foreground/90">
+          td: ({ children, ...props }: any) => (
+            <td className="px-4 py-2 text-foreground/90" {...props}>
               {children}
             </td>
           ),
           
           // 自定义链接样式
-          a: ({ href, children }) => (
+          a: ({ href, children, ...props }: any) => (
             <a
               href={href}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
+              {...props}
             >
               {children}
             </a>
           ),
           
           // 自定义引用块样式
-          blockquote: ({ children }) => (
-            <blockquote className="my-4 pl-4 border-l-4 border-primary/50 italic text-muted-foreground">
+          blockquote: ({ children, ...props }: any) => (
+            <blockquote className="my-4 pl-4 border-l-4 border-primary/50 italic text-muted-foreground" {...props}>
               {children}
             </blockquote>
           ),
           
           // 自定义分隔线样式
-          hr: () => (
-            <hr className="my-8 border-t border-border" />
+          hr: ({ ...props }: any) => (
+            <hr className="my-8 border-t border-border" {...props} />
           ),
           
           // 自定义强调样式
-          strong: ({ children }) => (
-            <strong className="font-bold text-foreground">{children}</strong>
+          strong: ({ children, ...props }: any) => (
+            <strong className="font-bold text-foreground" {...props}>{children}</strong>
           ),
-          em: ({ children }) => (
-            <em className="italic">{children}</em>
+          em: ({ children, ...props }: any) => (
+            <em className="italic" {...props}>{children}</em>
           ),
         }}
       >

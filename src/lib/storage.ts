@@ -73,7 +73,7 @@ export class Storage {
     const request = new Request(url, {
       method: "PUT",
       headers,
-      body: bodyArray,
+      body: bodyArray as BodyInit,
     });
 
     const response = await client.fetch(request);
