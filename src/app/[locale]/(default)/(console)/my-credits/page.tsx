@@ -5,9 +5,9 @@ import { getCreditsByUserUuid } from "@/models/credit";
 import { getTranslations } from "next-intl/server";
 import { getUserCredits } from "@/services/credit";
 import { getUserUuid } from "@/services/user";
-import moment from "moment";
+import dayjs from "@/lib/dayjs";
 
-export default async function () {
+const MyCreditsPage = async function () {
   const t = await getTranslations();
 
   const user_uuid = await getUserUuid();
@@ -54,7 +54,7 @@ export default async function () {
         title: t("my_credits.table.updated_at"),
         name: "created_at",
         callback: (v: any) => {
-          return moment(v.created_at).format("YYYY-MM-DD HH:mm:ss");
+          return dayjs(v.created_at).format("YYYY-MM-DD HH:mm:ss");
         },
       },
     ],
@@ -63,4 +63,8 @@ export default async function () {
   };
 
   return <TableSlot {...table} />;
-}
+};
+
+MyCreditsPage.displayName = "MyCreditsPage";
+
+export default MyCreditsPage;

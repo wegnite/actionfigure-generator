@@ -5,10 +5,10 @@ import { TableColumn } from "@/types/blocks/table";
 import TableSlot from "@/components/console/slots/table";
 import { Table as TableSlotType } from "@/types/slots/table";
 import { getTranslations } from "next-intl/server";
-import moment from "moment";
+import dayjs from "@/lib/dayjs";
 import { redirect } from "next/navigation";
 
-export default async function () {
+const MyOrdersPage = async function () {
   const t = await getTranslations();
 
   const user_uuid = await getUserUuid();
@@ -40,7 +40,7 @@ export default async function () {
       name: "paid_at",
       title: t("my_orders.table.paid_at"),
       callback: (item: any) =>
-        moment(item.paid_at).format("YYYY-MM-DD HH:mm:ss"),
+        dayjs(item.paid_at).format("YYYY-MM-DD HH:mm:ss"),
     },
   ];
 
@@ -63,4 +63,8 @@ export default async function () {
   };
 
   return <TableSlot {...table} />;
-}
+};
+
+MyOrdersPage.displayName = "MyOrdersPage";
+
+export default MyOrdersPage;

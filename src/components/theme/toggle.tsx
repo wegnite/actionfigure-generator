@@ -1,38 +1,28 @@
 "use client";
 
-import { BsMoonStars, BsSun } from "react-icons/bs";
+import { Moon, Sun } from "lucide-react";
 
-import { CacheKey } from "@/services/constant";
-import { cacheSet } from "@/lib/cache";
-import { useAppContext } from "@/contexts/app";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-export default function () {
-  const { theme, setTheme } = useAppContext();
+export default function ThemeToggle() {
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const handleThemeChange = function (_theme: string) {
-    if (_theme === theme) {
-      return;
-    }
-
-    cacheSet(CacheKey.Theme, _theme, -1);
-    setTheme(_theme);
-  };
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <div className="flex items-center gap-x-2 px-2">
-      {theme === "dark" ? (
-        <BsSun
+      {resolvedTheme === "dark" ? (
+        <Sun
           className="cursor-pointer text-lg text-muted-foreground"
-          onClick={() => handleThemeChange("light")}
-          width={80}
-          height={20}
+          onClick={() => setTheme("light")}
         />
       ) : (
-        <BsMoonStars
+        <Moon
           className="cursor-pointer text-lg text-muted-foreground"
-          onClick={() => handleThemeChange("dark")}
-          width={80}
-          height={20}
+          onClick={() => setTheme("dark")}
         />
       )}
     </div>

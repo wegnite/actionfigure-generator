@@ -4,9 +4,9 @@ import { Post } from "@/types/post";
 import TableSlot from "@/components/dashboard/slots/table";
 import { Table as TableSlotType } from "@/types/slots/table";
 import { getAllPosts } from "@/models/post";
-import moment from "moment";
+import dayjs from "@/lib/dayjs";
 
-export default async function () {
+async function AdminPostsPage() {
   const posts = await getAllPosts();
 
   const table: TableSlotType = {
@@ -45,7 +45,7 @@ export default async function () {
         name: "created_at",
         title: "Created At",
         callback: (item: Post) => {
-          return moment(item.created_at).format("YYYY-MM-DD HH:mm:ss");
+          return dayjs(item.created_at).format("YYYY-MM-DD HH:mm:ss");
         },
       },
       {
@@ -74,3 +74,6 @@ export default async function () {
 
   return <TableSlot {...table} />;
 }
+
+AdminPostsPage.displayName = "AdminPostsPage";
+export default AdminPostsPage;

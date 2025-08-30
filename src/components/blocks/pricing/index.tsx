@@ -12,17 +12,28 @@ import { Label } from "@/components/ui/label";
 import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "sonner";
 import { useAppContext } from "@/contexts/app";
+import { useLocale } from "next-intl";
 
-export default function Pricing({ pricing }: { pricing: PricingType }) {
-  if (pricing.disabled) {
-    return null;
-  }
-
+function Pricing({ pricing }: { pricing: PricingType }) {
+  // All Hooks must be called at the top level, before any conditional returns
+  const locale = useLocale();
   const { user, setShowSignModal } = useAppContext();
-
   const [group, setGroup] = useState(pricing.groups?.[0]?.name);
   const [isLoading, setIsLoading] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (pricing.items) {
+      setGroup(pricing.items[0].group);
+      setProductId(pricing.items[0].product_id);
+      setIsLoading(false);
+    }
+  }, [pricing.items]);
+
+  // Conditional return after all Hooks
+  if (pricing.disabled) {
+    return null;
+  }
 
   const handleCheckout = async (item: PricingItem, cn_pay: boolean = false) => {
     try {
@@ -39,6 +50,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         amount: cn_pay ? item.cn_amount : item.amount,
         currency: cn_pay ? "cny" : item.currency,
         valid_months: item.valid_months,
+        locale: locale || "en",
       };
 
       setIsLoading(true);
@@ -66,6 +78,11 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         return;
       }
 
+      if (data.provider === "creem" && data.url) {
+        window.location.href = data.url;
+        return;
+      }      
+
       const { public_key, session_id } = data;
 
       const stripe = await loadStripe(public_key);
@@ -90,14 +107,6 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
       setProductId(null);
     }
   };
-
-  useEffect(() => {
-    if (pricing.items) {
-      setGroup(pricing.items[0].group);
-      setProductId(pricing.items[0].product_id);
-      setIsLoading(false);
-    }
-  }, [pricing.items]);
 
   return (
     <section id={pricing.name} className="py-16">
@@ -294,3 +303,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
     </section>
   );
 }
+
+Pricing.displayName = 'Pricing';
+
+export default Pricing;

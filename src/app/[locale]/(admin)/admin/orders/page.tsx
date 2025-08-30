@@ -2,9 +2,9 @@ import { TableColumn } from "@/types/blocks/table";
 import TableSlot from "@/components/dashboard/slots/table";
 import { Table as TableSlotType } from "@/types/slots/table";
 import { getPaiedOrders } from "@/models/order";
-import moment from "moment";
+import dayjs from "@/lib/dayjs";
 
-export default async function () {
+async function AdminOrdersPage() {
   const orders = await getPaiedOrders(1, 50);
 
   const columns: TableColumn[] = [
@@ -15,7 +15,7 @@ export default async function () {
     {
       name: "created_at",
       title: "Created At",
-      callback: (row) => moment(row.created_at).format("YYYY-MM-DD HH:mm:ss"),
+      callback: (row) => dayjs(row.created_at).format("YYYY-MM-DD HH:mm:ss"),
     },
   ];
 
@@ -27,3 +27,6 @@ export default async function () {
 
   return <TableSlot {...table} />;
 }
+
+AdminOrdersPage.displayName = "AdminOrdersPage";
+export default AdminOrdersPage;

@@ -4,10 +4,10 @@ import { Table as TableSlotType } from "@/types/slots/table";
 import { getTranslations } from "next-intl/server";
 import { getUserApikeys, ApikeyStatus } from "@/models/apikey";
 import { getUserUuid } from "@/services/user";
-import moment from "moment";
+import dayjs from "@/lib/dayjs";
 import { Badge } from "@/components/ui/badge";
 
-export default async function () {
+async function ApiKeysPage() {
   const t = await getTranslations();
 
   const user_uuid = await getUserUuid();
@@ -48,7 +48,7 @@ export default async function () {
         title: t("api_keys.table.created_at"),
         name: "created_at",
         callback: (item: any) => {
-          return moment(item.created_at).fromNow();
+          return dayjs(item.created_at).fromNow();
         },
       },
     ],
@@ -58,3 +58,6 @@ export default async function () {
 
   return <TableSlot {...table} />;
 }
+
+ApiKeysPage.displayName = "ApiKeysPage";
+export default ApiKeysPage;

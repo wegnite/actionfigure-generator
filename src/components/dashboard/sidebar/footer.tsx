@@ -5,8 +5,10 @@ import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
 import { Social as SocialType } from "@/types/blocks/base";
+import ThemeToggle from "@/components/theme/toggle";
+import { Separator } from "@/components/ui/separator";
 
-export default function ({ social }: { social: SocialType }) {
+const DashboardSidebarFooter = function ({ social }: { social: SocialType }) {
   const { open } = useSidebar();
 
   const handleTabChange = (value: string) => {
@@ -28,8 +30,14 @@ export default function ({ social }: { social: SocialType }) {
               </Link>
             </div>
           ))}
+          <Separator orientation="vertical" className="h-4" />
+          <ThemeToggle />
         </div>
       ) : null}
     </>
   );
-}
+};
+
+DashboardSidebarFooter.displayName = "DashboardSidebarFooter";
+
+export default DashboardSidebarFooter;
