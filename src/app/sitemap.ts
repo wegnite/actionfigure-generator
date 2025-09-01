@@ -7,13 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 静态页面（确保这些页面实际存在）
   const staticPages = [
     '',
-    '/pricing',
+    '/pricing', 
     '/showcase',
     '/character-figure',
     '/character-figure/video',
-    '/tools/prompt-generator',
-    '/tools/style-mixer',
-    '/tools/batch-processor',
   ]
   
   // SEO教程页面 (仅英文，高优先级)
@@ -27,9 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const sitemapEntries: MetadataRoute.Sitemap = []
   
-  // 为每个语言和页面创建条目
-  staticPages.forEach(page => {
-    locales.forEach(locale => {
+  // 为每个语言和页面创建条目 (简化版本，去除可能导致序列化问题的复杂结构)
+  locales.forEach(locale => {
+    staticPages.forEach(page => {
       const url = locale === 'en' ? 
         `${baseUrl}${page}` : 
         `${baseUrl}/${locale}${page}`
@@ -39,15 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: page === '' ? 'daily' : 'weekly',
         priority: page === '' ? 1.0 : 0.8,
-        alternates: {
-          languages: locales.reduce((acc, loc) => {
-            const altUrl = loc === 'en' ? 
-              `${baseUrl}${page}` : 
-              `${baseUrl}/${loc}${page}`
-            acc[loc] = altUrl
-            return acc
-          }, {} as Record<string, string>)
-        }
       })
     })
   })
@@ -58,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}${page}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.9, // 高优先级，对SEO重要
+      priority: 0.9,
     })
   })
   
