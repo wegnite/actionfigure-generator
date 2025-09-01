@@ -8,7 +8,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
   }
 
   return (
-    <section id={footer.name} className="py-16">
+    <section id={footer.name} className="py-16 bg-gray-900 w-full relative z-20">
       <div className="max-w-7xl mx-auto px-8">
         <footer>
           <div className="flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left">
@@ -27,23 +27,27 @@ export default function Footer({ footer }: { footer: FooterType }) {
                       />
                     )}
                     {footer.brand.title && (
-                      <p className="text-3xl font-semibold">
+                      <p className="text-3xl font-semibold text-white">
                         {footer.brand.title}
                       </p>
                     )}
                   </div>
                   {footer.brand.description && (
-                    <p className="mt-6 text-md text-muted-foreground">
+                    <p className="mt-6 text-md text-gray-300">
                       {footer.brand.description}
                     </p>
                   )}
                 </div>
               )}
               {footer.social && (
-                <ul className="flex items-center space-x-6 text-muted-foreground">
+                <ul className="flex items-center space-x-6 text-gray-300">
                   {footer.social.items?.map((item, i) => (
-                    <li key={i} className="font-medium hover:text-[var(--cf-orange-500)]">
-                      <a href={item.url} target={item.target}>
+                    <li key={i} className="font-medium">
+                      <a 
+                        href={item.url} 
+                        target={item.target}
+                        className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer p-2 block"
+                      >
                         {item.icon && (
                           <Icon name={item.icon} className="size-4" />
                         )}
@@ -56,11 +60,15 @@ export default function Footer({ footer }: { footer: FooterType }) {
             <div className="grid grid-cols-3 gap-6 lg:gap-20">
               {footer.nav?.items?.map((item, i) => (
                 <div key={i}>
-                  <p className="mb-6 font-bold">{item.title}</p>
-                  <ul className="space-y-4 text-sm text-muted-foreground">
+                  <p className="mb-6 font-bold text-white">{item.title}</p>
+                  <ul className="space-y-4 text-sm text-gray-300">
                     {item.children?.map((iitem, ii) => (
-                      <li key={ii} className="font-medium hover:text-[var(--cf-orange-500)]">
-                        <a href={iitem.url} target={iitem.target}>
+                      <li key={ii} className="font-medium">
+                        <a 
+                          href={iitem.url} 
+                          target={iitem.target}
+                          className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer py-1 block"
+                        >
                           {iitem.title}
                         </a>
                       </li>
@@ -70,9 +78,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
               ))}
             </div>
           </div>
-          <div className="mt-8 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium text-muted-foreground lg:flex-row lg:items-center lg:text-left">
+          <div className="mt-8 flex flex-col justify-between gap-4 border-t border-gray-700 pt-8 text-center text-sm font-medium text-gray-300 lg:flex-row lg:items-center lg:text-left">
             {footer.copyright && (
-              <p>
+              <p className="text-gray-300">
                 {footer.copyright}
                 {process.env.NEXT_PUBLIC_SHOW_POWERED_BY === "false" ? null : (
                   <a
@@ -89,8 +97,12 @@ export default function Footer({ footer }: { footer: FooterType }) {
             {footer.agreement && (
               <ul className="flex justify-center gap-4 lg:justify-start">
                 {footer.agreement.items?.map((item, i) => (
-                  <li key={i} className="hover:text-[var(--cf-orange-500)]">
-                    <a href={item.url} target={item.target}>
+                  <li key={i} className="hover:text-orange-400">
+                    <a 
+                      href={item.url} 
+                      target={item.target}
+                      className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer py-1 px-2 block"
+                    >
                       {item.title}
                     </a>
                   </li>

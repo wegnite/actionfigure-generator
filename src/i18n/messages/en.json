@@ -161,5 +161,237 @@
     "contact_tip": "Other ways to contact us",
     "rating_tip": "How do you feel about ShipAny?",
     "placeholder": "Leave your words here..."
+  },
+  "generator": {
+    "template": "action-figure-generator",
+    "theme": "orange",
+    "title": "Action Figure Generator",
+    "subtitle": "AI-Powered Creation Tool",
+    
+    "inputSettings": {
+      "title": "FORGE CONTROLS",
+      "tabs": {
+        "imageToImage": "> IMAGE", 
+        "textToImage": "> TEXT"
+      },
+      "upload": {
+        "title": "> UPLOAD IMAGE",
+        "dragDrop": "> DRAG & DROP",
+        "subtitle": "MAX 10MB",
+        "remove": "×"
+      },
+      "mainPrompt": {
+        "label": "> MAIN PROMPT",
+        "placeholder": "Describe character..."
+      },
+      "negativePrompt": {
+        "label": "> NEGATIVE",
+        "placeholder": "Avoid..."
+      }
+    },
+    
+    "styleSelection": {
+      "title": "> STYLES",
+      "styles": {
+        "ghibli": {
+          "name": "Ghibli",
+          "description": "Miyazaki anime"
+        },
+        "figure": {
+          "name": "Figure", 
+          "description": "Collectible"
+        },
+        "anime": {
+          "name": "Anime",
+          "description": "Japanese style"
+        },
+        "oil": {
+          "name": "Oil",
+          "description": "Traditional art"
+        },
+        "watercolor": {
+          "name": "Watercolor",
+          "description": "Fresh style"
+        },
+        "pixel": {
+          "name": "Pixel", 
+          "description": "Retro game"
+        },
+        "none": {
+          "name": "Original",
+          "description": "Keep original"
+        }
+      }
+    },
+    
+    "advancedSettings": {
+      "title": "Advanced Settings",
+      "aspectRatio": {
+        "label": "> RATIO",
+        "options": {
+          "1:1": "Square",
+          "4:3": "Landscape", 
+          "3:4": "Portrait",
+          "16:9": "Wide",
+          "9:16": "Vertical"
+        }
+      },
+      "quality": {
+        "label": "> QUALITY",
+        "options": {
+          "standard": "STD",
+          "hd": "HD"
+        }
+      },
+      "numImages": {
+        "label": "> COUNT",
+        "options": {
+          "1": "1x",
+          "2": "2x",
+          "4": "4x"
+        }
+      }
+    },
+    
+    "outputGallery": {
+      "title": "GENERATED",
+      "empty": {
+        "title": "> READY",
+        "subtitle": "ONLINE",
+        "description": "> CONFIGURE & GENERATE",
+        "awaitCommand": "AWAITING YOUR COMMAND"
+      },
+      "actions": {
+        "generateMore": "> GENERATE MORE"
+      }
+    },
+    
+    "authentication": {
+      "required": "> LOGIN REQUIRED",
+      "signInAndGenerate": "> LOGIN & GO"
+    },
+    
+    "generation": {
+      "generating": "> GENERATING...",
+      "generateNow": "> GENERATE NOW",
+      "success": "Success!",
+      "successDescription": "Generated {count} figures",
+      "errors": {
+        "fileSize": "File too large",
+        "fileSizeDesc": "Upload <10MB image",
+        "missingInput": "Missing input", 
+        "missingInputDesc": "Upload image or enter prompt",
+        "authRequired": "Sign in required",
+        "authRequiredDesc": "Please sign in to use AI",
+        "insufficientCredits": "Insufficient Credits",
+        "insufficientCreditsDesc": "Purchase more credits",
+        "generationFailed": "Generation failed",
+        "generationFailedDesc": "Please try again",
+        "generationError": "Generation Error",
+        "generationErrorDesc": "Unexpected error occurred"
+      }
+    }
+  },
+  "landing": {
+    "hero": {
+      "badge": "AI-POWERED GENERATION",
+      "title": "ACTION FIGURE",
+      "subtitle": "GENERATOR",
+      "description": "> FORGE LEGENDARY WARRIORS FROM THE DEPTHS OF IMAGINATION_\n> EACH FIGURE TELLS A STORY OF SURVIVAL, POWER, AND HEROISM_",
+      "stats": {
+        "creators": "Creators",
+        "rating": "Rating",
+        "figuresCreated": "Figures Created"
+      },
+      "cta": "> START FORGING NOW"
+    },
+    "generatorSection": {
+      "title": "CREATE YOUR ACTION FIGURE",
+      "description": "> USE ADVANCED AI TO GENERATE PROFESSIONAL ACTION FIGURES IN SECONDS_"
+    },
+    "toolsSection": {
+      "title": "ACTION FIGURE GENERATOR TOOLS",
+      "description": "> OUR ACTION FIGURE GENERATOR PROVIDES COMPREHENSIVE TOOLS FOR CREATING PROFESSIONAL ACTION FIGURES",
+      "tools": [
+        {
+          "title": "AI Action Figure Generator",
+          "description": "Transform any image or text description into a professional action figure using our advanced AI action figure generator. Create collectible-quality action figures with studio lighting and premium finishes."
+        },
+        {
+          "title": "Multi-Style Action Figure Creator",
+          "description": "Choose from 10+ professional styles for your action figure generator projects. From anime action figures to realistic collectibles, our action figure generator adapts to any creative vision."
+        },
+        {
+          "title": "Commercial Action Figure Rights",
+          "description": "Every action figure created with our action figure generator includes full commercial usage rights. Perfect for businesses, content creators, and action figure enthusiasts who need professional licensing."
+        },
+        {
+          "title": "Batch Action Figure Processing",
+          "description": "Generate multiple action figures simultaneously with our batch processing feature. Our action figure generator can create up to 4 action figures per request for efficient workflow management."
+        },
+        {
+          "title": "HD Action Figure Export",
+          "description": "Export your action figures in high-definition quality perfect for printing, social media, or professional use. Our action figure generator ensures every detail is crisp and professional."
+        },
+        {
+          "title": "Instant Action Figure Creation",
+          "description": "Create professional action figures in just 10 seconds with our lightning-fast action figure generator. No waiting queues or delays - get your action figure results instantly."
+        }
+      ],
+      "cta": "> START USING OUR ACTION FIGURE GENERATOR TODAY AND CREATE PROFESSIONAL ACTION FIGURES FOR ANY PROJECT_",
+      "button": "> TRY ACTION FIGURE GENERATOR NOW"
+    },
+    "tutorialsSection": {
+      "title": "MASTER THE FORGE",
+      "description": "> STEP-BY-STEP TUTORIALS TO BECOME AN ACTION FIGURE AI MASTER_",
+      "tutorials": {
+        "primary": {
+          "badge": "MOST POPULAR",
+          "title": "How to Make Action Figure AI",
+          "description": "Complete beginner's guide to creating professional action figures with AI. Learn the fundamentals, best practices, and advanced techniques in this comprehensive 8-minute tutorial.",
+          "duration": "8 min read",
+          "level": "Beginner",
+          "readers": "25K+ readers",
+          "button": "> START LEARNING"
+        },
+        "secondary": {
+          "badge": "ADVANCED",
+          "title": "How to Make AI Action Figure",
+          "description": "Advanced techniques for creating AI action figures with professional results. Dive deep into AI technology, prompting strategies, and workflow optimization.",
+          "duration": "12 min read",
+          "level": "Advanced",
+          "feature": "Pro tips",
+          "button": "> ADVANCED GUIDE"
+        },
+        "additional": [
+          {
+            "title": "How to Make THE AI Action Figure",
+            "description": "Specific techniques for creating targeted AI action figures with precise control."
+          },
+          {
+            "title": "How to Make AN AI Action Figure",
+            "description": "Universal methods for creating any AI action figure with consistent quality results."
+          },
+          {
+            "title": "How to Make The Action Figure AI",
+            "description": "Technical deep-dive into action figure AI technology and implementation."
+          }
+        ]
+      },
+      "cta": "> MASTER THESE TUTORIALS AND BECOME A LEGENDARY ACTION FIGURE CREATOR_",
+      "buttons": {
+        "tutorial": "📚 START WITH TUTORIAL #1",
+        "generator": "🚀 TRY GENERATOR FIRST"
+      }
+    },
+    "gallerySection": {
+      "title": "WARRIOR GALLERY",
+      "description": "> DISCOVER LEGENDARY FIGURES CREATED BY THE COMMUNITY_"
+    },
+    "finalCTA": {
+      "title": "FORGE YOUR LEGEND TODAY",
+      "description": "> JOIN THE RANKS OF LEGENDARY CREATORS_",
+      "button": "CREATE YOUR FIRST WARRIOR FREE"
+    }
   }
 }

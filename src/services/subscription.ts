@@ -10,7 +10,7 @@ import { subscriptions, subscription_usage } from "@/db/schema";
 import { eq, and, lte, gte, sql } from "drizzle-orm";
 
 /**
- * Character Figure 订阅计划类型
+ * actionFigure 订阅计划类型
  * 专门为角色图像生成平台设计的订阅层级
  */
 export enum SubscriptionPlan {
@@ -40,7 +40,7 @@ export enum BillingInterval {
 }
 
 /**
- * Character Figure 专属订阅计划配置
+ * actionFigure 专属订阅计划配置
  * 
  * 设计理念：
  * - Free: 让用户体验产品核心功能，每日1次生成限制
@@ -59,7 +59,7 @@ export const DEFAULT_PLANS = {
     plan_name: "免费体验版",
     plan_name_en: "Free",
     description: "每日免费体验角色生成功能",
-    description_en: "Daily free character generation experience",
+    description_en: "Daily free actiongeneration experience",
     monthly_price: 0,
     yearly_price: 0,
     currency: "USD",
@@ -74,7 +74,7 @@ export const DEFAULT_PLANS = {
     ],
     features_en: [
       "1 free generation daily",
-      "Basic character styles",
+      "Basic actionstyles",
       "Standard quality output", 
       "Community gallery access",
       "Basic support"
@@ -124,7 +124,7 @@ export const DEFAULT_PLANS = {
       "⭐ 单次仅$0.399，超值体验"
     ],
     features_en: [
-      "10 premium character generations",
+      "10 premium actiongenerations",
       "All premium styles unlocked", 
       "HD quality output (2K)",
       "Priority generation queue",
@@ -183,7 +183,7 @@ export const DEFAULT_PLANS = {
     ],
     features_en: [
       "50 professional generations monthly",
-      "Complete character style library",
+      "Complete actionstyle library",
       "Ultra HD output (4K)", 
       "Priority processing queue",
       "Batch generation (up to 4)",
@@ -244,7 +244,7 @@ export const DEFAULT_PLANS = {
     ],
     features_en: [
       "200 flagship generations monthly",
-      "Exclusive character style library",
+      "Exclusive actionstyle library",
       "8K ultra HD output",
       "Highest priority queue", 
       "Bulk generation (up to 10)",
@@ -350,7 +350,7 @@ export async function getUserSubscriptionPlan(userUuid: string) {
 /**
  * 检查用户是否可以进行角色生成
  * 
- * Character Figure 专用限制检查：
+ * actionFigure 专用限制检查：
  * - Free: 每日1次限制
  * - Trial: 总共10次限制（一次性购买）
  * - Pro: 每月50次限制
@@ -528,7 +528,7 @@ export async function canUseFeature(
 }
 
 /**
- * 记录角色生成使用情况（Character Figure专用）
+ * 记录角色生成使用情况（actionFigure专用）
  * 
  * @param userUuid 用户UUID
  * @param generationId 生成记录ID（关联character_generations表）

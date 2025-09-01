@@ -1,4 +1,4 @@
--- Database Triggers for Character Figure AI Generator
+-- Database Triggers for Action Figure AI Generator
 -- Purpose: Automatic timestamp updates and data synchronization
 -- Author: Database Automation Expert
 -- Date: 2025-08-28

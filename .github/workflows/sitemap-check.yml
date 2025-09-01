@@ -1,0 +1,508 @@
+name: 🗺️ Sitemap持续验证
+
+# 触发条件
+on:
+  # 推送到主分支时触发
+  push:
+    branches: [ main, master, develop ]
+    paths:
+      - 'src/app/**'
+      - 'src/i18n/**'
+      - 'src/middleware.ts'
+      - 'src/app/sitemap.ts'
+      - 'test/sitemap/**'
+  
+  # Pull Request时触发
+  pull_request:
+    branches: [ main, master, develop ]
+    paths:
+      - 'src/app/**'
+      - 'src/i18n/**'
+      - 'src/middleware.ts'
+      - 'src/app/sitemap.ts'
+      - 'test/sitemap/**'
+  
+  # 定时检查（每天凌晨2点）
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      validation_mode:
+        description: '验证模式'
+        required: true
+        default: 'standard'
+        type: choice
+        options:
+          - quick
+          - standard
+          - full
+      include_performance:
+        description: '包含性能测试'
+        required: false
+        default: true
+        type: boolean
+
+# 权限设置
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+# 环境变量
+env:
+  NODE_VERSION: '20'
+  PNPM_VERSION: '9'
+
+jobs:
+  # 快速静态分析工作
+  static-analysis:
+    name: 📋 静态分析
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    outputs:
+      analysis-success: ${{ steps.static-check.outputs.success }}
+      total-urls: ${{ steps.static-check.outputs.total-urls }}
+      matched-urls: ${{ steps.static-check.outputs.matched-urls }}
+      success-rate: ${{ steps.static-check.outputs.success-rate }}
+    
+    steps:
+      - name: 📥 Checkout代码
+        uses: actions/checkout@v4
+        
+      - name: 📦 设置pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          
+      - name: 📦 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          
+      - name: 📦 安装依赖
+        run: pnpm install --frozen-lockfile
+        
+      - name: 🔍 执行静态分析
+        id: static-check
+        run: |
+          echo "开始静态分析..."
+          node test/sitemap/analyze_sitemap.js
+          
+          # 读取分析结果
+          if [ -f "test/sitemap/sitemap_404_diagnosis.json" ]; then
+            TOTAL_URLS=$(node -e "console.log(require('./test/sitemap/sitemap_404_diagnosis.json').summary.totalUrls)")
+            MATCHED_URLS=$(node -e "console.log(require('./test/sitemap/sitemap_404_diagnosis.json').summary.matched)")
+            SUCCESS_RATE=$(node -e "console.log(require('./test/sitemap/sitemap_404_diagnosis.json').summary.successRate)")
+            
+            echo "total-urls=$TOTAL_URLS" >> $GITHUB_OUTPUT
+            echo "matched-urls=$MATCHED_URLS" >> $GITHUB_OUTPUT
+            echo "success-rate=$SUCCESS_RATE" >> $GITHUB_OUTPUT
+            
+            # 判断是否成功（成功率 >= 95%）
+            SUCCESS_RATE_NUM=$(echo $SUCCESS_RATE | sed 's/%//')
+            if [ $(echo "$SUCCESS_RATE_NUM >= 95" | bc -l) -eq 1 ]; then
+              echo "success=true" >> $GITHUB_OUTPUT
+            else
+              echo "success=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "success=false" >> $GITHUB_OUTPUT
+            echo "total-urls=0" >> $GITHUB_OUTPUT
+            echo "matched-urls=0" >> $GITHUB_OUTPUT
+            echo "success-rate=0%" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: 📤 上传静态分析报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: static-analysis-report
+          path: |
+            test/sitemap/sitemap_404_diagnosis.json
+            test/sitemap/sitemap_urls.txt
+          retention-days: 30
+
+  # HTTP验证工作
+  http-validation:
+    name: 🌐 HTTP验证
+    runs-on: ubuntu-latest
+    needs: static-analysis
+    if: needs.static-analysis.outputs.analysis-success == 'true' || github.event_name == 'workflow_dispatch'
+    timeout-minutes: 20
+    
+    outputs:
+      validation-success: ${{ steps.http-check.outputs.success }}
+      http-success-rate: ${{ steps.http-check.outputs.success-rate }}
+      failed-urls: ${{ steps.http-check.outputs.failed-urls }}
+    
+    steps:
+      - name: 📥 Checkout代码
+        uses: actions/checkout@v4
+        
+      - name: 📦 设置pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          
+      - name: 📦 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          
+      - name: 📦 安装依赖
+        run: pnpm install --frozen-lockfile
+        
+      - name: 🚀 构建项目
+        run: pnpm build
+        
+      - name: 🌐 执行HTTP验证
+        id: http-check
+        run: |
+          echo "开始HTTP验证..."
+          
+          # 选择验证模式
+          VALIDATION_MODE="${{ github.event.inputs.validation_mode || 'standard' }}"
+          node test/sitemap/continuous-validation.js $VALIDATION_MODE --verbose
+          
+          # 读取验证结果
+          if [ -f "test/sitemap/reports/latest-$VALIDATION_MODE.json" ]; then
+            HTTP_SUCCESS_RATE=$(node -e "
+              const report = require('./test/sitemap/reports/latest-$VALIDATION_MODE.json');
+              console.log(report.summary?.validation?.httpSuccessRate || 0);
+            ")
+            
+            FAILED_URLS=$(node -e "
+              const report = require('./test/sitemap/reports/latest-$VALIDATION_MODE.json');
+              const failures = report.httpValidation?.filter(r => !r.success) || [];
+              console.log(failures.length);
+            ")
+            
+            echo "success-rate=$HTTP_SUCCESS_RATE" >> $GITHUB_OUTPUT
+            echo "failed-urls=$FAILED_URLS" >> $GITHUB_OUTPUT
+            
+            # 判断是否成功（成功率 >= 95%）
+            if [ $(echo "$HTTP_SUCCESS_RATE >= 95" | bc -l) -eq 1 ]; then
+              echo "success=true" >> $GITHUB_OUTPUT
+            else
+              echo "success=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "success=false" >> $GITHUB_OUTPUT
+            echo "success-rate=0" >> $GITHUB_OUTPUT
+            echo "failed-urls=unknown" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: 📤 上传HTTP验证报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: http-validation-report
+          path: |
+            test/sitemap/reports/
+          retention-days: 30
+
+  # 性能监控工作
+  performance-test:
+    name: ⚡ 性能监控
+    runs-on: ubuntu-latest
+    needs: [static-analysis, http-validation]
+    if: |
+      (needs.http-validation.outputs.validation-success == 'true' && 
+       (github.event.inputs.include_performance != 'false' || github.event_name == 'schedule')) ||
+      github.event.inputs.validation_mode == 'full'
+    timeout-minutes: 30
+    
+    outputs:
+      performance-score: ${{ steps.perf-check.outputs.score }}
+      performance-rating: ${{ steps.perf-check.outputs.rating }}
+      avg-response-time: ${{ steps.perf-check.outputs.avg-response-time }}
+    
+    steps:
+      - name: 📥 Checkout代码
+        uses: actions/checkout@v4
+        
+      - name: 📦 设置pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          
+      - name: 📦 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          
+      - name: 📦 安装依赖
+        run: pnpm install --frozen-lockfile
+        
+      - name: 🚀 构建项目
+        run: pnpm build
+        
+      - name: ⚡ 执行性能监控
+        id: perf-check
+        run: |
+          echo "开始性能监控..."
+          
+          # 准备URL列表
+          if [ ! -f "test/sitemap/sitemap_urls.txt" ]; then
+            node test/sitemap/analyze_sitemap.js
+          fi
+          
+          # 运行性能监控
+          node test/sitemap/performance-monitor.js --verbose
+          
+          # 读取性能结果
+          if [ -f "test/sitemap/performance-reports/latest-performance.json" ]; then
+            PERF_SCORE=$(node -e "
+              const report = require('./test/sitemap/performance-reports/latest-performance.json');
+              console.log(report.summary?.overall?.score || 0);
+            ")
+            
+            PERF_RATING=$(node -e "
+              const report = require('./test/sitemap/performance-reports/latest-performance.json');
+              console.log(report.summary?.overall?.rating || 'UNKNOWN');
+            ")
+            
+            AVG_RESPONSE_TIME=$(node -e "
+              const report = require('./test/sitemap/performance-reports/latest-performance.json');
+              console.log(report.summary?.baseline?.averageResponseTime || 0);
+            ")
+            
+            echo "score=$PERF_SCORE" >> $GITHUB_OUTPUT
+            echo "rating=$PERF_RATING" >> $GITHUB_OUTPUT
+            echo "avg-response-time=$AVG_RESPONSE_TIME" >> $GITHUB_OUTPUT
+          else
+            echo "score=0" >> $GITHUB_OUTPUT
+            echo "rating=FAILED" >> $GITHUB_OUTPUT
+            echo "avg-response-time=0" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: 📤 上传性能报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: performance-reports
+          path: |
+            test/sitemap/performance-reports/
+          retention-days: 30
+
+  # 生成综合报告
+  generate-report:
+    name: 📊 生成综合报告
+    runs-on: ubuntu-latest
+    needs: [static-analysis, http-validation, performance-test]
+    if: always()
+    timeout-minutes: 10
+    
+    steps:
+      - name: 📥 Checkout代码
+        uses: actions/checkout@v4
+        
+      - name: 📦 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          
+      - name: 📥 下载所有报告
+        uses: actions/download-artifact@v4
+        with:
+          path: ./artifacts/
+          
+      - name: 📊 生成综合报告
+        run: |
+          echo "# 🗺️ Sitemap验证报告" > sitemap-report.md
+          echo "" >> sitemap-report.md
+          echo "**验证时间**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> sitemap-report.md
+          echo "**触发事件**: ${{ github.event_name }}" >> sitemap-report.md
+          echo "**分支**: ${{ github.ref_name }}" >> sitemap-report.md
+          echo "**提交**: ${{ github.sha }}" >> sitemap-report.md
+          echo "" >> sitemap-report.md
+          
+          # 静态分析结果
+          echo "## 📋 静态分析" >> sitemap-report.md
+          echo "- **总URL数**: ${{ needs.static-analysis.outputs.total-urls }}" >> sitemap-report.md
+          echo "- **匹配URL数**: ${{ needs.static-analysis.outputs.matched-urls }}" >> sitemap-report.md
+          echo "- **成功率**: ${{ needs.static-analysis.outputs.success-rate }}" >> sitemap-report.md
+          echo "" >> sitemap-report.md
+          
+          # HTTP验证结果
+          if [ "${{ needs.http-validation.result }}" != "skipped" ]; then
+            echo "## 🌐 HTTP验证" >> sitemap-report.md
+            echo "- **HTTP成功率**: ${{ needs.http-validation.outputs.http-success-rate }}%" >> sitemap-report.md
+            echo "- **失败URL数**: ${{ needs.http-validation.outputs.failed-urls }}" >> sitemap-report.md
+            echo "" >> sitemap-report.md
+          fi
+          
+          # 性能监控结果
+          if [ "${{ needs.performance-test.result }}" != "skipped" ]; then
+            echo "## ⚡ 性能监控" >> sitemap-report.md
+            echo "- **性能评分**: ${{ needs.performance-test.outputs.performance-score }}/100" >> sitemap-report.md
+            echo "- **性能评级**: ${{ needs.performance-test.outputs.performance-rating }}" >> sitemap-report.md
+            echo "- **平均响应时间**: ${{ needs.performance-test.outputs.avg-response-time }}ms" >> sitemap-report.md
+            echo "" >> sitemap-report.md
+          fi
+          
+          # 总体状态
+          echo "## 🎯 总体状态" >> sitemap-report.md
+          if [ "${{ needs.static-analysis.outputs.analysis-success }}" == "true" ] && 
+             [ "${{ needs.http-validation.outputs.validation-success }}" == "true" ]; then
+            echo "✅ **状态**: 通过" >> sitemap-report.md
+          else
+            echo "❌ **状态**: 失败" >> sitemap-report.md
+          fi
+          
+      - name: 📤 上传综合报告
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitemap-comprehensive-report
+          path: sitemap-report.md
+          retention-days: 30
+
+  # PR评论
+  comment-pr:
+    name: 💬 PR评论
+    runs-on: ubuntu-latest
+    needs: [static-analysis, http-validation, performance-test]
+    if: github.event_name == 'pull_request' && always()
+    
+    steps:
+      - name: 💬 评论PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const staticSuccess = '${{ needs.static-analysis.outputs.analysis-success }}' === 'true';
+            const httpSuccess = '${{ needs.http-validation.outputs.validation-success }}' === 'true';
+            const staticRate = '${{ needs.static-analysis.outputs.success-rate }}';
+            const httpRate = '${{ needs.http-validation.outputs.http-success-rate }}';
+            const totalUrls = '${{ needs.static-analysis.outputs.total-urls }}';
+            
+            const statusIcon = (staticSuccess && httpSuccess) ? '✅' : '❌';
+            const performanceData = '${{ needs.performance-test.outputs.performance-score }}' !== '' 
+              ? `\n⚡ **性能评分**: ${{ needs.performance-test.outputs.performance-score }}/100 (${{ needs.performance-test.outputs.performance-rating }})`
+              : '';
+            
+            const comment = `## ${statusIcon} Sitemap验证结果
+            
+            📋 **静态分析**: ${staticRate} (${totalUrls} URLs)
+            🌐 **HTTP验证**: ${httpRate}% 成功${performanceData}
+            
+            ${(staticSuccess && httpSuccess) 
+              ? '🎉 所有sitemap URL验证通过！' 
+              : '⚠️  发现sitemap问题，请检查详细报告。'}
+            
+            📊 [查看详细报告](${context.payload.pull_request.html_url}/checks)`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+  # 创建Issue（如果验证失败）
+  create-issue:
+    name: 🚨 创建问题Issue
+    runs-on: ubuntu-latest
+    needs: [static-analysis, http-validation]
+    if: |
+      (needs.static-analysis.outputs.analysis-success != 'true' || 
+       needs.http-validation.outputs.validation-success != 'true') &&
+      github.event_name == 'schedule'
+    
+    steps:
+      - name: 🚨 创建Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const staticSuccess = '${{ needs.static-analysis.outputs.analysis-success }}' === 'true';
+            const httpSuccess = '${{ needs.http-validation.outputs.validation-success }}' === 'true';
+            const staticRate = '${{ needs.static-analysis.outputs.success-rate }}';
+            const httpRate = '${{ needs.http-validation.outputs.http-success-rate }}';
+            
+            const issues = [];
+            if (!staticSuccess) issues.push(`静态分析失败 (${staticRate})`);
+            if (!httpSuccess) issues.push(`HTTP验证失败 (${httpRate}%)`);
+            
+            const title = `🚨 Sitemap验证失败 - ${new Date().toISOString().split('T')[0]}`;
+            const body = `## 🗺️ Sitemap验证失败报告
+            
+            **检测时间**: ${new Date().toISOString()}
+            **触发方式**: 定时检查
+            
+            ### 🔍 问题详情
+            ${issues.map(issue => `- ❌ ${issue}`).join('\n')}
+            
+            ### 📊 详细数据
+            - **静态分析成功率**: ${staticRate}
+            - **HTTP验证成功率**: ${httpRate}%
+            
+            ### 🛠️ 修复建议
+            1. 检查 \`src/app/sitemap.ts\` 配置
+            2. 验证页面文件结构是否匹配
+            3. 检查中间件路由配置
+            4. 运行本地验证: \`pnpm test:sitemap:full\`
+            
+            ### 📋 相关文件
+            - \`test/sitemap/TESTING_GUIDE.md\` - 完整测试指南
+            - \`test/sitemap/continuous-validation.js\` - 验证脚本
+            
+            /label bug,sitemap,urgent
+            /assign @${context.repo.owner}`;
+            
+            // 检查是否已存在类似的开放Issue
+            const existingIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'sitemap',
+              state: 'open'
+            });
+            
+            const hasOpenSitemapIssue = existingIssues.data.some(issue => 
+              issue.title.includes('Sitemap验证失败')
+            );
+            
+            if (!hasOpenSitemapIssue) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['bug', 'sitemap', 'urgent']
+              });
+            }
+
+  # 部署报告到GitHub Pages（可选）
+  deploy-reports:
+    name: 🌐 部署报告到Pages
+    runs-on: ubuntu-latest
+    needs: [generate-report, performance-test]
+    if: |
+      github.event_name == 'schedule' && 
+      needs.performance-test.result == 'success' &&
+      github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 📥 Checkout代码
+        uses: actions/checkout@v4
+        
+      - name: 📥 下载报告
+        uses: actions/download-artifact@v4
+        with:
+          name: performance-reports
+          path: ./reports/
+          
+      - name: 🌐 部署到GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports/
+          destination_dir: sitemap-reports
+          keep_files: true

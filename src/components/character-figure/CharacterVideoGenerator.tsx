@@ -131,7 +131,7 @@ export default function CharacterVideoGenerator({ locale }: CharacterVideoGenera
   const handleGenerate = async () => {
     // Validation
     if (mode === 'prompt' && !prompt.trim()) {
-      setError('Please enter a prompt describing your character figure');
+      setError('Please enter a prompt describing your actionfigure');
       return;
     }
     if (mode === 'upload' && !uploadedImage) {
@@ -230,10 +230,10 @@ export default function CharacterVideoGenerator({ locale }: CharacterVideoGenera
   // Multi-language content
   const content = {
     en: {
-      title: 'Create Video from Character Figure',
+      title: 'Create Video from actionFigure',
       promptTab: 'Text to Video',
       uploadTab: 'Image to Video',
-      promptPlaceholder: 'Describe your character figure animation...',
+      promptPlaceholder: 'Describe your actionfigure animation...',
       uploadButton: 'Choose Image',
       generateButton: 'Generate Video',
       downloadButton: 'Download Video',
@@ -293,7 +293,7 @@ export default function CharacterVideoGenerator({ locale }: CharacterVideoGenera
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setPrompt('A cute anime character figure waving hello, pastel colors')}
+                onClick={() => setPrompt('A cute anime actionfigure waving hello, pastel colors')}
                 className="text-xs"
               >
                 Anime Character
@@ -309,7 +309,7 @@ export default function CharacterVideoGenerator({ locale }: CharacterVideoGenera
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setPrompt('Chibi style character figure dancing happily')}
+                onClick={() => setPrompt('Chibi style actionfigure dancing happily')}
                 className="text-xs"
               >
                 Dancing Chibi

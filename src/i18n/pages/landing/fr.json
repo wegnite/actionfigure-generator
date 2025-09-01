@@ -68,13 +68,13 @@
     }
   },
   "whatYouCanCreate": {
-    "title": "Ce Que Vous Pouvez Créer avec les Figurines d'Action IA",
-    "description": "Transformez n'importe quelle idée en figurines d'action professionnelles en utilisant l'IA avancée. Parfait pour les collectionneurs, créateurs et professionnels qui ont besoin de créations de haute qualité.",
+    "title": "Ce Que Vous Pouvez Créer avec Notre Générateur de Figurines Personnalisées",
+    "description": "Notre Générateur de Figurines transforme toute idée en figurines personnalisées professionnelles avec l'IA avancée. Parfait pour les collectionneurs et créateurs qui recherchent des figurines IA de haute qualité.",
     "categories": [
       {
         "title": "Objets de Collection Premium",
         "icon": "🏆",
-        "description": "Créez des figurines d'action haut de gamme pour les collectionneurs adultes (25-49 ans). Parfait pour les vitrines, conventions et collections personnelles.",
+        "description": "Créez des figurines personnalisées haut de gamme avec notre Générateur de Figurines pour les collectionneurs adultes. Parfait pour les vitrines, conventions et collections uniques avec des figurines IA sur mesure.",
         "features": [
           "Détails de qualité muséale",
           "Style édition limitée",
@@ -85,7 +85,7 @@
       {
         "title": "Contenu Réseaux Sociaux",
         "icon": "📱",
-        "description": "Générez des figurines d'action virales pour YouTube, TikTok, Instagram et diffusion en direct. Personnalisé pour les créateurs de 18-35 ans.",
+        "description": "Générez des figurines personnalisées virales avec notre Générateur de Figurines pour YouTube, TikTok, Instagram. Créez des figurines IA uniques pour les créateurs de contenu avec des résultats instantanés.",
         "features": [
           "Optimisé pour les réseaux sociaux",
           "Potentiel viral instantané",
@@ -107,7 +107,7 @@
       {
         "title": "Prêt pour Impression 3D",
         "icon": "🖨️",
-        "description": "Générez des figurines d'action optimisées avec une géométrie appropriée et des détails imprimables, spécialement conçues pour l'impression 3D.",
+        "description": "Générez des figurines personnalisées optimisées avec une géométrie appropriée et des détails imprimables, spécialement conçues pour l'impression 3D.",
         "features": [
           "Géométrie optimisée pour l'impression",
           "Design compatible supports",
@@ -118,49 +118,49 @@
     ],
     "benefits": [
       {
-        "title": "Qualité Propulsée par IA",
+        "title": "Générateur de Figurines IA Haute Qualité",
         "icon": "Sparkles",
-        "description": "Notre technologie Nano Banana IA garantit que chaque figurine d'action répond aux standards de qualité professionnelle, offrant des résultats haute résolution et cohérents."
+        "description": "Notre Générateur de Figurines utilise la technologie Nano Banana IA pour garantir que chaque figurine personnalisée répond aux standards professionnels, offrant des figurines IA haute résolution et cohérentes."
       },
       {
         "title": "Ultra Rapide",
         "icon": "Clock",
-        "description": "Générez des figurines d'action professionnelles en 10 secondes. Pas d'attente, pas de files d'attente - seulement des résultats créatifs instantanés."
+        "description": "Créez des figurines personnalisées avec notre Générateur de Figurines en 10 secondes. Pas d'attente pour vos figurines IA - résultats créatifs instantanés garantis."
       },
       {
         "title": "Droits Commerciaux",
         "icon": "Shield",
-        "description": "Toutes les figurines d'action générées viennent avec des droits d'usage commercial complets. Parfait pour les entreprises, la revente et les projets professionnels."
+        "description": "Toutes les figurines personnalisées de notre Générateur de Figurines incluent les droits commerciaux complets. Parfait pour monétiser vos figurines IA, entreprises et projets professionnels."
       }
     ]
   },
   "features": {
-    "title": "Fonctionnalités Avancées des Figurines d'Action",
-    "description": "Outils professionnels pour créer des figurines d'action de haute qualité",
+    "title": "Fonctionnalités Avancées du Générateur de Figurines Personnalisées",
+    "description": "Outils professionnels du Générateur de Figurines pour créer des figurines personnalisées de haute qualité",
     "items": [
       {
-        "title": "10+ Styles de Figurines d'Action",
-        "description": "Créez des figurines d'action diverses incluant les styles anime, réalisme, fantasy",
+        "title": "10+ Styles de Figurines Personnalisées dans le Générateur",
+        "description": "Notre Générateur de Figurines propose des styles variés pour vos figurines personnalisées - anime, réalisme, fantasy et plus",
         "icon": "Palette"
       },
       {
         "title": "Génération Vidéo",
-        "description": "Transformez les figurines d'action statiques en vidéos dynamiques avec l'IA",
+        "description": "Le Générateur transforme vos figurines personnalisées statiques en vidéos IA dynamiques",
         "icon": "Video"
       },
       {
         "title": "Ultra Rapide",
-        "description": "Générez des figurines d'action en 10 secondes avec Nano Banana IA",
+        "description": "Créez des figurines personnalisées en 10 secondes avec le Générateur Nano Banana IA",
         "icon": "Zap"
       },
       {
         "title": "Export HD",
-        "description": "Exportez les figurines d'action en haute résolution pour tout usage",
+        "description": "Exportez vos figurines personnalisées du Générateur en haute résolution pour tout usage",
         "icon": "Download"
       },
       {
         "title": "Licence Commerciale",
-        "description": "Toutes les figurines d'action incluent les droits d'usage commercial",
+        "description": "Toutes les figurines personnalisées du Générateur incluent les droits commerciaux",
         "icon": "Shield"
       },
       {
@@ -171,16 +171,16 @@
     ]
   },
   "gallery": {
-    "title": "Figurines d'Action Créées par la Communauté",
-    "description": "Découvrez la diversité et qualité incroyables des figurines d'action générées par IA. Des styles anime aux portraits réalistes, voyez les possibilités infinies de notre générateur avancé de figurines d'action.",
+    "title": "Figurines Personnalisées Créées par la Communauté avec le Générateur de Figurines",
+    "description": "Découvrez la diversité et qualité incroyables des figurines personnalisées générées par notre Générateur de Figurines IA. Des styles anime aux portraits réalistes, voyez les possibilités infinies pour créer des figurines IA uniques.",
     "stats": {
       "creators": "50 000+ Créateurs",
-      "generated": "1M+ Figurines Créées"
+      "generated": "1M+ figurines personnalisées créées avec le Générateur de Figurines"
     }
   },
   "pricing": {
-    "title": "Plans Tarifaires des Figurines d'Action",
-    "description": "Commencez à créer des figurines d'action gratuitement",
+    "title": "Plans Tarifaires du Générateur de Figurines Personnalisées",
+    "description": "Commencez à créer des figurines personnalisées gratuitement avec le Générateur de Figurines",
     "plans": [
       {
         "name": "Gratuit",
@@ -211,8 +211,8 @@
     "detailedPricing": "Voir les tarifs détaillés →"
   },
   "howItWorks": {
-    "title": "Comment Créer des Figurines d'Action",
-    "description": "Trois étapes simples pour des figurines d'action époustouflantes",
+    "title": "Comment Créer des Figurines Personnalisées",
+    "description": "Trois étapes simples pour des figurines personnalisées époustouflantes",
     "steps": [
       {
         "number": "1",
@@ -233,55 +233,55 @@
   },
   "faq": {
     "title": "Questions Fréquentes",
-    "description": "Tout ce que vous devez savoir sur la création de figurines d'action avec l'IA",
+    "description": "Tout ce que vous devez savoir sur notre Générateur de Figurines pour créer des figurines personnalisées avec l'IA",
     "items": [
       {
-        "question": "Qu'est-ce qu'un générateur de figurines d'action ?",
-        "answer": "Notre générateur IA de figurines d'action transforme les photos, descriptions ou idées en figurines d'action numériques de haute qualité. Utilisant la technologie avancée Nano Banana IA, il crée des figurines professionnelles dans divers styles, incluant anime, réalisme, fantasy et plus. Parfait pour les collectionneurs, créateurs et usage commercial."
+        "question": "Qu'est-ce que le Générateur de Figurines pour figurines personnalisées ?",
+        "answer": "Notre Générateur de Figurines transforme les photos, descriptions ou idées en figurines personnalisées numériques de haute qualité. Utilisant la technologie Nano Banana IA, il crée des figurines IA professionnelles dans divers styles. Parfait pour les collectionneurs, créateurs et usage commercial avec des figurines sur mesure."
       },
       {
-        "question": "Comment fonctionne la génération de figurines d'action IA ?",
+        "question": "Comment fonctionne la génération de figurines personnalisées IA ?",
         "answer": "Téléchargez simplement une photo ou saisissez une description, choisissez votre style préféré (anime, réalisme, cyberpunk, etc.), et notre IA analyse l'entrée pour générer une figurine d'action unique. Le processus entier prend moins de 10 secondes et utilise l'apprentissage automatique entraîné sur des millions de designs de personnages de haute qualité."
       },
       {
         "question": "Quels formats de fichiers sont supportés ?",
-        "answer": "Nous acceptons les fichiers JPEG, PNG, GIF et WEBP jusqu'à 20MB en entrée. Les figurines d'action générées sont livrées sous forme de fichiers PNG haute résolution, optimisés pour l'impression, les réseaux sociaux ou l'usage numérique. Nous offrons également plusieurs rapports d'aspect incluant carré (1:1), portrait (2:3) et paysage (3:2)."
+        "answer": "Nous acceptons les fichiers JPEG, PNG, GIF et WEBP jusqu'à 20MB en entrée. Les figurines personnalisées générées sont livrées sous forme de fichiers PNG haute résolution, optimisés pour l'impression, les réseaux sociaux ou l'usage numérique. Nous offrons également plusieurs rapports d'aspect incluant carré (1:1), portrait (2:3) et paysage (3:2)."
       },
       {
-        "question": "Puis-je utiliser les figurines d'action générées commercialement ?",
-        "answer": "Oui ! Toutes les figurines d'action créées avec notre générateur viennent avec des droits d'usage commercial complets. Vous pouvez les utiliser pour les affaires, la revente, le marketing, les réseaux sociaux, la marchandise et tout usage commercial sans frais de licence supplémentaires. Ceci s'applique à tous les plans payants."
+        "question": "Puis-je utiliser les figurines personnalisées générées commercialement ?",
+        "answer": "Oui ! Toutes les figurines personnalisées créées avec notre générateur viennent avec des droits d'usage commercial complets. Vous pouvez les utiliser pour les affaires, la revente, le marketing, les réseaux sociaux, la marchandise et tout usage commercial sans frais de licence supplémentaires. Ceci s'applique à tous les plans payants."
       },
       {
-        "question": "Combien de temps prend la génération de figurines d'action ?",
-        "answer": "La plupart des figurines d'action sont générées en 10 secondes. Les demandes complexes ou générations en lot peuvent prendre un peu plus de temps, mais notre Nano Banana IA est optimisée pour la vitesse. Pas de files d'attente ou temps d'attente - vous obtenez des résultats instantanés."
+        "question": "Combien de temps prend la génération de figurines personnalisées ?",
+        "answer": "La plupart des figurines personnalisées sont générées en 10 secondes. Les demandes complexes ou générations en lot peuvent prendre un peu plus de temps, mais notre Nano Banana IA est optimisée pour la vitesse. Pas de files d'attente ou temps d'attente - vous obtenez des résultats instantanés."
       },
       {
-        "question": "Quels styles de figurines d'action sont disponibles ?",
+        "question": "Quels styles de figurines personnalisées sont disponibles ?",
         "answer": "Nous offrons 10+ styles professionnels incluant : Anime, Réalisme, Guerrier Fantasy, Cyberpunk, Studio Ghibli, Super-héros, Pop Mart, Peinture à l'huile, Aquarelle et Pixel Art. Chaque style est soigneusement optimisé pour différents cas d'usage, des objets de collection au contenu pour réseaux sociaux."
       },
       {
         "question": "Offrez-vous des remboursements ?",
-        "answer": "Oui, nous offrons une garantie de remboursement de 30 jours pour tous les abonnements payants. Si vous n'êtes pas entièrement satisfait de la qualité des figurines d'action, contactez notre équipe de support pour un remboursement complet. Les utilisateurs gratuits peuvent tester le générateur avant de passer à un plan supérieur."
+        "answer": "Oui, nous offrons une garantie de remboursement de 30 jours pour tous les abonnements payants. Si vous n'êtes pas entièrement satisfait de la qualité des figurines personnalisées, contactez notre équipe de support pour un remboursement complet. Les utilisateurs gratuits peuvent tester le générateur avant de passer à un plan supérieur."
       },
       {
         "question": "Comment fonctionnent les tarifs ?",
-        "answer": "Les tarifs sont basés sur le nombre de figurines d'action que vous pouvez générer par mois : Gratuit (5 par jour), Créateur (15€/mois pour 100), Professionnel (39€/mois pour 500), et Entreprise (159€/mois illimité). Chaque génération utilise 1 crédit, indépendamment du style ou de la complexité."
+        "answer": "Les tarifs sont basés sur le nombre de figurines personnalisées que vous pouvez générer par mois : Gratuit (5 par jour), Créateur (15€/mois pour 100), Professionnel (39€/mois pour 500), et Entreprise (159€/mois illimité). Chaque génération utilise 1 crédit, indépendamment du style ou de la complexité."
       },
       {
         "question": "Puis-je annuler à tout moment ?",
         "answer": "Absolument ! Vous pouvez annuler votre abonnement à tout moment depuis les paramètres de compte. Pas de frais d'annulation ou d'engagements à long terme. Vos crédits inutilisés restent disponibles jusqu'à la fin de la période de facturation."
       },
       {
-        "question": "Quelle est la résolution des figurines d'action ?",
-        "answer": "Toutes les figurines d'action sont générées en haute résolution (typiquement 1024x1024 ou plus selon le rapport d'aspect). Ceci garantit qu'elles sont parfaites pour l'impression, les réseaux sociaux, l'usage commercial ou toute application professionnelle. Nous maintenons une qualité cohérente à travers tous les styles."
+        "question": "Quelle est la résolution des figurines personnalisées ?",
+        "answer": "Toutes les figurines personnalisées sont générées en haute résolution (typiquement 1024x1024 ou plus selon le rapport d'aspect). Ceci garantit qu'elles sont parfaites pour l'impression, les réseaux sociaux, l'usage commercial ou toute application professionnelle. Nous maintenons une qualité cohérente à travers tous les styles."
       },
       {
-        "question": "Mes données et figurines d'action sont-elles privées ?",
-        "answer": "Oui, votre confidentialité est notre priorité. Les images téléchargées sont traitées en sécurité et supprimées après génération. Les figurines d'action générées vous appartiennent et sont privées sauf si vous choisissez de les partager dans la galerie communautaire. Nous n'utilisons jamais votre contenu pour l'entraînement ou d'autres fins."
+        "question": "Mes données et figurines personnalisées sont-elles privées ?",
+        "answer": "Oui, votre confidentialité est notre priorité. Les images téléchargées sont traitées en sécurité et supprimées après génération. Les figurines personnalisées générées vous appartiennent et sont privées sauf si vous choisissez de les partager dans la galerie communautaire. Nous n'utilisons jamais votre contenu pour l'entraînement ou d'autres fins."
       },
       {
-        "question": "Puis-je créer des figurines d'action pour l'impression 3D ?",
-        "answer": "Oui ! Nos figurines d'action sont optimisées pour diverses utilisations, incluant l'impression 3D. Bien que nous générions des images 2D, elles sont conçues avec une géométrie appropriée et des détails imprimables. Nous fournissons des guides pour la conversion vers les formats 3D et l'optimisation pour différentes imprimantes."
+        "question": "Puis-je créer des figurines personnalisées pour l'impression 3D ?",
+        "answer": "Oui ! Nos figurines personnalisées sont optimisées pour diverses utilisations, incluant l'impression 3D. Bien que nous générions des images 2D, elles sont conçues avec une géométrie appropriée et des détails imprimables. Nous fournissons des guides pour la conversion vers les formats 3D et l'optimisation pour différentes imprimantes."
       }
     ],
     "contact": {
@@ -290,16 +290,16 @@
     }
   },
   "cta": {
-    "title": "Commencez à Créer des Figurines d'Action Aujourd'hui",
-    "description": "Rejoignez les milliers qui utilisent notre générateur de figurines d'action pour donner vie aux idées",
-    "button": "Créez Votre Première Figurine d'Action Gratuitement"
+    "title": "Commencez à Créer vos Figurines Personnalisées Aujourd'hui avec le Générateur de Figurines",
+    "description": "Rejoignez les milliers qui utilisent notre Générateur de Figurines pour créer des figurines personnalisées IA uniques et donner vie aux idées",
+    "button": "Créez Votre Première Figurine Personnalisée Gratuitement avec le Générateur de Figurines"
   },
   "footer": {
     "disabled": false,
     "name": "footer",
     "brand": {
-      "title": "Générateur IA de Figurines d'Action",
-      "description": "La plateforme de génération de figurines d'action la plus avancée propulsée par IA. Créez des personnages 3D époustouflants pour le gaming, l'animation et les objets de collection.",
+      "title": "Générateur de Figurines - Créateur de Figurines Personnalisées IA",
+      "description": "Le Générateur de Figurines le plus avancé propulsé par IA pour créer des figurines personnalisées uniques. Transformez vos idées en figurines IA époustouflantes pour le gaming, l'animation et les objets de collection.",
       "logo": {
         "src": "/logo.svg",
         "alt": "Générateur de Figurines - Créateur IA Personnalisé"
@@ -401,7 +401,7 @@
         }
       ]
     },
-    "copyright": "© 2024 Générateur IA de Figurines d'Action. Tous droits réservés.",
+    "copyright": "© 2024 Générateur de Figurines - Créateur de Figurines Personnalisées IA. Tous droits réservés.",
     "agreement": {
       "items": [
         {

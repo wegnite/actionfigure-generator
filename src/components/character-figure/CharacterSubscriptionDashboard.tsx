@@ -1,5 +1,5 @@
 /**
- * Character Figure 用户订阅仪表板组件
+ * actionFigure 用户订阅仪表板组件
  * 
  * 功能特性：
  * - 显示当前订阅状态和信贷余额
@@ -482,7 +482,7 @@ export const CharacterSubscriptionDashboard = ({
           订阅管理
         </h1>
         <p className="text-gray-600 dark:text-gray-400">
-          管理您的Character Figure订阅和使用情况
+          管理您的actionFigure订阅和使用情况
         </p>
       </div>
       

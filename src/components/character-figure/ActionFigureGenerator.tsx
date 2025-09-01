@@ -61,7 +61,7 @@ const ACTION_FIGURE_STYLES = {
     id: "anime",
     name: "Anime Action Figure", 
     icon: "🎌",
-    description: "Generate anime-style action figure with distinctive art style and character features",
+    description: "Generate anime-style action figure with distinctive art style and actionfeatures",
     prompt: "Design an anime-style action figure with exaggerated features, dynamic pose, and anime aesthetic in collectible box",
     popular: true
   },

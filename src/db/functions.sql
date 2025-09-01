@@ -1,4 +1,4 @@
--- Database Functions for Character Figure AI Generator
+-- Database Functions for Action Figure AI Generator
 -- Purpose: Optimized database functions for common query patterns
 -- Author: Database Performance Expert
 -- Date: 2025-08-28

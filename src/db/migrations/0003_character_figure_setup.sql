@@ -1,13 +1,13 @@
--- Character Figure AI Generator Database Setup
+-- Action Figure AI Generator Database Setup
 -- Migration: 0003_character_figure_setup
--- Purpose: Create all Character Figure related tables with optimized indexes and constraints
+-- Purpose: Create all actionFigure related tables with optimized indexes and constraints
 -- Author: Database Optimization Expert
 -- Date: 2025-08-28
 
 -- =============================================
--- CHARACTER GENERATIONS TABLE
+-- actionGENERATIONS TABLE
 -- =============================================
--- Stores all character generation history with complete metadata
+-- Stores all actiongeneration history with complete metadata
 CREATE TABLE "character_generations" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "character_generations_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"uuid" varchar(255) NOT NULL UNIQUE,
@@ -60,9 +60,9 @@ CREATE INDEX "idx_character_generations_favorited" ON "character_generations" ("
 CREATE INDEX "idx_character_generations_not_deleted" ON "character_generations" ("user_uuid", "created_at" DESC) WHERE "is_deleted" = false;
 
 -- =============================================
--- CHARACTER GALLERY TABLE
+-- actionGALLERY TABLE
 -- =============================================
--- Public showcase of character creations with social features
+-- Public showcase of actioncreations with social features
 CREATE TABLE "character_gallery" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "character_gallery_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"uuid" varchar(255) NOT NULL UNIQUE,
@@ -81,7 +81,7 @@ CREATE TABLE "character_gallery" (
 	"image_width" integer,
 	"image_height" integer,
 	
-	-- Character metadata (denormalized for performance)
+	-- actionmetadata (denormalized for performance)
 	"style" varchar(50) NOT NULL,
 	"pose" varchar(50) NOT NULL,
 	"enhanced_prompt" text,
@@ -140,9 +140,9 @@ CREATE INDEX "idx_gallery_interactions_gallery_item" ON "gallery_interactions" (
 CREATE INDEX "idx_gallery_interactions_user" ON "gallery_interactions" ("user_uuid", "created_at" DESC);
 
 -- =============================================
--- CHARACTER TEMPLATES TABLE
+-- actionTEMPLATES TABLE
 -- =============================================
--- Predefined templates for quick character generation
+-- Predefined templates for quick actiongeneration
 CREATE TABLE "character_templates" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "character_templates_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"uuid" varchar(255) NOT NULL UNIQUE,
@@ -181,7 +181,7 @@ CREATE INDEX "idx_character_templates_usage" ON "character_templates" ("usage_co
 -- =============================================
 -- SYSTEM CONFIGS TABLE
 -- =============================================
--- Dynamic system configuration for Character Figure
+-- Dynamic system configuration for actionFigure
 CREATE TABLE "system_configs" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "system_configs_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"config_key" varchar(100) NOT NULL UNIQUE,
@@ -198,7 +198,7 @@ CREATE INDEX "idx_system_configs_active" ON "system_configs" ("is_active", "conf
 -- =============================================
 -- USER PREFERENCES TABLE
 -- =============================================
--- User preferences for character generation
+-- User preferences for actiongeneration
 CREATE TABLE "user_preferences" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "user_preferences_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"user_uuid" varchar(255) NOT NULL UNIQUE,
@@ -361,12 +361,12 @@ CREATE INDEX "idx_generations_user_recent" ON "character_generations" ("user_uui
 -- =============================================
 -- TABLE COMMENTS FOR DOCUMENTATION
 -- =============================================
-COMMENT ON TABLE "character_generations" IS 'Stores all character generation requests and results with full metadata tracking';
-COMMENT ON TABLE "character_gallery" IS 'Public gallery for showcasing character creations with social interaction features';
+COMMENT ON TABLE "character_generations" IS 'Stores all actiongeneration requests and results with full metadata tracking';
+COMMENT ON TABLE "character_gallery" IS 'Public gallery for showcasing actioncreations with social interaction features';
 COMMENT ON TABLE "gallery_interactions" IS 'Tracks user interactions (likes, bookmarks, views) with gallery items';
-COMMENT ON TABLE "character_templates" IS 'Predefined templates for quick character generation with usage analytics';
-COMMENT ON TABLE "system_configs" IS 'Dynamic system configuration for Character Figure feature flags and settings';
-COMMENT ON TABLE "user_preferences" IS 'User-specific preferences and settings for character generation';
+COMMENT ON TABLE "character_templates" IS 'Predefined templates for quick actiongeneration with usage analytics';
+COMMENT ON TABLE "system_configs" IS 'Dynamic system configuration for actionFigure feature flags and settings';
+COMMENT ON TABLE "user_preferences" IS 'User-specific preferences and settings for actiongeneration';
 COMMENT ON TABLE "subscription_plans" IS 'Available subscription plans with pricing and feature definitions';
 COMMENT ON TABLE "subscriptions" IS 'Active user subscriptions with billing and usage tracking';
 COMMENT ON TABLE "subscription_usage" IS 'Detailed usage tracking for subscription billing and analytics';

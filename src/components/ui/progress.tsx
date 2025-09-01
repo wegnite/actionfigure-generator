@@ -1,7 +1,7 @@
 /**
  * Progress Component
  * 
- * Problem: Missing progress component for character figure generation
+ * Problem: Missing progress component for actionfigure generation
  * Solution: Create shadcn/ui compatible progress component
  */
 

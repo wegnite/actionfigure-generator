@@ -4,10 +4,10 @@
  * 从实际sitemap验证URL状态
  */
 
-// 从localhost:3004获取sitemap并验证每个URL
+// 从localhost:3006获取sitemap并验证每个URL
 async function getSitemapUrls() {
   try {
-    const response = await fetch('http://localhost:3004/sitemap.xml');
+    const response = await fetch('http://localhost:3006/sitemap.xml');
     const sitemapText = await response.text();
     
     // 提取所有<loc>标签中的URL
@@ -23,8 +23,8 @@ async function getSitemapUrls() {
 
 async function testUrl(url) {
   try {
-    // 将生产域名替换为localhost:3004进行测试
-    const testUrl = url.replace('https://actionfigure-generator.com', 'http://localhost:3004');
+    // 将生产域名替换为localhost:3006进行测试
+    const testUrl = url.replace('https://actionfigure-generator.com', 'http://localhost:3006');
     
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 3000);
@@ -45,7 +45,7 @@ async function testUrl(url) {
   } catch (error) {
     return {
       originalUrl: url,
-      testUrl: url.replace('https://actionfigure-generator.com', 'http://localhost:3004'),
+      testUrl: url.replace('https://actionfigure-generator.com', 'http://localhost:3006'),
       status: null,
       success: false,
       error: error.name === 'AbortError' ? 'TIMEOUT' : error.message

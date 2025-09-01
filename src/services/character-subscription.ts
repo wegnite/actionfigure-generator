@@ -1,5 +1,5 @@
 /**
- * Character Figure 专用订阅信贷管理服务
+ * actionFigure 专用订阅信贷管理服务
  * 
  * 功能说明：
  * - 实现月度重置的订阅信贷系统
@@ -20,7 +20,7 @@ import { eq, and, gte, lte, sql } from "drizzle-orm";
 import { SubscriptionPlan } from "./subscription";
 
 /**
- * Character Figure 信贷类型
+ * actionFigure 信贷类型
  * 区分不同类型的信贷以便于管理和重置
  */
 export enum CharacterCreditType {

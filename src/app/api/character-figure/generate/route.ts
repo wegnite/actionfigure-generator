@@ -1,13 +1,13 @@
 /**
- * Character Figure Generation API Route
+ * actionFigure Generation API Route
  * 
- * Problem: Need specialized API endpoints for character figure generation with style-specific optimizations
+ * Problem: Need specialized API endpoints for actionfigure generation with style-specific optimizations
  * Solution: Create dedicated endpoints that enhance prompts and manage character-specific features
  * 
  * Endpoint: POST /api/character-figure/generate
  * Features:
  * - Style-specific prompt enhancement
- * - Character figure validation
+ * - actionfigure validation
  * - Credit management
  * - History tracking
  * - Gallery integration
@@ -31,7 +31,7 @@ import {
 } from '../types';
 
 /**
- * Rate limiting configuration for character generation
+ * Rate limiting configuration for actiongeneration
  */
 const RATE_LIMITS = {
   FREE_USER_PER_HOUR: 5,
@@ -41,14 +41,14 @@ const RATE_LIMITS = {
 
 /**
  * POST /api/character-figure/generate
- * Generate character figures with style-specific optimizations
+ * Generate actionfigures with style-specific optimizations
  */
 export async function POST(request: NextRequest) {
   try {
     // 1. Check authentication
     const session = await auth();
     if (!session || !session.user) {
-      return respErr('Unauthorized - Please sign in to generate character figures', 401);
+      return respErr('Unauthorized - Please sign in to generate actionfigures', 401);
     }
 
     // 2. Parse and validate request body
@@ -94,19 +94,19 @@ export async function POST(request: NextRequest) {
       // Continue without rate limiting if check fails
     }
 
-    // 4. Generate character figure
-    console.log(`Generating character figure for user ${session.user.id}: ${body.style} style, ${body.pose} pose`);
+    // 4. Generate actionfigure
+    console.log(`Generating actionfigure for user ${session.user.id}: ${body.style} style, ${body.pose} pose`);
     const startTime = Date.now();
     
     const response = await generateCharacterFigure(session.user.id!, body);
     
     const totalTime = Date.now() - startTime;
-    console.log(`Character figure generation completed in ${totalTime}ms`);
+    console.log(`actionfigure generation completed in ${totalTime}ms`);
 
     // 5. Handle generation result
     if (!response.success) {
-      console.error('Character figure generation failed:', response.error);
-      return respErr(response.error || 'Character figure generation failed. Please try again.', 400);
+      console.error('actionfigure generation failed:', response.error);
+      return respErr(response.error || 'actionfigure generation failed. Please try again.', 400);
     }
 
     // 6. Return successful response
@@ -135,7 +135,7 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error: any) {
-    console.error('Character figure API route error:', error);
+    console.error('actionfigure API route error:', error);
     
     // Handle specific error types
     if (error.name === 'SyntaxError') {
@@ -143,20 +143,20 @@ export async function POST(request: NextRequest) {
     }
     
     if (error.message?.includes('timeout')) {
-      return respErr('Request timeout - The character generation took too long. Please try again.', 408);
+      return respErr('Request timeout - The actiongeneration took too long. Please try again.', 408);
     }
     
     if (error.message?.includes('rate limit')) {
       return respErr('Rate limit exceeded - Please wait before generating more characters.', 429);
     }
     
-    return respErr('An unexpected error occurred during character generation. Please try again later.', 500);
+    return respErr('An unexpected error occurred during actiongeneration. Please try again later.', 500);
   }
 }
 
 /**
  * GET /api/character-figure/generate
- * Get character generation configuration and user limits
+ * Get actiongeneration configuration and user limits
  */
 export async function GET(request: NextRequest) {
   try {
@@ -205,13 +205,13 @@ export async function GET(request: NextRequest) {
     });
 
   } catch (error) {
-    console.error('GET character generation config error:', error);
-    return respErr('Failed to retrieve character generation configuration', 500);
+    console.error('GET actiongeneration config error:', error);
+    return respErr('Failed to retrieve actiongeneration configuration', 500);
   }
 }
 
 /**
- * Validate character figure generation request
+ * Validate actionfigure generation request
  * 
  * @param body Request body to validate
  * @returns Error message if validation fails, null if valid
@@ -319,8 +319,8 @@ function getStyleDescription(style: CharacterFigureStyle): string {
  */
 function getPoseDescription(pose: CharacterPose): string {
   const descriptions = {
-    [CharacterPose.STANDING]: 'Character in a natural standing position',
-    [CharacterPose.SITTING]: 'Character in a comfortable sitting pose',
+    [CharacterPose.STANDING]: 'actionin a natural standing position',
+    [CharacterPose.SITTING]: 'actionin a comfortable sitting pose',
     [CharacterPose.ACTION]: 'Dynamic action pose showing movement',
     [CharacterPose.PORTRAIT]: 'Close-up portrait focusing on face and upper body',
     [CharacterPose.FULL_BODY]: 'Full body view showing the complete character',

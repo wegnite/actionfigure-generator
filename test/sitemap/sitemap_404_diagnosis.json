@@ -1,0 +1,281 @@
+{
+  "timestamp": "2025-09-01T02:47:18.586Z",
+  "summary": {
+    "totalUrls": 37,
+    "matched": 33,
+    "missing": 4,
+    "successRate": "89.2%"
+  },
+  "actualPages": [
+    {
+      "route": "/privacy-policy",
+      "file": "src/app/(legal)/privacy-policy/page.mdx",
+      "type": "mdx"
+    },
+    {
+      "route": "/terms-of-service",
+      "file": "src/app/(legal)/terms-of-service/page.mdx",
+      "type": "mdx"
+    },
+    {
+      "route": "/[locale]/admin/feedbacks",
+      "file": "src/app/[locale]/(admin)/admin/feedbacks/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/admin/orders",
+      "file": "src/app/[locale]/(admin)/admin/orders/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/admin",
+      "file": "src/app/[locale]/(admin)/admin/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/admin/posts/[uuid]/edit",
+      "file": "src/app/[locale]/(admin)/admin/posts/[uuid]/edit/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/admin/posts/add",
+      "file": "src/app/[locale]/(admin)/admin/posts/add/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/admin/posts",
+      "file": "src/app/[locale]/(admin)/admin/posts/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/admin/users",
+      "file": "src/app/[locale]/(admin)/admin/users/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/api-keys/create",
+      "file": "src/app/[locale]/(default)/(console)/api-keys/create/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/api-keys",
+      "file": "src/app/[locale]/(default)/(console)/api-keys/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/my-credits",
+      "file": "src/app/[locale]/(default)/(console)/my-credits/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/my-invites",
+      "file": "src/app/[locale]/(default)/(console)/my-invites/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/my-orders",
+      "file": "src/app/[locale]/(default)/(console)/my-orders/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/character-figure",
+      "file": "src/app/[locale]/(default)/character-figure/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/character-figure/video",
+      "file": "src/app/[locale]/(default)/character-figure/video/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/i/[code]",
+      "file": "src/app/[locale]/(default)/i/[code]/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/ja-landing",
+      "file": "src/app/[locale]/(default)/ja-landing/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]",
+      "file": "src/app/[locale]/(default)/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/posts/[slug]",
+      "file": "src/app/[locale]/(default)/posts/[slug]/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/posts",
+      "file": "src/app/[locale]/(default)/posts/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/pricing",
+      "file": "src/app/[locale]/(default)/pricing/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/showcase",
+      "file": "src/app/[locale]/(default)/showcase/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tools/batch-processor",
+      "file": "src/app/[locale]/(default)/tools/batch-processor/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tools/prompt-generator",
+      "file": "src/app/[locale]/(default)/tools/prompt-generator/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tools/style-mixer",
+      "file": "src/app/[locale]/(default)/tools/style-mixer/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/docs/[[...slug]]",
+      "file": "src/app/[locale]/(docs)/docs/[[...slug]]/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/auth/signin",
+      "file": "src/app/[locale]/auth/signin/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tutorial/how-to-make-action-figure-ai",
+      "file": "src/app/[locale]/tutorial/how-to-make-action-figure-ai/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tutorial/how-to-make-ai-action-figure",
+      "file": "src/app/[locale]/tutorial/how-to-make-ai-action-figure/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tutorial/how-to-make-an-ai-action-figure",
+      "file": "src/app/[locale]/tutorial/how-to-make-an-ai-action-figure/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tutorial/how-to-make-the-action-figure-ai",
+      "file": "src/app/[locale]/tutorial/how-to-make-the-action-figure-ai/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/[locale]/tutorial/how-to-make-the-ai-action-figure",
+      "file": "src/app/[locale]/tutorial/how-to-make-the-ai-action-figure/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/",
+      "file": "src/app/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/tutorial/how-to-make-action-figure-ai",
+      "file": "src/app/tutorial/how-to-make-action-figure-ai/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/tutorial/how-to-make-ai-action-figure",
+      "file": "src/app/tutorial/how-to-make-ai-action-figure/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/tutorial/how-to-make-an-ai-action-figure",
+      "file": "src/app/tutorial/how-to-make-an-ai-action-figure/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/tutorial/how-to-make-the-action-figure-ai",
+      "file": "src/app/tutorial/how-to-make-the-action-figure-ai/page.tsx",
+      "type": "tsx"
+    },
+    {
+      "route": "/tutorial/how-to-make-the-ai-action-figure",
+      "file": "src/app/tutorial/how-to-make-the-ai-action-figure/page.tsx",
+      "type": "tsx"
+    }
+  ],
+  "missingPages": [
+    {
+      "url": "https://actionfigure-generator.com/pricing",
+      "locale": "en",
+      "page": "/pricing",
+      "type": "static",
+      "priority": 0.8
+    },
+    {
+      "url": "https://actionfigure-generator.com/showcase",
+      "locale": "en",
+      "page": "/showcase",
+      "type": "static",
+      "priority": 0.8
+    },
+    {
+      "url": "https://actionfigure-generator.com/character-figure",
+      "locale": "en",
+      "page": "/character-figure",
+      "type": "static",
+      "priority": 0.8
+    },
+    {
+      "url": "https://actionfigure-generator.com/character-figure/video",
+      "locale": "en",
+      "page": "/character-figure/video",
+      "type": "static",
+      "priority": 0.8
+    }
+  ],
+  "problems": [
+    {
+      "url": "https://actionfigure-generator.com/pricing",
+      "type": "static",
+      "locale": "en",
+      "page": "/pricing",
+      "reason": "Page file not found"
+    },
+    {
+      "url": "https://actionfigure-generator.com/showcase",
+      "type": "static",
+      "locale": "en",
+      "page": "/showcase",
+      "reason": "Page file not found"
+    },
+    {
+      "url": "https://actionfigure-generator.com/character-figure",
+      "type": "static",
+      "locale": "en",
+      "page": "/character-figure",
+      "reason": "Page file not found"
+    },
+    {
+      "url": "https://actionfigure-generator.com/character-figure/video",
+      "type": "static",
+      "locale": "en",
+      "page": "/character-figure/video",
+      "reason": "Page file not found"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "missing_static_pages",
+      "priority": "HIGH",
+      "count": 4,
+      "description": "缺失的静态页面",
+      "pages": [
+        "/pricing",
+        "/showcase",
+        "/character-figure",
+        "/character-figure/video"
+      ],
+      "action": "需要创建对应的page.tsx文件"
+    }
+  ]
+}

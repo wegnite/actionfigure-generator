@@ -1,8 +1,8 @@
 /**
- * Character Figure AI Generator Page
+ * Action Figure AI Generator Page
  * 
- * Problem: Users need an easy way to transform photos into character figures/collectibles
- * Solution: Intuitive interface for AI-powered character figure generation
+ * Problem: Users need an easy way to transform photos into actionfigures/collectibles
+ * Solution: Intuitive interface for AI-powered actionfigure generation
  * 
  * Features:
  * - Image upload with drag & drop
@@ -18,9 +18,9 @@ import CharacterFigureHero from '@/components/character-figure/CharacterFigureHe
 import CharacterFigureCTA from '@/components/character-figure/CharacterFigureCTA';
 
 export const metadata: Metadata = {
-  title: 'Character Figure AI Generator - Transform Photos into Collectible Art',
-  description: 'Create stunning character figures, Ghibli-style art, and collectible designs from your photos using advanced AI technology. Fast, easy, and high-quality.',
-  keywords: 'character figure, AI generator, ghibli style, anime figure, collectible toy, action figure generator, AI art',
+  title: 'Action Figure AI Generator - Transform Photos into Collectible Art',
+  description: 'Create stunning actionfigures, Ghibli-style art, and collectible designs from your photos using advanced AI technology. Fast, easy, and high-quality.',
+  keywords: 'actionfigure, AI generator, ghibli style, anime figure, collectible toy, action figure generator, AI art',
 };
 
 interface CharacterFigurePageProps {
@@ -62,7 +62,7 @@ export default async function CharacterFigurePage({ params }: CharacterFigurePag
             </div>
             <h3 className="text-xl font-semibold mb-2">Lightning Fast</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Generate stunning character figures in under 10 seconds with nano-banana technology
+              Generate stunning actionfigures in under 10 seconds with nano-banana technology
             </p>
           </div>
           
@@ -96,7 +96,7 @@ export default async function CharacterFigurePage({ params }: CharacterFigurePag
       <section className="bg-gradient-to-r from-orange-500 to-yellow-500 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Create Your First Character Figure?
+            Ready to Create Your First actionFigure?
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Join thousands of creators making amazing AI art every day

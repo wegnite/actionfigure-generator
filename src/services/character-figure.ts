@@ -1,5 +1,5 @@
 /**
- * 角色图像服务层 - Character Figure Business Services
+ * 角色图像服务层 - actionFigure Business Services
  * 
  * 功能说明：
  * 管理角色图像生成的核心业务逻辑，包括：
@@ -94,7 +94,7 @@ const STYLE_PROMPT_CONFIGS: Record<CharacterFigureStyle, StylePromptConfig> = {
   },
   [CharacterFigureStyle.CARTOON]: {
     style: CharacterFigureStyle.CARTOON,
-    prompt_prefix: "cartoon style, stylized character design, colorful cartoon art,",
+    prompt_prefix: "cartoon style, stylized actiondesign, colorful cartoon art,",
     prompt_suffix: ", bright colors, cartoon illustration, clean art style",
     negative_prompt: "realistic, photorealistic, dark, gritty, low quality",
     recommended_settings: {
@@ -235,7 +235,7 @@ export async function generateCharacterFigure(
       userUuid,
       creditsUsed,
       'CHARACTER_GENERATION',
-      `Generated character figure: ${request.style} style`
+      `Generated actionfigure: ${request.style} style`
     );
 
     if (!deducted) {
@@ -306,7 +306,7 @@ export async function generateCharacterFigure(
     };
 
   } catch (error: any) {
-    console.error('Character figure generation failed:', error);
+    console.error('actionfigure generation failed:', error);
     return {
       success: false,
       error: 'Internal server error during generation',
@@ -473,7 +473,7 @@ async function saveToGallery(
 
     // 生成标题和描述
     const title = `${request.style.charAt(0).toUpperCase() + request.style.slice(1)} Character`;
-    const description = `A ${request.style} style character in ${request.pose} pose. Generated with: "${request.prompt.substring(0, 100)}..."`;
+    const description = `A ${request.style} style actionin ${request.pose} pose. Generated with: "${request.prompt.substring(0, 100)}..."`;
 
     const galleryData = {
       uuid: galleryId,

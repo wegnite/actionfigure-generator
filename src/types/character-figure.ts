@@ -1,11 +1,11 @@
 /**
- * Character Figure AI Generator Type Definitions
+ * Action Figure AI Generator Type Definitions
  * 
- * Problem: Need type safety for character figure generation features
- * Solution: Define comprehensive TypeScript interfaces for all character figure operations
+ * Problem: Need type safety for actionfigure generation features
+ * Solution: Define comprehensive TypeScript interfaces for all actionfigure operations
  * 
  * Features:
- * - Character generation with style-specific prompts
+ * - actiongeneration with style-specific prompts
  * - Gallery management (public showcase)
  * - User generation history
  * - Like/rating system
@@ -14,7 +14,7 @@
 import { GeneratedImage, NanoBananaResponse } from './nano-banana';
 
 /**
- * Character figure styles with specific prompt optimizations
+ * actionfigure styles with specific prompt optimizations
  */
 export enum CharacterFigureStyle {
   ANIME = 'anime',
@@ -30,7 +30,7 @@ export enum CharacterFigureStyle {
 }
 
 /**
- * Character pose presets
+ * actionpose presets
  */
 export enum CharacterPose {
   STANDING = 'standing',
@@ -46,7 +46,7 @@ export enum CharacterPose {
 }
 
 /**
- * Character gender options
+ * actiongender options
  */
 export enum CharacterGender {
   MALE = 'male',
@@ -56,7 +56,7 @@ export enum CharacterGender {
 }
 
 /**
- * Character age groups
+ * actionage groups
  */
 export enum CharacterAge {
   CHILD = 'child',
@@ -68,22 +68,22 @@ export enum CharacterAge {
 }
 
 /**
- * Character figure generation request
+ * actionfigure generation request
  */
 export interface CharacterFigureRequest {
-  /** Base character description */
+  /** Base actiondescription */
   prompt: string;
   
-  /** Character style */
+  /** actionstyle */
   style: CharacterFigureStyle;
   
-  /** Character pose */
+  /** actionpose */
   pose: CharacterPose;
   
-  /** Character gender */
+  /** actiongender */
   gender: CharacterGender;
   
-  /** Character age group */
+  /** actionage group */
   age: CharacterAge;
   
   /** Additional style keywords */
@@ -118,7 +118,7 @@ export interface CharacterFigureRequest {
 }
 
 /**
- * Enhanced character figure generation response
+ * Enhanced actionfigure generation response
  */
 export interface CharacterFigureResponse extends NanoBananaResponse {
   data?: {
@@ -135,7 +135,7 @@ export interface CharacterFigureResponse extends NanoBananaResponse {
 }
 
 /**
- * Character figure image with metadata
+ * actionfigure image with metadata
  */
 export interface CharacterFigureImage extends GeneratedImage {
   /** Unique image ID */
@@ -150,7 +150,7 @@ export interface CharacterFigureImage extends GeneratedImage {
   /** Pose applied */
   pose: CharacterPose;
   
-  /** Character metadata */
+  /** actionmetadata */
   character_info?: {
     gender: CharacterGender;
     age: CharacterAge;
@@ -268,7 +268,7 @@ export interface GalleryActionResponse {
 }
 
 /**
- * Character figure statistics
+ * actionfigure statistics
  */
 export interface CharacterFigureStats {
   total_generations: number;
@@ -282,7 +282,7 @@ export interface CharacterFigureStats {
 }
 
 /**
- * Public character figure trends
+ * Public actionfigure trends
  */
 export interface CharacterFigureTrends {
   popular_styles: { style: CharacterFigureStyle; count: number }[];
@@ -360,7 +360,7 @@ export interface StylePromptConfig {
 }
 
 /**
- * Character figure generation context
+ * actionfigure generation context
  */
 export interface GenerationContext {
   user_uuid: string;

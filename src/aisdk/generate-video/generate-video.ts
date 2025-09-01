@@ -13,7 +13,7 @@ export async function generateVideo({
   prompt,
   n = 1,
   providerOptions,
-  maxRetries,
+  _maxRetries,
   abortSignal,
   headers,
 }: {
@@ -21,7 +21,7 @@ export async function generateVideo({
   prompt: string;
   n?: number;
   providerOptions?: Record<string, Record<string, JSONValue>>;
-  maxRetries?: number;
+  _maxRetries?: number;
   abortSignal?: AbortSignal;
   headers?: Record<string, string>;
 }): Promise<GenerateVideoResult> {

@@ -1,5 +1,5 @@
 /**
- * Character Figure Hero Component
+ * actionFigure Hero Component
  * 
  * Problem: Need an engaging hero section to capture user attention
  * Solution: Dynamic, animated hero with clear value proposition
@@ -56,14 +56,14 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
               </span>
               <br />
               <span className="text-gray-900 dark:text-white">
-                {locale === 'zh' ? '吉卜力风格的艺术作品' : 'Character Figures'}
+                {locale === 'zh' ? '吉卜力风格的艺术作品' : 'actionFigures'}
               </span>
             </h1>
             
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
               {locale === 'zh' 
                 ? '将您的照片转换为精美的吉卜力风格艺术作品和角色手办。快速、简单、高质量。'
-                : 'Transform your photos into stunning Ghibli-style art and collectible character figures. Fast, easy, and high-quality.'}
+                : 'Transform your photos into stunning Ghibli-style art and collectible actionfigures. Fast, easy, and high-quality.'}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -89,13 +89,13 @@ export default function CharacterFigureHero({ locale }: HeroProps) {
               <div>
                 <div className="text-3xl font-bold text-[var(--cf-orange-500)]">50K+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {locale === 'zh' ? '创作者' : 'Character Figure Creators'}
+                  {locale === 'zh' ? '创作者' : 'actionFigure Creators'}
                 </div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[var(--cf-orange-500)]">1M+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {locale === 'zh' ? '生成作品' : 'Character Figures Created'}
+                  {locale === 'zh' ? '生成作品' : 'actionFigures Created'}
                 </div>
               </div>
               <div>

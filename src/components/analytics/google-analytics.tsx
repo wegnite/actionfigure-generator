@@ -144,7 +144,7 @@ export default function GoogleAnalytics() {
       />
 
       {/* 开发环境调试信息 */}
-      {process.env.NODE_ENV === "development" && (
+      {process.env.NODE_ENV !== "production" && (
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -164,6 +164,5 @@ export default function GoogleAnalytics() {
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-    dataLayer: any[];
   }
 }

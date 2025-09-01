@@ -52,9 +52,9 @@ export class KlingImageModel implements ImageModelV1 {
     n,
     aspectRatio,
     size,
-    seed,
+    seed: _seed,
     providerOptions,
-    headers,
+    headers: _headers,
     abortSignal,
   }: Parameters<ImageModelV1["doGenerate"]>[0]): Promise<
     Awaited<ReturnType<ImageModelV1["doGenerate"]>>

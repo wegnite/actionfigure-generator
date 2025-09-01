@@ -1,5 +1,5 @@
 /**
- * Character Figure 订阅管理API
+ * actionFigure 订阅管理API
  * 
  * 功能说明：
  * - 获取用户当前订阅状态和信贷余额

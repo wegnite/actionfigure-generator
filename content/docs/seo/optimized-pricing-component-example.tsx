@@ -46,7 +46,7 @@ const getCardStyles = (item: PricingItem, isLoading: boolean, productId: string 
 // 价格显示组件
 const PriceDisplay = ({ item }: { item: PricingItem }) => {
   const hasDiscount = item.original_price && item.original_price !== item.price;
-  const discountPercent = hasDiscount ? 
+  const discountPercent = hasDiscount && item.original_price && item.price ? 
     Math.round(((parseFloat(item.original_price.replace('$', '')) - parseFloat(item.price.replace('$', ''))) / parseFloat(item.original_price.replace('$', ''))) * 100) : 0;
 
   return (
@@ -78,7 +78,7 @@ const PriceDisplay = ({ item }: { item: PricingItem }) => {
       </div>
       
       {/* 价值说明 */}
-      {item.credits > 0 && (
+      {item.credits && item.credits > 0 && item.price && (
         <div className="text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-full inline-block">
           每张图仅 ${(parseFloat(item.price.replace('$', '')) / item.credits).toFixed(3)}
         </div>

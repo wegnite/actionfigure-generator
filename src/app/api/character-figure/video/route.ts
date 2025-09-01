@@ -1,5 +1,5 @@
 /**
- * Character Figure Video Generation API
+ * actionFigure Video Generation API
  * 
  * 工作流：
  * 1. 接收用户输入（文字或图片）

@@ -1,5 +1,5 @@
 /**
- * Character Figure CTA Button Component
+ * actionFigure CTA Button Component
  * 
  * 问题：服务端组件不能直接包含事件处理器
  * 解决：将带有onClick的按钮提取为独立的客户端组件

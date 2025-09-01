@@ -1,7 +1,7 @@
 /**
- * Character Figure Mobile Navigation Component
+ * actionFigure Mobile Navigation Component
  * 
- * Problem: Mobile users need easy navigation for character figure features
+ * Problem: Mobile users need easy navigation for actionfigure features
  * Solution: Bottom navigation with key actions always accessible
  */
 

@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-09-01T04:02:07.239Z",
+  "environment": "production",
+  "mode": "quick",
+  "duration": 3029,
+  "overall": {
+    "status": "EXCELLENT",
+    "score": 100,
+    "issues": []
+  },
+  "checks": {
+    "availability": {
+      "type": "availability",
+      "score": 100,
+      "details": {
+        "totalChecks": 4,
+        "successful": 4,
+        "failed": 0,
+        "avgResponseTime": 757,
+        "checks": [
+          {
+            "url": "https://actionfigure-generator.com/",
+            "success": true,
+            "status": 200,
+            "statusText": "OK",
+            "responseTime": 712,
+            "headers": {
+              "alt-svc": "h3=\":443\"; ma=86400",
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cf-ray": "9781dece8a99100c-LAX",
+              "connection": "keep-alive",
+              "content-encoding": "br",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Mon, 01 Sep 2025 04:02:07 GMT",
+              "link": "<https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"x-default\"",
+              "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=Dk4axzC4cP2W%2FrBU9iMYeVKZyqr8AltsJg0sisA%2BsjNXfoosnW0PtRahFh2TPleuLsHJufOcTHChHBsuTWClrgusKrGv%2BEIPSXXl2sbMQNTvtK8ZBpB%2FSslWqFBHu7zMa0xHWhZyldW9LP93Da7tV4MeNHOPESGlYA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "server": "cloudflare",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=183922&min_rtt=183708&rtt_var=52085&sent=6&recv=7&lost=0&retrans=0&sent_bytes=3942&recv_bytes=1905&delivery_rate=21828&cwnd=51&unsent_bytes=0&cid=f2d0a0124381b00a&ts=309&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699327794%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699327794%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756699327794_lyo3j710h%22%2C%22sessionId%22%3A%22s_1756699327794_d399ce6gk%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Wed, 01 Oct 2025 04:02:07 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "transfer-encoding": "chunked",
+              "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+              "x-opennext": "1",
+              "x-powered-by": "Next.js"
+            },
+            "size": 0
+          },
+          {
+            "url": "https://actionfigure-generator.com/pricing",
+            "success": true,
+            "status": 200,
+            "statusText": "OK",
+            "responseTime": 1767,
+            "headers": {
+              "alt-svc": "h3=\":443\"; ma=86400",
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cf-ray": "9781ded2db8acba4-LAX",
+              "connection": "keep-alive",
+              "content-encoding": "br",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Mon, 01 Sep 2025 04:02:09 GMT",
+              "link": "<https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/pricing>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"x-default\"",
+              "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=9%2BLArkd88%2FXdc%2BiGw8qTEEPywX0CwA1tyiQqkKVBsp6S91GmCHoTnAwXRyGgriOsjnrJEOJ9gccCcfLcqeP565%2FylGuGMYlMb4EiTGwtsFmN8sPPgTffUz6FCeh3Ci5PXzJpYe9v89wuLNN%2FXbcwvsaX4JcAbfiIug%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "server": "cloudflare",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=188661&min_rtt=187557&rtt_var=71122&sent=4&recv=6&lost=0&retrans=0&sent_bytes=1322&recv_bytes=2183&delivery_rate=7187&cwnd=171&unsent_bytes=0&cid=4ce31b7a6f77b7ee&ts=1384&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329114%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329114%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756699329114_sjunsy8yx%22%2C%22sessionId%22%3A%22s_1756699329114_u3zg497ro%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Wed, 01 Oct 2025 04:02:09 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "transfer-encoding": "chunked",
+              "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+              "x-opennext": "1",
+              "x-powered-by": "Next.js"
+            },
+            "size": 0
+          },
+          {
+            "url": "https://actionfigure-generator.com/character-figure",
+            "success": true,
+            "status": 200,
+            "statusText": "OK",
+            "responseTime": 283,
+            "headers": {
+              "alt-svc": "h3=\":443\"; ma=86400",
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cf-ray": "9781dedb8e43100c-LAX",
+              "connection": "keep-alive",
+              "content-encoding": "br",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Mon, 01 Sep 2025 04:02:09 GMT",
+              "link": "<https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/character-figure>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"x-default\"",
+              "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=fY46EiWXWW4gUJ5d93i5tvFX5QZsOMD1Zoasv1F1VRhZWazK7ERnTEyUi3LF5BJaDknpDFflt2QtbyxHlSdrtre0X0JRwTNfQ3RFLekIgYLrTzXf%2FEZoeFbnhLpxabrnIjIByzZOZSjwP3LfOXMkTi4MrftxXcyTAg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "server": "cloudflare",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=192201&min_rtt=183708&rtt_var=2745&sent=33&recv=27&lost=0&retrans=0&sent_bytes=28171&recv_bytes=2128&delivery_rate=165501&cwnd=63&unsent_bytes=0&cid=f2d0a0124381b00a&ts=2363&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329856%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329856%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756699329856_fg4s2jy1n%22%2C%22sessionId%22%3A%22s_1756699329856_al1nckt39%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Wed, 01 Oct 2025 04:02:09 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "transfer-encoding": "chunked",
+              "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+              "x-opennext": "1",
+              "x-powered-by": "Next.js"
+            },
+            "size": 0
+          },
+          {
+            "url": "https://actionfigure-generator.com/sitemap.xml",
+            "success": true,
+            "status": 200,
+            "statusText": "OK",
+            "responseTime": 264,
+            "headers": {
+              "alt-svc": "h3=\":443\"; ma=86400",
+              "cache-control": "public, max-age=0, must-revalidate",
+              "cf-ray": "9781dedd4b60cba4-LAX",
+              "connection": "keep-alive",
+              "content-encoding": "br",
+              "content-type": "application/xml",
+              "date": "Mon, 01 Sep 2025 04:02:10 GMT",
+              "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2FgVv8x7lPH0enpZyOQyibIgjoeIsJ4%2F7OAyiQo1hh%2BzAnf2KdX5gDzHJ%2B18WNzXZzVS1SZueVgO%2Fz2HRNxC15jqFOfO0S6vpDL8UxzpQ4gn6NRb%2FhsdQonlC6cu4CqWqZg5XzbG8%2FTFFVelunEW7%2FnufPkyA%2FhZhow%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "server": "cloudflare",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=186428&min_rtt=184957&rtt_var=3091&sent=22&recv=19&lost=0&retrans=0&sent_bytes=13469&recv_bytes=2401&delivery_rate=111805&cwnd=178&unsent_bytes=0&cid=4ce31b7a6f77b7ee&ts=1932&x=0\"",
+              "transfer-encoding": "chunked",
+              "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+              "x-nextjs-cache": "MISS",
+              "x-opennext": "1"
+            },
+            "size": 0
+          }
+        ]
+      },
+      "issues": [],
+      "timestamp": "2025-09-01T04:02:10.268Z"
+    }
+  },
+  "recommendations": [],
+  "alerts": []
+}

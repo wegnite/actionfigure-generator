@@ -3,10 +3,10 @@
   "theme": "orange",
   "header": {
     "brand": {
-      "title": "Character Figure AI Generator",
+      "title": "Action Figure AI Generator",
       "logo": {
         "src": "/logo.svg",
-        "alt": "Character Figure AI Generator"
+        "alt": "Action Figure AI Generator"
       },
       "url": "/"
     },
@@ -35,26 +35,26 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Character Figure",
+    "title": "Action Figure",
     "subtitle": "AI Generator",
-    "description": "Transform your creative vision into stunning character figures with advanced AI. Professional quality in seconds.",
+    "description": "Create professional AI action figures with advanced technology. Generate anime, realistic, and custom action figures in seconds with our AI action figure generator.",
     "announcement": {
       "label": "New",
-      "title": "✨ Powered by Nano-Banana AI",
+      "title": "✨ Advanced AI Action Figure Generator",
       "url": "/pricing"
     },
-    "tip": "🚀 Start Creating Character Figures",
-    "badge": "✨ Powered by Nano-Banana AI",
+    "tip": "🚀 Start Creating AI Action Figures",
+    "badge": "✨ AI-Powered Action Figure Generator",
     "buttons": [
       {
-        "title": "Start Creating Character Figures",
+        "title": "Create Action Figure Now",
         "icon": "RiFlashlightFill",
         "url": "#generator",
         "target": "_self",
         "variant": "default"
       },
       {
-        "title": "Browse Gallery",
+        "title": "View Action Figure Gallery",
         "icon": "RiGalleryFill",
         "url": "#gallery",
         "target": "_self",
@@ -64,17 +64,17 @@
     "stats": {
       "users": "50K+ Creators",
       "rating": "4.9/5 Rating",
-      "created": "1M+ Figures Created"
+      "created": "1M+ Action Figures Created"
     }
   },
   "whatYouCanCreate": {
-    "title": "What You Can Create with AI Character Figures",
-    "description": "Transform any idea into professional character figures using advanced AI. Perfect for collectors, creators, and professionals who demand quality and creativity.",
+    "title": "What You Can Create with AI Action Figure Generator",
+    "description": "Transform any idea into professional action figures using our advanced AI action figure generator. Perfect for collectors, creators, and professionals who demand quality.",
     "categories": [
       {
         "title": "Premium Collectibles",
         "icon": "🏆",
-        "description": "Create high-end character figures for adult collectors aged 25-49. Perfect for display cases, conventions, and personal collections.",
+        "description": "Create high-end action figures and anime collectibles for adult enthusiasts aged 25-49. Perfect for display cases, conventions, and personal collections.",
         "features": [
           "Museum-quality detail",
           "Limited edition styles",
@@ -85,7 +85,7 @@
       {
         "title": "Social Media Content",
         "icon": "📱",
-        "description": "Generate viral character figures for YouTube, TikTok, Instagram, and streaming. Built for creators aged 18-35.",
+        "description": "Generate viral action figure designs for YouTube, TikTok, Instagram, and streaming. Built for content creators aged 18-35.",
         "features": [
           "Social media optimized",
           "Instant viral potential",
@@ -96,18 +96,18 @@
       {
         "title": "Game Characters",
         "icon": "🎮",
-        "description": "Design custom avatars, NPCs, and character concepts for games, tabletop RPGs, and virtual worlds.",
+        "description": "Design custom avatars, NPCs, and actionconcepts for games, tabletop RPGs, and virtual worlds.",
         "features": [
           "Fantasy & sci-fi styles",
           "Game-ready formats",
-          "Character sheet templates",
+          "actionsheet templates",
           "RPG campaign assets"
         ]
       },
       {
         "title": "3D Print Ready",
         "icon": "🖨️",
-        "description": "Generate character figures optimized for 3D printing with proper geometry and printable details.",
+        "description": "Generate action figure designs optimized for 3D printing with proper geometry and printable details.",
         "features": [
           "Print-optimized geometry",
           "Support-friendly design",
@@ -120,47 +120,47 @@
       {
         "title": "AI-Powered Quality",
         "icon": "Sparkles",
-        "description": "Our nano-banana AI technology ensures every character figure meets professional quality standards with consistent, high-resolution outputs."
+        "description": "Our nano-banana AI technology ensures every action figure meets professional quality standards with consistent, high-resolution outputs."
       },
       {
         "title": "Lightning Fast",
         "icon": "Clock",
-        "description": "Generate professional character figures in under 10 seconds. No waiting, no queues - just instant creative results."
+        "description": "Generate professional action figures in under 10 seconds. No waiting, no queues - just instant creative results."
       },
       {
         "title": "Commercial Rights",
         "icon": "Shield",
-        "description": "All generated character figures include full commercial usage rights. Perfect for business, resale, and professional projects."
+        "description": "All generated action figures include full commercial usage rights. Perfect for business, resale, and professional projects."
       }
     ]
   },
   "features": {
-    "title": "Advanced Character Figure Features",
-    "description": "Professional tools for creating high-quality character figures",
+    "title": "Advanced AI Action Figure Generator Features", 
+    "description": "Professional tools for creating high-quality action figures",
     "items": [
       {
-        "title": "10+ Character Figure Styles",
-        "description": "Create diverse character figures including anime, realistic, fantasy styles",
+        "title": "10+ Action Figure Styles", 
+        "description": "Create diverse action figures including anime, realistic, fantasy styles",
         "icon": "Palette"
       },
       {
         "title": "Video Generation",
-        "description": "Transform static character figures into dynamic videos with AI",
+        "description": "Transform static action figures into dynamic videos with AI",
         "icon": "Video"
       },
       {
         "title": "Lightning Fast",
-        "description": "Generate character figures in under 10 seconds with nano-banana AI",
+        "description": "Generate professional action figures in under 10 seconds with nano-banana AI",
         "icon": "Zap"
       },
       {
         "title": "HD Export",
-        "description": "Export character figures in high resolution for any use",
+        "description": "Export action figures in high resolution for any use case",
         "icon": "Download"
       },
       {
         "title": "Commercial License",
-        "description": "All character figures include commercial usage rights",
+        "description": "All action figure creations include commercial usage rights",
         "icon": "Shield"
       },
       {
@@ -171,16 +171,16 @@
     ]
   },
   "gallery": {
-    "title": "Character Figures Created by Our Community",
-    "description": "Discover the incredible diversity and quality of AI-generated character figures. From anime styles to realistic portraits, see what's possible with our advanced character figure generator.",
+    "title": "Amazing Action Figures by Our Community", 
+    "description": "Discover the incredible diversity and quality of AI-generated action figures. From anime styles to realistic portraits, see what's possible with our advanced AI action figure generator.",
     "stats": {
       "creators": "50,000+ Creators",
       "generated": "1M+ Figures Generated"
     }
   },
   "pricing": {
-    "title": "Character Figure Pricing Plans",
-    "description": "Start creating character figures for free",
+    "title": "Simple Pricing for Action Figure Creation",
+    "description": "Start creating AI action figures for free",
     "plans": [
       {
         "name": "Free",
@@ -211,13 +211,13 @@
     "detailedPricing": "View detailed pricing →"
   },
   "howItWorks": {
-    "title": "How to Create Character Figures",
-    "description": "Three simple steps to amazing character figure creation",
+    "title": "How to Create Amazing Action Figures",
+    "description": "Three simple steps to professional action figure creation",
     "steps": [
       {
         "number": "1",
-        "title": "Upload Your Image",
-        "description": "Upload any photo or use text description to start creating your character figure. Our AI works with any input."
+        "title": "Upload Your Vision",
+        "description": "Upload any photo or use text description to start creating your unique design. Our AI works with any input."
       },
       {
         "number": "2",
@@ -227,61 +227,61 @@
       {
         "number": "3",
         "title": "Download & Share",
-        "description": "Get your high-quality character figure in seconds. Perfect for social media, printing, or commercial use."
+        "description": "Get your high-quality action figure in seconds. Perfect for social media, printing, or commercial use."
       }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "description": "Everything you need to know about creating character figures with AI",
+    "description": "Everything you need to know about creating action figures with AI",
     "items": [
       {
-        "question": "What is a character figure generator?",
-        "answer": "Our AI character figure generator transforms photos, descriptions, or ideas into high-quality digital character figures. Using advanced nano-banana AI technology, it creates professional-grade figures in multiple styles including anime, realistic, fantasy, and more. Perfect for collectors, creators, and businesses."
+        "question": "What is an AI action figure generator?",
+        "answer": "Our AI action figure generator transforms photos, descriptions, or ideas into high-quality digital action figures. Using advanced nano-banana AI technology, it creates professional-grade action figures in multiple styles including anime, realistic, fantasy, and more. Perfect for collectors, creators, and businesses."
       },
       {
-        "question": "How does AI character figure generation work?",
-        "answer": "Simply upload a photo or enter a description, choose your preferred style (anime, realistic, cyberpunk, etc.), and our AI analyzes the input to generate a unique character figure. The process takes under 10 seconds and uses machine learning models trained on millions of high-quality character designs."
+        "question": "How does AI action figure creation work?",
+        "answer": "Simply upload a photo or enter a description, choose your preferred style (anime, realistic, cyberpunk, etc.), and our AI action figure generator analyzes the input to generate a unique action figure design. The process takes under 10 seconds and uses machine learning models trained on millions of high-quality action figure designs."
       },
       {
         "question": "What file formats do you support?",
-        "answer": "We accept JPEG, PNG, GIF, and WEBP files up to 20MB for input. Generated character figures are delivered as high-resolution PNG files optimized for printing, social media, or digital use. We also provide multiple aspect ratios including square (1:1), portrait (2:3), and landscape (3:2)."
+        "answer": "We accept JPEG, PNG, GIF, and WEBP files up to 20MB for input. Generated action figures are delivered as high-resolution PNG files optimized for printing, social media, or digital use. We also provide multiple aspect ratios including square (1:1), portrait (2:3), and landscape (3:2)."
       },
       {
-        "question": "Can I use generated character figures commercially?",
-        "answer": "Yes! All character figures created with our generator include full commercial usage rights. You can use them for business, resale, marketing, social media, merchandise, and any commercial purposes without additional licensing fees. This applies to all paid plans."
+        "question": "Can I use generated action figures commercially?",
+        "answer": "Yes! All action figures created with our AI action figure generator include full commercial usage rights. You can use them for business, resale, marketing, social media, merchandise, and any commercial purposes without additional licensing fees. This applies to all paid plans."
       },
       {
-        "question": "How long does character figure generation take?",
-        "answer": "Most character figures are generated in under 10 seconds. Complex requests or high-volume generations may take slightly longer, but our nano-banana AI is optimized for speed. There are no queues or waiting times - you get instant results."
+        "question": "How long does action figure generation take?",
+        "answer": "Most action figures are generated in under 10 seconds. Complex requests or high-volume generations may take slightly longer, but our nano-banana AI is optimized for speed. There are no queues or waiting times - you get instant results."
       },
       {
-        "question": "What character figure styles are available?",
-        "answer": "We offer 10+ professional styles including: Anime, Realistic, Fantasy Warrior, Cyberpunk, Ghibli, Superhero, Funko Pop, Oil Painting, Watercolor, and Pixel Art. Each style is carefully optimized for different use cases from collectibles to social media content."
+        "question": "What action figure styles are available?",
+        "answer": "We offer 10+ professional action figure styles including: Anime, Realistic, Fantasy Warrior, Cyberpunk, Ghibli, Superhero, Funko Pop, Oil Painting, Watercolor, and Pixel Art. Each style is carefully optimized for different use cases from collectibles to social media content."
       },
       {
         "question": "Do you offer refunds?",
-        "answer": "Yes, we offer a 30-day money-back guarantee for all paid subscriptions. If you're not completely satisfied with the quality of your character figures, contact our support team for a full refund. Free tier users can test the generator before upgrading."
+        "answer": "Yes, we offer a 30-day money-back guarantee for all paid subscriptions. If you're not completely satisfied with the quality of your generated action figures, contact our support team for a full refund. Free tier users can test the AI action figure generator before upgrading."
       },
       {
         "question": "How is pricing calculated?",
-        "answer": "Pricing is based on the number of character figures you can generate per month: Free (5/day), Creator ($19 for 100/month), Professional ($49 for 500/month), and Enterprise ($199 for unlimited). Each generation uses 1 credit regardless of style or complexity."
+        "answer": "Pricing is based on the number of action figures you can generate per month: Free (5/day), Creator ($19 for 100/month), Professional ($49 for 500/month), and Enterprise ($199 for unlimited). Each action figure generation uses 1 credit regardless of style or complexity."
       },
       {
         "question": "Can I cancel my subscription anytime?",
         "answer": "Absolutely! You can cancel your subscription anytime from your account settings. There are no cancellation fees or long-term commitments. Your unused credits remain available until the end of your billing period."
       },
       {
-        "question": "What resolution are the character figure outputs?",
-        "answer": "All character figures are generated at high resolution (typically 1024x1024 or higher depending on aspect ratio). This ensures they're perfect for printing, social media, commercial use, or any professional application. We maintain consistent quality across all styles."
+        "question": "What resolution are the action figure outputs?",
+        "answer": "All action figures are generated at high resolution (typically 1024x1024 or higher depending on aspect ratio). This ensures they're perfect for printing, social media, commercial use, or any professional application. We maintain consistent quality across all action figure styles."
       },
       {
-        "question": "Is my data and character figures private?",
-        "answer": "Yes, your privacy is our priority. Uploaded images are processed securely and deleted after generation. Generated character figures belong to you and are private unless you choose to share them in our community gallery. We never use your content for training or other purposes."
+        "question": "Is my data and action figure creations private?",
+        "answer": "Yes, your privacy is our priority. Uploaded images are processed securely and deleted after generation. Generated action figures belong to you and are private unless you choose to share them in our community gallery. We never use your content for training or other purposes."
       },
       {
-        "question": "Can I generate character figures for 3D printing?",
-        "answer": "Yes! Our character figures are optimized for various uses including 3D printing. While we generate 2D images, they're designed with proper geometry and printable details in mind. We provide guides for converting to 3D formats and optimizing for different printers."
+        "question": "Can I generate action figures for 3D printing?",
+        "answer": "Yes! Our action figure designs are optimized for various uses including 3D printing. While we generate 2D images, they're designed with proper geometry and printable details in mind. We provide guides for converting to 3D formats and optimizing for different printers."
       }
     ],
     "contact": {
@@ -290,19 +290,19 @@
     }
   },
   "cta": {
-    "title": "Start Creating Character Figures Today",
-    "description": "Join thousands using our character figure generator to bring ideas to life",
-    "button": "Create Your First Character Figure Free"
+    "title": "Start Creating Amazing Action Figures Today",
+    "description": "Join thousands using our AI action figure generator to bring creative visions to life",
+    "button": "Create Your First Action Figure Free"
   },
   "footer": {
     "disabled": false,
     "name": "footer",
     "brand": {
-      "title": "Character Figure AI Generator",
-      "description": "The most advanced AI-powered character figure generation platform. Create stunning 3D characters for gaming, animation, and collectibles.",
+      "title": "Action Figure AI Generator",
+      "description": "The most advanced AI-powered action figure creation platform. Create stunning action figures for gaming, animation, and collections.",
       "logo": {
         "src": "/logo.svg",
-        "alt": "Character Figure AI Generator"
+        "alt": "Action Figure AI Generator"
       },
       "url": "/"
     },
@@ -312,11 +312,11 @@
           "title": "Product",
           "children": [
             {
-              "title": "Character Generator",
+              "title": "AI Action Figure Generator",
               "url": "/#generator"
             },
             {
-              "title": "Video Generator",
+              "title": "Video Creator",
               "url": "/generate/video"
             },
             {
@@ -401,7 +401,7 @@
         }
       ]
     },
-    "copyright": "© 2024 Character Figure AI Generator. All rights reserved.",
+    "copyright": "© 2024 Action Figure AI Generator. All rights reserved.",
     "agreement": {
       "items": [
         {

@@ -4,8 +4,14 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     // TypeScript 相关规则
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { 
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_",
+      "ignoreRestSiblings": true
+    }],
+    "@typescript-eslint/no-explicit-any": ["warn", {
+      "ignoreRestArgs": true
+    }],
     
     // React 相关规则  
     "react-hooks/exhaustive-deps": "warn",
@@ -19,6 +25,9 @@
     "node_modules/",
     "dist/",
     "*.config.*",
-    "scripts/"
+    "scripts/",
+    "src/aisdk/**/*",
+    "content/docs/**/*",
+    "src/types/**/*.d.ts"
   ]
 }

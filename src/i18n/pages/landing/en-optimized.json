@@ -1,0 +1,426 @@
+{
+  "template": "character-figure-generator",
+  "theme": "orange",
+  "header": {
+    "brand": {
+      "title": "Action Figure AI Generator",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Action Figure AI Generator"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Features",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "Pricing",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "Generator",
+          "url": "/#generator",
+          "icon": "RiMagicFill"
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "actionFigure",
+    "subtitle": "AI Generator",
+    "description": "Transform your creative vision into stunning collectible figures with advanced AI technology. Professional quality anime, realistic, and custom designs in seconds.",
+    "announcement": {
+      "label": "New",
+      "title": "✨ Powered by Nano-Banana AI",
+      "url": "/pricing"
+    },
+    "tip": "🚀 Start Creating Amazing Figures",
+    "badge": "✨ Powered by Nano-Banana AI",
+    "buttons": [
+      {
+        "title": "Create Your First Figure",
+        "icon": "RiFlashlightFill",
+        "url": "#generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Browse Gallery",
+        "icon": "RiGalleryFill",
+        "url": "#gallery",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "stats": {
+      "users": "50K+ Creators",
+      "rating": "4.9/5 Rating",
+      "created": "1M+ Figures Created"
+    }
+  },
+  "whatYouCanCreate": {
+    "title": "What You Can Create with AI-Powered Design",
+    "description": "Transform any idea into professional collectible figures using advanced AI. Perfect for collectors, creators, and professionals who demand quality and creativity.",
+    "categories": [
+      {
+        "title": "Premium Collectibles",
+        "icon": "🏆",
+        "description": "Create high-end anime figures and collectibles for adult enthusiasts aged 25-49. Perfect for display cases, conventions, and personal collections.",
+        "features": [
+          "Museum-quality detail",
+          "Limited edition styles",
+          "Commercial licensing included",
+          "HD export for 3D printing"
+        ]
+      },
+      {
+        "title": "Social Media Content",
+        "icon": "📱",
+        "description": "Generate viral figure designs for YouTube, TikTok, Instagram, and streaming. Built for content creators aged 18-35.",
+        "features": [
+          "Social media optimized",
+          "Instant viral potential",
+          "Multiple format exports",
+          "Monetization ready"
+        ]
+      },
+      {
+        "title": "Game Characters",
+        "icon": "🎮",
+        "description": "Design custom avatars, NPCs, and actionconcepts for games, tabletop RPGs, and virtual worlds.",
+        "features": [
+          "Fantasy & sci-fi styles",
+          "Game-ready formats",
+          "actionsheet templates",
+          "RPG campaign assets"
+        ]
+      },
+      {
+        "title": "3D Print Ready",
+        "icon": "🖨️",
+        "description": "Generate collectible designs optimized for 3D printing with proper geometry and printable details.",
+        "features": [
+          "Print-optimized geometry",
+          "Support-friendly design",
+          "Multiple scale options",
+          "STL conversion guides"
+        ]
+      }
+    ],
+    "benefits": [
+      {
+        "title": "AI-Powered Quality",
+        "icon": "Sparkles",
+        "description": "Our nano-banana AI technology ensures every figure meets professional quality standards with consistent, high-resolution outputs."
+      },
+      {
+        "title": "Lightning Fast",
+        "icon": "Clock",
+        "description": "Generate professional collectibles in under 10 seconds. No waiting, no queues - just instant creative results."
+      },
+      {
+        "title": "Commercial Rights",
+        "icon": "Shield",
+        "description": "All generated designs include full commercial usage rights. Perfect for business, resale, and professional projects."
+      }
+    ]
+  },
+  "features": {
+    "title": "Advanced AI Figure Creation Features",
+    "description": "Professional tools for creating high-quality collectible designs",
+    "items": [
+      {
+        "title": "10+ Creative Styles",
+        "description": "Create diverse figures including anime, realistic, fantasy styles",
+        "icon": "Palette"
+      },
+      {
+        "title": "Video Generation",
+        "description": "Transform static designs into dynamic videos with AI",
+        "icon": "Video"
+      },
+      {
+        "title": "Lightning Fast",
+        "description": "Generate professional figures in under 10 seconds with nano-banana AI",
+        "icon": "Zap"
+      },
+      {
+        "title": "HD Export",
+        "description": "Export designs in high resolution for any use case",
+        "icon": "Download"
+      },
+      {
+        "title": "Commercial License",
+        "description": "All creations include commercial usage rights",
+        "icon": "Shield"
+      },
+      {
+        "title": "Global Platform",
+        "description": "Available in 6 languages for creators worldwide",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Amazing Creations by Our Community",
+    "description": "Discover the incredible diversity and quality of AI-generated collectible designs. From anime styles to realistic portraits, see what's possible with our advanced creation platform.",
+    "stats": {
+      "creators": "50,000+ Creators",
+      "generated": "1M+ Figures Generated"
+    }
+  },
+  "pricing": {
+    "title": "Simple Pricing for Figure Creation",
+    "description": "Start creating collectible designs for free",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "description": "5 per day",
+        "button": "Get Started"
+      },
+      {
+        "name": "Creator",
+        "price": "$19",
+        "description": "100 per month",
+        "button": "Start Creating",
+        "badge": "BEST VALUE"
+      },
+      {
+        "name": "Professional",
+        "price": "$49",
+        "description": "500 per month",
+        "button": "Go Pro"
+      },
+      {
+        "name": "Enterprise",
+        "price": "$199",
+        "description": "Unlimited",
+        "button": "Contact Sales"
+      }
+    ],
+    "detailedPricing": "View detailed pricing →"
+  },
+  "howItWorks": {
+    "title": "How to Create Amazing Figures",
+    "description": "Three simple steps to professional collectible creation",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Upload Your Vision",
+        "description": "Upload any photo or use text description to start creating your unique design. Our AI works with any input."
+      },
+      {
+        "number": "2",
+        "title": "Choose Your Style",
+        "description": "Select from 10+ professional styles including anime, realistic, Ghibli, and more. Customize every detail."
+      },
+      {
+        "number": "3",
+        "title": "Download & Share",
+        "description": "Get your high-quality collectible design in seconds. Perfect for social media, printing, or commercial use."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about creating figures with AI",
+    "items": [
+      {
+        "question": "What is an AI figure generator?",
+        "answer": "Our AI-powered platform transforms photos, descriptions, or ideas into high-quality digital collectible designs. Using advanced nano-banana AI technology, it creates professional-grade figures in multiple styles including anime, realistic, fantasy, and more. Perfect for collectors, creators, and businesses."
+      },
+      {
+        "question": "How does AI figure creation work?",
+        "answer": "Simply upload a photo or enter a description, choose your preferred style (anime, realistic, cyberpunk, etc.), and our AI analyzes the input to generate a unique collectible design. The process takes under 10 seconds and uses machine learning models trained on millions of high-quality actiondesigns."
+      },
+      {
+        "question": "What file formats do you support?",
+        "answer": "We accept JPEG, PNG, GIF, and WEBP files up to 20MB for input. Generated designs are delivered as high-resolution PNG files optimized for printing, social media, or digital use. We also provide multiple aspect ratios including square (1:1), portrait (2:3), and landscape (3:2)."
+      },
+      {
+        "question": "Can I use generated designs commercially?",
+        "answer": "Yes! All collectible designs created with our generator include full commercial usage rights. You can use them for business, resale, marketing, social media, merchandise, and any commercial purposes without additional licensing fees. This applies to all paid plans."
+      },
+      {
+        "question": "How long does figure generation take?",
+        "answer": "Most designs are generated in under 10 seconds. Complex requests or high-volume generations may take slightly longer, but our nano-banana AI is optimized for speed. There are no queues or waiting times - you get instant results."
+      },
+      {
+        "question": "What creative styles are available?",
+        "answer": "We offer 10+ professional styles including: Anime, Realistic, Fantasy Warrior, Cyberpunk, Ghibli, Superhero, Funko Pop, Oil Painting, Watercolor, and Pixel Art. Each style is carefully optimized for different use cases from collectibles to social media content."
+      },
+      {
+        "question": "Do you offer refunds?",
+        "answer": "Yes, we offer a 30-day money-back guarantee for all paid subscriptions. If you're not completely satisfied with the quality of your generated designs, contact our support team for a full refund. Free tier users can test the generator before upgrading."
+      },
+      {
+        "question": "How is pricing calculated?",
+        "answer": "Pricing is based on the number of designs you can generate per month: Free (5/day), Creator ($19 for 100/month), Professional ($49 for 500/month), and Enterprise ($199 for unlimited). Each generation uses 1 credit regardless of style or complexity."
+      },
+      {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Absolutely! You can cancel your subscription anytime from your account settings. There are no cancellation fees or long-term commitments. Your unused credits remain available until the end of your billing period."
+      },
+      {
+        "question": "What resolution are the outputs?",
+        "answer": "All designs are generated at high resolution (typically 1024x1024 or higher depending on aspect ratio). This ensures they're perfect for printing, social media, commercial use, or any professional application. We maintain consistent quality across all styles."
+      },
+      {
+        "question": "Is my data and creations private?",
+        "answer": "Yes, your privacy is our priority. Uploaded images are processed securely and deleted after generation. Generated designs belong to you and are private unless you choose to share them in our community gallery. We never use your content for training or other purposes."
+      },
+      {
+        "question": "Can I generate designs for 3D printing?",
+        "answer": "Yes! Our collectible designs are optimized for various uses including 3D printing. While we generate 2D images, they're designed with proper geometry and printable details in mind. We provide guides for converting to 3D formats and optimizing for different printers."
+      }
+    ],
+    "contact": {
+      "text": "Still have questions?",
+      "link": "Contact Support"
+    }
+  },
+  "cta": {
+    "title": "Start Creating Amazing Figures Today",
+    "description": "Join thousands using our AI platform to bring creative visions to life",
+    "button": "Create Your First Figure Free"
+  },
+  "footer": {
+    "disabled": false,
+    "name": "footer",
+    "brand": {
+      "title": "Action Figure AI Generator",
+      "description": "The most advanced AI-powered collectible creation platform. Create stunning 3D characters for gaming, animation, and collections.",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Action Figure AI Generator"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Product",
+          "children": [
+            {
+              "title": "AI Generator",
+              "url": "/#generator"
+            },
+            {
+              "title": "Video Creator",
+              "url": "/generate/video"
+            },
+            {
+              "title": "Gallery",
+              "url": "/gallery"
+            },
+            {
+              "title": "Pricing",
+              "url": "/pricing"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Blog",
+              "url": "/blog"
+            },
+            {
+              "title": "Tutorials",
+              "url": "/blog/tutorials"
+            },
+            {
+              "title": "Style Guide",
+              "url": "/blog/style-guide"
+            },
+            {
+              "title": "API Docs",
+              "url": "/docs/api"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "children": [
+            {
+              "title": "About Us",
+              "url": "/about"
+            },
+            {
+              "title": "Contact",
+              "url": "/contact"
+            },
+            {
+              "title": "Support",
+              "url": "/support"
+            },
+            {
+              "title": "Careers",
+              "url": "/careers"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/actionfiguregen",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/actionfigure-generator",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://youtube.com/@actionfiguregen",
+          "target": "_blank"
+        }
+      ]
+    },
+    "copyright": "© 2024 Action Figure AI Generator. All rights reserved.",
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Cookie Policy",
+          "url": "/cookie-policy"
+        },
+        {
+          "title": "DMCA",
+          "url": "/dmca"
+        }
+      ]
+    }
+  }
+}

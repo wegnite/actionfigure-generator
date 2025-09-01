@@ -1,8 +1,8 @@
 /**
- * Character Figure 专用定价配置
+ * actionFigure 专用定价配置
  * 
  * 功能说明：
- * - 定义Character Figure平台的订阅定价结构
+ * - 定义actionFigure平台的订阅定价结构
  * - 支持多语言显示和货币
  * - 包含价值感知和营销信息
  * - 与Stripe产品ID映射
@@ -85,7 +85,7 @@ export interface CharacterPricingPlan {
 }
 
 /**
- * Character Figure 完整定价配置 - 基于PRD文档定价策略
+ * actionFigure 完整定价配置 - 基于PRD文档定价策略
  * 
  * 定价结构（根据PRD文档）：
  * 1. Free: 每日5次免费体验，建立使用习惯
@@ -106,7 +106,7 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
     planName: "免费体验",
     planNameEn: "Free",
     description: "每日免费体验，探索角色生成魅力",
-    descriptionEn: "Daily free access to explore character creation",
+    descriptionEn: "Daily free access to explore actioncreation",
     
     monthlyPrice: 0,
     yearlyPrice: 0,
@@ -174,7 +174,7 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
       "🎭 高级风格选项"
     ],
     featuresEn: [
-      "🎨 100 character generations monthly",
+      "🎨 100 actiongenerations monthly",
       "🌟 High-definition quality output",
       "📋 Commercial license included",
       "✨ Watermark-free export",
@@ -308,7 +308,7 @@ export const CHARACTER_PRICING_PLANS: CharacterPricingPlan[] = [
       "🛠️ 私有部署选项"
     ],
     featuresEn: [
-      "🚀 Unlimited character generations",
+      "🚀 Unlimited actiongenerations",
       "🤖 Custom model training",
       "🏢 White-label solutions",
       "👤 Dedicated account manager",

@@ -37,7 +37,7 @@
   animation: gradient 6s ease infinite;
 }
 
-/* Character Figure gradients */
+/* actionFigure gradients */
 .cf-gradient-primary {
   background: linear-gradient(135deg, 
     oklch(0.67 0.18 35.73) 0%, 

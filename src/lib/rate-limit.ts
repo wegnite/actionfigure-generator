@@ -1,7 +1,7 @@
 /**
  * Rate Limiting Utilities
  * 
- * Problem: Need rate limiting for character figure generation to prevent abuse
+ * Problem: Need rate limiting for actionfigure generation to prevent abuse
  * Solution: Implement simple in-memory rate limiting with Redis fallback option
  * 
  * Features:
@@ -153,7 +153,7 @@ export const rateLimiters = {
 };
 
 /**
- * Check rate limit for character generation
+ * Check rate limit for actiongeneration
  */
 export async function checkCharacterGenerationRateLimit(
   userUuid: string,

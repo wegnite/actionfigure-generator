@@ -1,5 +1,5 @@
 /**
- * Character Figure Video Generation Page
+ * actionFigure Video Generation Page
  * 
  * 功能：让用户通过nano-banana生成首尾帧，再通过可灵生成完整视频
  * 创新点：首尾帧控制 + AI视频补间
@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { locale } = await params;
   
   const titles = {
-    en: 'Character Figure Video Generator | Transform Images to Videos',
+    en: 'actionFigure Video Generator | Transform Images to Videos',
     zh: '角色手办视频生成器 | 图片转视频',
     ja: 'キャラクターフィギュア動画生成 | 画像から動画へ',
     es: 'Generador de Videos de Figuras | Imágenes a Videos',
@@ -25,7 +25,7 @@ export async function generateMetadata({
   };
   
   const descriptions = {
-    en: 'Transform your character figures into dynamic videos with AI. Generate smooth animations from static images.',
+    en: 'Transform your actionfigures into dynamic videos with AI. Generate smooth animations from static images.',
     zh: '用AI将角色手办转换为动态视频。从静态图片生成流畅动画。',
     ja: 'AIでキャラクターフィギュアを動画に変換。静止画から滑らかなアニメーションを生成。',
     es: 'Transforma tus figuras en videos dinámicos con IA.',
@@ -36,7 +36,7 @@ export async function generateMetadata({
   return {
     title: titles[locale as keyof typeof titles] || titles.en,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    keywords: 'character figure video, AI animation, image to video, character animation',
+    keywords: 'actionfigure video, AI animation, image to video, actionanimation',
   };
 }
 
@@ -55,11 +55,11 @@ export default async function CharacterVideoPage({
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Character Figure Video Generator
+                actionFigure Video Generator
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform static character figures into dynamic videos with advanced AI technology
+              Transform static actionfigures into dynamic videos with advanced AI technology
             </p>
           </div>
           

@@ -1,7 +1,7 @@
 /**
- * Character Figure History API Route
+ * actionFigure History API Route
  * 
- * Problem: Need API endpoints for managing user's character generation history
+ * Problem: Need API endpoints for managing user's actiongeneration history
  * Solution: Create endpoints for viewing, filtering, and managing generation history
  * 
  * Endpoints:
@@ -21,7 +21,7 @@ import {
 
 /**
  * GET /api/character-figure/history
- * Get user's character generation history with filtering and pagination
+ * Get user's actiongeneration history with filtering and pagination
  */
 export async function GET(request: NextRequest) {
   try {

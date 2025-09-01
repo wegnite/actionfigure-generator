@@ -2,10 +2,9 @@ import Empty from "@/components/blocks/empty";
 import TableSlot from "@/components/console/slots/table";
 import { Table as TableSlotType } from "@/types/slots/table";
 import { getTranslations } from "next-intl/server";
-import { getUserApikeys, ApikeyStatus } from "@/models/apikey";
+import { getUserApikeys } from "@/models/apikey";
 import { getUserUuid } from "@/services/user";
 import dayjs from "@/lib/dayjs";
-import { Badge } from "@/components/ui/badge";
 
 async function ApiKeysPage() {
   const t = await getTranslations();

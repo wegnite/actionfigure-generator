@@ -1,5 +1,5 @@
 /**
- * Template-based Character Generation API Route
+ * Template-based actionGeneration API Route
  * 
  * Problem: Need API endpoints for generating characters using predefined templates
  * Solution: Create endpoint that uses template parameters with optional customizations
@@ -16,7 +16,7 @@ import type { CharacterFigureRequest } from '@/types/character-figure';
 
 /**
  * POST /api/character-figure/templates/[templateId]/generate
- * Generate character using template with optional customizations
+ * Generate actionusing template with optional customizations
  */
 export async function POST(
   request: NextRequest,
@@ -46,7 +46,7 @@ export async function POST(
       return respErr(validationError, 400);
     }
 
-    console.log(`Generating character from template ${templateId} for user ${session.user.id}`);
+    console.log(`Generating actionfrom template ${templateId} for user ${session.user.id}`);
     const startTime = Date.now();
 
     // Generate using template

@@ -37,7 +37,7 @@ export const locales = ["en", "zh", "de", "ja", "es", "ar", "fr", "it"];
  * key: 语言代码
  * value: 显示名称
  */
-export const localeNames: unknown = {
+export const localeNames: Record<string, string> = {
   en: "English",
   zh: "中文",
   de: "Deutsch",

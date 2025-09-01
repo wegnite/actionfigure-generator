@@ -2,16 +2,16 @@
   "pricing": {
     "name": "pricing",
     "label": "Pricing",
-    "title": "Character Figure AI Generator Pricing",
-    "description": "Choose the perfect plan for your character figure creation needs.",
+    "title": "Action Figure AI Generator Pricing",
+    "description": "Choose the perfect plan for your actionfigure creation needs.",
     "groups": [],
     "items": [
       {
         "title": "Free",
-        "description": "Explore character figure generation with daily free access.",
+        "description": "Explore actionfigure generation with daily free access.",
         "features_title": "Includes",
         "features": [
-          "5 character figures daily",
+          "5 actionfigures daily",
           "Basic quality output",
           "Watermarked images",
           "Community gallery access",
@@ -25,14 +25,14 @@
         "original_price": "",
         "unit": "USD",
         "is_featured": false,
-        "tip": "Perfect for exploring character creation",
+        "tip": "Perfect for exploring actioncreation",
         "button": {
           "title": "Get Started Free",
           "url": "/character-figure",
           "icon": "RiPlayFill"
         },
         "product_id": "free",
-        "product_name": "Free Character Figure Plan",
+        "product_name": "Free actionFigure Plan",
         "credits": 5,
         "valid_months": 1
       },
@@ -42,7 +42,7 @@
         "label": "Popular",
         "features_title": "Everything in Free, plus",
         "features": [
-          "100 character figures monthly",
+          "100 actionfigures monthly",
           "High-definition quality",
           "Commercial license included",
           "No watermarks",
@@ -65,7 +65,7 @@
           "icon": "RiFlashlightFill"
         },
         "product_id": "creator",
-        "product_name": "Creator Character Figure Plan",
+        "product_name": "Creator actionFigure Plan",
         "credits": 100,
         "valid_months": 1
       },
@@ -74,7 +74,7 @@
         "description": "For small businesses and game developers.",
         "features_title": "Everything in Creator, plus",
         "features": [
-          "500 character figures monthly",
+          "500 actionfigures monthly",
           "3D file export capability",
           "API access included",
           "Custom training options",
@@ -97,7 +97,7 @@
           "icon": "RiFlashlightFill"
         },
         "product_id": "professional",
-        "product_name": "Professional Character Figure Plan",
+        "product_name": "Professional actionFigure Plan",
         "credits": 500,
         "valid_months": 1
       },
@@ -106,7 +106,7 @@
         "description": "For toy companies and professional studios.",
         "features_title": "Everything in Professional, plus",
         "features": [
-          "Unlimited character figures",
+          "Unlimited actionfigures",
           "Custom model training",
           "White-label solutions",
           "Dedicated account manager",
@@ -129,7 +129,7 @@
           "icon": "RiPhoneFill"
         },
         "product_id": "enterprise",
-        "product_name": "Enterprise Character Figure Plan",
+        "product_name": "Enterprise actionFigure Plan",
         "credits": -1,
         "valid_months": 1
       }

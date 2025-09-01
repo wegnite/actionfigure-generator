@@ -1,4 +1,37 @@
 {
+  "metadata": {
+    "title": "AIフィギュア生成器 - 瞬時にアクションフィギュアを作成",
+    "description": "最先端のAI技術で写真やアイデアを話題のAIフィギュア風画像に変換。プロ品質のアクションフィギュアを数秒で作成。",
+    "keywords": "AIフィギュア, アクションフィギュア生成器, AI画像生成, フィギュア作成"
+  },
+  "user": {
+    "sign_in": "サインイン",
+    "sign_out": "サインアウト",
+    "credits": "クレジット",
+    "api_keys": "APIキー",
+    "my_orders": "注文履歴",
+    "user_center": "ユーザーセンター",
+    "admin_system": "管理システム"
+  },
+  "sign_modal": {
+    "sign_in_title": "サインイン",
+    "sign_in_description": "アカウントにサインイン",
+    "sign_up_title": "サインアップ",
+    "sign_up_description": "アカウントを作成",
+    "email_title": "メールアドレス",
+    "email_placeholder": "メールアドレスを入力",
+    "password_title": "パスワード",
+    "password_placeholder": "パスワードを入力",
+    "forgot_password": "パスワードをお忘れですか？",
+    "or": "または",
+    "continue": "続行",
+    "no_account": "アカウントをお持ちでないですか？",
+    "email_sign_in": "メールでサインイン",
+    "google_sign_in": "Googleでサインイン",
+    "github_sign_in": "GitHubでサインイン",
+    "close_title": "閉じる",
+    "cancel_title": "キャンセル"
+  },
   "LocaleLayoutCluster": {
     "title": "アクションフィギュア AI ジェネレーター",
     "description": "最先端のAI技術で見事なアクションフィギュアを作成。数秒でプロ品質を実現。"

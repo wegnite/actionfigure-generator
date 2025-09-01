@@ -216,6 +216,6 @@ export const config = {
     // - API routes
     // - Next.js internals
     // - Static files
-    "/((?!privacy-policy|terms-of-service|api/|_next|_vercel|.*\\..*).*)",
+    "/((?!privacy-policy|terms-of-service|cookie-policy|dmca|api/|_next|_vercel|.*\\..*).*)",
   ],
 };

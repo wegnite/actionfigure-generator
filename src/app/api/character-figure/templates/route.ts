@@ -1,7 +1,7 @@
 /**
- * Character Figure Templates API Route
+ * actionFigure Templates API Route
  * 
- * Problem: Need API endpoints for managing character generation templates
+ * Problem: Need API endpoints for managing actiongeneration templates
  * Solution: Create endpoints for browsing templates and generating from templates
  * 
  * Endpoints:
@@ -17,7 +17,7 @@ import { CharacterFigureRequest } from '../types';
 
 /**
  * GET /api/character-figure/templates
- * Get available character templates
+ * Get available actiontemplates
  */
 export async function GET(request: NextRequest) {
   try {
@@ -69,6 +69,6 @@ export async function GET(request: NextRequest) {
 
   } catch (error: any) {
     console.error('Templates API error:', error);
-    return respErr('Failed to load character templates', 500);
+    return respErr('Failed to load actiontemplates', 500);
   }
 }

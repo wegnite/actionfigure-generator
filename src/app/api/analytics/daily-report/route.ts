@@ -231,7 +231,7 @@ async function generateUserMetrics(sql: any, reportDate: string): Promise<DailyR
 }
 
 /**
- * Generate character generation metrics
+ * Generate actiongeneration metrics
  */
 async function generateGenerationMetrics(sql: any, reportDate: string): Promise<DailyReport['generation_metrics']> {
   try {

@@ -1,12 +1,12 @@
 /**
- * Character Figure Types for API Routes
+ * actionFigure Types for API Routes
  * 
  * Problem: API routes have trouble resolving @/ aliases in some Next.js configurations
  * Solution: Define required types locally to ensure proper resolution
  */
 
 /**
- * Character figure styles
+ * actionfigure styles
  */
 export enum CharacterFigureStyle {
   ANIME = 'anime',
@@ -22,7 +22,7 @@ export enum CharacterFigureStyle {
 }
 
 /**
- * Character pose presets
+ * actionpose presets
  */
 export enum CharacterPose {
   STANDING = 'standing',
@@ -38,7 +38,7 @@ export enum CharacterPose {
 }
 
 /**
- * Character gender options
+ * actiongender options
  */
 export enum CharacterGender {
   MALE = 'male',
@@ -48,7 +48,7 @@ export enum CharacterGender {
 }
 
 /**
- * Character age groups
+ * actionage groups
  */
 export enum CharacterAge {
   CHILD = 'child',
@@ -60,7 +60,7 @@ export enum CharacterAge {
 }
 
 /**
- * Character figure generation request
+ * actionfigure generation request
  */
 export interface CharacterFigureRequest {
   prompt: string;

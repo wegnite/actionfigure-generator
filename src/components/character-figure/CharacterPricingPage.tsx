@@ -1,5 +1,5 @@
 /**
- * Character Figure 专用定价页面组件
+ * actionFigure 专用定价页面组件
  * 
  * 功能特性：
  * - 展示所有订阅计划的详细信息

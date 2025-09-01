@@ -1,4 +1,4 @@
--- Seed Data for Character Figure AI Generator Testing
+-- Seed Data for Action Figure AI Generator Testing
 -- Purpose: Provide test data for development and testing
 -- Author: Database Testing Expert  
 -- Date: 2025-08-28
@@ -8,7 +8,7 @@
 -- =============================================
 
 INSERT INTO system_configs (config_key, config_value, description, is_active) VALUES
-('character_generation_enabled', 'true', 'Enable/disable character generation feature', true),
+('character_generation_enabled', 'true', 'Enable/disable actiongeneration feature', true),
 ('max_generations_per_user_per_hour', '10', 'Maximum generations per user per hour (rate limiting)', true),
 ('default_image_quality', 'standard', 'Default image quality setting', true),
 ('supported_aspect_ratios', '["1:1", "16:9", "9:16", "4:3", "3:4"]', 'Supported aspect ratios for generation', true),
@@ -36,28 +36,28 @@ INSERT INTO subscription_plans (
   support_level, api_access, custom_models,
   is_active, is_featured
 ) VALUES
-('free', 'Free Plan', 'Basic character generation with limited features', 
+('free', 'Free Plan', 'Basic actiongeneration with limited features', 
  0, 0, 'USD',
  10, 3,
  false, 'normal',
  'basic', false, false,
  true, false),
 
-('basic', 'Basic Plan', 'Enhanced character generation with more styles and options',
+('basic', 'Basic Plan', 'Enhanced actiongeneration with more styles and options',
  999, 9990, 'USD', 
  100, 20,
  false, 'normal',
  'basic', false, false,
  true, false),
 
-('pro', 'Pro Plan', 'Professional character generation with priority processing',
+('pro', 'Pro Plan', 'Professional actiongeneration with priority processing',
  2999, 29990, 'USD',
  500, 50,
  true, 'fast',
  'priority', true, true,
  true, true),
 
-('enterprise', 'Enterprise Plan', 'Unlimited character generation with dedicated support',
+('enterprise', 'Enterprise Plan', 'Unlimited actiongeneration with dedicated support',
  9999, 99990, 'USD',
  NULL, NULL,
  true, 'fast',
@@ -71,7 +71,7 @@ ON CONFLICT (plan_id) DO UPDATE SET
   updated_at = NOW();
 
 -- =============================================
--- CHARACTER GENERATION TEMPLATES
+-- actionGENERATION TEMPLATES
 -- =============================================
 
 INSERT INTO character_templates (
@@ -89,17 +89,17 @@ INSERT INTO character_templates (
  '{"style": "fantasy", "pose": "battle_stance", "gender": "female", "age": "adult", "clothing": "plate armor", "background": "castle courtyard", "quality": "high"}',
  0, 100, true, true, true, 2),
 
-(gen_random_uuid()::text, 'Cyberpunk Hacker', 'Futuristic cyberpunk character with tech gear', 'Sci-Fi',
+(gen_random_uuid()::text, 'Cyberpunk Hacker', 'Futuristic cyberpunk actionwith tech gear', 'Sci-Fi',
  '/imgs/templates/cyberpunk-hacker-preview.jpg',
  '{"style": "cyberpunk", "pose": "sitting", "gender": "non_binary", "age": "young_adult", "clothing": "tech wear", "background": "neon city", "quality": "high"}',
  0, 100, true, true, true, 3),
 
-(gen_random_uuid()::text, 'Cute Chibi', 'Adorable chibi-style character perfect for beginners', 'Cute',
+(gen_random_uuid()::text, 'Cute Chibi', 'Adorable chibi-style actionperfect for beginners', 'Cute',
  '/imgs/templates/cute-chibi-preview.jpg',
  '{"style": "chibi", "pose": "happy", "gender": "female", "age": "child", "clothing": "school uniform", "background": "pastel colors", "quality": "standard"}',
  0, 100, true, false, true, 4),
 
-(gen_random_uuid()::text, 'Realistic Portrait', 'High-quality realistic character portrait', 'Realistic',
+(gen_random_uuid()::text, 'Realistic Portrait', 'High-quality realistic actionportrait', 'Realistic',
  '/imgs/templates/realistic-portrait-preview.jpg',
  '{"style": "realistic", "pose": "portrait", "gender": "male", "age": "middle_aged", "clothing": "casual", "background": "studio", "quality": "ultra"}',
  0, 100, true, false, false, 5),
@@ -109,7 +109,7 @@ INSERT INTO character_templates (
  '{"style": "anime", "pose": "transformation", "gender": "female", "age": "teenager", "clothing": "magical outfit", "background": "sparkles", "quality": "high"}',
  0, 100, true, true, true, 6),
 
-(gen_random_uuid()::text, 'Steampunk Inventor', 'Victorian-era steampunk character with gadgets', 'Steampunk',
+(gen_random_uuid()::text, 'Steampunk Inventor', 'Victorian-era steampunk actionwith gadgets', 'Steampunk',
  '/imgs/templates/steampunk-inventor-preview.jpg',
  '{"style": "steampunk", "pose": "working", "gender": "male", "age": "adult", "clothing": "victorian coat", "background": "workshop", "quality": "high"}',
  0, 100, true, false, true, 7),
@@ -125,7 +125,7 @@ INSERT INTO character_templates (
 -- Note: This assumes you have test users in your users table
 -- You may need to adjust UUIDs based on your actual test users
 
--- Sample character generations (replace UUIDs with actual test user UUIDs)
+-- Sample actiongenerations (replace UUIDs with actual test user UUIDs)
 DO $$
 DECLARE
   test_user_uuid VARCHAR := (SELECT uuid FROM users LIMIT 1);
@@ -297,7 +297,7 @@ END $$;
 -- Uncomment and run when you need to test with larger datasets
 
 /*
--- Generate 1000 character generations for performance testing
+-- Generate 1000 actiongenerations for performance testing
 DO $$
 DECLARE
   i INTEGER;
@@ -364,7 +364,7 @@ BEGIN
   RAISE NOTICE 'Seed data summary:';
   RAISE NOTICE '- System configs: %', config_count;
   RAISE NOTICE '- Subscription plans: %', plan_count;
-  RAISE NOTICE '- Character templates: %', template_count;
+  RAISE NOTICE '- actiontemplates: %', template_count;
   
   IF config_count = 0 OR plan_count = 0 OR template_count = 0 THEN
     RAISE WARNING 'Some seed data may not have been inserted correctly';

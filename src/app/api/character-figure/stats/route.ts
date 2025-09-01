@@ -1,5 +1,5 @@
 /**
- * Character Figure Statistics API Route
+ * actionFigure Statistics API Route
  * 
  * Problem: Need API endpoints for user and system statistics
  * Solution: Create endpoints for user stats and public trends

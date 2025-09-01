@@ -1,5 +1,5 @@
 /**
- * Character Figure Loading States Component
+ * actionFigure Loading States Component
  * 
  * Problem: Users need visual feedback during loading and generation
  * Solution: Skeleton screens and animated loading states
@@ -76,7 +76,7 @@ interface GeneratingStateProps {
   message?: string;
 }
 
-export function GeneratingState({ progress = 0, message = 'Generating your character figure...' }: GeneratingStateProps) {
+export function GeneratingState({ progress = 0, message = 'Generating your actionfigure...' }: GeneratingStateProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[400px] p-8">
       <div className="relative">
@@ -148,7 +148,7 @@ export function ErrorState({ error, onRetry }: ErrorStateProps) {
       </h3>
       
       <p className="text-gray-600 dark:text-gray-400 text-center max-w-md mb-6">
-        {error || 'Something went wrong while generating your character figure. Please try again.'}
+        {error || 'Something went wrong while generating your actionfigure. Please try again.'}
       </p>
       
       {onRetry && (

@@ -1,5 +1,5 @@
 /**
- * Character Figure Gallery Component
+ * actionFigure Gallery Component
  * 
  * Problem: Users need inspiration and social proof of what's possible
  * Solution: Dynamic gallery showcasing community creations
@@ -25,7 +25,7 @@ interface GalleryItem {
   createdAt: string;
 }
 
-// Character Figure Gallery - Real examples showcasing the platform's capabilities
+// actionFigure Gallery - Real examples showcasing the platform's capabilities
 const MOCK_GALLERY: GalleryItem[] = [
   {
     id: '1',

@@ -1,7 +1,7 @@
 /**
- * Character Figure Gallery API Route
+ * actionFigure Gallery API Route
  * 
- * Problem: Need API endpoints for managing the public character figure gallery
+ * Problem: Need API endpoints for managing the public actionfigure gallery
  * Solution: Create endpoints for browsing, filtering, and interacting with gallery items
  * 
  * Endpoints: 

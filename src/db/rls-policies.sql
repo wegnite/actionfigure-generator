@@ -1,10 +1,10 @@
--- Row Level Security Policies for Character Figure AI Generator
+-- Row Level Security Policies for Action Figure AI Generator
 -- Purpose: Secure data access with granular permissions in Supabase
 -- Author: Database Security Expert
 -- Date: 2025-08-28
 
 -- =============================================
--- ENABLE RLS ON ALL CHARACTER FIGURE TABLES
+-- ENABLE RLS ON ALL actionFIGURE TABLES
 -- =============================================
 
 ALTER TABLE "character_generations" ENABLE ROW LEVEL SECURITY;
@@ -18,37 +18,37 @@ ALTER TABLE "subscriptions" ENABLE ROW LEVEL SECURITY;
 ALTER TABLE "subscription_usage" ENABLE ROW LEVEL SECURITY;
 
 -- =============================================
--- CHARACTER GENERATIONS POLICIES
+-- actionGENERATIONS POLICIES
 -- =============================================
 
 -- Users can view their own generation history
-CREATE POLICY "Users can view their own character generations"
+CREATE POLICY "Users can view their own actiongenerations"
 ON "character_generations" FOR SELECT
 TO authenticated
 USING (auth.uid()::text = user_uuid);
 
 -- Users can create their own generation records
-CREATE POLICY "Users can create their own character generations"
+CREATE POLICY "Users can create their own actiongenerations"
 ON "character_generations" FOR INSERT
 TO authenticated
 WITH CHECK (auth.uid()::text = user_uuid);
 
 -- Users can update their own generation records (for favoriting, etc.)
-CREATE POLICY "Users can update their own character generations"
+CREATE POLICY "Users can update their own actiongenerations"
 ON "character_generations" FOR UPDATE
 TO authenticated
 USING (auth.uid()::text = user_uuid)
 WITH CHECK (auth.uid()::text = user_uuid);
 
 -- Users can soft-delete their own generations
-CREATE POLICY "Users can delete their own character generations"
+CREATE POLICY "Users can delete their own actiongenerations"
 ON "character_generations" FOR UPDATE
 TO authenticated
 USING (auth.uid()::text = user_uuid AND is_deleted = false)
 WITH CHECK (auth.uid()::text = user_uuid);
 
--- Admin policy for character generations
-CREATE POLICY "Admin full access to character generations"
+-- Admin policy for actiongenerations
+CREATE POLICY "Admin full access to actiongenerations"
 ON "character_generations" FOR ALL
 TO authenticated
 USING (
@@ -60,7 +60,7 @@ USING (
 );
 
 -- =============================================
--- CHARACTER GALLERY POLICIES
+-- actionGALLERY POLICIES
 -- =============================================
 
 -- Anyone can view public, approved gallery items
@@ -153,7 +153,7 @@ TO authenticated
 USING (auth.uid()::text = user_uuid);
 
 -- =============================================
--- CHARACTER TEMPLATES POLICIES
+-- actionTEMPLATES POLICIES
 -- =============================================
 
 -- Everyone can view active templates

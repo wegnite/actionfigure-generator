@@ -1,5 +1,5 @@
 /**
- * 角色图像模型层 - Character Figure Data Access Layer
+ * 角色图像模型层 - actionFigure Data Access Layer
  * 
  * 功能说明：
  * 处理所有与角色图像生成相关的数据库操作
