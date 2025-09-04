@@ -213,66 +213,29 @@ export async function parseIPLocation(ip: string): Promise<Partial<AttributionDa
     };
   }
   
-  // Helper with timeout
-  const fetchWithTimeout = async (url: string, ms = 1500) => {
-    const controller = new AbortController();
-    const t = setTimeout(() => controller.abort(), ms);
-    try {
-      const res = await fetch(url, { signal: controller.signal, next: { revalidate: 3600 } });
-      return res;
-    } finally {
-      clearTimeout(t);
+  try {
+    // 使用ip-api.com免费版（限制每分钟45次请求）
+    const response = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,countryCode,region,city,timezone`, {
+      next: { revalidate: 3600 } // 缓存1小时
+    });
+    
+    if (!response.ok) throw new Error('Failed to fetch IP location');
+    
+    const data = await response.json();
+    
+    if (data.status === 'success') {
+      return {
+        ip,
+        country: data.country,
+        countryCode: data.countryCode,
+        region: data.region,
+        city: data.city,
+        timezone: data.timezone,
+      };
     }
-  };
-
-  // 尝试多源，全部设置超时，任一成功即返回
-  const sources = [
-    // ipapi.co (HTTPS)
-    async () => {
-      const r = await fetchWithTimeout(`https://ipapi.co/${ip}/json/`);
-      if (!r.ok) throw new Error('ipapi.co request failed');
-      const d = await r.json();
-      if (d && (d.country || d.country_name)) {
-        return {
-          ip,
-          country: d.country_name || d.country,
-          countryCode: d.country,
-          region: d.region || d.region_code,
-          city: d.city,
-          timezone: d.timezone,
-        } as Partial<AttributionData>;
-      }
-      throw new Error('ipapi.co invalid data');
-    },
-    // ipwho.is (HTTPS)
-    async () => {
-      const r = await fetchWithTimeout(`https://ipwho.is/${ip}`);
-      if (!r.ok) throw new Error('ipwho.is request failed');
-      const d = await r.json();
-      if (d && d.success) {
-        return {
-          ip,
-          country: d.country,
-          countryCode: d.country_code,
-          region: d.region,
-          city: d.city,
-          timezone: d.timezone?.id,
-        } as Partial<AttributionData>;
-      }
-      throw new Error('ipwho.is invalid data');
-    },
-  ];
-
-  for (const src of sources) {
-    try {
-      const result = await src();
-      if (result) return result;
-    } catch (err) {
-      // Continue to next source
-    }
+  } catch (error) {
+    console.error('Failed to parse IP location:', error);
   }
-
-  // 所有来源失败，返回最小信息，避免阻塞登录流程
   
   return { ip };
 }

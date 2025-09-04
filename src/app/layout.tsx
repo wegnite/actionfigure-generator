@@ -25,10 +25,7 @@ export default async function RootLayout({
           <meta name="google-adsense-account" content={googleAdsenseCode} />
         )}
 
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#FF6B35" />
+        <link rel="icon" href="/favicon.ico" />
 
         {webUrl && locales &&
           locales.map((loc) => (

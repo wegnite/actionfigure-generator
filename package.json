@@ -23,6 +23,7 @@
     "test:sitemap": "node test/sitemap/validate_sitemap_urls.js",
     "test:urls-fast": "node test/url-validation/validate_urls_fast.js",
     "verify:analytics": "node scripts/verify-analytics.js",
+    
     "sitemap:analyze": "node test/sitemap/analyze_sitemap.js",
     "sitemap:quick": "node test/sitemap/continuous-validation.js quick --verbose",
     "sitemap:validate": "node test/sitemap/continuous-validation.js standard --verbose",
@@ -142,7 +143,6 @@
     "stripe": "^17.5.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "undici": "^7.15.0",
     "uuid": "^11.0.3",
     "vaul": "^1.1.2",
     "zod": "^4.1.5"
