@@ -4,21 +4,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { NextAuthConfig } from "next-auth";
 import { Provider } from "next-auth/providers/index";
 import { User } from "@/types/user";
-
-// Optional: honor HTTPS_PROXY for server-side Google requests (helps in restricted networks)
-try {
-  const httpsProxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
-  if (httpsProxy) {
-    // undici is the HTTP client used by Next.js/Node 18+
-    // Dynamically require to avoid bundling on client
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { ProxyAgent, setGlobalDispatcher } = require('undici');
-    setGlobalDispatcher(new ProxyAgent(httpsProxy));
-    console.log('[auth] Using proxy for outgoing requests:', httpsProxy);
-  }
-} catch (e) {
-  // noop: proxy is optional
-}
 import { getClientIp } from "@/lib/ip";
 import { getIsoTimestr } from "@/lib/time";
 import { getUuid } from "@/lib/hash";
@@ -105,8 +90,9 @@ if (
       authorization: {
         url: 'https://accounts.google.com/o/oauth2/v2/auth',
         params: {
-          // 避免每次强制 consent 触发 Google 风险校验 (rapt)
-          prompt: 'select_account',
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
         },
       },
       token: 'https://oauth2.googleapis.com/token',
@@ -147,7 +133,6 @@ export const providerMap = providers
 
 export const authOptions: NextAuthConfig = {
   providers,
-  debug: process.env.NODE_ENV !== 'production',
   pages: {
     signIn: "/auth/signin",
   },
