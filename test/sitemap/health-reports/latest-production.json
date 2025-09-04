@@ -1,12 +1,14 @@
 {
-  "timestamp": "2025-09-01T04:02:07.239Z",
+  "timestamp": "2025-09-03T14:13:50.212Z",
   "environment": "production",
-  "mode": "quick",
-  "duration": 3029,
+  "mode": "deep",
+  "duration": 58144,
   "overall": {
     "status": "EXCELLENT",
-    "score": 100,
-    "issues": []
+    "score": 97,
+    "issues": [
+      "https://actionfigure-generator.com/: 响应时间过长 (6144ms)"
+    ]
   },
   "checks": {
     "availability": {
@@ -16,28 +18,28 @@
         "totalChecks": 4,
         "successful": 4,
         "failed": 0,
-        "avgResponseTime": 757,
+        "avgResponseTime": 2335,
         "checks": [
           {
             "url": "https://actionfigure-generator.com/",
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 712,
+            "responseTime": 6144,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-              "cf-ray": "9781dece8a99100c-LAX",
+              "cf-ray": "9795d9b89a1f2534-LHR",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "text/html; charset=utf-8",
-              "date": "Mon, 01 Sep 2025 04:02:07 GMT",
-              "link": "<https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"x-default\"",
+              "date": "Wed, 03 Sep 2025 14:13:55 GMT",
+              "link": "<https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/de>; rel=\"alternate\"; hreflang=\"de\", <https://actionfigure-generator.com/ja>; rel=\"alternate\"; hreflang=\"ja\", <https://actionfigure-generator.com/es>; rel=\"alternate\"; hreflang=\"es\", <https://actionfigure-generator.com/ar>; rel=\"alternate\"; hreflang=\"ar\", <https://actionfigure-generator.com/fr>; rel=\"alternate\"; hreflang=\"fr\", <https://actionfigure-generator.com/it>; rel=\"alternate\"; hreflang=\"it\", <https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"x-default\"",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=Dk4axzC4cP2W%2FrBU9iMYeVKZyqr8AltsJg0sisA%2BsjNXfoosnW0PtRahFh2TPleuLsHJufOcTHChHBsuTWClrgusKrGv%2BEIPSXXl2sbMQNTvtK8ZBpB%2FSslWqFBHu7zMa0xHWhZyldW9LP93Da7tV4MeNHOPESGlYA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=W0VV2yVqjVUKdFiN0aKH9rEVqUMVHBKkjEEWf%2FSdDLgc7ThmHelrZQ5HJlSxutLGcPr%2FqNSX2%2B11hWluEdJdlnbVDJVM7Ix47dEC7JYDIccpnp03CSvMxYdw2D2bUhWKsnANVGWNg08WpUsdDw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=183922&min_rtt=183708&rtt_var=52085&sent=6&recv=7&lost=0&retrans=0&sent_bytes=3942&recv_bytes=1905&delivery_rate=21828&cwnd=51&unsent_bytes=0&cid=f2d0a0124381b00a&ts=309&x=0\"",
-              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699327794%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699327794%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756699327794_lyo3j710h%22%2C%22sessionId%22%3A%22s_1756699327794_d399ce6gk%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Wed, 01 Oct 2025 04:02:07 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=330547&min_rtt=329000&rtt_var=93883&sent=8&recv=8&lost=0&retrans=3&sent_bytes=6482&recv_bytes=1905&delivery_rate=4173&cwnd=45&unsent_bytes=0&cid=f5f12bc538c1432d&ts=2590&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908835148%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908835148%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756908835148_704r2h6td%22%2C%22sessionId%22%3A%22s_1756908835148_grng1jfpa%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Fri, 03 Oct 2025 14:13:55 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-opennext": "1",
@@ -50,21 +52,21 @@
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 1767,
+            "responseTime": 2429,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-              "cf-ray": "9781ded2db8acba4-LAX",
+              "cf-ray": "9795d9cca983a162-ORD",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "text/html; charset=utf-8",
-              "date": "Mon, 01 Sep 2025 04:02:09 GMT",
-              "link": "<https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/pricing>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"x-default\"",
+              "date": "Wed, 03 Sep 2025 14:13:58 GMT",
+              "link": "<https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/pricing>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/de/pricing>; rel=\"alternate\"; hreflang=\"de\", <https://actionfigure-generator.com/ja/pricing>; rel=\"alternate\"; hreflang=\"ja\", <https://actionfigure-generator.com/es/pricing>; rel=\"alternate\"; hreflang=\"es\", <https://actionfigure-generator.com/ar/pricing>; rel=\"alternate\"; hreflang=\"ar\", <https://actionfigure-generator.com/fr/pricing>; rel=\"alternate\"; hreflang=\"fr\", <https://actionfigure-generator.com/it/pricing>; rel=\"alternate\"; hreflang=\"it\", <https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"x-default\"",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=9%2BLArkd88%2FXdc%2BiGw8qTEEPywX0CwA1tyiQqkKVBsp6S91GmCHoTnAwXRyGgriOsjnrJEOJ9gccCcfLcqeP565%2FylGuGMYlMb4EiTGwtsFmN8sPPgTffUz6FCeh3Ci5PXzJpYe9v89wuLNN%2FXbcwvsaX4JcAbfiIug%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=ThNmHIPaf8JTeSpWWrrIuJhirG7792bjv5dM9IaxZhxDsL%2FsTsMnptpWDBzeVm16vtpV4S%2FmB7sjauCiuW1WZgXfFKX90gkJGLHkBUX2gN2FWFDv7qDwn6DboE3RpvpALYb%2BYfUF1YaIc%2Fy67g%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=188661&min_rtt=187557&rtt_var=71122&sent=4&recv=6&lost=0&retrans=0&sent_bytes=1322&recv_bytes=2183&delivery_rate=7187&cwnd=171&unsent_bytes=0&cid=4ce31b7a6f77b7ee&ts=1384&x=0\"",
-              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329114%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329114%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756699329114_sjunsy8yx%22%2C%22sessionId%22%3A%22s_1756699329114_u3zg497ro%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Wed, 01 Oct 2025 04:02:09 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=281943&min_rtt=278062&rtt_var=84983&sent=6&recv=7&lost=0&retrans=0&sent_bytes=3942&recv_bytes=1912&delivery_rate=14221&cwnd=33&unsent_bytes=0&cid=233e3b47e0986111&ts=1117&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908838356%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908838356%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756908838356_46z79xvx6%22%2C%22sessionId%22%3A%22s_1756908838356_x6lufjr7h%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Fri, 03 Oct 2025 14:13:58 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-opennext": "1",
@@ -77,21 +79,21 @@
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 283,
+            "responseTime": 415,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-              "cf-ray": "9781dedb8e43100c-LAX",
+              "cf-ray": "9795d9d3be512534-LHR",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "text/html; charset=utf-8",
-              "date": "Mon, 01 Sep 2025 04:02:09 GMT",
-              "link": "<https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/character-figure>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"x-default\"",
+              "date": "Wed, 03 Sep 2025 14:13:59 GMT",
+              "link": "<https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/character-figure>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/de/character-figure>; rel=\"alternate\"; hreflang=\"de\", <https://actionfigure-generator.com/ja/character-figure>; rel=\"alternate\"; hreflang=\"ja\", <https://actionfigure-generator.com/es/character-figure>; rel=\"alternate\"; hreflang=\"es\", <https://actionfigure-generator.com/ar/character-figure>; rel=\"alternate\"; hreflang=\"ar\", <https://actionfigure-generator.com/fr/character-figure>; rel=\"alternate\"; hreflang=\"fr\", <https://actionfigure-generator.com/it/character-figure>; rel=\"alternate\"; hreflang=\"it\", <https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"x-default\"",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=fY46EiWXWW4gUJ5d93i5tvFX5QZsOMD1Zoasv1F1VRhZWazK7ERnTEyUi3LF5BJaDknpDFflt2QtbyxHlSdrtre0X0JRwTNfQ3RFLekIgYLrTzXf%2FEZoeFbnhLpxabrnIjIByzZOZSjwP3LfOXMkTi4MrftxXcyTAg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=L11O%2FSCF35PjwSBnZBUSelA5gwmx%2FXG4MErH7f%2FcrXkBdF2KVOxoCVgj4qYqXF5s%2BNjchtbfVz1FGm13a9WioxN9UAtc49gS%2B1ojHmQ3xKM%2Fiy2mr2Xz0WDdzpJ7JVFgUutF2nbVC6LaRt4nSg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=192201&min_rtt=183708&rtt_var=2745&sent=33&recv=27&lost=0&retrans=0&sent_bytes=28171&recv_bytes=2128&delivery_rate=165501&cwnd=63&unsent_bytes=0&cid=f2d0a0124381b00a&ts=2363&x=0\"",
-              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329856%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756699329856%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756699329856_fg4s2jy1n%22%2C%22sessionId%22%3A%22s_1756699329856_al1nckt39%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Wed, 01 Oct 2025 04:02:09 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=332224&min_rtt=327510&rtt_var=6700&sent=49&recv=33&lost=0&retrans=18&sent_bytes=53896&recv_bytes=2128&delivery_rate=16410&cwnd=47&unsent_bytes=0&cid=f5f12bc538c1432d&ts=6130&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908839000%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908839000%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756908839000_sfvrbvjfy%22%2C%22sessionId%22%3A%22s_1756908839000_eh3w7i7la%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Fri, 03 Oct 2025 14:13:59 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-opennext": "1",
@@ -104,19 +106,19 @@
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 264,
+            "responseTime": 352,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "public, max-age=0, must-revalidate",
-              "cf-ray": "9781dedd4b60cba4-LAX",
+              "cf-ray": "9795d9d61a83a162-ORD",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "application/xml",
-              "date": "Mon, 01 Sep 2025 04:02:10 GMT",
+              "date": "Wed, 03 Sep 2025 14:13:59 GMT",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2FgVv8x7lPH0enpZyOQyibIgjoeIsJ4%2F7OAyiQo1hh%2BzAnf2KdX5gDzHJ%2B18WNzXZzVS1SZueVgO%2Fz2HRNxC15jqFOfO0S6vpDL8UxzpQ4gn6NRb%2FhsdQonlC6cu4CqWqZg5XzbG8%2FTFFVelunEW7%2FnufPkyA%2FhZhow%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=0tucjTQLBbS6m4Z5u5fW7aaV7gIyQsx%2Fao0gY%2BpE7fvcaTDi2h7qz5t8fWBDI3o5%2FfVx1YBLkC8DGEURe8%2F%2FbalzjRqRqTkbggFeTyfOyykDcKTabGE0pbN0SjJAgKFD497xZvKtOiRdGSgquw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=186428&min_rtt=184957&rtt_var=3091&sent=22&recv=19&lost=0&retrans=0&sent_bytes=13469&recv_bytes=2401&delivery_rate=111805&cwnd=178&unsent_bytes=0&cid=4ce31b7a6f77b7ee&ts=1932&x=0\"",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=276189&min_rtt=272040&rtt_var=12365&sent=23&recv=18&lost=0&retrans=0&sent_bytes=22096&recv_bytes=2130&delivery_rate=75121&cwnd=43&unsent_bytes=0&cid=233e3b47e0986111&ts=1861&x=0\"",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-nextjs-cache": "MISS",
@@ -126,8 +128,247 @@
           }
         ]
       },
+      "issues": [
+        "https://actionfigure-generator.com/: 响应时间过长 (6144ms)"
+      ],
+      "timestamp": "2025-09-03T14:13:59.556Z"
+    },
+    "sitemap": {
+      "type": "sitemap",
+      "score": 100,
+      "details": {
+        "sitemapUrl": "https://actionfigure-generator.com/sitemap.xml",
+        "totalUrls": 37,
+        "testedUrls": 24,
+        "validUrls": 24,
+        "invalidUrls": 0,
+        "avgResponseTime": 1389,
+        "validationResults": [
+          {
+            "url": "https://actionfigure-generator.com/pricing",
+            "success": true,
+            "status": 200,
+            "responseTime": 2312,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/showcase",
+            "success": true,
+            "status": 200,
+            "responseTime": 3419,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/character-figure",
+            "success": true,
+            "status": 200,
+            "responseTime": 440,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/character-figure/video",
+            "success": true,
+            "status": 200,
+            "responseTime": 4306,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/zh/pricing",
+            "success": true,
+            "status": 200,
+            "responseTime": 4429,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/zh/showcase",
+            "success": true,
+            "status": 200,
+            "responseTime": 1857,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/zh/character-figure",
+            "success": true,
+            "status": 200,
+            "responseTime": 658,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/zh/character-figure/video",
+            "success": true,
+            "status": 200,
+            "responseTime": 2239,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/ja/pricing",
+            "success": true,
+            "status": 200,
+            "responseTime": 754,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/ja/showcase",
+            "success": true,
+            "status": 200,
+            "responseTime": 389,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/ja/character-figure",
+            "success": true,
+            "status": 200,
+            "responseTime": 978,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/ja/character-figure/video",
+            "success": true,
+            "status": 200,
+            "responseTime": 397,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/es/pricing",
+            "success": true,
+            "status": 200,
+            "responseTime": 3094,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/es/showcase",
+            "success": true,
+            "status": 200,
+            "responseTime": 709,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/es/character-figure",
+            "success": true,
+            "status": 200,
+            "responseTime": 434,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/es/character-figure/video",
+            "success": true,
+            "status": 200,
+            "responseTime": 1557,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/fr/pricing",
+            "success": true,
+            "status": 200,
+            "responseTime": 415,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/fr/showcase",
+            "success": true,
+            "status": 200,
+            "responseTime": 661,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/fr/character-figure",
+            "success": true,
+            "status": 200,
+            "responseTime": 762,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/fr/character-figure/video",
+            "success": true,
+            "status": 200,
+            "responseTime": 763,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/de/pricing",
+            "success": true,
+            "status": 200,
+            "responseTime": 413,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/de/showcase",
+            "success": true,
+            "status": 200,
+            "responseTime": 776,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/de/character-figure",
+            "success": true,
+            "status": 200,
+            "responseTime": 934,
+            "contentType": "text/html; charset=utf-8"
+          },
+          {
+            "url": "https://actionfigure-generator.com/de/character-figure/video",
+            "success": true,
+            "status": 200,
+            "responseTime": 650,
+            "contentType": "text/html; charset=utf-8"
+          }
+        ]
+      },
       "issues": [],
-      "timestamp": "2025-09-01T04:02:10.268Z"
+      "timestamp": "2025-09-03T14:14:38.481Z"
+    },
+    "performance": {
+      "type": "performance",
+      "score": 90,
+      "details": {
+        "testedUrls": 3,
+        "results": [
+          {
+            "url": "https://actionfigure-generator.com/",
+            "measurements": [
+              947,
+              908,
+              739
+            ],
+            "avgResponseTime": 865,
+            "minResponseTime": 739,
+            "maxResponseTime": 947,
+            "errors": 0,
+            "reliability": 100
+          },
+          {
+            "url": "https://actionfigure-generator.com/pricing",
+            "measurements": [
+              405,
+              894,
+              731
+            ],
+            "avgResponseTime": 677,
+            "minResponseTime": 405,
+            "maxResponseTime": 894,
+            "errors": 0,
+            "reliability": 100
+          },
+          {
+            "url": "https://actionfigure-generator.com/character-figure",
+            "measurements": [
+              429,
+              840,
+              974
+            ],
+            "avgResponseTime": 748,
+            "minResponseTime": 429,
+            "maxResponseTime": 974,
+            "errors": 0,
+            "reliability": 100
+          }
+        ],
+        "avgResponseTime": 763,
+        "minResponseTime": 405,
+        "maxResponseTime": 974
+      },
+      "issues": [],
+      "timestamp": "2025-09-03T14:14:48.356Z"
     }
   },
   "recommendations": [],

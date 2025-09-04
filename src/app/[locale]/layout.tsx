@@ -20,6 +20,16 @@ export async function generateMetadata({
   setRequestLocale(locale);
 
   const t = await getTranslations();
+  
+  // Build hreflang alternates (keep in sync with sitemap locales)
+  const baseUrl = 'https://actionfigure-generator.com';
+  const alternates: Metadata["alternates"] = {
+    canonical: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
+    languages: {
+      en: baseUrl,
+      zh: `${baseUrl}/zh`,
+    },
+  };
 
   return {
     title: {
@@ -28,6 +38,7 @@ export async function generateMetadata({
     },
     description: t("metadata.description") || "",
     keywords: t("metadata.keywords") || "",
+    alternates,
   };
 }
 
