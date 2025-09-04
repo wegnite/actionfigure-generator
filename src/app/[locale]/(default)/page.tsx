@@ -50,27 +50,27 @@ export async function generateMetadata({
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
     keywords: keywords[locale as keyof typeof keywords] || keywords.en,
     alternates: {
-      canonical: `https://actionfigure-generator.com/${locale === 'en' ? '' : locale}`,
+      canonical: `${process.env.NEXT_PUBLIC_WEB_URL}/${locale === 'en' ? '' : locale}`,
       languages: {
-        'en': 'https://actionfigure-generator.com',
-        'zh': 'https://actionfigure-generator.com/zh',
-        'ja': 'https://actionfigure-generator.com/ja',
-        'es': 'https://actionfigure-generator.com/es',
-        'fr': 'https://actionfigure-generator.com/fr',
-        'de': 'https://actionfigure-generator.com/de',
-        'x-default': 'https://actionfigure-generator.com',
+        'en': `${process.env.NEXT_PUBLIC_WEB_URL}`,
+        'zh': `${process.env.NEXT_PUBLIC_WEB_URL}/zh`,
+        'ja': `${process.env.NEXT_PUBLIC_WEB_URL}/ja`,
+        'es': `${process.env.NEXT_PUBLIC_WEB_URL}/es`,
+        'fr': `${process.env.NEXT_PUBLIC_WEB_URL}/fr`,
+        'de': `${process.env.NEXT_PUBLIC_WEB_URL}/de`,
+        'x-default': `${process.env.NEXT_PUBLIC_WEB_URL}`,
       },
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      url: `https://actionfigure-generator.com/${locale === 'en' ? '' : locale}`,
+      url: `${process.env.NEXT_PUBLIC_WEB_URL}/${locale === 'en' ? '' : locale}`,
       siteName: 'Action Figure AI Generator',
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
       type: 'website',
       images: [
         {
-          url: 'https://actionfigure-generator.com/og-image.jpg',
+          url: `${process.env.NEXT_PUBLIC_WEB_URL}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: 'Action Figure AI Generator - Create Professional Action Figures',
@@ -81,7 +81,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      images: ['https://actionfigure-generator.com/og-image.jpg'],
+      images: [`${process.env.NEXT_PUBLIC_WEB_URL}/og-image.jpg`],
       creator: '@actionfiguregen',
       site: '@actionfiguregen',
     },
@@ -122,7 +122,7 @@ export default async function CharacterFigurePage({
         data={{
           name: "Action Figure AI Generator",
           description: "Advanced AI-powered platform for creating professional action figures and collectibles",
-          url: "https://actionfigure-generator.com"
+          url: process.env.NEXT_PUBLIC_WEB_URL
         }} 
       />
       <ActionFigureLanding locale={locale} t={t} />

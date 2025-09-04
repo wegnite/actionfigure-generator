@@ -11,6 +11,7 @@ interface StructuredDataProps {
 }
 
 export function StructuredData({ type, data }: StructuredDataProps) {
+  const baseUrl = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com';
   const generateSchema = () => {
     switch (type) {
       case 'website':
@@ -19,12 +20,12 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           "@type": "WebSite",
           "name": "Action Figure AI Generator",
           "description": "Advanced AI-powered platform for creating professional action figures and collectibles",
-          "url": "https://actionfigure-generator.com",
+          "url": baseUrl,
           "potentialAction": {
             "@type": "SearchAction",
             "target": {
               "@type": "EntryPoint",
-              "urlTemplate": "https://actionfigure-generator.com/search?q={search_term_string}"
+              "urlTemplate": `${baseUrl}/search?q={search_term_string}`
             },
             "query-input": "required name=search_term_string"
           },
@@ -50,7 +51,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             "priceCurrency": "USD",
             "priceValidUntil": "2025-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://actionfigure-generator.com/pricing"
+            "url": `${baseUrl}/pricing`
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -109,7 +110,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             "name": "Action Figure AI",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://actionfigure-generator.com/logo.svg"
+              "url": `${baseUrl}/logo.svg`
             }
           }
         };

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://actionfigure-generator.com'
+  const baseUrl = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'
   const locales = ['en', 'zh', 'ja', 'es', 'fr', 'de']
   
   // 静态页面（确保这些页面实际存在）

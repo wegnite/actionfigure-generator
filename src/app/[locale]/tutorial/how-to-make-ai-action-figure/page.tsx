@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
     },
     alternates: {
-      canonical: "https://actionfigure-generator.com/tutorial/how-to-make-ai-action-figure",
+      canonical: `${process.env.NEXT_PUBLIC_WEB_URL}/tutorial/how-to-make-ai-action-figure`,
     }
   };
 }

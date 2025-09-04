@@ -37,10 +37,12 @@ export default async function RootLayout({
             />
           ))}
         {webUrl && <link rel="alternate" hrefLang="x-default" href={webUrl} />}
+        
+        {/* Google Analytics、Google Ads 和其他分析工具 - 放在 head 内以确保最佳跟踪性能 */}
+        <Analytics />
       </head>
       <body className={cn("min-h-screen overflow-x-hidden dark")}>
-        {/* Google Analytics 和其他分析工具 */}
-        <Analytics />
+        {/* 页面内容 */}
         {children}
       </body>
     </html>

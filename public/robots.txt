@@ -27,7 +27,7 @@ Allow: /sitemap.xml
 Allow: /ads.txt
 
 # 网站地图位置
-Sitemap: https://actionfigure-generator.com/sitemap.xml
+Sitemap: https://actionfigure_generator.mryangsd.workers.dev/sitemap.xml
 
 # 爬取频率限制
 Crawl-delay: 1

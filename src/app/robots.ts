@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://actionfigure-generator.com'
+  const baseUrl = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'
   
   return {
     rules: [

@@ -1,4 +1,5 @@
 import GoogleAnalytics from "./google-analytics";
+import GoogleAds from "./google-ads";
 import OpenPanelAnalytics from "./open-panel";
 import Plausible from "./plausible";
 
@@ -7,8 +8,9 @@ import Plausible from "./plausible";
  * 
  * 包含的分析工具：
  * 1. Google Analytics (GA4) - 主要网站分析
- * 2. OpenPanel - 开源分析平台
- * 3. Plausible - 隐私友好的分析工具
+ * 2. Google Ads (AW-17411795321) - 转换跟踪和广告优化
+ * 3. OpenPanel - 开源分析平台
+ * 4. Plausible - 隐私友好的分析工具
  * 
  * 功能：
  * - 仅在生产环境中加载分析脚本
@@ -36,6 +38,9 @@ export default function Analytics() {
     <>
       {/* Google Analytics (GA4) - 主要分析工具 */}
       <GoogleAnalytics />
+      
+      {/* Google Ads - 转换跟踪和广告优化 */}
+      <GoogleAds />
       
       {/* OpenPanel Analytics - 开源替代方案 */}
       <OpenPanelAnalytics />
