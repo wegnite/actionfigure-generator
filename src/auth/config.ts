@@ -86,22 +86,6 @@ if (
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
-      // 明确指定端点以避免运行时对 well-known 的网络发现请求
-      authorization: {
-        url: 'https://accounts.google.com/o/oauth2/v2/auth',
-        params: {
-          prompt: 'consent',
-          access_type: 'offline',
-          response_type: 'code',
-        },
-      },
-      token: 'https://oauth2.googleapis.com/token',
-      userinfo: 'https://openidconnect.googleapis.com/v1/userinfo',
-      // 可选：减少外部请求超时导致的失败面
-      httpOptions: {
-        timeout: 15000,
-      },
-      // checks: ['pkce', 'state'], // 如需显式指定
     })
   );
 }
