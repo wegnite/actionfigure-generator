@@ -183,18 +183,35 @@ export const authOptions: NextAuthConfig = {
           return token;
         }
 
-        const userInfo = await handleSignInUser(user, account);
-        if (!userInfo) {
-          throw new Error("save user failed");
-        }
+        // 设定一个上限超时，避免外部网络导致登录卡住
+        const withTimeout = <T>(p: Promise<T>, ms = 2500) =>
+          Promise.race([
+            p,
+            new Promise<T>((_, reject) => setTimeout(() => reject(new Error('handleSignInUser timeout')), ms))
+          ]);
 
-        token.user = {
-          uuid: userInfo.uuid,
-          email: userInfo.email,
-          nickname: userInfo.nickname,
-          avatar_url: userInfo.avatar_url,
-          created_at: userInfo.created_at,
-        };
+        try {
+          const userInfo = await withTimeout(handleSignInUser(user, account));
+          if (userInfo) {
+            token.user = {
+              uuid: userInfo.uuid,
+              email: userInfo.email,
+              nickname: userInfo.nickname,
+              avatar_url: userInfo.avatar_url,
+              created_at: userInfo.created_at,
+            };
+          }
+        } catch (innerErr) {
+          console.warn('[auth] handleSignInUser skipped:', (innerErr as Error).message);
+          // 最少填充基础字段，后续可在用户使用时再延迟写库
+          token.user = {
+            uuid: getUuid(),
+            email: user.email!,
+            nickname: user.name || '',
+            avatar_url: user.image || '',
+            created_at: new Date(),
+          } as any;
+        }
 
         return token;
       } catch (e) {
