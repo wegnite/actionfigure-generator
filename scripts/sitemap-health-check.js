@@ -169,9 +169,10 @@ class AvailabilityChecker {
     
     const checks = [];
     
+    // 关键URL增加快速重试，降低偶发抖动误报
     for (const urlPath of criticalUrls) {
       const url = baseUrl + urlPath;
-      const checkResult = await this.checkSingleUrl(url);
+      const checkResult = await this.checkSingleUrlWithRetry(url, 2, 600);
       checks.push(checkResult);
       
       this.logger.info(`${url} - ${checkResult.status} (${checkResult.responseTime}ms)`);
@@ -211,6 +212,37 @@ class AvailabilityChecker {
     
     result.score = Math.max(0, result.score);
     return result;
+  }
+  
+  async checkSingleUrlWithRetry(url, retries = 2, backoffMs = 500) {
+    let attempt = 0;
+    let lastError = null;
+    let best = null;
+    
+    while (attempt <= retries) {
+      const res = await this.checkSingleUrl(url);
+      // 成功直接返回
+      if (res.success) return res;
+      
+      // 记录最佳（响应时间更短）失败结果
+      if (!best || res.responseTime < best.responseTime) {
+        best = res;
+      }
+      lastError = res.error || res.statusText;
+      attempt++;
+      if (attempt <= retries) {
+        await new Promise(r => setTimeout(r, backoffMs));
+      }
+    }
+    
+    return best || {
+      url,
+      success: false,
+      status: 0,
+      statusText: 'Request Failed',
+      responseTime: 0,
+      error: lastError || 'Unknown error'
+    };
   }
   
   async checkSingleUrl(url) {

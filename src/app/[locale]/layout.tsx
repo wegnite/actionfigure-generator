@@ -28,6 +28,7 @@ export async function generateMetadata({
     languages: {
       en: baseUrl,
       zh: `${baseUrl}/zh`,
+      'x-default': baseUrl,
     },
   };
 

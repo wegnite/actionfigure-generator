@@ -1,45 +1,46 @@
 {
-  "timestamp": "2025-09-03T14:13:50.212Z",
+  "timestamp": "2025-09-04T04:39:36.748Z",
   "environment": "production",
-  "mode": "deep",
-  "duration": 58144,
+  "mode": "standard",
+  "duration": 21927,
   "overall": {
-    "status": "EXCELLENT",
-    "score": 97,
+    "status": "WARNING",
+    "score": 84,
     "issues": [
-      "https://actionfigure-generator.com/: 响应时间过长 (6144ms)"
+      "https://actionfigure-generator.com/pricing: fetch failed",
+      "https://actionfigure-generator.com/pricing: 响应时间过长 (10490ms)"
     ]
   },
   "checks": {
     "availability": {
       "type": "availability",
-      "score": 100,
+      "score": 70,
       "details": {
         "totalChecks": 4,
-        "successful": 4,
-        "failed": 0,
-        "avgResponseTime": 2335,
+        "successful": 3,
+        "failed": 1,
+        "avgResponseTime": 3739,
         "checks": [
           {
             "url": "https://actionfigure-generator.com/",
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 6144,
+            "responseTime": 2535,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-              "cf-ray": "9795d9b89a1f2534-LHR",
+              "cf-ray": "979acddf0cf92f0b-LAX",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "text/html; charset=utf-8",
-              "date": "Wed, 03 Sep 2025 14:13:55 GMT",
+              "date": "Thu, 04 Sep 2025 04:39:39 GMT",
               "link": "<https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/de>; rel=\"alternate\"; hreflang=\"de\", <https://actionfigure-generator.com/ja>; rel=\"alternate\"; hreflang=\"ja\", <https://actionfigure-generator.com/es>; rel=\"alternate\"; hreflang=\"es\", <https://actionfigure-generator.com/ar>; rel=\"alternate\"; hreflang=\"ar\", <https://actionfigure-generator.com/fr>; rel=\"alternate\"; hreflang=\"fr\", <https://actionfigure-generator.com/it>; rel=\"alternate\"; hreflang=\"it\", <https://actionfigure-generator.com/>; rel=\"alternate\"; hreflang=\"x-default\"",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=W0VV2yVqjVUKdFiN0aKH9rEVqUMVHBKkjEEWf%2FSdDLgc7ThmHelrZQ5HJlSxutLGcPr%2FqNSX2%2B11hWluEdJdlnbVDJVM7Ix47dEC7JYDIccpnp03CSvMxYdw2D2bUhWKsnANVGWNg08WpUsdDw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=0bW5S6ZGu3XfVQH3y1KRu7QI4eoL51Wf8UqKwZIqCmMz3YSyQTAxb%2FKtyR%2BzekF%2BVMNCKDxnenG9o84x91uIJXttv7810EKKtj0lnATWwAa7FYJYb3JJfUvra9cCOfXyiv3xNshy38w7t259yg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=330547&min_rtt=329000&rtt_var=93883&sent=8&recv=8&lost=0&retrans=3&sent_bytes=6482&recv_bytes=1905&delivery_rate=4173&cwnd=45&unsent_bytes=0&cid=f5f12bc538c1432d&ts=2590&x=0\"",
-              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908835148%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908835148%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756908835148_704r2h6td%22%2C%22sessionId%22%3A%22s_1756908835148_grng1jfpa%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Fri, 03 Oct 2025 14:13:55 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=193542&min_rtt=193222&rtt_var=54949&sent=6&recv=7&lost=0&retrans=0&sent_bytes=3942&recv_bytes=1905&delivery_rate=21506&cwnd=252&unsent_bytes=0&cid=8356435dc69a79f2&ts=1575&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756960778800%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2F%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756960778800%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756960778800_67wv8yobs%22%2C%22sessionId%22%3A%22s_1756960778800_n418t8a2e%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Sat, 04 Oct 2025 04:39:38 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-opennext": "1",
@@ -49,51 +50,32 @@
           },
           {
             "url": "https://actionfigure-generator.com/pricing",
-            "success": true,
-            "status": 200,
-            "statusText": "OK",
-            "responseTime": 2429,
-            "headers": {
-              "alt-svc": "h3=\":443\"; ma=86400",
-              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-              "cf-ray": "9795d9cca983a162-ORD",
-              "connection": "keep-alive",
-              "content-encoding": "br",
-              "content-type": "text/html; charset=utf-8",
-              "date": "Wed, 03 Sep 2025 14:13:58 GMT",
-              "link": "<https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/pricing>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/de/pricing>; rel=\"alternate\"; hreflang=\"de\", <https://actionfigure-generator.com/ja/pricing>; rel=\"alternate\"; hreflang=\"ja\", <https://actionfigure-generator.com/es/pricing>; rel=\"alternate\"; hreflang=\"es\", <https://actionfigure-generator.com/ar/pricing>; rel=\"alternate\"; hreflang=\"ar\", <https://actionfigure-generator.com/fr/pricing>; rel=\"alternate\"; hreflang=\"fr\", <https://actionfigure-generator.com/it/pricing>; rel=\"alternate\"; hreflang=\"it\", <https://actionfigure-generator.com/pricing>; rel=\"alternate\"; hreflang=\"x-default\"",
-              "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=ThNmHIPaf8JTeSpWWrrIuJhirG7792bjv5dM9IaxZhxDsL%2FsTsMnptpWDBzeVm16vtpV4S%2FmB7sjauCiuW1WZgXfFKX90gkJGLHkBUX2gN2FWFDv7qDwn6DboE3RpvpALYb%2BYfUF1YaIc%2Fy67g%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
-              "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=281943&min_rtt=278062&rtt_var=84983&sent=6&recv=7&lost=0&retrans=0&sent_bytes=3942&recv_bytes=1912&delivery_rate=14221&cwnd=33&unsent_bytes=0&cid=233e3b47e0986111&ts=1117&x=0\"",
-              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908838356%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fpricing%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908838356%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756908838356_46z79xvx6%22%2C%22sessionId%22%3A%22s_1756908838356_x6lufjr7h%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Fri, 03 Oct 2025 14:13:58 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
-              "transfer-encoding": "chunked",
-              "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
-              "x-opennext": "1",
-              "x-powered-by": "Next.js"
-            },
-            "size": 0
+            "success": false,
+            "status": 0,
+            "statusText": "Request Failed",
+            "responseTime": 10490,
+            "error": "fetch failed"
           },
           {
             "url": "https://actionfigure-generator.com/character-figure",
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 415,
+            "responseTime": 1270,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-              "cf-ray": "9795d9d3be512534-LHR",
+              "cf-ray": "979ace302b0e2f10-LAX",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "text/html; charset=utf-8",
-              "date": "Wed, 03 Sep 2025 14:13:59 GMT",
+              "date": "Thu, 04 Sep 2025 04:39:51 GMT",
               "link": "<https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"en\", <https://actionfigure-generator.com/zh/character-figure>; rel=\"alternate\"; hreflang=\"zh\", <https://actionfigure-generator.com/de/character-figure>; rel=\"alternate\"; hreflang=\"de\", <https://actionfigure-generator.com/ja/character-figure>; rel=\"alternate\"; hreflang=\"ja\", <https://actionfigure-generator.com/es/character-figure>; rel=\"alternate\"; hreflang=\"es\", <https://actionfigure-generator.com/ar/character-figure>; rel=\"alternate\"; hreflang=\"ar\", <https://actionfigure-generator.com/fr/character-figure>; rel=\"alternate\"; hreflang=\"fr\", <https://actionfigure-generator.com/it/character-figure>; rel=\"alternate\"; hreflang=\"it\", <https://actionfigure-generator.com/character-figure>; rel=\"alternate\"; hreflang=\"x-default\"",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=L11O%2FSCF35PjwSBnZBUSelA5gwmx%2FXG4MErH7f%2FcrXkBdF2KVOxoCVgj4qYqXF5s%2BNjchtbfVz1FGm13a9WioxN9UAtc49gS%2B1ojHmQ3xKM%2Fiy2mr2Xz0WDdzpJ7JVFgUutF2nbVC6LaRt4nSg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=PUGWoPdyaKK93aFI50KrSxWF0kUTy9Ia7iLbA6ke6UuFkQasgi%2ByVsk9eF8R2cGojB0S3ec8YZ2qcVgPz9j8xlRAh72mTg7d%2FZA3JFdMICO12Fy0DxxEXcPwUaOyxz6GjyyZNE%2F1ogvqwrgQkA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=332224&min_rtt=327510&rtt_var=6700&sent=49&recv=33&lost=0&retrans=18&sent_bytes=53896&recv_bytes=2128&delivery_rate=16410&cwnd=47&unsent_bytes=0&cid=f5f12bc538c1432d&ts=6130&x=0\"",
-              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908839000%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756908839000%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756908839000_sfvrbvjfy%22%2C%22sessionId%22%3A%22s_1756908839000_eh3w7i7la%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Fri, 03 Oct 2025 14:13:59 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=186186&min_rtt=185931&rtt_var=69906&sent=4&recv=6&lost=0&retrans=0&sent_bytes=1322&recv_bytes=2192&delivery_rate=7529&cwnd=250&unsent_bytes=0&cid=2f4b646d36adef09&ts=364&x=0\"",
+              "set-cookie": "user_attribution=%7B%22first%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756960791102%7D%2C%22last%22%3A%7B%22source%22%3A%22direct%22%2C%22medium%22%3A%22none%22%2C%22landing%22%3A%22%2Fcharacter-figure%22%2C%22referrer%22%3Anull%2C%22timestamp%22%3A1756960791102%7D%2C%22visitor%22%3A%7B%22id%22%3A%22v_1756960791102_7bbrd6ed3%22%2C%22sessionId%22%3A%22s_1756960791102_w0cadksyd%22%2C%22visitCount%22%3A1%7D%7D; Path=/; Expires=Sat, 04 Oct 2025 04:39:51 GMT; Max-Age=2592000; Secure; HttpOnly; SameSite=lax",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-opennext": "1",
@@ -106,19 +88,19 @@
             "success": true,
             "status": 200,
             "statusText": "OK",
-            "responseTime": 352,
+            "responseTime": 662,
             "headers": {
               "alt-svc": "h3=\":443\"; ma=86400",
               "cache-control": "public, max-age=0, must-revalidate",
-              "cf-ray": "9795d9d61a83a162-ORD",
+              "cf-ray": "979ace350f5049d4-LAX",
               "connection": "keep-alive",
               "content-encoding": "br",
               "content-type": "application/xml",
-              "date": "Wed, 03 Sep 2025 14:13:59 GMT",
+              "date": "Thu, 04 Sep 2025 04:39:51 GMT",
               "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
-              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=0tucjTQLBbS6m4Z5u5fW7aaV7gIyQsx%2Fao0gY%2BpE7fvcaTDi2h7qz5t8fWBDI3o5%2FfVx1YBLkC8DGEURe8%2F%2FbalzjRqRqTkbggFeTyfOyykDcKTabGE0pbN0SjJAgKFD497xZvKtOiRdGSgquw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+              "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=n4YeP1Li15m3j3kbnu4ikNJGARS6nadFvC982LJeeuFzAJwqYp64zxL62TCjhCezM5i6hOtexkTyIv6khzaV0lU25tioeFJtXw28t7ywKLIEa%2FAJVvgOvl2yRjs%2BK6AwXewEawCt3lrStD65Yg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
               "server": "cloudflare",
-              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=276189&min_rtt=272040&rtt_var=12365&sent=23&recv=18&lost=0&retrans=0&sent_bytes=22096&recv_bytes=2130&delivery_rate=75121&cwnd=43&unsent_bytes=0&cid=233e3b47e0986111&ts=1861&x=0\"",
+              "server-timing": "cfL4;desc=\"?proto=TCP&rtt=199395&min_rtt=190848&rtt_var=77673&sent=4&recv=6&lost=0&retrans=0&sent_bytes=1322&recv_bytes=2187&delivery_rate=7335&cwnd=250&unsent_bytes=0&cid=bb0c2e21541ffa8f&ts=267&x=0\"",
               "transfer-encoding": "chunked",
               "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
               "x-nextjs-cache": "MISS",
@@ -129,9 +111,10 @@
         ]
       },
       "issues": [
-        "https://actionfigure-generator.com/: 响应时间过长 (6144ms)"
+        "https://actionfigure-generator.com/pricing: fetch failed",
+        "https://actionfigure-generator.com/pricing: 响应时间过长 (10490ms)"
       ],
-      "timestamp": "2025-09-03T14:13:59.556Z"
+      "timestamp": "2025-09-04T04:39:51.708Z"
     },
     "sitemap": {
       "type": "sitemap",
@@ -142,235 +125,218 @@
         "testedUrls": 24,
         "validUrls": 24,
         "invalidUrls": 0,
-        "avgResponseTime": 1389,
+        "avgResponseTime": 279,
         "validationResults": [
           {
             "url": "https://actionfigure-generator.com/pricing",
             "success": true,
             "status": 200,
-            "responseTime": 2312,
+            "responseTime": 294,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/showcase",
             "success": true,
             "status": 200,
-            "responseTime": 3419,
+            "responseTime": 303,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/character-figure",
             "success": true,
             "status": 200,
-            "responseTime": 440,
+            "responseTime": 300,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/character-figure/video",
             "success": true,
             "status": 200,
-            "responseTime": 4306,
+            "responseTime": 282,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/zh/pricing",
             "success": true,
             "status": 200,
-            "responseTime": 4429,
+            "responseTime": 272,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/zh/showcase",
             "success": true,
             "status": 200,
-            "responseTime": 1857,
+            "responseTime": 259,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/zh/character-figure",
             "success": true,
             "status": 200,
-            "responseTime": 658,
+            "responseTime": 276,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/zh/character-figure/video",
             "success": true,
             "status": 200,
-            "responseTime": 2239,
+            "responseTime": 260,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/ja/pricing",
             "success": true,
             "status": 200,
-            "responseTime": 754,
+            "responseTime": 259,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/ja/showcase",
             "success": true,
             "status": 200,
-            "responseTime": 389,
+            "responseTime": 246,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/ja/character-figure",
             "success": true,
             "status": 200,
-            "responseTime": 978,
+            "responseTime": 308,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/ja/character-figure/video",
             "success": true,
             "status": 200,
-            "responseTime": 397,
+            "responseTime": 268,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/es/pricing",
             "success": true,
             "status": 200,
-            "responseTime": 3094,
+            "responseTime": 345,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/es/showcase",
             "success": true,
             "status": 200,
-            "responseTime": 709,
+            "responseTime": 262,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/es/character-figure",
             "success": true,
             "status": 200,
-            "responseTime": 434,
+            "responseTime": 318,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/es/character-figure/video",
             "success": true,
             "status": 200,
-            "responseTime": 1557,
+            "responseTime": 265,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/fr/pricing",
             "success": true,
             "status": 200,
-            "responseTime": 415,
+            "responseTime": 252,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/fr/showcase",
             "success": true,
             "status": 200,
-            "responseTime": 661,
+            "responseTime": 257,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/fr/character-figure",
             "success": true,
             "status": 200,
-            "responseTime": 762,
+            "responseTime": 344,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/fr/character-figure/video",
             "success": true,
             "status": 200,
-            "responseTime": 763,
+            "responseTime": 273,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/de/pricing",
             "success": true,
             "status": 200,
-            "responseTime": 413,
+            "responseTime": 256,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/de/showcase",
             "success": true,
             "status": 200,
-            "responseTime": 776,
+            "responseTime": 250,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/de/character-figure",
             "success": true,
             "status": 200,
-            "responseTime": 934,
+            "responseTime": 291,
             "contentType": "text/html; charset=utf-8"
           },
           {
             "url": "https://actionfigure-generator.com/de/character-figure/video",
             "success": true,
             "status": 200,
-            "responseTime": 650,
+            "responseTime": 253,
             "contentType": "text/html; charset=utf-8"
           }
         ]
       },
       "issues": [],
-      "timestamp": "2025-09-03T14:14:38.481Z"
-    },
-    "performance": {
-      "type": "performance",
-      "score": 90,
-      "details": {
-        "testedUrls": 3,
-        "results": [
-          {
-            "url": "https://actionfigure-generator.com/",
-            "measurements": [
-              947,
-              908,
-              739
-            ],
-            "avgResponseTime": 865,
-            "minResponseTime": 739,
-            "maxResponseTime": 947,
-            "errors": 0,
-            "reliability": 100
-          },
-          {
-            "url": "https://actionfigure-generator.com/pricing",
-            "measurements": [
-              405,
-              894,
-              731
-            ],
-            "avgResponseTime": 677,
-            "minResponseTime": 405,
-            "maxResponseTime": 894,
-            "errors": 0,
-            "reliability": 100
-          },
-          {
-            "url": "https://actionfigure-generator.com/character-figure",
-            "measurements": [
-              429,
-              840,
-              974
-            ],
-            "avgResponseTime": 748,
-            "minResponseTime": 429,
-            "maxResponseTime": 974,
-            "errors": 0,
-            "reliability": 100
-          }
-        ],
-        "avgResponseTime": 763,
-        "minResponseTime": 405,
-        "maxResponseTime": 974
-      },
-      "issues": [],
-      "timestamp": "2025-09-03T14:14:48.356Z"
+      "timestamp": "2025-09-04T04:39:58.675Z"
     }
   },
-  "recommendations": [],
-  "alerts": []
+  "recommendations": [
+    "💡 有改进空间",
+    "考虑优化响应时间和缓存策略",
+    "🔧 修复不可用的URL"
+  ],
+  "alerts": [
+    {
+      "level": "CRITICAL",
+      "message": "网站可用性异常！成功率: 3/4",
+      "details": [
+        "https://actionfigure-generator.com/pricing: fetch failed",
+        "https://actionfigure-generator.com/pricing: 响应时间过长 (10490ms)"
+      ],
+      "timestamp": "2025-09-04T04:39:58.677Z",
+      "environment": "production"
+    }
+  ],
+  "trends": {
+    "overall": {
+      "direction": "STABLE",
+      "change": 0,
+      "recentAverage": 99,
+      "previousAverage": 99
+    },
+    "availability": {
+      "direction": "STABLE",
+      "change": 0,
+      "recentAverage": 100,
+      "previousAverage": 100
+    },
+    "performance": {
+      "direction": "STABLE",
+      "change": 0,
+      "recentAverage": 45,
+      "previousAverage": 45
+    },
+    "recommendations": []
+  }
 }
