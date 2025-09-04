@@ -31,6 +31,55 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
+// 模拟 Web API（用于 Next.js API 路由测试）
+if (typeof global.Request === 'undefined') {
+  global.Request = class MockRequest {
+    constructor(input, init = {}) {
+      this.url = typeof input === 'string' ? input : input.url;
+      this.method = init.method || 'GET';
+      this.headers = new Map(Object.entries(init.headers || {}));
+      this.body = init.body || null;
+    }
+
+    json() {
+      return Promise.resolve(JSON.parse(this.body || '{}'));
+    }
+
+    text() {
+      return Promise.resolve(this.body || '');
+    }
+  };
+}
+
+if (typeof global.Response === 'undefined') {
+  global.Response = class MockResponse {
+    constructor(body, init = {}) {
+      this.body = body;
+      this.status = init.status || 200;
+      this.statusText = init.statusText || 'OK';
+      this.headers = new Map(Object.entries(init.headers || {}));
+    }
+
+    json() {
+      return Promise.resolve(typeof this.body === 'string' ? JSON.parse(this.body) : this.body);
+    }
+
+    text() {
+      return Promise.resolve(typeof this.body === 'string' ? this.body : JSON.stringify(this.body));
+    }
+
+    static json(data, init = {}) {
+      return new Response(JSON.stringify(data), {
+        ...init,
+        headers: {
+          'Content-Type': 'application/json',
+          ...init.headers
+        }
+      });
+    }
+  };
+}
+
 // 模拟环境变量（测试环境专用）
 process.env.NEXT_PUBLIC_APP_URL = 'http://localhost:3000'
 //process.env.NODE_ENV = 'test' // NODE_ENV is read-only in production builds

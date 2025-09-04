@@ -4,21 +4,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { NextAuthConfig } from "next-auth";
 import { Provider } from "next-auth/providers/index";
 import { User } from "@/types/user";
-
-// Optional: honor HTTPS_PROXY for server-side Google requests (helps in restricted networks)
-try {
-  const httpsProxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
-  if (httpsProxy) {
-    // undici is the HTTP client used by Next.js/Node 18+
-    // Dynamically require to avoid bundling on client
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { ProxyAgent, setGlobalDispatcher } = require('undici');
-    setGlobalDispatcher(new ProxyAgent(httpsProxy));
-    console.log('[auth] Using proxy for outgoing requests:', httpsProxy);
-  }
-} catch (e) {
-  // noop: proxy is optional
-}
 import { getClientIp } from "@/lib/ip";
 import { getIsoTimestr } from "@/lib/time";
 import { getUuid } from "@/lib/hash";
@@ -50,48 +35,72 @@ if (
 
         const token = credentials!.credential;
 
-        const response = await fetch(
-          "https://oauth2.googleapis.com/tokeninfo?id_token=" + token
-        );
-        if (!response.ok) {
-          console.log("Failed to verify token");
+        try {
+          // 添加超时控制和错误处理
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 10000); // 10秒超时
+
+          const response = await fetch(
+            "https://oauth2.googleapis.com/tokeninfo?id_token=" + token,
+            {
+              signal: controller.signal,
+              headers: {
+                'User-Agent': 'NextAuth.js'
+              }
+            }
+          );
+
+          clearTimeout(timeoutId);
+
+          if (!response.ok) {
+            console.log("Failed to verify token:", response.status, response.statusText);
+            return null;
+          }
+
+          const payload = await response.json();
+          if (!payload) {
+            console.log("invalid payload from token");
+            return null;
+          }
+
+          const {
+            email,
+            sub,
+            given_name,
+            family_name,
+            email_verified,
+            picture: image,
+          } = payload;
+          if (!email) {
+            console.log("invalid email in payload");
+            return null;
+          }
+
+          const user = {
+            id: sub,
+            name: [given_name, family_name].join(" "),
+            email,
+            image,
+            emailVerified: email_verified ? new Date() : null,
+          };
+
+          return user;
+        } catch (error) {
+          if (error.name === 'AbortError') {
+            console.error("Google token verification timeout");
+          } else if (error.code === 'ENOTFOUND' || error.code === 'ECONNREFUSED') {
+            console.error("Network error accessing Google services:", error.message);
+          } else {
+            console.error("Google One-Tap auth error:", error);
+          }
           return null;
         }
-
-        const payload = await response.json();
-        if (!payload) {
-          console.log("invalid payload from token");
-          return null;
-        }
-
-        const {
-          email,
-          sub,
-          given_name,
-          family_name,
-          email_verified,
-          picture: image,
-        } = payload;
-        if (!email) {
-          console.log("invalid email in payload");
-          return null;
-        }
-
-        const user = {
-          id: sub,
-          name: [given_name, family_name].join(" "),
-          email,
-          image,
-          emailVerified: email_verified ? new Date() : null,
-        };
-
-        return user;
       },
     })
   );
 }
 
-// Google Auth
+// Google Auth with improved error handling
 if (
   process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" &&
   process.env.AUTH_GOOGLE_ID &&
@@ -101,21 +110,12 @@ if (
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
-      // 明确指定端点以避免运行时对 well-known 的网络发现请求
-      authorization: {
-        url: 'https://accounts.google.com/o/oauth2/v2/auth',
-        params: {
-          // 避免每次强制 consent 触发 Google 风险校验 (rapt)
-          prompt: 'select_account',
-        },
-      },
-      token: 'https://oauth2.googleapis.com/token',
-      userinfo: 'https://openidconnect.googleapis.com/v1/userinfo',
-      // 可选：减少外部请求超时导致的失败面
+      // 添加额外的配置来处理网络问题
       httpOptions: {
-        timeout: 15000,
+        timeout: 10000, // 10秒超时
       },
-      // checks: ['pkce', 'state'], // 如需显式指定
+      // 添加自定义的授权URL检查
+      checks: ["state"],
     })
   );
 }
@@ -147,20 +147,24 @@ export const providerMap = providers
 
 export const authOptions: NextAuthConfig = {
   providers,
-  debug: process.env.NODE_ENV !== 'production',
   pages: {
     signIn: "/auth/signin",
+    error: "/auth/error", // 添加错误页面
   },
+  // 添加调试模式
+  debug: process.env.NODE_ENV === "development",
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      const isAllowedToSignIn = true;
-      if (isAllowedToSignIn) {
-        return true;
-      } else {
-        // Return false to display a default error message
+      try {
+        const isAllowedToSignIn = true;
+        if (isAllowedToSignIn) {
+          return true;
+        } else {
+          return false;
+        }
+      } catch (error) {
+        console.error("SignIn callback error:", error);
         return false;
-        // Or you can return a URL to redirect to:
-        // return '/unauthorized'
       }
     },
     async redirect({ url, baseUrl }) {
@@ -201,6 +205,18 @@ export const authOptions: NextAuthConfig = {
         console.error("jwt callback error:", e);
         return token;
       }
+    },
+  },
+  // 添加事件处理来记录网络问题
+  events: {
+    async signIn(message) {
+      console.log("User signed in:", message.user?.email);
+    },
+    async signOut(message) {
+      console.log("User signed out:", message.token);
+    },
+    async session(message) {
+      // 可以在这里添加会话监控
     },
   },
 };

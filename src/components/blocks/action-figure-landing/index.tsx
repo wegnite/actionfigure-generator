@@ -334,9 +334,12 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• Standard quality</li>
                   <li>• Basic styles only</li>
                 </ul>
-                <button className="w-full bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
+                <ScrollToButton 
+                  targetId="generator"
+                  className="w-full bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title"
+                >
                   START FREE
-                </button>
+                </ScrollToButton>
               </div>
 
               {/* Creator Tier - Popular */}
@@ -360,9 +363,12 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• All art styles</li>
                   <li>• Commercial rights</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
+                <a 
+                  href={`/${locale}/auth/signin`}
+                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title inline-block text-center"
+                >
                   UPGRADE NOW
-                </button>
+                </a>
               </div>
 
               {/* Pro Tier */}
@@ -379,9 +385,12 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• Advanced controls</li>
                   <li>• API access</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
+                <a 
+                  href={`/${locale}/auth/signin`}
+                  className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title inline-block text-center"
+                >
                   GO PRO
-                </button>
+                </a>
               </div>
 
               {/* Enterprise Tier */}
@@ -398,9 +407,12 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• 24/7 support</li>
                   <li>• SLA guarantee</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
+                <a 
+                  href={`/${locale}/auth/signin`}
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title inline-block text-center"
+                >
                   CONTACT SALES
-                </button>
+                </a>
               </div>
             </div>
 
