@@ -45,5 +45,3 @@ supabase
 .*next
 .dev.vars*
 .source
-\n+# sitemap health reports (keep latest, ignore timestamped history)
-test/sitemap/health-reports/health-check-*.json

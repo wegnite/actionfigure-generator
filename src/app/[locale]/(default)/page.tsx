@@ -19,30 +19,30 @@ export async function generateMetadata({
   const { locale } = await params;
   
   const titles = {
-    en: 'Professional AI Action Figure Generator | 4K Commercial-Grade Design Platform',
-    zh: '专业级AI手办生成器 | 4K商业级设计平台',
-    ja: 'プロフェッショナルAIフィギュア生成器 | 4K商業グレードプラットフォーム',
-    es: 'Generador Profesional AI de Figuras | Plataforma Comercial 4K',
-    fr: 'Générateur Professionnel AI | Plateforme Commerciale 4K',
-    de: 'Professioneller KI Figuren Generator | 4K Commercial Platform',
+    en: 'AI Action Figure Generator | Create Professional Action Figures - ActionFigure.com',
+    zh: 'AI手办生成器 | 创建专业角色收藏品 - CharacterFigure.com',
+    ja: 'AIフィギュア生成器 | プロ品質キャラクター作成 - CharacterFigure.com',
+    es: 'Generador AI de Figuras | Crea Coleccionables Profesionales',
+    fr: 'Générateur AI de Figurines | Créez des Collectibles Professionnels',
+    de: 'KI Figuren Generator | Professionelle Sammlerfiguren Erstellen',
   };
   
   const descriptions = {
-    en: 'Industry-leading AI action figure generator for game developers, collectors, and creative professionals. Generate 4K commercial-grade action figures with full licensing rights. Batch processing, workflow integration, and 3D-print optimization included.',
-    zh: '面向游戏开发者、收藏家和创意专业人士的行业领先AI手办生成器。生成4K商业级手办，含完整授权。支持批处理、工作流集成和3D打印优化。',
-    ja: 'ゲーム開発者、コレクター、クリエイティブ専門家向けの業界最先端AIフィギュア生成器。完全ライセンス付き4K商業品質フィギュアを生成。バッチ処理、ワークフロー統合、3D印刷最適化を含む。',
-    es: 'Generador AI líder para desarrolladores de juegos, coleccionistas y profesionales creativos. Genera figuras comerciales 4K con derechos completos.',
-    fr: 'Générateur AI leader pour développeurs de jeux, collectionneurs et professionnels créatifs. Génère des figurines commerciales 4K avec droits complets.',
-    de: 'Branchenführender KI-Generator für Spieleentwickler, Sammler und Kreativprofis. Generiert 4K-kommerzielle Figuren mit vollständigen Rechten.',
+    en: 'Transform ideas into professional action figures with our advanced AI action figure generator. Create anime, realistic, and custom action figure designs in seconds. Free trial with commercial rights included.',
+    zh: '用先进AI将创意转化为专业角色手办。几秒内创建动漫、写实和自定义收藏品设计。免费试用包含商业版权。',
+    ja: '高度なAIでアイデアをプロ品質のキャラクターフィギュアに変換。アニメ、リアル、カスタムコレクションデザインを数秒で作成。',
+    es: 'Transforma ideas en figuras profesionales con IA avanzada. Crea diseños anime, realistas y coleccionables en segundos.',
+    fr: 'Transformez vos idées en figurines professionnelles avec l\'IA avancée. Créez des designs anime, réalistes et collectibles.',
+    de: 'Verwandeln Sie Ideen in professionelle Figuren mit fortschrittlicher KI. Erstellen Sie Anime, realistische Sammlerfiguren.',
   };
 
   const keywords = {
-    en: 'professional action figure generator, commercial action figure AI, 4K action figure creator, game development action figures, collectible design software, action figure licensing rights, batch action figure processing, 3D printable action figures, action figure workflow tools, enterprise action figure generator',
-    zh: '专业AI手办生成器, 商业级手办制作, 4K手办设计, 游戏开发手办, 收藏品设计软件, 手办版权授权, 批量手办处理, 3D打印手办, 手办工作流工具, 企业级手办生成器',
-    ja: 'プロフェッショナルフィギュア生成器, 商業フィギュアAI, 4Kフィギュア作成, ゲーム開発フィギュア, コレクション品デザインソフト, フィギュアライセンス権利, バッチフィギュア処理, 3D印刷フィギュア',
-    es: 'generador profesional de figuras, AI comercial figuras, creador 4K figuras, desarrollo juegos figuras, software diseño coleccionables',
-    fr: 'générateur professionnel figurines, AI commercial figurines, créateur 4K figurines, développement jeux figurines, logiciel design collectibles',
-    de: 'professioneller Figuren Generator, kommerzielle Figuren AI, 4K Figuren Ersteller, Spieleentwicklung Figuren, Sammlerobjekt Design Software',
+    en: 'action figure generator, AI action figure, action figure creator, anime action figure maker, AI figure generator, collectible designer, 3D action figure creator, professional action figure design',
+    zh: 'AI手办生成器, 角色手办制作, 动漫手办设计, 收藏品制作, 3D角色创建, 手办定制',
+    ja: 'AIフィギュア生成器, キャラクターフィギュア作成, アニメフィギュア制作, コレクション品デザイン',
+    es: 'generador de figuras AI, creador de personajes, figuras anime, coleccionables',
+    fr: 'générateur de figurines AI, créateur de personnages, figurines anime',
+    de: 'KI Figuren Generator, Charakter Ersteller, Anime Figuren, Sammlerfiguren',
   };
 
   return {

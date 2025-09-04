@@ -18,30 +18,16 @@ Disallow: /_next/
 Disallow: /dashboard/
 Disallow: /*?*q=
 
-# 重要: 明确允许SEO重要页面
-Allow: /
-Allow: /pricing
-Allow: /showcase
-Allow: /character-figure
-Allow: /character-figure/video
+# 重要: 允许抓取 Privacy Policy 和 Terms of Service (AdSense 必需)
+Allow: /privacy-policy/
+Allow: /terms-of-service/
+Allow: /blog/
 Allow: /tools/
-Allow: /posts/
-Allow: /privacy-policy
-Allow: /terms-of-service
-Allow: /cookie-policy
-Allow: /tutorial/
-
-# 明确允许主要多语言页面（与 sitemap 一致）
-Allow: /zh/
-
-# 允许其他重要文件
 Allow: /sitemap.xml
 Allow: /ads.txt
-Allow: /favicon.ico
-Allow: /robots.txt
 
 # 网站地图位置
 Sitemap: https://actionfigure-generator.com/sitemap.xml
 
-# 爬取频率限制（使用整数，兼容更多爬虫）
+# 爬取频率限制
 Crawl-delay: 1

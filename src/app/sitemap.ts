@@ -2,35 +2,31 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://actionfigure-generator.com'
+  const locales = ['en', 'zh', 'ja', 'es', 'fr', 'de']
   
-  // 只保留最重要的语言版本 - 避免内容稀释
-  const primaryLocales = ['en', 'zh'] // 主要市场语言
-  
-  // 核心高价值页面
-  const corePages = [
-    '',                    // 主页 - 最重要
-    '/pricing',           // 价格页 - 商业价值高
-    '/character-figure',  // 核心功能页
+  // 静态页面（确保这些页面实际存在）
+  const staticPages = [
+    '',
+    '/pricing', 
+    '/showcase',
+    '/character-figure',
+    '/character-figure/video',
   ]
   
-  // 次要但仍有价值的页面
-  const secondaryPages = [
-    '/showcase',          // 展示页面
-    '/character-figure/video', // 视频功能
-    '/commercial-action-figure-generator', // 高价值B2B页面
-  ]
-  
-  // 只保留最有价值的SEO教程页面 (只选择主关键词页面)
+  // SEO教程页面 (仅英文，高优先级)
   const tutorialPages = [
-    '/tutorial/how-to-make-action-figure-ai',  // 主关键词 880/月
-    '/tutorial/how-to-make-ai-action-figure',  // 次要关键词 720/月
+    '/tutorial/how-to-make-action-figure-ai',
+    '/tutorial/how-to-make-ai-action-figure', 
+    '/tutorial/how-to-make-an-ai-action-figure',
+    '/tutorial/how-to-make-the-action-figure-ai',
+    '/tutorial/how-to-make-the-ai-action-figure',
   ]
   
   const sitemapEntries: MetadataRoute.Sitemap = []
   
-  // 核心页面 - 多语言版本
-  primaryLocales.forEach(locale => {
-    corePages.forEach(page => {
+  // 为每个语言和页面创建条目 (简化版本，去除可能导致序列化问题的复杂结构)
+  locales.forEach(locale => {
+    staticPages.forEach(page => {
       const url = locale === 'en' ? 
         `${baseUrl}${page}` : 
         `${baseUrl}/${locale}${page}`
@@ -39,32 +35,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url,
         lastModified: new Date(),
         changeFrequency: page === '' ? 'daily' : 'weekly',
-        priority: page === '' ? 1.0 : 0.9,
+        priority: page === '' ? 1.0 : 0.8,
       })
     })
   })
   
-  // 次要页面 - 仅英文版本避免稀释
-  secondaryPages.forEach(page => {
-    sitemapEntries.push({
-      url: `${baseUrl}${page}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    })
-  })
-  
-  // 高质量SEO教程页面 (仅英文)
+  // 添加SEO教程页面 (仅英文，高SEO价值)
   tutorialPages.forEach(page => {
     sitemapEntries.push({
       url: `${baseUrl}${page}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     })
   })
   
-  // 法律页面 - 必需但低优先级
+  // 添加特殊页面
   sitemapEntries.push(
     {
       url: `${baseUrl}/privacy-policy`,
