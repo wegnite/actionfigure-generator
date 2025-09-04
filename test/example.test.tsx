@@ -1,6 +1,7 @@
 // 示例测试文件 - 验证测试环境配置
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from '@jest/globals'
+import '@testing-library/jest-dom'
 
 // 简单组件用于测试
 function TestComponent({ message }: { message: string }) {

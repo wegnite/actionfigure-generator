@@ -30,6 +30,15 @@ export default function GoogleAds() {
   }
 
   const adsConversionId = "AW-17411795321";
+  // 从环境变量推导主域，用于 cross-domain linker
+  const siteDomain = (() => {
+    try {
+      const url = process.env.NEXT_PUBLIC_WEB_URL || '';
+      return url ? new URL(url).hostname : 'actionfigure-generator.com';
+    } catch {
+      return 'actionfigure-generator.com';
+    }
+  })();
 
   useEffect(() => {
     // 初始化 Google Ads 跟踪配置
@@ -80,7 +89,7 @@ export default function GoogleAds() {
               
               // 链接器设置（用于跨域跟踪）
               linker: {
-                domains: ['actionfigure-generator.com']
+                domains: ['${siteDomain}']
               }
             });
             

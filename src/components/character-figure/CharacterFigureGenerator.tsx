@@ -106,8 +106,18 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
   
   // Handle generation
   const handleGenerate = async () => {
+    // 添加调试日志
+    console.log('🚀 Generate button clicked!', {
+      session: !!session,
+      generationTab,
+      uploadedImage: !!uploadedImage,
+      prompt,
+      selectedStyle
+    });
+    
     // Check user authentication
     if (!session) {
+      console.warn('❌ User not authenticated');
       toast({
         title: t('generation.errors.authRequired'),
         description: t('generation.errors.authRequiredDesc'),
@@ -128,6 +138,7 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
     }
     
     if (generationTab === 'upload' && !uploadedImage && !prompt) {
+      console.warn('❌ Missing input for generation');
       toast({
         title: t('generation.errors.missingInput'),
         description: t('generation.errors.missingInputDesc'),
@@ -139,6 +150,7 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
     setIsGenerating(true);
     
     try {
+      console.log('🎯 Starting image generation...');
       // Build the generation prompt based on style
       let fullPrompt = prompt || '';
       
@@ -150,21 +162,29 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
         fullPrompt = `Convert to high-quality anime art style with vibrant colors, expressive eyes, and dynamic composition. ${prompt}`;
       }
       
+      const requestPayload = {
+        prompt: fullPrompt,
+        negative_prompt: negativePrompt,
+        input_image: uploadedImage,
+        style: selectedStyle,
+        aspect_ratio: aspectRatio,
+        num_images: numImages,
+        quality: quality,
+      };
+      
+      console.log('📝 API Request payload:', requestPayload);
+      
       const response = await fetch('/api/nano-banana/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt: fullPrompt,
-          negative_prompt: negativePrompt,
-          input_image: uploadedImage,
-          style: selectedStyle,
-          aspect_ratio: aspectRatio,
-          num_images: numImages,
-          quality: quality,
-        }),
+        body: JSON.stringify(requestPayload),
       });
       
+      console.log('📡 API Response status:', response.status);
+      
       const data = await response.json();
+      
+      console.log('📊 API Response data:', data);
       
       if (!response.ok) {
         if (response.status === 401) {
@@ -190,6 +210,8 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
         return;
       }
       
+      console.log('✅ Generation successful:', data.images?.length || 0, 'images');
+      
       setGeneratedImages(data.images || []);
       
       toast({
@@ -197,13 +219,18 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
         description: t('generation.successDescription', { count: data.images?.length || 1 }),
       });
     } catch (error) {
-      console.error('Generation error:', error);
+      console.error('💥 Generation error:', error);
+      
+      // 显示详细错误信息
+      const errorMessage = error instanceof Error ? error.message : '未知错误';
+      
       toast({
         title: t('generation.errors.generationError'),
-        description: t('generation.errors.generationErrorDesc'),
+        description: `${t('generation.errors.generationErrorDesc')} 详细错误: ${errorMessage}`,
         variant: 'destructive',
       });
     } finally {
+      console.log('🏁 Generation process completed');
       setIsGenerating(false);
     }
   };

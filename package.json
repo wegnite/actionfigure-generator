@@ -18,7 +18,6 @@
     "test:sitemap": "node test/sitemap/validate_sitemap_urls.js",
     "test:urls-fast": "node test/url-validation/validate_urls_fast.js",
     "verify:analytics": "node scripts/verify-analytics.js",
-    
     "sitemap:analyze": "node test/sitemap/analyze_sitemap.js",
     "sitemap:quick": "node test/sitemap/continuous-validation.js quick --verbose",
     "sitemap:validate": "node test/sitemap/continuous-validation.js standard --verbose",
@@ -144,6 +143,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.15",
+    "@jest/globals": "^30.1.2",
     "@next/bundle-analyzer": "^15.1.3",
     "@tailwindcss/postcss": "^4.1.4",
     "@testing-library/jest-dom": "^6.8.0",

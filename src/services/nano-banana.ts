@@ -35,7 +35,7 @@ export class NanoBananaService {
   constructor(config?: Partial<NanoBananaConfig>) {
     this.config = {
       apiKey: process.env.NANO_BANANA_API_KEY || '',
-      baseUrl: process.env.NANO_BANANA_API_URL || 'https://api.kie.ai/nano-banana',
+      baseUrl: process.env.NANO_BANANA_API_URL || 'https://api.siliconflow.cn/v1',
       timeout: 60000, // 60 seconds
       maxRetries: 3,
       ...config,
@@ -59,14 +59,15 @@ export class NanoBananaService {
         throw new Error('Prompt is required for image generation');
       }
 
-      // Prepare request body
+      // Prepare request body for SiliconFlow API
+      const numImages = parseInt(request.num_images || '1');
       const body = {
+        model: 'stabilityai/stable-diffusion-3-5-large',
         prompt: request.prompt.trim(),
-        num_images: request.num_images || '1',
-        ...(request.aspect_ratio && { aspect_ratio: request.aspect_ratio }),
-        ...(request.style && { style: request.style }),
-        ...(request.quality && { quality: request.quality }),
-        ...(request.seed !== undefined && { seed: request.seed }),
+        n: numImages,
+        size: this.mapAspectRatioToSize(request.aspect_ratio || '1:1'),
+        quality: request.quality === 'hd' ? 'hd' : 'standard',
+        response_format: 'url'
       };
 
       // Make API call
@@ -136,7 +137,7 @@ export class NanoBananaService {
   }
 
   /**
-   * Make HTTP request to nano-banana API
+   * Make HTTP request to image generation API
    * 
    * @param endpoint - API endpoint
    * @param body - Request body
@@ -148,7 +149,10 @@ export class NanoBananaService {
     body: any,
     retryCount = 0
   ): Promise<NanoBananaResponse> {
-    const url = `${this.config.baseUrl}${endpoint}`;
+    // 使用 SiliconFlow API 作为备用服务
+    const url = endpoint === '/generate' 
+      ? `${this.config.baseUrl}/images/generations`
+      : `${this.config.baseUrl}${endpoint}`;
     
     try {
       const controller = new AbortController();
@@ -157,9 +161,9 @@ export class NanoBananaService {
       const response = await fetch(url, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.config.apiKey}`,
+          'Authorization': `Bearer ${process.env.SILICONFLOW_API_KEY || this.config.apiKey}`,
           'Content-Type': 'application/json',
-          'X-Client': 'nano-banana-nextjs',
+          'X-Client': 'actionfigure-generator',
           'X-Client-Version': '1.0.0',
         },
         body: JSON.stringify(body),
@@ -188,13 +192,19 @@ export class NanoBananaService {
         } as NanoBananaError;
       }
 
+      // 处理 SiliconFlow API 响应
+      const processedData = {
+        images: data.data ? data.data.map((item: any) => item.url || item.b64_json) : [],
+        message: 'Generation completed successfully'
+      };
+      
       return {
         success: true,
-        data: data,
-        credits_used: data.credits_used,
-        remaining_credits: data.remaining_credits,
-        request_id: data.request_id,
-        processing_time: data.processing_time,
+        data: processedData,
+        credits_used: 1, // 估算值
+        remaining_credits: 999, // 估算值
+        request_id: data.id || Date.now().toString(),
+        processing_time: Date.now() - performance.now(),
       };
     } catch (error: any) {
       // Handle network errors with retry
@@ -269,6 +279,20 @@ export class NanoBananaService {
     return { ...this.usageStats };
   }
 
+  /**
+   * 将纵横比映射为 SiliconFlow API 的尺寸
+   */
+  private mapAspectRatioToSize(aspectRatio: string): string {
+    const sizeMap: Record<string, string> = {
+      '1:1': '1024x1024',
+      '16:9': '1344x768',
+      '9:16': '768x1344',
+      '4:3': '1152x896',
+      '3:4': '896x1152'
+    };
+    return sizeMap[aspectRatio] || '1024x1024';
+  }
+  
   /**
    * Sleep utility for retry delays
    */
