@@ -106,15 +106,6 @@ export default async function CharacterFigurePage({
 }) {
   const { locale } = await params;
   
-  // 加载落地页翻译
-  let t;
-  try {
-    t = (await import(`@/i18n/pages/landing/${locale}.json`)).default;
-  } catch {
-    // 默认使用英文
-    t = (await import(`@/i18n/pages/landing/en.json`)).default;
-  }
-  
   return (
     <>
       <StructuredData 
@@ -125,7 +116,7 @@ export default async function CharacterFigurePage({
           url: process.env.NEXT_PUBLIC_WEB_URL
         }} 
       />
-      <ActionFigureLanding locale={locale} t={t} />
+      <ActionFigureLanding locale={locale} />
     </>
   );
 }

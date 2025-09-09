@@ -21,9 +21,43 @@
 
 ### Documentation Integration
 
-- **Always Check Docs**: Claude Code should automatically reference the `/docs` and `/content/docs` directories for project-specific information
+- **Always Check Docs**: Claude Code should automatically reference the `/docs` directory for project-specific information
 - **Context Awareness**: Use existing documentation to inform development decisions
 - **Knowledge Base**: Leverage the comprehensive documentation suite including SEO guides, market research, and technical specifications
+
+### 🔍 Pre-Commit SEO & Sitemap Validation
+
+**CRITICAL REQUIREMENT**: Before any code commit or deployment, Claude MUST automatically run the following validation commands:
+
+```bash
+# 1. Quick URL validation (essential)
+npm run test:urls-fast
+
+# 2. Sitemap health check (production)
+npm run sitemap:health:quick
+
+# 3. SEO analytics verification
+npm run verify:analytics
+```
+
+**Validation Rules**:
+- ❌ **STOP COMMIT** if any validation fails
+- ⚠️ **Review Required** if warnings are found  
+- ✅ **Proceed** only when all checks pass
+
+**Error Handling Protocol**:
+1. **URL Issues**: Fix broken links, missing pages, or routing problems
+2. **Sitemap Issues**: Update sitemap.xml, fix canonical URLs, resolve duplicates
+3. **SEO Issues**: Fix meta tags, structured data, or analytics configuration
+4. **Re-run validation** after fixes before proceeding
+
+**Quick Commands Reference**:
+- `npm run sitemap:quick` - Fast sitemap validation
+- `npm run test:sitemap` - Complete sitemap testing
+- `npm run sitemap:health:local` - Local environment health check
+- `npm run sitemap:analyze` - Detailed sitemap analysis
+
+**🚨 NEVER commit or deploy without passing these checks! SEO integrity is critical for this project's success.**
 
 ## Project: Action Figure AI Generator
 
@@ -99,7 +133,7 @@ Main application directory using Next.js 15 App Router pattern.
 
 ### Documentation System
 
-#### `/content/docs` - **NEW**: Comprehensive Documentation Center
+#### `/docs` - Documentation Center
 
 Professional documentation suite covering all aspects of the project.
 
@@ -418,12 +452,25 @@ Professional credit-based pricing model:
    - Server components for data fetching
    - Client components only when needed
 
-6. **SEO Best Practices**
+6. **SEO Best Practices & Validation**
 
    - Follow "one keyword, one page" strategy
    - Complete metadata for all pages
    - Multi-language canonical URLs
    - Structured data implementation
+   
+   **🚨 MANDATORY PRE-COMMIT CHECKS**:
+   ```bash
+   # Always run these before ANY commit:
+   npm run test:urls-fast        # URL validation
+   npm run sitemap:health:quick  # Sitemap check
+   npm run verify:analytics      # Analytics verification
+   ```
+   
+   **Error Response Protocol**:
+   - ❌ **FAILED TESTS**: Fix issues immediately, re-run validation
+   - ⚠️ **WARNINGS**: Review and document if acceptable
+   - ✅ **ALL CLEAR**: Proceed with commit/deployment
 
 7. **Internationalization**
 
@@ -464,10 +511,10 @@ pnpm analyze      # Bundle analysis
 
 ### Documentation Usage
 
-1. **Always Reference Docs**: Check `/content/docs` for existing guidance before implementing new features
-2. **Market Research**: Use competitive analysis in `/content/docs/market-research` for feature decisions
-3. **SEO Strategy**: Follow the complete SEO guide in `/content/docs/seo`
-4. **Product Requirements**: Align with PRD in `/content/docs/product-design`
+1. **Always Reference Docs**: Check `/docs` for existing guidance before implementing new features
+2. **Market Research**: Use competitive analysis in `/docs/market-research` for feature decisions
+3. **SEO Strategy**: Follow the complete SEO guide in `/docs/seo`
+4. **Product Requirements**: Align with PRD in `/docs/product-design`
 
 ## Business Model
 

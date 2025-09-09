@@ -14,7 +14,7 @@
 
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -51,6 +51,16 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImages, setGeneratedImages] = useState<string[]>([]);
   const [generationTab, setGenerationTab] = useState('upload');
+  
+  // Debug: Monitor generatedImages state changes
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('🖼️ [State Update] generatedImages changed:', generatedImages.length, 'images');
+      if (generatedImages.length > 0) {
+        console.log('🖼️ [State Update] First image URL:', generatedImages[0].substring(0, 100) + '...');
+      }
+    }
+  }, [generatedImages]);
   
   // Style presets with their descriptions
   const STYLE_PRESETS = [
@@ -210,13 +220,31 @@ export default function CharacterFigureGenerator({ locale }: GeneratorProps) {
         return;
       }
       
-      console.log('✅ Generation successful:', data.images?.length || 0, 'images');
+      // 处理成功响应 - 注意 respData 包装了数据在 data 字段里
+      const responseData = data.data || data; // 兼容处理
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('✅ Generation successful:', responseData.images?.length || 0, 'images');
+        console.log('📸 Generated images URLs:', responseData.images);
+      }
       
-      setGeneratedImages(data.images || []);
+      // 确保图片数组存在并且有内容
+      if (responseData.images && Array.isArray(responseData.images) && responseData.images.length > 0) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.log('🎨 Setting generated images state with', responseData.images.length, 'images');
+        }
+        setGeneratedImages(responseData.images);
+      } else {
+        console.error('❌ No images found in response:', responseData);
+        toast({
+          title: t('generation.errors.noImages'),
+          description: 'The generation succeeded but no images were returned. Please try again.',
+          variant: 'destructive',
+        });
+      }
       
       toast({
         title: t('generation.success'),
-        description: t('generation.successDescription', { count: data.images?.length || 1 }),
+        description: t('generation.successDescription', { count: responseData.images?.length || 1 }),
       });
     } catch (error) {
       console.error('💥 Generation error:', error);

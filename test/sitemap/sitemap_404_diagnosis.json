@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-01T02:47:18.586Z",
+  "timestamp": "2025-09-08T05:05:26.450Z",
   "summary": {
     "totalUrls": 37,
     "matched": 33,
@@ -7,6 +7,16 @@
     "successRate": "89.2%"
   },
   "actualPages": [
+    {
+      "route": "/cookie-policy",
+      "file": "src/app/(legal)/cookie-policy/page.mdx",
+      "type": "mdx"
+    },
+    {
+      "route": "/dmca",
+      "file": "src/app/(legal)/dmca/page.mdx",
+      "type": "mdx"
+    },
     {
       "route": "/privacy-policy",
       "file": "src/app/(legal)/privacy-policy/page.mdx",

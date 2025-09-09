@@ -10,7 +10,7 @@ const path = require('path');
 
 // 从sitemap_urls.txt读取URL列表
 function getUrlsFromFile() {
-  const filePath = path.join(__dirname, 'sitemap_urls.txt');
+  const filePath = path.join(__dirname, '../sitemap/sitemap_urls.txt');
   const content = fs.readFileSync(filePath, 'utf8');
   
   const urls = content

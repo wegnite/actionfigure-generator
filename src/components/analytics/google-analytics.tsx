@@ -160,9 +160,4 @@ export default function GoogleAnalytics() {
   );
 }
 
-// 类型定义：扩展 Window 对象以包含 gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
+// gtag 类型定义现在在 src/types/global.d.ts 中统一管理

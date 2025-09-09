@@ -45,3 +45,7 @@ supabase
 .*next
 .dev.vars*
 .source
+
+# local test reports
+test/sitemap/health-reports/health-check-*.json
+test/sitemap/health-reports/latest-local.json

@@ -5,14 +5,178 @@ import CharacterFigureGenerator from "@/components/character-figure/CharacterFig
 import CharacterFigureGallery from "@/components/character-figure/CharacterFigureGallery"
 import { ScrollToButton } from '@/components/ui/scroll-to-button'
 import { useTranslations } from 'next-intl'
+import { useRouter } from 'next/navigation'
+import { useAppContext } from '@/contexts/app'
+import { toast } from 'sonner'
+import { useState } from 'react'
 
 interface Props {
   locale: string
-  t: any
 }
 
-export default function ActionFigureLanding({ locale, t }: Props) {
+export default function ActionFigureLanding({ locale }: Props) {
   const tl = useTranslations('landing')
+  const router = useRouter()
+  const { user, setShowSignModal } = useAppContext()
+  const [isLoading, setIsLoading] = useState<string | null>(null)
+
+  // Pricing tiers configuration
+  const pricingTiers = {
+    free: { 
+      id: 'free', 
+      name: 'FREE TRIAL', 
+      price: 0,
+      product_id: 'free_tier',
+      credits: 50,
+      interval: 'month',
+      valid_months: 1
+    },
+    creator: { 
+      id: 'creator', 
+      name: 'CREATOR', 
+      price: 19,
+      originalPrice: 29,
+      product_id: 'prod_creator_monthly',
+      credits: 2000,
+      interval: 'month',
+      valid_months: 1,
+      amount: 1900,
+      currency: 'usd'
+    },
+    pro: { 
+      id: 'pro', 
+      name: 'PRO', 
+      price: 49,
+      product_id: 'prod_pro_monthly',
+      credits: 6000,
+      interval: 'month',
+      valid_months: 1,
+      amount: 4900,
+      currency: 'usd'
+    },
+    enterprise: { 
+      id: 'enterprise', 
+      name: 'ENTERPRISE', 
+      price: 199,
+      product_id: 'prod_enterprise_monthly',
+      credits: 30000,
+      interval: 'month',
+      valid_months: 1,
+      amount: 19900,
+      currency: 'usd'
+    }
+  }
+
+  // Handle pricing button clicks - 直接调用支付API
+  const handlePricingClick = async (tierId: string) => {
+    // Set loading state
+    setIsLoading(tierId)
+    
+    try {
+      // Free tier - just navigate to sign up
+      if (tierId === 'free') {
+        if (!user) {
+          setShowSignModal(true)
+          setIsLoading(null)
+        } else {
+          toast.info('You already have an account! Start creating for free.')
+          router.push(`/${locale}/dashboard`)
+        }
+        return
+      }
+
+      // Enterprise tier - navigate to contact page
+      if (tierId === 'enterprise') {
+        router.push(`/${locale}/contact`)
+        return
+      }
+
+      // Paid tiers - check authentication first
+      if (!user) {
+        setShowSignModal(true)
+        toast.info('Please sign in to upgrade your plan')
+        setIsLoading(null)
+        return
+      }
+
+      // 直接调用支付API而不是跳转到定价页面
+      const tier = pricingTiers[tierId as keyof typeof pricingTiers]
+      if (!('amount' in tier)) {
+        toast.error('Invalid plan selected')
+        setIsLoading(null)
+        return
+      }
+
+      // 准备支付参数
+      const params = {
+        product_id: tier.product_id,
+        product_name: tier.name,
+        credits: tier.credits,
+        interval: tier.interval,
+        amount: tier.amount,
+        currency: tier.currency,
+        valid_months: tier.valid_months,
+        locale: locale || "en",
+      }
+
+      // 转换跟踪
+      if (typeof window !== 'undefined' && (window as any).trackConversion) {
+        (window as any).trackConversion('purchase_intent', tier.amount / 100, tier.currency)
+      }
+
+      // 调用支付API
+      const response = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(params),
+      })
+
+      if (response.status === 401) {
+        setIsLoading(null)
+        setShowSignModal(true)
+        return
+      }
+
+      const { code, message, data } = await response.json()
+      if (code !== 0) {
+        toast.error(message || '支付失败，请重试')
+        setIsLoading(null)
+        return
+      }
+
+      // 如果是Creem支付，直接跳转到支付URL
+      if (data.provider === "creem" && data.url) {
+        // 成功，直接跳转到Creem支付页面
+        window.location.href = data.url
+        return
+      }
+
+      // 如果是Stripe支付，使用Stripe checkout
+      if (data.public_key && data.session_id) {
+        const { loadStripe } = await import('@stripe/stripe-js')
+        const stripe = await loadStripe(data.public_key)
+        
+        if (!stripe) {
+          toast.error("Checkout failed")
+          setIsLoading(null)
+          return
+        }
+
+        const result = await stripe.redirectToCheckout({ sessionId: data.session_id })
+        if (result.error) {
+          toast.error(result.error.message)
+          setIsLoading(null)
+        }
+      } else {
+        toast.error('Invalid payment response')
+        setIsLoading(null)
+      }
+    } catch (error) {
+      console.error("支付失败: ", error)
+      toast.error('支付失败，请重试')
+      setIsLoading(null)
+    }
+  }
 
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -334,8 +498,11 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• Standard quality</li>
                   <li>• Basic styles only</li>
                 </ul>
-                <button className="w-full bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
-                  START FREE
+                <button 
+                  onClick={() => handlePricingClick('free')}
+                  disabled={isLoading === 'free'}
+                  className="w-full bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isLoading === 'free' ? 'LOADING...' : 'START FREE'}
                 </button>
               </div>
 
@@ -360,8 +527,11 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• All art styles</li>
                   <li>• Commercial rights</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
-                  UPGRADE NOW
+                <button 
+                  onClick={() => handlePricingClick('creator')}
+                  disabled={isLoading === 'creator'}
+                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isLoading === 'creator' ? 'LOADING...' : 'UPGRADE NOW'}
                 </button>
               </div>
 
@@ -379,8 +549,11 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• Advanced controls</li>
                   <li>• API access</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
-                  GO PRO
+                <button 
+                  onClick={() => handlePricingClick('pro')}
+                  disabled={isLoading === 'pro'}
+                  className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isLoading === 'pro' ? 'LOADING...' : 'GO PRO'}
                 </button>
               </div>
 
@@ -398,8 +571,11 @@ export default function ActionFigureLanding({ locale, t }: Props) {
                   <li>• 24/7 support</li>
                   <li>• SLA guarantee</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title">
-                  CONTACT SALES
+                <button 
+                  onClick={() => handlePricingClick('enterprise')}
+                  disabled={isLoading === 'enterprise'}
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 action-figure-title disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isLoading === 'enterprise' ? 'LOADING...' : 'CONTACT SALES'}
                 </button>
               </div>
             </div>

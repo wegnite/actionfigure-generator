@@ -1,0 +1,10 @@
+{
+  "locales": ["en", "zh"],
+  "paths": [
+    "",
+    "/pricing",
+    "/showcase",
+    "/character-figure",
+    "/character-figure/video"
+  ]
+}

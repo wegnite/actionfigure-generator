@@ -1,37 +1,42 @@
 import { MetadataRoute } from 'next'
+import { getIncludedLocales, getTrafficAllowlist } from '@/lib/sitemapConfig'
 
+/**
+ * 精简版 sitemap：仅保留核心、有价值的页面
+ * - 仅包含英文（可通过环境变量覆盖）
+ * - 去掉教程类和低价值页面
+ * - 默认不包含法律类页面（仍可被发现，不必在sitemap占配额）
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
+  // 生产环境主域名
   const baseUrl = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'
-  const locales = ['en', 'zh', 'ja', 'es', 'fr', 'de']
-  
-  // 静态页面（确保这些页面实际存在）
-  const staticPages = [
+
+  // 语言集：默认仅英文，可被环境变量或allowlist覆写/收紧
+  const includedLocales = getIncludedLocales(['en'])
+
+  // 核心业务页面（请确保这些路由存在）
+  let corePages = [
     '',
-    '/pricing', 
+    '/pricing',
     '/showcase',
     '/character-figure',
     '/character-figure/video',
   ]
-  
-  // SEO教程页面 (仅英文，高优先级)
-  const tutorialPages = [
-    '/tutorial/how-to-make-action-figure-ai',
-    '/tutorial/how-to-make-ai-action-figure', 
-    '/tutorial/how-to-make-an-ai-action-figure',
-    '/tutorial/how-to-make-the-action-figure-ai',
-    '/tutorial/how-to-make-the-ai-action-figure',
-  ]
-  
-  const sitemapEntries: MetadataRoute.Sitemap = []
-  
-  // 为每个语言和页面创建条目 (简化版本，去除可能导致序列化问题的复杂结构)
-  locales.forEach(locale => {
-    staticPages.forEach(page => {
-      const url = locale === 'en' ? 
-        `${baseUrl}${page}` : 
-        `${baseUrl}/${locale}${page}`
-      
-      sitemapEntries.push({
+
+  // 若提供了基于流量的白名单，则仅保留白名单中的页面（始终保留首页）
+  const allow = getTrafficAllowlist()
+  if (allow) {
+    const allowed = new Set(allow.paths)
+    corePages = corePages.filter((p) => p === '' || allowed.has(p))
+  }
+
+  const entries: MetadataRoute.Sitemap = []
+
+  // 仅为指定语言输出核心页面
+  includedLocales.forEach((locale) => {
+    corePages.forEach((page) => {
+      const url = locale === 'en' ? `${baseUrl}${page}` : `${baseUrl}/${locale}${page}`
+      entries.push({
         url,
         lastModified: new Date(),
         changeFrequency: page === '' ? 'daily' : 'weekly',
@@ -39,32 +44,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     })
   })
-  
-  // 添加SEO教程页面 (仅英文，高SEO价值)
-  tutorialPages.forEach(page => {
-    sitemapEntries.push({
-      url: `${baseUrl}${page}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    })
-  })
-  
-  // 添加特殊页面
-  sitemapEntries.push(
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.3,
-    }
-  )
-  
-  return sitemapEntries
+
+  // 如需保留法律页面，可通过环境变量开启（默认关闭）
+  if (process.env.NEXT_PUBLIC_SITEMAP_INCLUDE_LEGAL === 'true') {
+    entries.push(
+      {
+        url: `${baseUrl}/privacy-policy`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.2,
+      },
+      {
+        url: `${baseUrl}/terms-of-service`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.2,
+      }
+    )
+  }
+
+  return entries
 }

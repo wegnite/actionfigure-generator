@@ -26,15 +26,46 @@ const MAX_IMAGES_PER_REQUEST = 4;
  * Generate images using nano-banana API
  */
 export async function POST(request: NextRequest) {
+  const isProd = process.env.NODE_ENV === 'production';
+  const debugLog = (...args: any[]) => {
+    if (!isProd) console.log(...args);
+  };
+  const debugWarn = (...args: any[]) => {
+    if (!isProd) console.warn(...args);
+  };
+  const debugError = (...args: any[]) => {
+    if (!isProd) console.error(...args);
+  };
+
+  debugLog('🚀 [nano-banana/generate] API endpoint called');
+  
   try {
     // 1. Check authentication
+    debugLog('🔐 [nano-banana/generate] Checking authentication...');
     const session = await auth();
+    
     if (!session || !session.user) {
+      // 保留最小必要的生产日志，不包含敏感信息
+      if (isProd) {
+        console.warn('⚠️ [nano-banana/generate] Unauthorized request');
+      } else {
+        debugWarn('⚠️ [nano-banana/generate] Unauthorized access attempt');
+      }
       return respErr('Unauthorized - Please sign in to generate images');
     }
+    debugLog('✅ [nano-banana/generate] User authenticated');
 
     // 2. Parse and validate request body
+    debugLog('📝 [nano-banana/generate] Parsing request body...');
     const body: ImageGenerationRequest = await request.json();
+    debugLog('📊 [nano-banana/generate] Request data:', {
+      hasPrompt: !!body.prompt,
+      promptLength: body.prompt?.length,
+      style: body.style,
+      numImages: body.num_images,
+      aspectRatio: body.aspect_ratio,
+      quality: body.quality
+    });
     
     if (!body.prompt || body.prompt.trim().length === 0) {
       return respErr('Prompt is required');
@@ -66,11 +97,20 @@ export async function POST(request: NextRequest) {
     }
 
     // 4. Initialize nano-banana service
+    debugLog('🔧 [nano-banana/generate] Initializing nano-banana service...');
     const nanoBananaService = getNanoBananaService();
 
     // 5. Generate images
-    console.log(`Generating ${numImages} images for user ${session.user.id}`);
+    debugLog(`🎨 [nano-banana/generate] Generating ${numImages} images`);
     const startTime = Date.now();
+    
+    debugLog('📤 [nano-banana/generate] Calling nano-banana API with params:', {
+      promptPreview: body.prompt?.substring(0, 50) + '...',
+      num_images: body.num_images,
+      aspect_ratio: body.aspect_ratio,
+      style: body.style,
+      quality: body.quality
+    });
     
     const response = await nanoBananaService.generateImage({
       prompt: body.prompt,
@@ -83,11 +123,16 @@ export async function POST(request: NextRequest) {
 
     // 6. Handle generation errors
     if (!response.success) {
-      console.error('Nano-banana generation failed:', response.error);
+      // 生产仅输出简要错误，详细放在调试日志
+      console.error('❌ [nano-banana/generate] Generation failed');
+      debugError('❌ [nano-banana/generate] Error:', response.error);
+      debugError('❌ [nano-banana/generate] Full response:', response);
       return respErr(
         response.error || 'Image generation failed. Please try again.'
       );
     }
+    
+    debugLog('✅ [nano-banana/generate] Generation successful, images:', response.data?.images?.length);
 
     // 7. Deduct credits from user account
     const deducted = await deductCredits(
@@ -118,7 +163,9 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error: any) {
-    console.error('API route error:', error);
+    console.error('💥 [nano-banana/generate] Unexpected error');
+    debugError('💥 [nano-banana/generate] Error detail:', error);
+    debugError('💥 [nano-banana/generate] Error stack:', error?.stack);
     
     // Handle specific error types
     if (error.code === 'TIMEOUT') {

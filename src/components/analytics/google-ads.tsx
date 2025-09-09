@@ -131,10 +131,4 @@ export default function GoogleAds() {
   );
 }
 
-// 扩展 Window 对象类型定义
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    trackConversion: (label: string, value?: number, currency?: string) => void;
-  }
-}
+// Window 对象类型定义现在在 src/types/global.d.ts 中统一管理

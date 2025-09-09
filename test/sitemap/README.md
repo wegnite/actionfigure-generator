@@ -166,6 +166,6 @@ node test/sitemap/url_validator.js
 
 ## 🔗 相关文档
 
-- [详细诊断报告](../../content/docs/development/sitemap-404-diagnosis-report.md)
+- [详细诊断报告](../../docs/development/sitemap-404-diagnosis-report.md)
 - [Next.js App Router文档](https://nextjs.org/docs/app)
 - [next-intl配置指南](https://next-intl-docs.vercel.app/)
