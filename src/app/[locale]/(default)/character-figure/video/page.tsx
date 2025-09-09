@@ -37,6 +37,31 @@ export async function generateMetadata({
     title: titles[locale as keyof typeof titles] || titles.en,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
     keywords: 'actionfigure video, AI animation, image to video, actionanimation',
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/${locale === 'en' ? '' : `${locale}/`}character-figure/video`,
+    },
+    openGraph: {
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      url: `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/${locale === 'en' ? '' : `${locale}/`}character-figure/video`,
+      type: 'website',
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/logo.png`,
+          width: 1200,
+          height: 630,
+          alt: 'actionFigure Video Generator',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      images: [
+        `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/logo.png`,
+      ],
+    },
   };
 }
 

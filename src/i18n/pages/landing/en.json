@@ -35,16 +35,16 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Action Figure",
-    "subtitle": "AI Generator",
-    "description": "Create professional AI action figures with advanced technology. Generate anime, realistic, and custom action figures in seconds with our AI action figure generator.",
+    "title": "AI Action Figure Generator",
+    "subtitle": "Create Pro‑Quality Action Figures Online",
+    "description": "Use our AI Action Figure Generator to create professional action figures in seconds. This AI action figure generator supports anime, realistic, and custom styles with commercial rights included.",
     "announcement": {
       "label": "New",
       "title": "✨ Advanced AI Action Figure Generator",
       "url": "/pricing"
     },
-    "tip": "🚀 Start Creating AI Action Figures",
-    "badge": "✨ AI-Powered Action Figure Generator",
+    "tip": "🚀 Start with the AI Action Figure Generator",
+    "badge": "✨ AI Action Figure Generator",
     "buttons": [
       {
         "title": "Create Action Figure Now",
@@ -290,8 +290,8 @@
     }
   },
   "cta": {
-    "title": "Start Creating Amazing Action Figures Today",
-    "description": "Join thousands using our AI action figure generator to bring creative visions to life",
+    "title": "Start with the AI Action Figure Generator Today",
+    "description": "Join thousands using our AI Action Figure Generator to bring creative visions to life",
     "button": "Create Your First Action Figure Free"
   },
   "footer": {

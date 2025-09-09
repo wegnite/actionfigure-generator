@@ -19,8 +19,39 @@ import CharacterFigureCTA from '@/components/character-figure/CharacterFigureCTA
 
 export const metadata: Metadata = {
   title: 'Action Figure AI Generator - Transform Photos into Collectible Art',
-  description: 'Create stunning actionfigures, Ghibli-style art, and collectible designs from your photos using advanced AI technology. Fast, easy, and high-quality.',
-  keywords: 'actionfigure, AI generator, ghibli style, anime figure, collectible toy, action figure generator, AI art',
+  description:
+    'Create stunning actionfigures, Ghibli-style art, and collectible designs from your photos using advanced AI technology. Fast, easy, and high-quality.',
+  keywords:
+    'actionfigure, AI generator, ghibli style, anime figure, collectible toy, action figure generator, AI art',
+  alternates: {
+    canonical:
+      `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/en/character-figure`,
+  },
+  openGraph: {
+    title: 'Action Figure AI Generator - Transform Photos into Collectible Art',
+    description:
+      'Create stunning actionfigures, Ghibli-style art, and collectible designs from your photos using advanced AI technology.',
+    url:
+      `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/en/character-figure`,
+    type: 'website',
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/logo.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Action Figure AI Generator',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Action Figure AI Generator - Transform Photos into Collectible Art',
+    description:
+      'Create stunning actionfigures, Ghibli-style art, and collectible designs from your photos using advanced AI technology.',
+    images: [
+      `${process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'}/logo.png`,
+    ],
+  },
 };
 
 interface CharacterFigurePageProps {

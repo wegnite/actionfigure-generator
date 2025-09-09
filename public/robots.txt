@@ -1,33 +1,19 @@
 User-agent: *
 Allow: /
 
-# 允许所有主要搜索引擎抓取
-User-agent: Googlebot
-Allow: /
+# 不阻止 CSS / JS / Images 等关键资源
+# 保持渲染所需的资源可访问，便于通过移动端抓取与渲染
 
-User-agent: Bingbot
-Allow: /
+# 仅屏蔽低价值或敏感路径（非资源文件）
+Disallow: /search
+Disallow: /admin
+Disallow: /api
+Disallow: /*?*filter=
+Disallow: /*?*sort=
 
-User-agent: Slurp
-Allow: /
-
-# 禁止抓取管理后台和API
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /dashboard/
-Disallow: /*?*q=
-
-# 重要: 允许抓取 Privacy Policy 和 Terms of Service (AdSense 必需)
+# 法务等页面允许抓取（但建议不纳入站点地图的优先抓取清单）
 Allow: /privacy-policy/
 Allow: /terms-of-service/
-Allow: /blog/
-Allow: /tools/
-Allow: /sitemap.xml
-Allow: /ads.txt
 
-# 网站地图位置
-Sitemap: https://actionfigure_generator.mryangsd.workers.dev/sitemap.xml
-
-# 爬取频率限制
-Crawl-delay: 1
+# 站点地图（索引文件）位置
+Sitemap: https://actionfigure-generator.com/sitemap.xml

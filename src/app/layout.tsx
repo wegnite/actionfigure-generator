@@ -27,16 +27,7 @@ export default async function RootLayout({
 
         <link rel="icon" href="/favicon.ico" />
 
-        {webUrl && locales &&
-          locales.map((loc) => (
-            <link
-              key={loc}
-              rel="alternate"
-              hrefLang={loc}
-              href={`${webUrl}${loc === "en" ? "" : `/${loc}`}/`}
-            />
-          ))}
-        {webUrl && <link rel="alternate" hrefLang="x-default" href={webUrl} />}
+        {/* 注意：hreflang 改为在各页面的 generateMetadata 中按页面维度输出，避免全站指向语言首页的误配 */}
         
         {/* Google Analytics、Google Ads 和其他分析工具 - 放在 head 内以确保最佳跟踪性能 */}
         <Analytics />
