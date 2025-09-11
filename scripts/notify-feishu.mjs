@@ -34,12 +34,20 @@ const res = await fetch(webhook, {
   headers: { 'Content-Type': 'application/json; charset=utf-8' },
   body,
 })
-
-if (!res.ok) {
-  const t = await res.text().catch(() => '')
+let ok = res.ok
+let detail = ''
+try {
+  const data = await res.json()
+  // Feishu custom bot returns {StatusCode: 0, StatusMessage: 'success'} when ok
+  if (typeof data?.StatusCode !== 'undefined') ok = ok && data.StatusCode === 0
+  if (typeof data?.code !== 'undefined') ok = ok && data.code === 0
+  detail = JSON.stringify(data)
+} catch {
+  // ignore json parse error; keep HTTP status as indicator
+}
+if (!ok) {
+  const t = detail || (await res.text().catch(() => ''))
   console.error('Feishu notify failed:', res.status, t)
   process.exit(1)
 }
-
 process.exit(0)
-

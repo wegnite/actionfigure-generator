@@ -33,7 +33,13 @@ async function notifyFeishu(msg) {
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body,
     })
-    return res.ok
+    let ok = res.ok
+    try {
+      const data = await res.json()
+      if (typeof data?.StatusCode !== 'undefined') ok = ok && data.StatusCode === 0
+      if (typeof data?.code !== 'undefined') ok = ok && data.code === 0
+    } catch {}
+    return ok
   } catch {
     return false
   }
@@ -51,4 +57,3 @@ async function speak(msg) {
 
 await Promise.allSettled([notifyFeishu(text), speak(text)])
 process.exit(0)
-
