@@ -1,3 +1,8 @@
+---
+title: Traffic-driven Sitemap
+description: Use a JSON allowlist to keep only pages that have traffic/value
+---
+
 # Traffic-driven Sitemap
 
 Use a JSON allowlist to keep only pages that have traffic/value. This avoids indexing low-quality or zero-traffic pages.

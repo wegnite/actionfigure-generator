@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server'
+import { getBaseUrl } from '@/lib/seo'
 
 export const revalidate = 3600 // 1 hour
 
 export async function GET() {
-  const base = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'
+  const base = getBaseUrl()
   const urls: string[] = []
 
   // Include ads.txt entry as requested
@@ -20,4 +21,3 @@ export async function GET() {
     },
   })
 }
-

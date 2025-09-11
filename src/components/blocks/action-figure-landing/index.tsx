@@ -472,6 +472,32 @@ export default function ActionFigureLanding({ locale }: Props) {
           </div>
         </section>
 
+        {/* SEO Content Section — improves clarity and keyword coverage */}
+        <section className="py-20 bg-black border-t border-orange-500/20">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+              About Our AI Action Figure Generator
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              Our AI action figure generator turns your ideas into professional action figures in seconds. 
+              The AI action figure generator supports anime styles, realistic renders, and collectible looks while keeping details sharp and consistent. 
+              Whether you start from text or an image, the AI action figure generator produces studio‑quality figures ready for social posts, printing, and commercial projects.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed mb-8">
+              Why choose this AI action figure generator? It’s fast, reliable, and gives you full commercial rights on results. 
+              Content creators and brands use the AI action figure generator for campaigns, product concepts, and fan art. 
+              Designers appreciate how the AI action figure generator maintains pose, lighting, and material fidelity across variations.
+            </p>
+            <ul className="grid md:grid-cols-2 gap-4 text-gray-300">
+              <li className="bg-gray-800/40 p-4 rounded-lg">Lightning‑fast AI action figure generator with batch creation</li>
+              <li className="bg-gray-800/40 p-4 rounded-lg">Style‑rich AI action figure generator: anime, realistic, collectible</li>
+              <li className="bg-gray-800/40 p-4 rounded-lg">HD exports from the AI action figure generator for print and web</li>
+              <li className="bg-gray-800/40 p-4 rounded-lg">Commercial rights included with every AI action figure generator result</li>
+              <li className="bg-gray-800/40 p-4 rounded-lg">Simple workflow: prompt, generate, refine in the AI action figure generator</li>
+            </ul>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900/80 border-t border-orange-500/20">
           <div className="container mx-auto px-4">

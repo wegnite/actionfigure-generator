@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { canonicalFor } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
     },
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_WEB_URL}/tutorial/how-to-make-an-ai-action-figure`,
+      canonical: canonicalFor('/tutorial/how-to-make-an-ai-action-figure'),
     }
   };
 }

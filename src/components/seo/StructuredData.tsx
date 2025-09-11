@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { getBaseUrl } from '@/lib/seo';
 
 interface StructuredDataProps {
   type: 'website' | 'product' | 'faq' | 'breadcrumb' | 'article';
@@ -11,7 +12,7 @@ interface StructuredDataProps {
 }
 
 export function StructuredData({ type, data }: StructuredDataProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com';
+  const baseUrl = getBaseUrl();
   const generateSchema = () => {
     switch (type) {
       case 'website':

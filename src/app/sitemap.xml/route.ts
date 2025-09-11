@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server'
+import { getBaseUrl } from '@/lib/seo'
 
 export const revalidate = 3600 // 1 hour
 
 export async function GET() {
-  const base = process.env.NEXT_PUBLIC_WEB_URL || 'https://actionfigure-generator.com'
+  const base = getBaseUrl()
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>${base}/sitemaps/pages.xml</loc></sitemap>
@@ -17,4 +18,3 @@ export async function GET() {
     },
   })
 }
-

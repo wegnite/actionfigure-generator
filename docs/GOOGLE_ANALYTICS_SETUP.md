@@ -1,3 +1,8 @@
+---
+title: Google Analytics (GA4) 集成指南
+description: 本项目的Google Analytics GA4完整集成文档
+---
+
 # Google Analytics (GA4) 集成指南
 
 本项目已完成Google Analytics GA4的完整集成，遵循Next.js最佳实践和GDPR隐私要求。

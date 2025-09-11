@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Ship Any AI SaaS Startups in hours | ShipAny",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups, Ship Fast with a variety of templates and components.",
-    "keywords": "ShipAny, AI SaaS Boilerplate, NextJS Boilerplate"
+    "title": "AI Action Figure Generator – ActionFigure.com",
+    "description": "Create professional action figures in seconds with our AI action figure generator. Design anime and realistic figures fast. Free trial with commercial rights.",
+    "keywords": "ai action figure generator, action figure maker, ai figure creator"
   },
   "user": {
     "sign_in": "Sign In",
@@ -297,7 +297,7 @@
       "badge": "AI-POWERED GENERATION",
       "title": "ACTION FIGURE",
       "subtitle": "GENERATOR",
-      "description": "> FORGE LEGENDARY WARRIORS FROM THE DEPTHS OF IMAGINATION_\n> EACH FIGURE TELLS A STORY OF SURVIVAL, POWER, AND HEROISM_",
+      "description": "> Our AI action figure generator helps you forge legendary warriors from imagination. Each figure tells a story of survival, power and heroism using our advanced AI action figure generator.",
       "stats": {
         "creators": "Creators",
         "rating": "Rating",
@@ -307,11 +307,11 @@
     },
     "generatorSection": {
       "title": "CREATE YOUR ACTION FIGURE",
-      "description": "> USE ADVANCED AI TO GENERATE PROFESSIONAL ACTION FIGURES IN SECONDS_"
+      "description": "> Use our AI action figure generator to create professional action figures in seconds."
     },
     "toolsSection": {
       "title": "ACTION FIGURE GENERATOR TOOLS",
-      "description": "> OUR ACTION FIGURE GENERATOR PROVIDES COMPREHENSIVE TOOLS FOR CREATING PROFESSIONAL ACTION FIGURES",
+      "description": "> Our AI action figure generator provides comprehensive tools for creating professional action figures.",
       "tools": [
         {
           "title": "AI Action Figure Generator",
@@ -319,26 +319,26 @@
         },
         {
           "title": "Multi-Style Action Figure Creator",
-          "description": "Choose from 10+ professional styles for your action figure generator projects. From anime action figures to realistic collectibles, our action figure generator adapts to any creative vision."
+          "description": "Choose from 10+ professional styles. From anime action figures to realistic collectibles, our AI action figure generator adapts to any creative vision."
         },
         {
           "title": "Commercial Action Figure Rights",
-          "description": "Every action figure created with our action figure generator includes full commercial usage rights. Perfect for businesses, content creators, and action figure enthusiasts who need professional licensing."
+          "description": "Every action figure created with our AI action figure generator includes full commercial usage rights. Perfect for businesses, content creators, and enthusiasts."
         },
         {
           "title": "Batch Action Figure Processing",
-          "description": "Generate multiple action figures simultaneously with our batch processing feature. Our action figure generator can create up to 4 action figures per request for efficient workflow management."
+          "description": "Generate multiple action figures simultaneously with batch processing. The AI action figure generator can create up to 4 figures per request."
         },
         {
           "title": "HD Action Figure Export",
-          "description": "Export your action figures in high-definition quality perfect for printing, social media, or professional use. Our action figure generator ensures every detail is crisp and professional."
+          "description": "Export figures in high-definition quality for printing, social media, or professional use. Our AI action figure generator ensures crisp details."
         },
         {
           "title": "Instant Action Figure Creation",
-          "description": "Create professional action figures in just 10 seconds with our lightning-fast action figure generator. No waiting queues or delays - get your action figure results instantly."
+          "description": "Create professional action figures in seconds with our lightning-fast AI action figure generator. No queues or delays—get results instantly."
         }
       ],
-      "cta": "> START USING OUR ACTION FIGURE GENERATOR TODAY AND CREATE PROFESSIONAL ACTION FIGURES FOR ANY PROJECT_",
+      "cta": "> Start using our AI action figure generator today and create professional action figures for any project.",
       "button": "> TRY ACTION FIGURE GENERATOR NOW"
     },
     "tutorialsSection": {

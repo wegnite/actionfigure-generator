@@ -14,6 +14,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: "standalone",
   reactStrictMode: false,
+  // 全站路径统一使用结尾斜杠形式（例如 /pricing/）
+  trailingSlash: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   eslint: {
     // Warning: This allows production builds to successfully complete even if
@@ -27,6 +29,17 @@ const nextConfig = {
         hostname: "*",
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        // Apply to all routes to satisfy crawlers expecting explicit header
+        source: '/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'index, follow' },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [];

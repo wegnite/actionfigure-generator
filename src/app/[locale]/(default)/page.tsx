@@ -10,6 +10,7 @@
 
 import ActionFigureLanding from '@/components/blocks/action-figure-landing';
 import StructuredData from '@/components/seo/StructuredData';
+import { canonicalFor, getBaseUrl } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -19,58 +20,60 @@ export async function generateMetadata({
   const { locale } = await params;
   
   const titles = {
-    en: 'AI Action Figure Generator | Create Professional Action Figures - ActionFigure.com',
-    zh: 'AI手办生成器 | 创建专业角色收藏品 - CharacterFigure.com',
-    ja: 'AIフィギュア生成器 | プロ品質キャラクター作成 - CharacterFigure.com',
-    es: 'Generador AI de Figuras | Crea Coleccionables Profesionales',
-    fr: 'Générateur AI de Figurines | Créez des Collectibles Professionnels',
-    de: 'KI Figuren Generator | Professionelle Sammlerfiguren Erstellen',
+    en: 'AI Action Figure Generator – Create Pro Figures',
+    zh: 'AI手办生成器 – 快速生成专业手办',
+    ja: 'AIフィギュア ジェネレーター – プロ品質を生成',
+    es: 'Generador de Figuras AI – Crea figuras pro',
+    fr: 'Générateur de Figurines IA – Créez des modèles pro',
+    de: 'KI Figuren Generator – Profi-Figuren erstellen',
   };
   
   const descriptions = {
-    en: 'Transform ideas into professional action figures with our advanced AI action figure generator. Create anime, realistic, and custom action figure designs in seconds. Free trial with commercial rights included.',
-    zh: '用先进AI将创意转化为专业角色手办。几秒内创建动漫、写实和自定义收藏品设计。免费试用包含商业版权。',
-    ja: '高度なAIでアイデアをプロ品質のキャラクターフィギュアに変換。アニメ、リアル、カスタムコレクションデザインを数秒で作成。',
-    es: 'Transforma ideas en figuras profesionales con IA avanzada. Crea diseños anime, realistas y coleccionables en segundos.',
-    fr: 'Transformez vos idées en figurines professionnelles avec l\'IA avancée. Créez des designs anime, réalistes et collectibles.',
-    de: 'Verwandeln Sie Ideen in professionelle Figuren mit fortschrittlicher KI. Erstellen Sie Anime, realistische Sammlerfiguren.',
+    en: 'Create professional action figures in seconds with our AI generator. Design anime and realistic figures fast. Free trial. Commercial rights included.',
+    zh: '使用 AI 手办生成器，数秒生成专业手办。支持动漫与写实风格。免费试用，含商用授权。',
+    ja: 'AIで数秒でプロ品質のフィギュアを生成。アニメ/リアル対応。無料体験、商用利用可。',
+    es: 'Crea figuras profesionales en segundos con IA. Gratis y con derechos comerciales.',
+    fr: 'Créez des figurines pro en quelques secondes avec l’IA. Essai gratuit et droits commerciaux.',
+    de: 'In Sekunden Profi‑Figuren mit KI erstellen. Kostenlose Testversion, kommerzielle Rechte inklusive.',
   };
 
   const keywords = {
-    en: 'action figure generator, AI action figure, action figure creator, anime action figure maker, AI figure generator, collectible designer, 3D action figure creator, professional action figure design',
-    zh: 'AI手办生成器, 角色手办制作, 动漫手办设计, 收藏品制作, 3D角色创建, 手办定制',
-    ja: 'AIフィギュア生成器, キャラクターフィギュア作成, アニメフィギュア制作, コレクション品デザイン',
-    es: 'generador de figuras AI, creador de personajes, figuras anime, coleccionables',
-    fr: 'générateur de figurines AI, créateur de personnages, figurines anime',
-    de: 'KI Figuren Generator, Charakter Ersteller, Anime Figuren, Sammlerfiguren',
+    en: 'ai action figure generator, action figure maker, ai figure creator',
+    zh: 'ai 手办生成器, 手办制作, ai figure 生成',
+    ja: 'ai action figure generator, フィギュア作成',
+    es: 'generador de figuras ai, creador',
+    fr: 'générateur de figurines ia, créateur',
+    de: 'ki figuren generator, figuren ersteller',
   };
+
+  const base = getBaseUrl();
 
   return {
     title: titles[locale as keyof typeof titles] || titles.en,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
     keywords: keywords[locale as keyof typeof keywords] || keywords.en,
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_WEB_URL}/${locale === 'en' ? '' : locale}`,
+      canonical: canonicalFor(locale === 'en' ? '/' : `/${locale}`),
       languages: {
-        'en': `${process.env.NEXT_PUBLIC_WEB_URL}`,
-        'zh': `${process.env.NEXT_PUBLIC_WEB_URL}/zh`,
-        'ja': `${process.env.NEXT_PUBLIC_WEB_URL}/ja`,
-        'es': `${process.env.NEXT_PUBLIC_WEB_URL}/es`,
-        'fr': `${process.env.NEXT_PUBLIC_WEB_URL}/fr`,
-        'de': `${process.env.NEXT_PUBLIC_WEB_URL}/de`,
-        'x-default': `${process.env.NEXT_PUBLIC_WEB_URL}`,
+        'en': `${base}`,
+        'zh': `${base}/zh`,
+        'ja': `${base}/ja`,
+        'es': `${base}/es`,
+        'fr': `${base}/fr`,
+        'de': `${base}/de`,
+        'x-default': `${base}`,
       },
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      url: `${process.env.NEXT_PUBLIC_WEB_URL}/${locale === 'en' ? '' : locale}`,
+      url: canonicalFor(locale === 'en' ? '/' : `/${locale}`),
       siteName: 'Action Figure AI Generator',
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
       type: 'website',
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_WEB_URL}/og-image.jpg`,
+          url: `${base}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: 'Action Figure AI Generator - Create Professional Action Figures',
@@ -81,7 +84,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      images: [`${process.env.NEXT_PUBLIC_WEB_URL}/og-image.jpg`],
+      images: [`${base}/og-image.jpg`],
       creator: '@actionfiguregen',
       site: '@actionfiguregen',
     },
@@ -113,7 +116,7 @@ export default async function CharacterFigurePage({
         data={{
           name: "Action Figure AI Generator",
           description: "Advanced AI-powered platform for creating professional action figures and collectibles",
-          url: process.env.NEXT_PUBLIC_WEB_URL
+          url: getBaseUrl()
         }} 
       />
       <ActionFigureLanding locale={locale} />

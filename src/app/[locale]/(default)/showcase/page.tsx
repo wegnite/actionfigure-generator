@@ -1,5 +1,6 @@
 import Showcase from "@/components/blocks/showcase";
 import type { Metadata } from "next";
+import { canonicalFor, getBaseUrl } from "@/lib/seo";
 import { getShowcasePage } from "@/services/page";
 
 export default async function ShowcasePage({
@@ -19,8 +20,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const base = process.env.NEXT_PUBLIC_WEB_URL || "https://actionfigure-generator.com";
-  const url = `${base}/${locale === 'en' ? '' : `${locale}/`}showcase`;
+  const base = getBaseUrl();
+  const url = canonicalFor(`${locale === 'en' ? '' : `${locale}/`}showcase`);
 
   return {
     title: "Showcase | AI Action Figure Generator",

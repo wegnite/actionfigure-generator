@@ -4,6 +4,16 @@ import { getLocale, setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
 import Analytics from "@/components/analytics";
+import type { Metadata } from "next";
+import { getBaseUrl } from "@/lib/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  // Ensure Next.js derives absolute URLs (canonical, OG, etc.) from the real host
+  const base = getBaseUrl();
+  return {
+    metadataBase: new URL(base),
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -24,15 +34,17 @@ export default async function RootLayout({
         {googleAdsenseCode && (
           <meta name="google-adsense-account" content={googleAdsenseCode} />
         )}
-
-        <link rel="icon" href="/favicon.ico" />
+        {/* Favicons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
 
         {/* 注意：hreflang 改为在各页面的 generateMetadata 中按页面维度输出，避免全站指向语言首页的误配 */}
-        
-        {/* Google Analytics、Google Ads 和其他分析工具 - 放在 head 内以确保最佳跟踪性能 */}
-        <Analytics />
       </head>
       <body className={cn("min-h-screen overflow-x-hidden dark")}>
+        {/* Analytics: 放在 body 中，避免在 <head> 渲染 Client 组件引发运行时错误 */}
+        <Analytics />
         {/* 页面内容 */}
         {children}
       </body>

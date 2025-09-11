@@ -1,3 +1,8 @@
+---
+title: Creem 产品配置指南
+description: Action Figure Generator 在 Creem 支付平台的产品配置文档
+---
+
 # Creem 产品配置指南
 
 ## 概述
@@ -107,7 +112,7 @@ AI Action Figure Enterprise Plan - Complete solution for businesses.
 创建产品后，你会获得产品ID，需要在环境变量中配置：
 
 ### .env.local (开发环境)
-```env
+```bash
 # Creem 支付配置
 CREEM_ENV=test
 CREEM_API_KEY=creem_test_YOUR_TEST_API_KEY
@@ -121,7 +126,7 @@ NEXT_PUBLIC_PAY_CANCEL_URL=/pricing
 ```
 
 ### .env.production (生产环境)
-```env
+```bash
 # Creem 支付配置
 CREEM_ENV=prod
 CREEM_API_KEY=creem_YOUR_PRODUCTION_API_KEY

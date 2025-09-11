@@ -1,3 +1,8 @@
+---
+title: Action Figure Generator - 产品功能规划路线图
+description: 产品功能规划、发展路线图和里程碑
+---
+
 # Action Figure Generator - 产品功能规划路线图
 
 ## 🎯 产品现状分析

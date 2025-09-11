@@ -1,3 +1,8 @@
+---
+title: AI Action Figure Generator - SEO 关键词策略文档
+description: 基于关键词研究的SEO优化策略和实施方案
+---
+
 # AI Action Figure Generator - SEO 关键词策略文档
 
 ## 项目概述

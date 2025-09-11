@@ -1,5 +1,6 @@
 import ABTestWrapper from "@/components/blocks/pricing/ab-test-wrapper";
 import type { Metadata } from "next";
+import { canonicalFor, getBaseUrl } from "@/lib/seo";
 import { getPricingPage } from "@/services/page";
 
 export default async function PricingPage({
@@ -22,8 +23,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const base = process.env.NEXT_PUBLIC_WEB_URL || "https://actionfigure-generator.com";
-  const url = `${base}/${locale === 'en' ? '' : `${locale}/`}pricing`;
+  const base = getBaseUrl();
+  const url = canonicalFor(`${locale === 'en' ? '' : `${locale}/`}pricing`);
 
   return {
     title: "Pricing | AI Action Figure Generator",
@@ -37,12 +38,7 @@ export async function generateMetadata({
       url,
       type: "website",
       images: [
-        {
-          url: `${base}/logo.png`,
-          width: 1200,
-          height: 630,
-          alt: "AI Action Figure Generator Pricing",
-        },
+        { url: `${base}/logo.png`, width: 1200, height: 630, alt: "AI Action Figure Generator Pricing" },
       ],
     },
     twitter: {
