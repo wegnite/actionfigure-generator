@@ -34,6 +34,8 @@
     "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:deploy:notify": "node scripts/deploy-with-notify.mjs",
+    "notify:feishu": "node scripts/notify-feishu.mjs 工作完成，请查阅",
+    "notify:codex": "node scripts/notify-codex.mjs 工作完成，请查阅",
     "cf:upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "docker:build": "docker build -f Dockerfile -t shipany-template-one:latest .",
