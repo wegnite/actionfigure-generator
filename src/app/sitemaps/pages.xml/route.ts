@@ -8,7 +8,7 @@ export async function GET() {
   const base = getBaseUrl()
 
   // base core pages
-  let corePages = ['', '/character-figure', '/character-figure/video', '/pricing', '/showcase']
+  let corePages = ['', '/character-figure', '/character-figure/video', '/pricing', '/showcase', '/ai-3d-model']
 
   // allowlist to tighten focus if provided
   const allow = getTrafficAllowlist()
@@ -34,7 +34,7 @@ export async function GET() {
     }
     for (const page of corePages) {
       if (page === '') continue
-      const priority = page.startsWith('/character-figure') ? '0.8' : '0.7'
+      const priority = page.startsWith('/character-figure') ? '0.8' : (page === '/ai-3d-model' ? '0.5' : '0.7')
       urls.push(
         `<url><loc>${base}${prefix}${page}/</loc><changefreq>weekly</changefreq><priority>${priority}</priority></url>`
       )
